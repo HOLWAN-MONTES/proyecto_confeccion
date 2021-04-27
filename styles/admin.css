@@ -164,8 +164,9 @@ header{
     transition: all 0.9s;
 }
 
+
 .title_intruc{
-    font-size: 40px;
+    font-size: 30px;
     padding-top: 30px;    
     width: 100%;
     color: white;
