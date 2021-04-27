@@ -1,5 +1,5 @@
 <?php
-require '../conneccion/connec.php';
+require '../includes/conection.php';
 ?>
 
 <!DOCTYPE html>
@@ -8,7 +8,7 @@ require '../conneccion/connec.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="../styles/registro_users.css">
     <title>Registro De Usuarios</title>
 </head>
 <body>
@@ -23,7 +23,7 @@ require '../conneccion/connec.php';
                     <option value="0">SELECCIONAR</option>
                     <?php
                         $tipo = "SELECT * FROM tipo_usu";
-                        $inser = mysqli_query($mysqli,$tipo);
+                        $inser = mysqli_query($conexion,$tipo);
                         while($tip = mysqli_fetch_array($inser)){
                     ?>
                     <option name="tip_user" value="<?php echo $tip[0]; ?>"><?php echo $tip[1]; ?></option>
@@ -39,7 +39,7 @@ require '../conneccion/connec.php';
                     <option value="0">SELECCIONAR</option>
                     <?php
                         $tipo2 = "SELECT * FROM tipo_docu";
-                        $inser2 = mysqli_query($mysqli,$tipo2);
+                        $inser2 = mysqli_query($conexion,$tipo2);
                         while($tip2 = mysqli_fetch_array($inser2)){
                     ?>
                     <option name="tip_user" value="<?php echo $tip2[0]; ?>"><?php echo $tip2[1]; ?></option>
