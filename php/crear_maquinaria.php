@@ -14,7 +14,7 @@ include('../includes/conection.php');
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 </head>
 <body>
-<header>
+    <header>
         <div class="content_header">
             <div class="title" id="title">
                 <h3>SISTEMA DE INFORMACION PARA LA ENTRADA, SALIDA Y ALMACENAMIENTO DE MATERIAL TEXTIL</h3>
@@ -103,11 +103,11 @@ include('../includes/conection.php');
     <div class="primer_form">
         <h1 class="titulo_maqui" >INGRESO DE MAQUINARIA</h1>
         <div class="form_reg_maquina">
-            <form action="#" method="POST" autocomplete="off">
+            <form action="" method="POST" autocomplete="off">
                 <input type="text" name="serial" id="serial" placeholder="Serial" required>
                 <br>
                 <label for="maquina">TIPO DE MAQUINARIA</label>
-                <select id="tipo_maquinaria" name="tipo_maquinaria">           
+                <select id="tipo_maquinaria" name="tipo_maquinaria" required>           
                     <?php
                         $sql="SELECT * FROM tipo_maquinaria";
                         $query=mysqli_query($conexion,$sql);
@@ -123,7 +123,7 @@ include('../includes/conection.php');
                 <a href="#">CREAR TIPO DE MAQUINARIA</a>
                 <br>
                 <label for="marca">MARCA</label>
-                <select id="marca" name="marca">           
+                <select id="marca" name="marca" required>           
                     <?php
                         $sql="SELECT * FROM marca";
                         $query=mysqli_query($conexion,$sql);
