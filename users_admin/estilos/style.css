@@ -1,0 +1,25 @@
+body{
+    margin: 0;
+}
+h1{
+    margin-left: 500px;
+}
+.form{
+    margin: 20px 320px;
+    width: 600px;
+    height: 300px;
+    padding: 20px;
+    border: 2px solid black;
+    text-align: center;
+}
+.user{
+    margin-right: 400px;
+}
+.doc{
+    margin-top: -55px;
+    margin-right: 20px;
+}
+#tex-use{
+    margin: -20px auto;
+}
+
