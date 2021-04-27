@@ -1,5 +1,5 @@
 <?php
-    require '../conneccion/connec.php';
+    require '../includes/conection.php';
 
     if($_POST["registro"]){
         //Declaramos las variables para almacenar los datos digitados
@@ -17,20 +17,20 @@
         $consul = "INSERT INTO usuario(DOCUMENTO, ID_TIPO_DOCU, ID_TIPO_USU, NOMBRE, 
         APELLIDO, PASSWORD, EDAD, TELEFONO, CORREO) VALUES('$doc', '$tipo_doc', '$tipo_use', 
         '$nom', '$ape', '$pass', '$edad', '$telefono', '$correo')";
-        $query = mysqli_query($mysqli,$consul);
+        $query = mysqli_query($conexion,$consul);
 
         if(!$query){
             echo '<script> alert ("Error al registrarlo");</script>';
-            echo '<script> window.location="../users_admin/registro_users.php" </script>';
+            echo '<script> window.location="../users/registro_users.php" </script>';
         }
         else{
             echo '<script> alert ("Exito al registrarlo");</script>';
-            echo '<script> window.location="../users_admin/registro_users.php" </script>';
+            echo '<script> window.location="../users/registro_users.php" </script>';
         }
     }
     else{
         echo '<script> alert ("Ups algo fallo, intentalo de nuevo");</script>';
-        echo '<script> window.location="../users_admin/registro_users.php" </script>';
+        echo '<script> window.location="../users/registro_users.php" </script>';
     }
 
 ?>
