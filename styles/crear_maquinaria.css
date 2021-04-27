@@ -261,8 +261,8 @@ header{
 /*-----------------formulario----------------*/
 .form_reg_maquina{
     display: flex;
-    width: 360px;
-    height: 360px;
+    width: 380px;
+    height: 385px;
     position: absolute;
     left: 40%;
     top: 20px;
@@ -277,8 +277,8 @@ header{
 }
 form{
     border: 1px solid #000;
-    width: 350px;
-    height: 370px;
+    width: 380px;
+    height: 385px;
     padding: 20px;
     border-radius: 15px;
     margin-top: 170px;
@@ -313,7 +313,7 @@ form a{
 }
 .continuar{
     font-weight: bold;
-    margin-left: 85px;
+    margin-left: 90px;
     padding: 10px;
     margin-top: 25px;
     border: 0;
