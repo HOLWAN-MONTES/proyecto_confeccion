@@ -1,3 +1,7 @@
+<?php
+require '../includes/conection.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,11 +9,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/7b875e4198.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../styles/admin.css">
+    <link rel="stylesheet" href="../styles/registro_users.css">
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <title>ADMINISTRADOR</title>
+    <title>Registro De Usuarios</title>
 </head>
-
 <body>
     <header>
         <div class="content_header">
@@ -20,15 +23,12 @@
                 <div class="content_img_user">
                     <img class="img_user" src="../img/img_user.png" alt="">
                 </div>
-
                 <div class="content_us">
                     <div class="welcome_name">
-                        <span class="nam">JOSE ALFREDO</span>
-                        
+                        <span class="nam">JOSE ALFREDO</span> 
                     </div>
                     <div class="icon">
                         <i class="opc fas fa-angle-down"></i>
-
                         <ul class="ul_users">
                             <div class="a">
                                 <li><a href="#">ACTUALIZAR PERFIL</a></li>
@@ -36,40 +36,29 @@
                             <div class="a">
                                 <li><a href="#"> CERRAR SESION</a></li>
                             </div>
-
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-
-
-        </div>
         <button id="btn" class="btn_menu"><i class="fas fa-align-justify"></i></button>
     </header>
     <main>
         <nav class="nav" id="nav">
-            
             <div class="title_intruc">
-                <h5 class="title_int">ADMINISTRADOR</h5>
+                <h5 class="title_int">INSTRUCTOR</h5>
             </div>
             <div class="img_logo">
-                <img class="img_logo" src="../img/logo_costura.png" alt="">
+                <img class="img_logo" src="../img/lafea.jpg" alt="">
             </div>
-
-
            <div class="menu">
-
-           
                 <ul>
-                  
                     <li class="submenu"><a href="">REGISTRO<span><i class="opc fas fa-angle-down"></i></span></a>
                         <ul>
                             <li><a href="registro_users.php">Registro De Usuarios</a></li>
                             <li><a href="editar_users.php">Editar Usuario</a></li>
                             <li><a href="eliminar_users.php">Eliminar Usuario</a></li>
                         </ul>
-
                     </li>
                     <li class="submenu"><a href="">INVENTARIO<span><i class="opc fas fa-angle-down"></i></span></a>
                         <ul>
@@ -78,7 +67,6 @@
                             <li><a href="#">sub Item 3</a></li>
                             <li><a href="#">sub Item 4</a></li>
                         </ul>
-
                     </li>
                     <li><a href="">AUTORIZACIONES </a></li>
                     <li><a href="">REPORTES</a></li>
@@ -87,14 +75,8 @@
                       </div>
                 </ul>
             </div>
-          
-
         </nav>
-    </main>
-    <footer>
-
-    </footer>
+    </main> <br>
     <script src="../js/main.js"></script>
 </body>
-
 </html>
