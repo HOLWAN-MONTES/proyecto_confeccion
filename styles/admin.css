@@ -75,6 +75,7 @@ header{
     display: none;/* escondiendo lo de actualizar y no actualizar  */
 
 }
+
 .ul_users li a{
     text-decoration: none;
     font-size: 20px;
@@ -86,12 +87,12 @@ header{
     cursor: pointer;
 }
 
-
 .ul_users li{
     list-style-type: none;
     padding-top: 10px;
     width: 100%;
 }
+
 .ul_users .a:hover{
     border: black;
     background-color: rgba(0, 0, 0, 0.158);
@@ -102,7 +103,6 @@ header{
     border-radius: 50%;
     border: 1px solid rgb(19, 0, 128);
 }
-
 
 .welcome_name{
     
@@ -162,24 +162,33 @@ header{
     margin-left: 0;
     transform: translateX(-0%);
     transition: all 0.9s;
+    text-decoration: none;
+    text-transform: none;
+}
+
+.title_int{
+    text-decoration: none;
+    color: white;
 }
 
 
 .title_intruc{
     font-size: 30px;
-    padding-top: 30px;    
+    padding-top: 30px;
+    padding-bottom: 30px;   
     width: 100%;
     color: white;
-    height: 16vh;
+    height: 13vh auto;
     background: var(--coloresgenerales1);
     text-align: center;
+    text-decoration: none;
+
 }
 
 .img_logo{
     width: 100%;
     height: 35vh;
 }
-
 
 .sections{
     font-size: 30px;
@@ -191,13 +200,11 @@ header{
     transition: all 4s;
 }
 
-
 .menu{
     top: 58px;
     left: 0;
     width: 100%;
 }
-
 
 .menu ul{
     background: orange;
@@ -256,7 +263,7 @@ header{
 .logo_institu{
     width: 65%;
     margin-left: 15%;
-    height: 133.2px;
+    height: 132px;
 }
 
 

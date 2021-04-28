@@ -66,9 +66,9 @@ include('../includes/conection.php');
     
     <label for="">ESTADO DEL INSUMO</label>
     <input type="text" name="estado" id="estado" placeholder="Buen estado" auto-complete="off" requied>
-
-    <input type="submit" value="CREAR INSUMO" class="form-control">
     <input type="hidden" name="cre_insumo" value="crearmoto">
+    <input type="submit" value="CREAR INSUMO" class="form-control">
+  
 </form>
 
     
