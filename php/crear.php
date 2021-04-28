@@ -21,16 +21,16 @@
 
         if(!$query){
             echo '<script> alert ("Error al registrarlo");</script>';
-            echo '<script> window.location="../users/registro_users.php" </script>';
+            echo '<script> window.location="../users/administrador/registro_users.php" </script>';
         }
         else{
             echo '<script> alert ("Exito al registrarlo");</script>';
-            echo '<script> window.location="../users/registro_users.php" </script>';
+            echo '<script> window.location="../users/administrador/registro_users.php" </script>';
         }
     }
     else{
         echo '<script> alert ("Ups algo fallo, intentalo de nuevo");</script>';
-        echo '<script> window.location="../users/registro_users.php" </script>';
+        echo '<script> window.location="../users/administrador/registro_users.php" </script>';
     }
 
 ?>

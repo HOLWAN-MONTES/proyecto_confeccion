@@ -244,11 +244,12 @@ header{
     height: 133.2px;
 }
 .titulo{
-    margin-top: 90px;
+    margin-top: 8%;
+    margin-left: 13%;
     text-align: center;
 }
 .form{
-    margin: 200px 390px;
+    margin: 2% 35%;
     width: 600px;
     height: 260px;
     padding: 20px;

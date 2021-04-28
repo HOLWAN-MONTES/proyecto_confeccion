@@ -244,25 +244,125 @@ header{
     height: 133.2px;
 }
 .titulo{
-    margin-top: 90px;
+    margin-top: 8%;
+    margin-left: 13%;
     text-align: center;
 }
 .form{
-    margin: 20px 390px;
-    width: 600px;
-    height: 260px;
-    padding: 20px;
+    margin: 2% 30%;
+    width: 55%;
+    height: 370px;
+    padding: 2%;
     border: 2px solid black;
     text-align: center;
+    justify-content: center;
+    background: #d6d2c4;
 }
 .user{
-    margin-right: 400px;
+    margin-top: 3%;
+    margin-right: 67%;
+    font-size: 18px;
+}  
+
+.tip_usu{
+    margin-top: 3%;
+    width: 90%;
+    border: 2px solid black;
+    font-size: 14px;
+} 
+
+#docu{
+    margin-top: 2%;
+    width: 30%;
+    height: 6.5%;
+    margin-left: -20%;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 14px;
+}
+#nom{
+    width: 30%;
+    height: 6.5%;
+    margin-left: 1%;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 14px;
+}
+#apel{
+    width: 30%;
+    height: 6.5%;
+    margin-right: -20%;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 14px;
 }
 .doc{
-    margin-top: -55px;
-    margin-right: 20px;
+    margin-top: -12.5%;
+    margin-right: -2%;
 }
-#tex-use{
-    margin: -20px auto;
+#tip_docu{
+    margin-top: 1%;
+    width: 29%;
+    border: 2px solid black;
+    font-size: 14px;
 }
 
+#edad{
+    border: 2px solid black;
+    margin-top: -8.5%;
+    margin-right: 1%;
+    width: 30%;
+    height: 6.5%;
+    float: right;
+    text-align: center;
+}
+.crear-user, .crear-doc{
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: orangered;
+}
+#contra{
+    margin-top: 3%;
+    width: 30%;
+    height: 6.5%;
+    margin-left: 1.5%;
+    float: left;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 14px;    
+}
+#tele{
+    margin-top: 3%;
+    width: 30%;
+    height: 6.5%;
+    margin-left: -0.5%;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 14px;  
+}
+#cor{
+    margin-top: 3%;
+    width: 30%;
+    height: 6.5%;
+    margin-right: 1%;
+    float: right;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 14px;    
+}
+#reg{
+    margin-top: 6%;
+    border: 2px solid black;
+    width: 20%;
+    height: 13%;
+    font-size: 16px;
+    background: #adce74;
+    border-bottom: 6px solid #61b15a;
+    transition: border-bottom .1s ease ;
+}
+#reg:hover{
+    cursor:pointer;
+    border: 2px solid black;
+    border-bottom: 3px solid #5aa469;
+}

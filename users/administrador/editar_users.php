@@ -11,7 +11,7 @@ require '../../includes/conection.php';
     <script src="https://kit.fontawesome.com/7b875e4198.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../styles/editar_users.css">
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <title>Registro De Usuarios</title>
+    <title>Editar Usuarios</title>
 </head>
 <body>
     <header>
@@ -53,6 +53,13 @@ require '../../includes/conection.php';
             </div>
            <div class="menu">
                 <ul>
+                    <li class="suba submenu" id="subm"><a href="">ADMIN. USUARIOS<span><i class="opc fas fa-angle-down"></i></span></a>
+                        <ul  class="mos">
+                            <li><a href="registro_users.php">Registro De Usuarios</a></li>
+                            <li><a href="editar_users.php">Editar Usuario</a></li>
+                            <li><a href="eliminar_users.php">Eliminar Usuario</a></li>
+                        </ul>
+                    </li>
                     <li class="submenu"><a href="">REGISTRO<span><i class="opc fas fa-angle-down"></i></span></a>
                         <ul>
                             <li><a href="registro_users.php">Registro De Usuarios</a></li>
@@ -77,13 +84,16 @@ require '../../includes/conection.php';
             </div>
         </nav>
     </main> <br>
+    <div class="titulo">
+        <h1>Edición De Usuarios</h1>
+    </div>
     <form class="form" id="form" method="POST">
-        <input type="number" name="docu" id="docu" placeholder="DOCUMENTO" autocomplete="off"> &nbsp;&nbsp;&nbsp;
-        <input type="text" name="nom" id="nom" placeholder="NOMBRE" autocomplete="off">&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="text" name="apel" id="apel" placeholder="APELLIDO" autocomplete="off"> <br><br>
+        <input type="number" name="docu" id="docu" placeholder="DOCUMENTO" autocomplete="off" required> &nbsp;&nbsp;&nbsp;
+        <input type="text" name="nom" id="nom" placeholder="NOMBRE" autocomplete="off" required>&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" name="apel" id="apel" placeholder="APELLIDO" autocomplete="off" required> <br><br>
         <div class="user">
             <label id="tex-use" for="">TIPO DE USUARIO</label><br>
-            <select name="tip_us" class="tip_usu" id="tip_usu" autocomplete="off">
+            <select name="tip_us" class="tip_usu" id="tip_usu" autocomplete="off" required>
                 <option value="0">SELECCIONAR</option>
                 <?php
                     $tipo = "SELECT * FROM tipo_usu";
@@ -98,7 +108,7 @@ require '../../includes/conection.php';
         </div>
         <div class="doc">
             <label for="">TIPO DE DOCUMENTO</label><br>
-            <select name="tip_doc" id="tip_docu" autocomplete="off">
+            <select name="tip_doc" id="tip_docu" autocomplete="off" required>
                 <option value="0">SELECCIONAR</option>
                 <?php
                     $tipo2 = "SELECT * FROM tipo_docu";
@@ -112,10 +122,10 @@ require '../../includes/conection.php';
             </select>
         </div><br>
         
-        <input type="number" name="edad" id="edad" placeholder="EDAD" autocomplete="off">
-        <input type="password" name="contra" id="contra" placeholder="CONTRASEÑA" autocomplete="off">
-        <input type="number" name="tele" id="tele" placeholder="TELEFONO" autocomplete="off">
-        <input type="text" name="cor" id="cor" placeholder="CORREO" autocomplete="off">
+        <input type="number" name="edad" id="edad" placeholder="EDAD" autocomplete="off" required>
+        <input type="password" name="contra" id="contra" placeholder="CONTRASEÑA" autocomplete="off" required>
+        <input type="number" name="tele" id="tele" placeholder="TELEFONO" autocomplete="off" required>
+        <input type="text" name="cor" id="cor" placeholder="CORREO" autocomplete="off" required>
         <input type="hidden" name="docume" id="docume">
         <input type="submit" name="actualiza" id="reg" value="ACTUALIZAR">
     </form>
@@ -145,7 +155,7 @@ require '../../includes/conection.php';
                             docum: documento.value,
                         })
                     }
-                    fetch('../php/editar_user.php', option)
+                    fetch('../../php/editar_user.php', option)
                      .then(res => res.ok ? res.json() : Promise.reject(res))
                      .then(datos => {
                         console.log(datos);
@@ -169,7 +179,7 @@ require '../../includes/conection.php';
                             correo.disabled = true;
                         }
                         else{
-                            alert('No se encontro el triple hpta usuario cesar esquivel lo mama');
+                            alert('No se encontro usuario');
                         }
                      })
                      .catch(error => console.error(error));
@@ -192,17 +202,17 @@ require '../../includes/conection.php';
                         contra: contra.value,
                     })
                 }
-                fetch('../php/editar_user.php', option)
+                fetch('../../php/editar_user.php', option)
                  .then(res => res.ok ? res.json() : Promise.reject(res))
                  .then(datos => {
                     const {err, status, statusText} = datos;
                     if(status >= 200 && status < 300){
                         alert("Se ha actualizado correctamente");
-                        window.location.href="../users/editar_users.php";
+                        window.location.href="../administrador/editar_users.php";
                     }
                     else{
                         alert("No se ha actualizado correctamente");
-                        window.location.href="../users/editar_users.php";
+                        window.location.href="../administrador/editar_users.php";
                     }
                     console.log(datos);
                  })
