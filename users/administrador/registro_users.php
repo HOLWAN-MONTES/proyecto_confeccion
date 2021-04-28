@@ -60,11 +60,11 @@ require '../../includes/conection.php';
                             <li><a href="eliminar_users.php">Eliminar Usuario</a></li>
                         </ul>
                     </li>
-                    <li class="submenu"><a href="">REGISTRO<span><i class="opc fas fa-angle-down"></i></span></a>
-                        <ul>
-                            <li><a href="registro_users.php">Registro De Usuarios</a></li>
-                            <li><a href="editar_users.php">Editar Usuario</a></li>
-                            <li><a href="eliminar_users.php">Eliminar Usuario</a></li>
+                    <li class="suba submenu" id="subm"><a href="">REGISTRO<span><i class="opc fas fa-angle-down"></i></span></a>
+                        <ul  class="mos">
+                            <li><a href="">Item 1</a></li>
+                            <li><a href="">Item 2</a></li>
+                            <li><a href="">Item 3</a></li>
                         </ul>
                     </li>
                     <li class="submenu"><a href="">INVENTARIO<span><i class="opc fas fa-angle-down"></i></span></a>
@@ -130,6 +130,11 @@ require '../../includes/conection.php';
             <input type="text" name="cor" id="cor" placeholder="CORREO" autocomplete="off" required><br>
             <input type="submit" name="registro" id="reg" value="REGISTRAR">
         </form>
+        <div class="modal">
+            <form class="formu" action="../../php/modal_user.php" method="post">
+        
+            </form>
+        </div>
     <script src="../../js/main.js"></script>
 </body>
 </html>
