@@ -11,7 +11,7 @@ require '../../includes/conection.php';
     <script src="https://kit.fontawesome.com/7b875e4198.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../styles/registro_users.css">
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <title>Registro De Usuarios</title>
+    <title>Eliminar Usuarios</title>
 </head>
 <body>
     <header>
@@ -53,6 +53,13 @@ require '../../includes/conection.php';
             </div>
            <div class="menu">
                 <ul>
+                    <li class="suba submenu" id="subm"><a href="">ADMIN. USUARIOS<span><i class="opc fas fa-angle-down"></i></span></a>
+                        <ul  class="mos">
+                            <li><a href="registro_users.php">Registro De Usuarios</a></li>
+                            <li><a href="editar_users.php">Editar Usuario</a></li>
+                            <li><a href="eliminar_users.php">Eliminar Usuario</a></li>
+                        </ul>
+                    </li>
                     <li class="submenu"><a href="">REGISTRO<span><i class="opc fas fa-angle-down"></i></span></a>
                         <ul>
                             <li><a href="registro_users.php">Registro De Usuarios</a></li>

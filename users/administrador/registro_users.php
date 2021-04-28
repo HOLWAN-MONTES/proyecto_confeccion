@@ -53,6 +53,13 @@ require '../../includes/conection.php';
             </div>
            <div class="menu">
                 <ul>
+                    <li class="suba submenu" id="subm"><a href="">ADMIN. USUARIOS<span><i class="opc fas fa-angle-down"></i></span></a>
+                        <ul  class="mos">
+                            <li><a href="registro_users.php">Registro De Usuarios</a></li>
+                            <li><a href="editar_users.php">Editar Usuario</a></li>
+                            <li><a href="eliminar_users.php">Eliminar Usuario</a></li>
+                        </ul>
+                    </li>
                     <li class="submenu"><a href="">REGISTRO<span><i class="opc fas fa-angle-down"></i></span></a>
                         <ul>
                             <li><a href="registro_users.php">Registro De Usuarios</a></li>
@@ -81,12 +88,12 @@ require '../../includes/conection.php';
         <h1>Registro De Usuarios</h1>
     </div>
         <form class="form" action="../../php/crear.php" method="POST">
-            <input type="number" name="docu" id="docu" placeholder="DOCUMENTO" autocomplete="off"> &nbsp;&nbsp;&nbsp;
-            <input type="text" name="nom" id="nom" placeholder="NOMBRE" autocomplete="off">&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="text" name="apel" id="apel" placeholder="APELLIDO" autocomplete="off"> <br><br>
+            <input type="number" name="docu" id="docu" placeholder="DOCUMENTO" autocomplete="off" required> &nbsp;&nbsp;&nbsp;
+            <input type="text" name="nom" id="nom" placeholder="NOMBRE" autocomplete="off" required>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" name="apel" id="apel" placeholder="APELLIDO" autocomplete="off" required> <br><br>
             <div class="user">
                 <label id="tex-use" for="">TIPO DE USUARIO</label><br>
-                <select name="tip_us" class="tip_usu" id="tip_usu" autocomplete="off">
+                <select name="tip_us" class="tip_usu" id="tip_usu" autocomplete="off" required>
                     <option value="0">SELECCIONAR</option>
                     <?php
                         $tipo = "SELECT * FROM tipo_usu";
@@ -98,11 +105,11 @@ require '../../includes/conection.php';
                     }
                     ?>
                 </select><br>
-                <a href="">CREAR TIPO DE USUARIO</a>
-            </div>
+                <a class="crear-user" href="">CREAR TIPO DE USUARIO</a>
+            </div><br>
             <div class="doc">
-                <label for="">TIPO DE DOCUMENTO</label><br>
-                <select name="tip_doc" id="tip_docu" autocomplete="off">
+                <label class="tipo-doc" for="">TIPO DE DOCUMENTO</label><br>
+                <select name="tip_doc" id="tip_docu" autocomplete="off" required>
                     <option value="0">SELECCIONAR</option>
                     <?php
                         $tipo2 = "SELECT * FROM tipo_docu";
@@ -113,13 +120,14 @@ require '../../includes/conection.php';
                     <?php
                     }
                     ?>
-                </select>
+                </select><br>
+                <a class="crear-doc" href="">CREAR TIPO DE DOCUMENTO</a>
             </div><br>
             
-            <input type="number" name="edad" id="edad" placeholder="EDAD" autocomplete="off">
-            <input type="password" name="contra" id="contra" placeholder="CONTRASEÑA" autocomplete="off">
-            <input type="number" name="tele" id="tele" placeholder="TELEFONO" autocomplete="off">
-            <input type="text" name="cor" id="cor" placeholder="CORREO" autocomplete="off">
+            <input type="number" name="edad" id="edad" placeholder="EDAD" autocomplete="off" required>
+            <input type="password" name="contra" id="contra" placeholder="CONTRASEÑA" autocomplete="off" required>&nbsp;&nbsp;&nbsp;
+            <input type="number" name="tele" id="tele" placeholder="TELEFONO" autocomplete="off" required>
+            <input type="text" name="cor" id="cor" placeholder="CORREO" autocomplete="off" required><br>
             <input type="submit" name="registro" id="reg" value="REGISTRAR">
         </form>
     <script src="../../js/main.js"></script>
