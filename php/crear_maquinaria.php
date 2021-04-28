@@ -8,7 +8,7 @@ include('../includes/conection.php');
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ingreso maquinaria</title>
+    <title>Crear maquinaria</title>
     <script src="https://kit.fontawesome.com/7b875e4198.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../styles/crear_maquinaria.css">
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -101,9 +101,10 @@ include('../includes/conection.php');
     </main>
     
     <div class="primer_form">
-        <h1 class="titulo_maqui" >INGRESO DE MAQUINARIA</h1>
+        <h1 class="titulo_maqui">INGRESO DE MAQUINARIA</h1>
         <div class="form_reg_maquina">
             <form action="" method="POST" autocomplete="off">
+                <label for="serial">SERIAL</label>
                 <input type="text" name="serial" id="serial" placeholder="Serial" required>
                 <br>
                 <label for="maquina">TIPO DE MAQUINARIA</label>
@@ -137,7 +138,8 @@ include('../includes/conection.php');
                 </select>
                 <br>
                 <a href="#">CREAR MARCA</a>
-                <br><br>
+                <br>
+                <label for="estado">ESTADO</label>
                 <input type="text" name="estado" id="estado" placeholder="Estado" required>
                 <input type="submit" class="continuar" name="registrar_maquina" id="registrar_maquina" value="CONTINUAR">    
             </form>
