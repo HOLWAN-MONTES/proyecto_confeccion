@@ -1,5 +1,5 @@
 <?php
-require '../includes/conection.php';
+require '../../includes/conection.php';
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +9,7 @@ require '../includes/conection.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/7b875e4198.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../styles/registro_users.css">
+    <link rel="stylesheet" href="../../styles/registro_users.css">
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <title>Registro De Usuarios</title>
 </head>
@@ -21,7 +21,7 @@ require '../includes/conection.php';
             </div>
             <div class="user_min">
                 <div class="content_img_user">
-                    <img class="img_user" src="../img/img_user.png" alt="">
+                    <img class="img_user" src="../../img/img_user.png" alt="">
                 </div>
                 <div class="content_us">
                     <div class="welcome_name">
@@ -71,22 +71,57 @@ require '../includes/conection.php';
                     <li><a href="">AUTORIZACIONES </a></li>
                     <li><a href="">REPORTES</a></li>
                     <div class="logo_institu">
-                        <img class="logo_institu" src="../img/logo_sena.png" alt="">
+                        <img class="logo_institu" src="../../img/logo_sena.png" alt="">
                       </div>
                 </ul>
             </div>
         </nav>
     </main> <br>
-    <script>
-        const precio = document.getElementById('precio').value;
-        const canti = document.getElementById('canti');
-        const total = document.getElementById('total');
-        canti.addEventListener('keyup', function(e){
-            e.preventDefault();
-            let preciototal = precio * canti.value;
-            total.value = preciototal;
-        })
-    </script>
-    <script src="../js/main.js"></script>
+    <div class="titulo">
+        <h1>Registro De Usuarios</h1>
+    </div>
+        <form class="form" action="../../php/crear.php" method="POST">
+            <input type="number" name="docu" id="docu" placeholder="DOCUMENTO" autocomplete="off"> &nbsp;&nbsp;&nbsp;
+            <input type="text" name="nom" id="nom" placeholder="NOMBRE" autocomplete="off">&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" name="apel" id="apel" placeholder="APELLIDO" autocomplete="off"> <br><br>
+            <div class="user">
+                <label id="tex-use" for="">TIPO DE USUARIO</label><br>
+                <select name="tip_us" class="tip_usu" id="tip_usu" autocomplete="off">
+                    <option value="0">SELECCIONAR</option>
+                    <?php
+                        $tipo = "SELECT * FROM tipo_usu";
+                        $inser = mysqli_query($conexion,$tipo);
+                        while($tip = mysqli_fetch_array($inser)){
+                    ?>
+                    <option name="tip_user" value="<?php echo $tip[0]; ?>"><?php echo $tip[1]; ?></option>
+                    <?php
+                    }
+                    ?>
+                </select><br>
+                <a href="">CREAR TIPO DE USUARIO</a>
+            </div>
+            <div class="doc">
+                <label for="">TIPO DE DOCUMENTO</label><br>
+                <select name="tip_doc" id="tip_docu" autocomplete="off">
+                    <option value="0">SELECCIONAR</option>
+                    <?php
+                        $tipo2 = "SELECT * FROM tipo_docu";
+                        $inser2 = mysqli_query($conexion,$tipo2);
+                        while($tip2 = mysqli_fetch_array($inser2)){
+                    ?>
+                    <option name="tip_user" value="<?php echo $tip2[0]; ?>"><?php echo $tip2[1]; ?></option>
+                    <?php
+                    }
+                    ?>
+                </select>
+            </div><br>
+            
+            <input type="number" name="edad" id="edad" placeholder="EDAD" autocomplete="off">
+            <input type="password" name="contra" id="contra" placeholder="CONTRASEÑA" autocomplete="off">
+            <input type="number" name="tele" id="tele" placeholder="TELEFONO" autocomplete="off">
+            <input type="text" name="cor" id="cor" placeholder="CORREO" autocomplete="off">
+            <input type="submit" name="registro" id="reg" value="REGISTRAR">
+        </form>
+    <script src="../../js/main.js"></script>
 </body>
 </html>
