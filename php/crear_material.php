@@ -103,7 +103,7 @@ include('../includes/conection.php');
     <div class="primer_from">
         <h1 class="titulo_material">INGRESO DE MATERIAL TEXTIL</h1>
         <div class="formul">
-            <form action="" method="" autocomplete="off">
+            <form action="" method="POST" autocomplete="off">
                 <label for="tela">TIPO DE TELA</label>
                 <select class="tela" id="tipo_tela" name="tipo_tela">           
                     <?php
@@ -111,7 +111,7 @@ include('../includes/conection.php');
                         $query=mysqli_query($conexion,$sql);
                         while($row=mysqli_fetch_array($query)){
                     ?>
-                        <option value="<?php echo $row['ID_TIPO_TELA']?>"> <?php echo $row['NOM_TIPO_TELA']?></option> 
+                        <option value="<?php echo $row['ID_TIP_TELA']?>"> <?php echo $row['NOM_TIP_TELA']?></option> 
 
                     <?php
                     }
@@ -157,13 +157,41 @@ include('../includes/conection.php');
                 <br>
                 <label class="t_largo" for="largo">LARGO</label>
                 <input type="text" class="largo" name="largo" id="largo" placeholder="LARGO" required>
+                <input type="hidden" name="cre_tela" value="crearmaterial">
                 <input type="submit" class="continuar" name="regis_material" id="regis_material" value="CONTINUAR">
-
+                
             </form>
         </div>
     </div>
+    <?php
+    if(isset($_POST['cre_tela'])){
+        $tiptela=$_POST['tipo_tela'];
+        $color=$_POST['color'];
+        $ancho=$_POST['ancho'];
+        $marca=$_POST['marca'];
+        $largo=$_POST['largo'];
+        
+            
+        $sql="INSERT INTO `material_textil` (`ID_TIP_TELA`, `ID_MARCA`, `ID_COLOR`, `ANCHO`, `LARGO`) VALUES ('$tiptela', '$marca', '$color', '$ancho', '$largo')";
+            
+        $resul=mysqli_query($conexion,$sql);
+            if($resul){
+                echo "<script language='JavaScript'>
+                    alert('Se ha creado el material textil correctamente');
+                    </script>";
+            }else{
+                echo "<script language='JavaScript'>
+                    alert('los datos no fueron ingresados correctamente');
+                    </script>";
+            }
+            mysqli_close($conexion);
+    }else{
+            ?>
+   
     
+    <?php
+    }
+    ?>
     <script src="../js/main.js"></script>
-
 </body>
 </html>
