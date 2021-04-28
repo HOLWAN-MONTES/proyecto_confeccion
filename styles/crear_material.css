@@ -257,6 +257,7 @@ header{
     margin-left: 15%;
     height: 133.2px;
 }
+
 /*-----------------formulario---------------*/
 .formul{
     display: flex;
@@ -282,6 +283,7 @@ form{
     margin-top: 70px;
 }
 label{
+    padding: 10px;
     font-weight: bold;
     display: block;
     color: black;
@@ -307,7 +309,7 @@ label{
 
 }
 .t_color{
-    margin-top: -73px;
+    margin-top: -95px;
     float: right;
     font-weight: bold;
     display: block;
@@ -331,7 +333,14 @@ label{
     padding: 8px;
     width: 210px;
     border: 1px solid #000;
-
+}
+.t_ancho{
+    padding: 10px;
+    font-weight: bold;
+    display: block;
+    color: black;
+    font-family: serif;
+    margin-left: 55px;
 }
 .marca{
     border: 1px solid #000;
@@ -343,7 +352,7 @@ label{
     margin-top: -35px; 
 }
 .t_marca{
-    margin-top: -52px;
+    margin-top: -86px;
     float: right;
     font-weight: bold;
     display: block;
@@ -366,8 +375,14 @@ label{
     padding: 8px;
     width: 210px;
     border: 1px solid #000;
-
-
+}
+.t_largo{
+    margin-bottom: -8px;
+    font-weight: bold;
+    display: block;
+    color: black;
+    font-family: serif;
+    margin-left: 180px;
 }
 form a{
     padding: 8px;
@@ -380,7 +395,7 @@ form a{
     font-weight: bold;
     margin-left: 160px;
     padding: 10px;
-    margin-top: 45px;
+    margin-top: 23px;
     border: 0;
     border-radius: 10px;
     width: 120px;

@@ -1,3 +1,6 @@
+body{
+    margin: 0;
+}
 *{
     border: 0;
     padding: 0;
@@ -11,7 +14,7 @@
     --colorDefondoDelMenu2:rgba(60, 151, 68, 0.699);
 }
 
-/* header------------------------------- */
+    /* header------------------------------- */
 header{
     border-bottom: 2px solid black;
     padding-top: 10px;
@@ -38,7 +41,7 @@ header{
     border: 1px solid transparent;
     transform: translateX(-0%);
     transition: all 0.4s;
-    
+
 }
 
 .title-active{
@@ -50,7 +53,6 @@ header{
 }
 
 .user_min{
-    
     /* width: 30%; */
     height: 52px;
     display: flex;
@@ -75,7 +77,6 @@ header{
     display: none;/* escondiendo lo de actualizar y no actualizar  */
 
 }
-
 .ul_users li a{
     text-decoration: none;
     font-size: 20px;
@@ -86,13 +87,11 @@ header{
 .opc:hover{
     cursor: pointer;
 }
-
 .ul_users li{
     list-style-type: none;
     padding-top: 10px;
     width: 100%;
 }
-
 .ul_users .a:hover{
     border: black;
     background-color: rgba(0, 0, 0, 0.158);
@@ -105,7 +104,7 @@ header{
 }
 
 .welcome_name{
-    
+
     padding-right: 10px;
     font-size: 10px;
     text-align: left;
@@ -124,10 +123,7 @@ header{
     margin-top: 5%;
     display: flex   ;
 }
-
-
-/* -------------------menu izquierda------- */
-
+    /* -------------------menu izquierda------- */
 .btn_menu{
     margin-left: 18.5%;
     cursor: pointer;
@@ -155,34 +151,23 @@ header{
 
 .nav{
     position: absolute;
-    
+
     border-right: 1px solid black;
     width: 20%;
     height: 50vh;
     margin-left: 0;
     transform: translateX(-0%);
     transition: all 0.9s;
-    text-decoration: none;
-    text-transform: none;
 }
-
-.title_int{
-    text-decoration: none;
-    color: white;
-}
-
 
 .title_intruc{
-    font-size: 30px;
-    padding-top: 30px;
-    padding-bottom: 30px;   
+    font-size: 40px;
+    padding-top: 30px;    
     width: 100%;
     color: white;
-    height: 13vh auto;
+    height: 16vh;
     background: var(--coloresgenerales1);
     text-align: center;
-    text-decoration: none;
-
 }
 
 .img_logo{
@@ -199,21 +184,18 @@ header{
     display: none;
     transition: all 4s;
 }
-
 .menu{
     top: 58px;
     left: 0;
     width: 100%;
 }
-
 .menu ul{
     background: orange;
     display: flex;
     list-style: none;
 }
-
 .menu ul ul {
-     display: block;
+    display: block;
 }
 
 .menu a{
@@ -238,8 +220,6 @@ header{
 
 .menu ul li:hover ul{
     display: block;
-    
-    
 }
 
 
@@ -253,21 +233,36 @@ header{
     background-color:var(--colorDefondoDelMenu2);
 }
 
-
 .menu a span{
     position: absolute;
     right: 6px;
 }
 
-
 .logo_institu{
     width: 65%;
     margin-left: 15%;
-    height: 132px;
+    height: 133.2px;
 }
-
-
-
-
-
+.titulo{
+    margin-top: 90px;
+    text-align: center;
+}
+.form{
+    margin: 200px 390px;
+    width: 600px;
+    height: 260px;
+    padding: 20px;
+    border: 2px solid black;
+    text-align: center;
+}
+.user{
+    margin-right: 400px;
+}
+.doc{
+    margin-top: -35px;
+    margin-right: 20px;
+}
+#tex-use{
+    margin: -20px auto;
+}
 

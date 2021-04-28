@@ -8,7 +8,7 @@ include('../includes/conection.php');
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ingreso maquinaria</title>
+    <title>Crear maquinaria</title>
     <script src="https://kit.fontawesome.com/7b875e4198.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../styles/crear_maquinaria.css">
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -101,7 +101,7 @@ include('../includes/conection.php');
     </main>
     
     <div class="primer_form">
-        <h1 class="titulo_maqui" >INGRESO DE MAQUINARIA</h1>
+        <h1 class="titulo_maqui">INGRESO DE MAQUINARIA</h1>
         <div class="form_reg_maquina">
             <form action="val_maqui.php" method="POST" autocomplete="off">
                 <input type="text" name="serial" id="serial" placeholder="Serial" required>

@@ -7,7 +7,7 @@ include('../includes/conection.php');
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>registrar material textil</title>
+    <title>Crear material textil</title>
     <script src="https://kit.fontawesome.com/7b875e4198.js" crossorigin="anonymous"></script>
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <link rel="stylesheet" href="../styles/crear_material.css">
@@ -136,6 +136,7 @@ include('../includes/conection.php');
                 <br>
                 <a href="#" class="d_color">CREAR COLOR</a>
                 <br>
+                <label class="t_ancho" for="ancho">ANCHO</label>
                 <input type="text" class="ancho" name="ancho" id="ancho" placeholder="ANCHO" required>
                 <br>
                 <label class="t_marca" for="marca">MARCA</label>
@@ -154,6 +155,7 @@ include('../includes/conection.php');
                 <br>
                 <a class="d_marca" href="#">CREAR MARCA</a>
                 <br>
+                <label class="t_largo" for="largo">LARGO</label>
                 <input type="text" class="largo" name="largo" id="largo" placeholder="LARGO" required>
                 <input type="hidden" name="cre_tela" value="crearmaterial">
                 <input type="submit" class="continuar" name="regis_material" id="regis_material" value="CONTINUAR">

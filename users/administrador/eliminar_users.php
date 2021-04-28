@@ -1,5 +1,5 @@
 <?php
-require '../includes/conection.php';
+require '../../includes/conection.php';
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +9,7 @@ require '../includes/conection.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/7b875e4198.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../styles/registro_users.css">
+    <link rel="stylesheet" href="../../styles/registro_users.css">
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <title>Registro De Usuarios</title>
 </head>
@@ -21,7 +21,7 @@ require '../includes/conection.php';
             </div>
             <div class="user_min">
                 <div class="content_img_user">
-                    <img class="img_user" src="../img/img_user.png" alt="">
+                    <img class="img_user" src="../../img/img_user.png" alt="">
                 </div>
                 <div class="content_us">
                     <div class="welcome_name">
@@ -49,7 +49,7 @@ require '../includes/conection.php';
                 <h5 class="title_int">INSTRUCTOR</h5>
             </div>
             <div class="img_logo">
-                <img class="img_logo" src="../img/lafea.jpg" alt="">
+                <img class="img_logo" src="../../img/lafea.jpg" alt="">
             </div>
            <div class="menu">
                 <ul>
@@ -71,12 +71,12 @@ require '../includes/conection.php';
                     <li><a href="">AUTORIZACIONES </a></li>
                     <li><a href="">REPORTES</a></li>
                     <div class="logo_institu">
-                        <img class="logo_institu" src="../img/logo_sena.png" alt="">
+                        <img class="logo_institu" src="../../img/logo_sena.png" alt="">
                       </div>
                 </ul>
             </div>
         </nav>
     </main> <br>
-    <script src="../js/main.js"></script>
+    <script src="../../js/main.js"></script>
 </body>
 </html>
