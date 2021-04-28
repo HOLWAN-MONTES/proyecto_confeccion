@@ -103,18 +103,18 @@ include('../includes/conection.php');
     <div class="primer_form">
         <h1 class="titulo_maqui" >INGRESO DE MAQUINARIA</h1>
         <div class="form_reg_maquina">
-            <form action="" method="POST" autocomplete="off">
+            <form action="val_maqui.php" method="POST" autocomplete="off">
                 <input type="text" name="serial" id="serial" placeholder="Serial" required>
                 <br>
-                <label for="maquina">TIPO DE MAQUINARIA</label>
-                <select id="tipo_maquinaria" name="tipo_maquinaria" required>           
+                <label for="">TIPO DE MAQUINARIA</label>
+                <select id="tipo_maqui" name="tipo_maqui" required>           
                     <?php
                         $sql="SELECT * FROM tipo_maquinaria";
                         $query=mysqli_query($conexion,$sql);
                         while($row=mysqli_fetch_array($query)){
                     ?>
-                        <option value="<?php echo $row['ID_TIPO_MAQUI']?>"> <?php echo $row['NOM_TIPO_MAQUI']?></option> 
-
+                        <option value="<?php echo $row['ID_TIP_MAQUI']?>"> <?php echo $row['NOM_TIP_MAQUI']?></option> 
+                    
                     <?php
                     }
                     ?>
@@ -137,14 +137,30 @@ include('../includes/conection.php');
                 </select>
                 <br>
                 <a href="#">CREAR MARCA</a>
-                <br><br>
-                <input type="text" name="estado" id="estado" placeholder="Estado" required>
-                <input type="submit" class="continuar" name="registrar_maquina" id="registrar_maquina" value="CONTINUAR">    
+                <br>
+                <label for="">COLOR DE MAQUINARIA</label>
+                <select id="color" name="color">
+                        <?php
+                            $sql="SELECT*FROM color";
+                            $query=mysqli_query($conexion,$sql);
+                            while($row=mysqli_fetch_array($query)){
+                        ?>
+                            <option value="<?php echo $row['ID_COLOR']?>"> <?php echo $row['NOM_COLOR']?></option> 
+
+                        <?php
+                        }
+                        ?>
+                </select>
+                <a href="cre_color_ins.php">CREAR COLOR DE MAQUINARIA</a>
+                <br>
+                <label for="estado">ESTADO</label>
+                <input type="text" name="estado" id="estado" placeholder="Estado" required>  
+                <input type="hidden" name="cre_maqui" value="crearmaquina">
+                <input type="submit" class="continuar" name="registrar_maquina" id="registrar_maquina" value="CONTINUAR">  
             </form>
         </div>
-
     </div>
-
+    
     <script src="../js/main.js"></script>
     
 </body>
