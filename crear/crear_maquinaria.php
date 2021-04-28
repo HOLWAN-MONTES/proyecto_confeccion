@@ -103,7 +103,7 @@ include('../includes/conection.php');
     <div class="primer_form">
         <h1 class="titulo_maqui">INGRESO DE MAQUINARIA</h1>
         <div class="form_reg_maquina">
-            <form action="val_maqui.php" method="POST" autocomplete="off">
+            <form action="../php/val_maqui.php" method="POST" autocomplete="off">
                 <input type="text" name="serial" id="serial" placeholder="Serial" required>
                 <br>
                 <label for="">TIPO DE MAQUINARIA</label>
@@ -113,7 +113,7 @@ include('../includes/conection.php');
                         $query=mysqli_query($conexion,$sql);
                         while($row=mysqli_fetch_array($query)){
                     ?>
-                        <option value="<?php echo $row['ID_TIP_MAQUI']?>"> <?php echo $row['NOM_TIP_MAQUI']?></option> 
+                        <option value="<?php echo $row['ID_TIPO_MAQUI']?>"> <?php echo $row['NOM_TIPO_MAQUI']?></option> 
                     
                     <?php
                     }
@@ -153,8 +153,7 @@ include('../includes/conection.php');
                 </select>
                 <a href="cre_color_ins.php">CREAR COLOR DE MAQUINARIA</a>
                 <br>
-                <label for="estado">ESTADO</label>
-                <input type="text" name="estado" id="estado" placeholder="Estado" required>  
+                 
                 <input type="hidden" name="cre_maqui" value="crearmaquina">
                 <input type="submit" class="continuar" name="registrar_maquina" id="registrar_maquina" value="CONTINUAR">  
             </form>
