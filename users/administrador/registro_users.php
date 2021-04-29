@@ -130,11 +130,37 @@ require '../../includes/conection.php';
             <input type="text" name="cor" id="cor" placeholder="CORREO" autocomplete="off" required><br>
             <input type="submit" name="registro" id="reg" value="REGISTRAR">
         </form>
-        <div class="modal">
-            <form class="formu" action="../../php/modal_user.php" method="post">
-        
-            </form>
+        <div class="ven1">
+            <div class="ventana-modal1" id="ventana-modal1">
+                <div class="modal1 modal-close1">
+                    <a href=""><img class="cerrar1" src="../../img/cerrar.png" alt="Cerrar"></a>
+                    <div class="modal-text" id="modal-text">
+                        <h2 class="reg-user" id="reg-user">Agregar Tip. Usuario</h2>
+                        <form class="formul" action="../../php/registro_users_doc.php" method="post">
+                            <label class="dig-user" for="">Digite Tipo Usuario</label><br><br>
+                            <input type="text" class="ti-user" name="tipo-user" placeholder="TIPO USUARIO" autocomplete="off" required><br><br>
+                            <input type="submit" name="env-user" class="env-user" value="AGREGAR">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ven">
+            <div class="ventana-modal" id="ventana-modal">
+                <div class="modal modal-close">
+                    <a href=""><img class="cerrar" src="../../img/cerrar.png" alt="Cerrar"></a>
+                    <div class="modal-text" id="modal-text">
+                        <h2 class="reg-doc" id="reg-doc">Agregar Tip. Documento</h2>
+                        <form class="formu" action="../../php/registro_users_doc.php" method="post">
+                            <label class="dig-doc" for="">Digite Tipo Documento</label><br><br>
+                            <input type="text" class="ti-docu" name="tipo-docume" placeholder="TIPO DOCUMENTO" autocomplete="off" required><br><br>
+                            <input type="submit" name="env-doc" class="env-doc" value="AGREGAR">
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     <script src="../../js/main.js"></script>
+    <!-- <script src="../../js/registro_users.js"></script> -->
 </body>
 </html>
