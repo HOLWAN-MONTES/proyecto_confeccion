@@ -98,9 +98,6 @@ include('../includes/conection.php');
 
         </nav>
     </main>
-
-
-<<<<<<< Updated upstream
     <div class="primer_from">
         <h1 class="titulo_material">INGRESO DE MATERIAL TEXTIL</h1>
         <div class="formul">
@@ -188,8 +185,7 @@ include('../includes/conection.php');
             mysqli_close($conexion);
     }else{
             ?>
-   
->>>>>>> Stashed changes
+
     
     <script src="../js/main.js"></script>
 
