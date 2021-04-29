@@ -155,7 +155,7 @@ include('../includes/conection.php');
                 <a href="#" class="d_color">CREAR COLOR</a>
                 
                 <label class="t_metraje" for="metraje">METRAJE</label>
-                <input type="text" class="metraje" name="metraje" id="metraje" placeholder="Metraje" required>
+                <input type="number" class="metraje" name="metraje" id="metraje" placeholder="Metraje" required>
                 <input type="hidden" name="cre_tela" value="crearmaterial">
                 <input type="submit" class="continuar" name="regis_material" id="regis_material" value="CONTINUAR">
                 
