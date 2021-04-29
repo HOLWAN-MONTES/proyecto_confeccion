@@ -127,7 +127,7 @@ require '../../includes/conection.php';
         <input type="number" name="tele" id="tele" placeholder="TELEFONO" autocomplete="off" required>
         <input type="text" name="cor" id="cor" placeholder="CORREO" autocomplete="off" required>
         <input type="hidden" name="docume" id="docume">
-        <input type="submit" name="actualiza" id="reg" value="ACTUALIZAR">
+        <input type="submit" name="actualiza" id="edi" value="EDITAR">
     </form>
     <script>
         const formu = document.getElementById('form');

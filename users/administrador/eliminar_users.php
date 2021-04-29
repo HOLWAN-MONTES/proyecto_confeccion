@@ -9,7 +9,7 @@ require '../../includes/conection.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/7b875e4198.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../../styles/editar_users.css">
+    <link rel="stylesheet" href="../../styles/eliminar_users.css">
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <title>Editar Usuarios</title>
 </head>
@@ -85,7 +85,7 @@ require '../../includes/conection.php';
         </nav>
     </main> <br>
     <div class="titulo">
-        <h1>Edición De Usuarios</h1>
+        <h1>Eliminación De Usuarios</h1>
     </div>
     <form class="form" id="form" method="POST">
         <input type="number" name="docu" id="docu" placeholder="DOCUMENTO" autocomplete="off" required> &nbsp;&nbsp;&nbsp;
@@ -123,10 +123,10 @@ require '../../includes/conection.php';
         </div><br>
         
         <input type="number" name="edad" id="edad" placeholder="EDAD" autocomplete="off" required>
-        <input type="number" name="tele" id="tele" placeholder="TELEFONO" autocomplete="off" required>
-        <input type="text" name="cor" id="cor" placeholder="CORREO" autocomplete="off" required>
+        <input type="number" name="tele" id="tele" placeholder="TELEFONO" autocomplete="off" required> <br>
+        <input type="text" name="cor" id="cor" placeholder="CORREO" autocomplete="off" required><br>
         <input type="hidden" name="docume" id="docume">
-        <input type="submit" name="actualiza" id="reg" value="ELIMINAR">
+        <input type="submit" name="eliminar" id="elimi" value="ELIMINAR">
     </form>
     <script>
         const formu = document.getElementById('form');
@@ -154,7 +154,7 @@ require '../../includes/conection.php';
                             docum: documento.value,
                         })
                     }
-                    fetch('../../php/editar_user.php', option)
+                    fetch('../../php/eliminar_users.php', option)
                      .then(res => res.ok ? res.json() : Promise.reject(res))
                      .then(datos => {
                         console.log(datos);

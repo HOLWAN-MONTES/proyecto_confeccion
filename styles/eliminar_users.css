@@ -243,7 +243,6 @@ header{
     margin-left: 15%;
     height: 133.2px;
 }
-/*Estilos del formulario*/
 .titulo{
     margin-top: 8%;
     margin-left: 13%;
@@ -320,37 +319,28 @@ header{
     float: right;
     text-align: center;
 }
-#contra{
-    margin-top: 5%;
-    width: 30%;
-    height: 8%;
-    margin-left: 1.5%;
-    float: left;
-    border: 2px solid black;
-    text-align: center;
-    font-size: 14px;    
-}
+
 #tele{
-    margin-top: 5%;
+    margin-top: 4%;
     width: 30%;
     height: 8%;
-    margin-left: -0.5%;
+    margin-left: -40%;
     border: 2px solid black;
     text-align: center;
     font-size: 14px;  
 }
 #cor{
-    margin-top: 5%;
+    margin-top: -3%;
     width: 30%;
     height: 8%;
-    margin-right: 1%;
+    margin-right: 10%;
     float: right;
     border: 2px solid black;
     text-align: center;
     font-size: 14px;    
 }
-#edi{
-    margin-top: 6%;
+#elimi{
+    margin-top: 4%;
     border: 2px solid black;
     width: 20%;
     height: 13%;
@@ -359,7 +349,7 @@ header{
     border-bottom: 6px solid #61b15a;
     transition: border-bottom .1s ease ;
 }
-#edi:hover{
+#elimi:hover{
     cursor:pointer;
     border: 2px solid black;
     border-bottom: 3px solid #5aa469;
