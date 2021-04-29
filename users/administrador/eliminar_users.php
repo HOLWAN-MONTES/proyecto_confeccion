@@ -62,9 +62,9 @@ require '../../includes/conection.php';
                     </li>
                     <li class="suba submenu" id="subm"><a href="">REGISTRO<span><i class="opc fas fa-angle-down"></i></span></a>
                         <ul  class="mos">
-                            <li><a href="../../crear_insumo.php">Crear insumos</a></li>
-                            <li><a href="../../crear_maquinaria.php">Crear maquinaria</a></li>
-                            <li><a href="../../crear_material.php">Crear material textil</a></li>
+                            <li><a href="../../crear/crear_insumo.php">Crear insumos</a></li>
+                            <li><a href="../../crear/crear_maquinaria.php">Crear maquinaria</a></li>
+                            <li><a href="../../crear/crear_material.php">Crear material textil</a></li>
                         </ul>
                     </li>
                     <li class="submenu"><a href="">INVENTARIO<span><i class="opc fas fa-angle-down"></i></span></a>
