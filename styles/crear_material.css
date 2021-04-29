@@ -283,20 +283,71 @@ form{
     margin-top: 70px;
 }
 label{
-    padding: 10px;
+    padding: 8px;
     font-weight: bold;
     display: block;
     color: black;
     font-family: serif;
-    margin-left: 52px;
+    margin-left: 20px;
 }
-.tela{
+.nom_material{
     margin-left: 5px;
     font-size: 15px;
     padding: 8px;
     width: 210px;
     border: 1px solid #000;
-    
+
+}
+.tela{
+    border: 1px solid #000;
+    font-size: 15px;
+    padding: 8px;
+    width: 210px;
+    float: right;
+    margin-right: 5px;
+    margin-top: -36px;  
+}
+.t_tela{
+    margin-top: -71px;
+    float: right;
+    font-weight: bold;
+    display: block;
+    color: black;
+    font-family: serif;
+    padding-right: 70px;
+}
+.d_tela{
+    text-decoration: none;
+    font-size: 15px;
+    float: right;
+    margin-right: 50px;
+    margin-top: -15px;
+    color: #228B22;
+}
+.marca{
+    margin-top: 10px;
+    margin-left: 5px;
+    font-size: 15px;
+    padding: 8px;
+    width: 210px;
+    border: 1px solid #000;
+}
+.t_marca{
+    margin-bottom: -8px;
+    padding: 8px;
+    font-weight: bold;
+    display: block;
+    color: black;
+    font-family: serif;
+    margin-left: 20px;
+}
+.d_marca{
+    padding-top: 60px;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 15px;
+    margin-left: 15px;
+    color: #228B22;
 }
 .color{
     border: 1px solid #000;
@@ -305,92 +356,42 @@ label{
     width: 210px;
     float: right;
     margin-right: 5px;
-    margin-top: -55px;
-
+    margin-top: -54px;
 }
 .t_color{
-    margin-top: -95px;
+    margin-top: -89px;
     float: right;
     font-weight: bold;
     display: block;
     color: black;
     font-family: serif;
     padding-right: 100px;
-
 }
 .d_color{
     text-decoration: none;
     font-size: 15px;
     float: right;
-    margin-right: 80px;
-    margin-top: -40px;
+    margin-right: 70px;
+    margin-top: -32px;
     color: #228B22;
 }
-.ancho{
+.metraje{
     margin-top: 10px;
-    margin-left: 5px;
+    margin-left: 118px;
     font-size: 15px;
     padding: 8px;
     width: 210px;
     border: 1px solid #000;
 }
-.t_ancho{
-    padding: 10px;
-    font-weight: bold;
-    display: block;
-    color: black;
-    font-family: serif;
-    margin-left: 55px;
-}
-.marca{
-    border: 1px solid #000;
-    font-size: 15px;
-    padding: 8px;
-    width: 210px;
-    float: right;
-    margin-right: 5px;
-    margin-top: -35px; 
-}
-.t_marca{
-    margin-top: -86px;
-    float: right;
-    font-weight: bold;
-    display: block;
-    color: black;
-    font-family: serif;
-    padding-right: 100px;
-}
-.d_marca{
-    text-decoration: none;
-    font-size: 15px;
-    float: right;
-    margin-right: 80px;
-    margin-top: -20px;
-    color: #228B22;
-}
-.largo{
-    margin-top: 10px;
-    margin-left: 110px;
-    font-size: 15px;
-    padding: 8px;
-    width: 210px;
-    border: 1px solid #000;
-}
-.t_largo{
+.t_metraje{
     margin-bottom: -8px;
     font-weight: bold;
     display: block;
     color: black;
     font-family: serif;
-    margin-left: 180px;
+    margin-left: 170px;
 }
-form a{
-    padding: 8px;
-    text-decoration: none;
-    font-size: 15px;
-    margin-left: 15px;
-    color: #228B22;
-}
+
 .continuar{
     font-weight: bold;
     margin-left: 160px;
