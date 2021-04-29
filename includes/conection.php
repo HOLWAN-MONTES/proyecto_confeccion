@@ -3,7 +3,7 @@
 $server="localhost";
 $user="root";
 $password="";
-$bd="confeccion";
+$bd="tri_tailor";
 
 $conexion=mysqli_connect($server,$user,$password,$bd);
 

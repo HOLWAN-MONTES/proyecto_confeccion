@@ -27,6 +27,7 @@
 }
 .menuu{
     width: 100%; 
+    margin-left: 7%;
 }
 
 .navegacion  ul  li {
@@ -142,4 +143,15 @@
     margin: 4px;
     margin-left: 5px;
     font-family: Verdana;
+}
+.iniciar{
+    width: 50%;
+    margin-left: 10%;
+    margin-top: 1%;
+}
+.iniciar a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+    color: rgb(35, 130, 118);
 }
