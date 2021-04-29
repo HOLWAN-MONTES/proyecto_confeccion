@@ -103,7 +103,7 @@ include('../includes/conection.php');
     <div class="primer_from">
         <h1 class="titulo_material">INGRESO DE MATERIAL TEXTIL</h1>
         <div class="formul">
-            <form action="val_material.php" method="POST" autocomplete="off">
+            <form action="../php/val_material.php" method="POST" autocomplete="off">
                 <label for="">MATERIAL TEXTIL</label>
                 <input type="text" class="nom_material" name="nom_material" id="nom_material" placeholder="Nombre material" required>
                 <br>
@@ -164,37 +164,6 @@ include('../includes/conection.php');
         </div>
     </div>
 
-
-
-    <?php
-    if(isset($_POST['cre_tela'])){
-        $tiptela=$_POST['tipo_tela'];
-        $color=$_POST['color'];
-        $ancho=$_POST['ancho'];
-        $marca=$_POST['marca'];
-        $largo=$_POST['largo'];
-        
-            
-        $sql="INSERT INTO `material_textil` (`ID_TIP_TELA`, `ID_MARCA`, `ID_COLOR`, `ANCHO`, `LARGO`) VALUES ('$tiptela', '$marca', '$color', '$ancho', '$largo')";
-            
-        $resul=mysqli_query($conexion,$sql);
-            if($resul){
-                echo "<script language='JavaScript'>
-                    alert('Se ha creado el material textil correctamente');
-                    </script>";
-            }else{
-                echo "<script language='JavaScript'>
-                    alert('los datos no fueron ingresados correctamente');
-                    </script>";
-            }
-            mysqli_close($conexion);
-    }else{
-            ?>
-   
-    
-    <?php
-    }
-    ?>
     <script src="../js/main.js"></script>
 </body>
 </html>
