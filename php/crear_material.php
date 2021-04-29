@@ -98,11 +98,16 @@ include('../includes/conection.php');
 
         </nav>
     </main>
+
+    
     <div class="primer_from">
         <h1 class="titulo_material">INGRESO DE MATERIAL TEXTIL</h1>
         <div class="formul">
-            <form action="" method="" autocomplete="off">
-                <label for="tela">TIPO DE TELA</label>
+            <form action="val_material.php" method="POST" autocomplete="off">
+                <label for="">MATERIAL TEXTIL</label>
+                <input type="text" class="nom_material" name="nom_material" id="nom_material" placeholder="Nombre material" required>
+                <br>
+                <label class="t_tela" for="tela">TIPO DE TELA</label>
                 <select class="tela" id="tipo_tela" name="tipo_tela">           
                     <?php
                         $sql="SELECT * FROM tipo_tela";
@@ -116,26 +121,7 @@ include('../includes/conection.php');
                     ?>
                 </select>
                 <br>
-                <a href="#">CREAR TIPO TELA</a>
-                <br>
-                <label class="t_color" for="color">COLOR</label>
-                <select class="color" id="color" name="color">           
-                    <?php
-                        $sql="SELECT * FROM color";
-                        $query=mysqli_query($conexion,$sql);
-                        while($row = mysqli_fetch_array($query)){
-                    ?>
-                        <option value="<?php echo $row['ID_COLOR']?>"> <?php echo $row['NOM_COLOR']?></option> 
-
-                    <?php
-                    }
-                    ?>
-                </select>
-                <br>
-                <a href="#" class="d_color">CREAR COLOR</a>
-                <br>
-                <label class="t_ancho" for="ancho">ANCHO</label>
-                <input type="text" class="ancho" name="ancho" id="ancho" placeholder="ANCHO" required>
+                <a class="d_tela" href="#">CREAR TIPO TELA</a>
                 <br>
                 <label class="t_marca" for="marca">MARCA</label>
                 <select class="marca" id="marca" name="marca">           
@@ -153,13 +139,31 @@ include('../includes/conection.php');
                 <br>
                 <a class="d_marca" href="#">CREAR MARCA</a>
                 <br>
-                <label class="t_largo" for="largo">LARGO</label>
-                <input type="text" class="largo" name="largo" id="largo" placeholder="LARGO" required>
-                <input type="submit" class="continuar" name="regis_material" id="regis_material" value="CONTINUAR">
+                <label class="t_color" for="color">COLOR</label>
+                <select class="color" id="color" name="color">           
+                    <?php
+                        $sql="SELECT * FROM color";
+                        $query=mysqli_query($conexion,$sql);
+                        while($row = mysqli_fetch_array($query)){
+                    ?>
+                        <option value="<?php echo $row['ID_COLOR']?>"> <?php echo $row['NOM_COLOR']?></option> 
 
+                    <?php
+                    }
+                    ?>
+                </select>
+                <br>
+                <a href="#" class="d_color">CREAR COLOR</a>
+                
+                <label class="t_metraje" for="metraje">METRAJE</label>
+                <input type="text" class="metraje" name="metraje" id="metraje" placeholder="Metraje" required>
+                <input type="hidden" name="cre_tela" value="crearmaterial">
+                <input type="submit" class="continuar" name="regis_material" id="regis_material" value="CONTINUAR">
+                
             </form>
         </div>
     </div>
+
 
     <?php
     if(isset($_POST['cre_tela'])){
