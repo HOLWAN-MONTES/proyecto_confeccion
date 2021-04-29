@@ -58,7 +58,7 @@ include('../includes/conection.php');
         <nav class="nav" id="nav">
             
             <div class="title_intruc">
-                <h5 class="title_int">INSTRUCTOR</h5>
+                <h5 class="title_int">ADMINISTRADOR</h5>
             </div>
             <div class="img_logo">
                 <img class="img_logo" src="../img/logo_costura.png" alt="">
@@ -72,10 +72,9 @@ include('../includes/conection.php');
                   
                     <li class="submenu"><a href="">REGISTRO<span><i class="opc fas fa-angle-down"></i></span></a>
                         <ul>
-                            <li><a href="#">sub Item 1</a></li>
-                            <li><a href="#">sub Item 2</a></li>
-                            <li><a href="#">sub Item 3</a></li>
-                            <li><a href="#">sub Item 4</a></li>
+                        <li><a href="../../crear_insumo.php">Crear insumos</a></li>
+                            <li><a href="../../crear_maquinaria.php">Crear maquinaria</a></li>
+                            <li><a href="../../crear_material.php">Crear material textil</a></li>
                         </ul>
 
                     </li>
