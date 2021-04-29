@@ -1,17 +1,16 @@
 <?php
 include('../includes/conection.php');
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crear maquinaria</title>
+    <title>Crear material textil</title>
     <script src="https://kit.fontawesome.com/7b875e4198.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../styles/crear_maquinaria.css">
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <link rel="stylesheet" href="../styles/crear_material.css">
 </head>
 <body>
     <header>
@@ -99,32 +98,33 @@ include('../includes/conection.php');
 
         </nav>
     </main>
-    
-    <div class="primer_form">
-        <h1 class="titulo_maqui">INGRESO DE MAQUINARIA</h1>
-        <div class="form_reg_maquina">
-            <form action="" method="POST" autocomplete="off">
-                <label for="serial">SERIAL</label>
-                <input type="text" name="serial" id="serial" placeholder="Serial" required>
+
+
+    <div class="primer_from">
+        <h1 class="titulo_material">INGRESO DE MATERIAL TEXTIL</h1>
+        <div class="formul">
+            <form action="../php/val_material.php" method="POST" autocomplete="off">
+                <label for="">MATERIAL TEXTIL</label>
+                <input type="text" class="nom_material" name="nom_material" id="nom_material" placeholder="Nombre material" required>
                 <br>
-                <label for="maquina">TIPO DE MAQUINARIA</label>
-                <select id="tipo_maquinaria" name="tipo_maquinaria" required>           
+                <label class="t_tela" for="tela">TIPO DE TELA</label>
+                <select class="tela" id="tipo_tela" name="tipo_tela">           
                     <?php
-                        $sql="SELECT * FROM tipo_maquinaria";
+                        $sql="SELECT * FROM tipo_tela";
                         $query=mysqli_query($conexion,$sql);
                         while($row=mysqli_fetch_array($query)){
                     ?>
-                        <option value="<?php echo $row['ID_TIPO_MAQUI']?>"> <?php echo $row['NOM_TIPO_MAQUI']?></option> 
+                        <option value="<?php echo $row['ID_TIPO_TELA']?>"> <?php echo $row['NOM_TIPO_TELA']?></option> 
 
                     <?php
                     }
                     ?>
                 </select>
                 <br>
-                <a href="#">CREAR TIPO DE MAQUINARIA</a>
+                <a class="d_tela" href="#">CREAR TIPO TELA</a>
                 <br>
-                <label for="marca">MARCA</label>
-                <select id="marca" name="marca" required>           
+                <label class="t_marca" for="marca">MARCA</label>
+                <select class="marca" id="marca" name="marca">           
                     <?php
                         $sql="SELECT * FROM marca";
                         $query=mysqli_query($conexion,$sql);
@@ -137,17 +137,33 @@ include('../includes/conection.php');
                     ?>
                 </select>
                 <br>
-                <a href="#">CREAR MARCA</a>
+                <a class="d_marca" href="#">CREAR MARCA</a>
                 <br>
-                <label for="estado">ESTADO</label>
-                <input type="text" name="estado" id="estado" placeholder="Estado" required>
-                <input type="submit" class="continuar" name="registrar_maquina" id="registrar_maquina" value="CONTINUAR">    
+                <label class="t_color" for="color">COLOR</label>
+                <select class="color" id="color" name="color">           
+                    <?php
+                        $sql="SELECT * FROM color";
+                        $query=mysqli_query($conexion,$sql);
+                        while($row = mysqli_fetch_array($query)){
+                    ?>
+                        <option value="<?php echo $row['ID_COLOR']?>"> <?php echo $row['NOM_COLOR']?></option> 
+
+                    <?php
+                    }
+                    ?>
+                </select>
+                <br>
+                <a href="#" class="d_color">CREAR COLOR</a>
+                
+                <label class="t_metraje" for="metraje">METRAJE</label>
+                <input type="text" class="metraje" name="metraje" id="metraje" placeholder="Metraje" required>
+                <input type="hidden" name="cre_tela" value="crearmaterial">
+                <input type="submit" class="continuar" name="regis_material" id="regis_material" value="CONTINUAR">
+                
             </form>
         </div>
-
     </div>
 
     <script src="../js/main.js"></script>
-    
 </body>
 </html>

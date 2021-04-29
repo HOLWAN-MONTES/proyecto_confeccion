@@ -102,7 +102,7 @@ include('../includes/conection.php');
     <div class="primer_from">
         <h2 class="titulo_insumo">INGRESO DE INSUMO</h2>
         <div class="formulario">
-            <form method="POST" autocomplete="off">                            
+            <form action="../php/val_insumos.php" method="POST" autocomplete="off">                            
                 <label for="tipinsu">TIPO DE INSUMO</label>              
                 <select class="insumo" id="tipinsumo" name="tipinsumo" required>           
                         <?php
@@ -157,9 +157,7 @@ include('../includes/conection.php');
                 <a href="cre_color_ins.php" class="d_color">Crear color de insumo</a>
                 <br>
                 
-                <label class="t_estado" for="">ESTADO DEL INSUMO</label>
-                <input type="text" class="estado" name="estado" id="estado" placeholder="Buen estado" required>
-
+               
                 <input type="submit" class="btn_insumo" value="CREAR INSUMO" class="form-control">
                 <input type="hidden" name="cre_insumo" value="crearmoto">
             </form>
@@ -169,35 +167,7 @@ include('../includes/conection.php');
 
 
     
-<?php
-    if(isset($_POST['cre_insumo'])){
-        $tipinsumo=$_POST['tipinsumo'];
-        $nombre=$_POST['nominsumo'];
-        $marca=$_POST['marca'];
-        $color=$_POST['color'];
-        $estado=$_POST['estado'];
-        
-            
-        $sql="INSERT INTO `insumos` (`ID_TIPO_INSUMO`, `NOMBRE`, `ID_MARCA`, `ID_COLOR`, `ESTADO`) VALUES ('$tipinsumo', '$nombre', '$marca', '$color', '$estado')";
-            
-        $resul=mysqli_query($conexion,$sql);
-            if($resul){
-                echo "<script language='JavaScript'>
-                    alert('Se ha creado el insumo correctamente');
-                    </script>";
-            }else{
-                echo "<script language='JavaScript'>
-                    alert('los datos no fueron ingresados correctamente');
-                    </script>";
-            }
-            mysqli_close($conexion);
-    }else{
-            ?>
-   
-    
-    <?php
-    }
-    ?>
+
 
 
     

@@ -300,7 +300,7 @@ header{
     font-size: 14px;
 }
 .doc{
-    margin-top: -12.5%;
+    margin-top: -7%;
     margin-right: -2%;
 }
 #tip_docu{
@@ -312,50 +312,35 @@ header{
 
 #edad{
     border: 2px solid black;
-    margin-top: -8.5%;
+    margin-top: -6%;
     margin-right: 1%;
     width: 30%;
     height: 8%;
     float: right;
     text-align: center;
 }
-.crear-user, .crear-doc{
-    font-size: 12px;
-    text-decoration: none;
-    font-weight: bold;
-    color: orangered;
-}
-#contra{
-    margin-top: 3%;
-    width: 30%;
-    height: 8%;
-    margin-left: 1.5%;
-    float: left;
-    border: 2px solid black;
-    text-align: center;
-    font-size: 14px;    
-}
+
 #tele{
-    margin-top: 3%;
+    margin-top: 4%;
     width: 30%;
     height: 8%;
-    margin-left: -0.5%;
+    margin-left: -40%;
     border: 2px solid black;
     text-align: center;
     font-size: 14px;  
 }
 #cor{
-    margin-top: 3%;
+    margin-top: -3%;
     width: 30%;
     height: 8%;
-    margin-right: 1%;
+    margin-right: 10%;
     float: right;
     border: 2px solid black;
     text-align: center;
     font-size: 14px;    
 }
-#reg{
-    margin-top: 6%;
+#elimi{
+    margin-top: 4%;
     border: 2px solid black;
     width: 20%;
     height: 13%;
@@ -364,174 +349,8 @@ header{
     border-bottom: 6px solid #61b15a;
     transition: border-bottom .1s ease ;
 }
-#reg:hover{
+#elimi:hover{
     cursor:pointer;
     border: 2px solid black;
     border-bottom: 3px solid #5aa469;
-}
-/*Venatana para registrar un nuevo tipo de documento*/
-.ventana-modal{
-    opacity: 0; 
-    visibility: hidden;
-    width: 100%;
-    height: 150%;
-    background-color: rgba(0,0,0,0.5);
-    position: fixed;
-    top: -2%;
-    right: 20%;
-    left: 0%;
-    bottom: 25%;
-    margin: -12% auto 0 auto;
-    padding:3vw 5px ;
-    z-index: 2000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-}
-.modal{
-    margin-top: 4%;
-    margin-left: 15%;
-    width: 35%;
-    height: 40%;
-    background: #fff;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    position: relative;
-    transition: transform 1s;
-    transform: translateY(0%);
-}
-#reg-doc{
-    margin-top: -10%;
-    font-size: 25px;
-    text-transform: uppercase;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-}
-.dig-doc{
-    font-size: 18px;
-    cursor:text;
-}
-.formu{
-    background: #d6d2c4;
-    margin-top: 8%;
-    margin-left: 25%;
-    text-align: center;
-    font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #150485;
-    border: 2px solid black;
-    width: 50%;
-    max-height: -150%;
-    padding-block: 5%;
-    text-align: center;
-    
-}
-.ti-docu{
-    height: 25%;
-    text-align: center;
-    padding: 3%;
-    border: 2px solid black;
-    text-transform: uppercase;
-}
-.env-doc{
-    font-weight: bold;
-    border: 2px solid black;
-    padding: 5%;
-    cursor: pointer;
-}
-.modal-close{
-    transform: translateY(-900%);
-}
-.cerrar{
-    position: absolute;
-    right: 2%;
-    width: 11%;
-    height: 12%;
-    top: 2%;
-}
-/*Ventana modal para registro de usuarios nuevos*/
-.ventana-modal1{
-    opacity: 0; 
-    visibility: hidden;
-    width: 100%;
-    height: 150%;
-    background-color: rgba(0,0,0,0.5);
-    position: fixed;
-    top: -2%;
-    right: 20%;
-    left: 0%;
-    bottom: 25%;
-    margin: -12% auto 0 auto;
-    padding:3vw 5px ;
-    z-index: 2000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-}
-.modal1{
-    margin-top: 4%;
-    margin-left: 15%;
-    width: 35%;
-    height: 40%;
-    background: #fff;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    position: relative;
-    transition: transform 1s;
-    transform: translateY(0%);
-}
-#reg-user{
-    margin-top: -10%;
-    font-size: 25px;
-    text-transform: uppercase;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-}
-.dig-user{
-    font-size: 18px;
-    cursor:text;
-}
-.formul{
-    background: #d6d2c4;
-    margin-top: 8%;
-    margin-left: 25%;
-    text-align: center;
-    font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #150485;
-    border: 2px solid black;
-    width: 50%;
-    max-height: -150%;
-    padding-block: 5%;
-    text-align: center;
-    
-}
-.ti-user{
-    height: 25%;
-    text-align: center;
-    padding: 3%;
-    border: 2px solid black;
-    text-transform: uppercase;
-}
-.env-user{
-    font-weight: bold;
-    border: 2px solid black;
-    padding: 5%;
-    cursor: pointer;
-}
-.modal-close1{
-    transform: translateY(-900%);
-}
-.cerrar1{
-    position: absolute;
-    right: 2%;
-    width: 11%;
-    height: 12%;
-    top: 2%;
 }
