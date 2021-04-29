@@ -1,0 +1,57 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+.general{
+    height: 665px;
+    background-color: aquamarine;
+}
+.uno{
+    height: 50%;
+    background-color: rgb(35, 130, 118);
+    position: relative;
+}
+.dos{
+    height: 50%;
+    background-color: gainsboro;
+}
+.infor{
+    position: absolute;
+    background-color: transparent;
+    width: 100%;
+    z-index: 1;
+    margin-top: -52%;
+    height: 650px;
+    text-align: center;
+}
+
+.tet{
+    margin-left: 15%;
+    width: 70%;
+    color: white;
+    margin-top: 6%;
+}
+.log{
+    background-color: white;
+    height: 70%;
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 2%;
+    border-radius: 10px;
+}
+.log img{
+    width: 30%;
+    height: 30%;
+}
+
+input{
+    width: 70%;
+    height: 30px;
+    margin-top: 4%;
+    border-color: 1px black;
+}
+.seleccionTipo{
+    width: 70%;
+    height: 30px;
+    margin-top: 4%;   
+}
