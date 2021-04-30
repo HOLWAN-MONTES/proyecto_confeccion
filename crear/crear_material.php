@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('../../includes/conection.php');
+include('../includes/conection.php');
 
 $usario = $_SESSION["DOCUMENTO"];
 if ($usario == "" || $usario == null) {
