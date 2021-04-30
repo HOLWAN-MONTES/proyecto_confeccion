@@ -1,26 +1,19 @@
 
-/* $(".submenu").click(function(){
-    $(this).children("ul").slideToggle();
-})
 
-
-$("ul").click(function(a){
-    a.stopPropagation();
-})
- */
 
 const btnmenu = document.getElementById('btn')
 const nav = document.getElementById('nav')
 const title = document.getElementById('title')
 
-/* const subm = document.getElementById('subm')
-const id = document.getElementById('mos')
+const btnC = document.getElementById('Pmostrar')
+const btnCo = document.getElementById('mostrar')
 
-subm.addEventListener('click',function(){
-   // id.classList.toggle('mos'); 
-    id.style.display = 'block'
+btnC.addEventListener('click',function(){
+    btnCo.classList.toggle('ul_users-active')
+})
 
-}) */
+
+
 
 
 btnmenu.addEventListener('click',function(){

@@ -1,6 +1,15 @@
 <?php
+session_start();
 include('../includes/conection.php');
+
+$usario = $_SESSION["DOCUMENTO"];
+if ($usario == "" || $usario == null) {
+    header("location: ../../index.html");
+}
+
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,18 +36,18 @@ include('../includes/conection.php');
 
                 <div class="content_us">
                     <div class="welcome_name">
-                        <span class="nam">JOSE ALFREDO</span>
+                    <span class="nam"><?php echo $_SESSION['NOMBRE'];?></span>
                         
                     </div>
-                    <div class="icon">
-                        <i class="opc fas fa-angle-down"></i>
+                    <div class="icon" >
+                        <i class="opc fas fa-angle-down" id="Pmostrar"></i>
 
-                        <ul class="ul_users">
-                            <div class="a">
+                        <ul class="ul_users" id="mostrar">
+                           <!--  <div class="a">
                                 <li><a href="#">ACTUALIZAR PERFIL</a></li>
-                            </div>
+                            </div> -->
                             <div class="a">
-                                <li><a href="#"> CERRAR SESION</a></li>
+                                <li><a href="../includes/cerrar.php"> CERRAR SESION</a></li>
                             </div>
 
                         </ul>
@@ -56,8 +65,8 @@ include('../includes/conection.php');
     <main>
         <nav class="nav" id="nav">
             
-            <div class="title_intruc">
-                <h5 class="title_int">ADMINISTRADOR</h5>
+        <div class="title_intruc">
+                <h5 class="title_int"><a class="title_int" href="../users/administrador/admin.php">ADMINISTRADOR</a> </h5>
             </div>
             <div class="img_logo">
                 <img class="img_logo" src="../img/logo_costura.png" alt="">
@@ -68,24 +77,33 @@ include('../includes/conection.php');
 
            
                 <ul>
+
+                    <li class="suba submenu" id="subm"><a href="">ADMIN. USUARIOS<span><i class="opc fas fa-angle-down"></i></span></a>
+                        <ul  class="mos">
+                            <li><a href="../users/administrador/registro_users.php">Registro De Usuarios</a></li>
+                            <li><a href="../users/administrador/editar_users.php">Editar Usuario</a></li>
+                            <li><a href="../users/administrador/eliminar_users.php">Eliminar Usuario</a></li>
+                        </ul>
+                    </li>
                   
                     <li class="submenu"><a href="">REGISTRO<span><i class="opc fas fa-angle-down"></i></span></a>
                         <ul>
-                            <li><a href="../../crear/crear_insumo.php">Crear insumos</a></li>
-                            <li><a href="../../crear/crear_maquinaria.php">Crear maquinaria</a></li>
-                            <li><a href="../../crear/crear_material.php">Crear material textil</a></li>
+                            <li><a href="crear_insumo.php">Crear insumos</a></li>
+                            <li><a href="crear_maquinaria.php">Crear maquinaria</a></li>
+                            <li><a href="crear_material.php">Crear material textil</a></li>
                         </ul>
 
                     </li>
                     <li class="submenu"><a href="">INVENTARIO<span><i class="opc fas fa-angle-down"></i></span></a>
-                        <ul>
-                            <li><a href="#">sub Item 1</a></li>
+                        <ul class="mos">
+                            <li><a class="mos" id="mos" href="#">sub Item 1</a></li>
                             <li><a href="#">sub Item 2</a></li>
                             <li><a href="#">sub Item 3</a></li>
                             <li><a href="#">sub Item 4</a></li>
                         </ul>
 
                     </li>
+                    
                     <li><a href="">AUTORIZACIONES </a></li>
                     <li><a href="">REPORTES</a></li>
                     <div class="logo_institu">
