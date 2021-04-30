@@ -45,11 +45,11 @@ require '../../includes/conection.php';
     </header>
     <main>
         <nav class="nav" id="nav">
-            <div class="title_intruc">
-                <h5 class="title_int">INSTRUCTOR</h5>
+        <div class="title_intruc">
+                <h5 class="title_int"><a class="title_int" href="admin.php">ADMINISTRADOR</a> </h5>
             </div>
             <div class="img_logo">
-                <img class="img_logo" src="../img/logo_costura.png" alt="">
+                <img class="img_logo" src="../../img/COSTUD.png" alt="">
             </div>
            <div class="menu">
                 <ul>

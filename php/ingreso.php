@@ -20,7 +20,7 @@ if ($documento != "" and $clave != "" and $tipo != ""){
         $_SESSION['CORREO']= $dato_SQL['CORREO'];
         $_SESSION['TELEFONO']= $dato_SQL['TELEFONO'];
 
-        header("location: ../users/administrador/admin.html");
+        header("location: ../users/administrador/admin.php");
 
     }else {
         echo("<script>alert('DATOS INCORRECTOS')</script>");

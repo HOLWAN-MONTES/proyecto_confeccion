@@ -56,8 +56,8 @@ include('../includes/conection.php');
     <main>
         <nav class="nav" id="nav">
             
-            <div class="title_intruc">
-                <h5 class="title_int">ADMINISTRADOR</h5>
+        <div class="title_intruc">
+                <h5 class="title_int"><a class="title_int" href="../users/administrador/admin.php">ADMINISTRADOR</a> </h5>
             </div>
             <div class="img_logo">
                 <img class="img_logo" src="../img/logo_costura.png" alt="">

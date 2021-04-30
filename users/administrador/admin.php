@@ -1,3 +1,13 @@
+<?php
+session_start();
+$usario = $_SESSION["documento"];
+if ($usario == "" || $usario == null) {
+    header("location: ../index.php");
+}
+require_once('../php/connecion.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,7 +45,7 @@
                                 <li><a href="#">ACTUALIZAR PERFIL</a></li>
                             </div>
                             <div class="a">
-                                <li><a href="#"> CERRAR SESION</a></li>
+                                <li><a href="../../includes/cerrar.php"> CERRAR SESION</a></li>
                             </div>
 
                         </ul>
@@ -50,7 +60,7 @@
         <nav class="nav" id="nav">
 
             <div class="title_intruc">
-                <h5 class="title_int"><a class="title_int" href="">ADMINISTRADOR</a> </h5>
+                <h5 class="title_int"><a class="title_int" href="admin.php">ADMINISTRADOR</a> </h5>
             </div>
             <div class="img_logo">
                 <img class="img_logo" src="../../img/COSTUD.png" alt="">
