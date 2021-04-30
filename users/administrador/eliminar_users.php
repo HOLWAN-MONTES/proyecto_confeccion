@@ -49,7 +49,7 @@ require '../../includes/conection.php';
                 <h5 class="title_int">INSTRUCTOR</h5>
             </div>
             <div class="img_logo">
-                <img class="img_logo" src="../img/lafea.jpg" alt="">
+                <img class="img_logo" src="../img/logo_costura.png" alt="">
             </div>
            <div class="menu">
                 <ul>
@@ -62,18 +62,19 @@ require '../../includes/conection.php';
                     </li>
                     <li class="suba submenu" id="subm"><a href="">REGISTRO<span><i class="opc fas fa-angle-down"></i></span></a>
                         <ul  class="mos">
-                            <li><a href="../../crear_insumo.php">Crear insumos</a></li>
-                            <li><a href="../../crear_maquinaria.php">Crear maquinaria</a></li>
-                            <li><a href="../../crear_material.php">Crear material textil</a></li>
+                            <li><a href="../../crear/crear_insumo.php">Crear insumos</a></li>
+                            <li><a href="../../crear/crear_maquinaria.php">Crear maquinaria</a></li>
+                            <li><a href="../../crear/crear_material.php">Crear material textil</a></li>
                         </ul>
                     </li>
                     <li class="submenu"><a href="">INVENTARIO<span><i class="opc fas fa-angle-down"></i></span></a>
-                        <ul>
-                            <li><a href="#">sub Item 1</a></li>
+                        <ul class="mos">
+                            <li><a class="mos" id="mos" href="#">sub Item 1</a></li>
                             <li><a href="#">sub Item 2</a></li>
                             <li><a href="#">sub Item 3</a></li>
                             <li><a href="#">sub Item 4</a></li>
                         </ul>
+
                     </li>
                     <li><a href="">AUTORIZACIONES </a></li>
                     <li><a href="">REPORTES</a></li>
