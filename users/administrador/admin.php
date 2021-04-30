@@ -9,11 +9,6 @@ if ($usario == "" || $usario == null) {
 
 
 ?>
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,9 +41,9 @@ if ($usario == "" || $usario == null) {
                         <i class="opc fas fa-angle-down"></i>
 
                         <ul class="ul_users">
-                            <div class="a">
+                           <!--  <div class="a">
                                 <li><a href="#">ACTUALIZAR PERFIL</a></li>
-                            </div>
+                            </div> -->
                             <div class="a">
                                 <li><a href="../../includes/cerrar.php"> CERRAR SESION</a></li>
                             </div>
