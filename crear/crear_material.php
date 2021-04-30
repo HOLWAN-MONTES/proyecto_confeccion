@@ -1,6 +1,15 @@
 <?php
-include('../includes/conection.php');
+session_start();
+include('../../includes/conection.php');
+
+$usario = $_SESSION["DOCUMENTO"];
+if ($usario == "" || $usario == null) {
+    header("location: ../../index.html");
+}
+
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +36,7 @@ include('../includes/conection.php');
 
                 <div class="content_us">
                     <div class="welcome_name">
-                        <span class="nam">JOSE ALFREDO</span>
+                    <span class="nam"><?php echo $_SESSION['NOMBRE'];?></span>
                         
                     </div>
                     <div class="icon">

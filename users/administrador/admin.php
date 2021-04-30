@@ -1,12 +1,18 @@
 <?php
 session_start();
-$usario = $_SESSION["documento"];
+include('../../includes/conection.php');
+
+$usario = $_SESSION["DOCUMENTO"];
 if ($usario == "" || $usario == null) {
-    header("location: ../index.php");
+    header("location: ../../index.html");
 }
-require_once('../php/connecion.php');
+
 
 ?>
+
+
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -31,10 +37,9 @@ require_once('../php/connecion.php');
                 <div class="content_img_user">
                     <img class="img_user" src="../../img/img_user.png" alt="">
                 </div>
-
                 <div class="content_us">
                     <div class="welcome_name">
-                        <span class="nam">JOSE ALFREDO</span>
+                        <span class="nam"><?php echo $_SESSION['NOMBRE'];?></span>
 
                     </div>
                     <div class="icon">
