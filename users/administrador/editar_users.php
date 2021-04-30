@@ -135,8 +135,8 @@ if ($usario == "" || $usario == null) {
         </div><br>
         
         <input type="number" name="edad" id="edad" placeholder="EDAD" autocomplete="off" required>
-        <input type="password" name="contra" id="contra" placeholder="CONTRASEÑA" autocomplete="off" required>
-        <input type="number" name="tele" id="tele" placeholder="TELEFONO" autocomplete="off" required>
+        <input type="password" name="contra" id="contra" placeholder="CONTRASEÑA" pattern="[A-Za-z0-9!?-]{2,12}" autocomplete="off" required>
+        <input type="number" name="tele" id="tele" placeholder="TELEFONO" min="1" max="3999999999" autocomplete="off" required>
         <input type="text" name="cor" id="cor" placeholder="CORREO" autocomplete="off" required>
         <input type="hidden" name="docume" id="docume">
         <input type="submit" name="actualiza" id="edi" value="EDITAR">
