@@ -164,14 +164,24 @@ header{
     transition: all 0.9s;
 }
 
+
+.title_int{
+    text-decoration: none;
+    color: white;
+}
+
+
 .title_intruc{
-    font-size: 40px;
-    padding-top: 30px;    
+    font-size: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;   
     width: 100%;
     color: white;
-    height: 16vh;
+    height: 13vh auto;
     background: var(--coloresgenerales1);
     text-align: center;
+    text-decoration: none;
+
 }
 
 .img_logo{
