@@ -125,7 +125,8 @@ if ($usario == "" || $usario == null) {
                 <input type="text" class="nom_material" name="nom_material" id="nom_material" placeholder="Nombre material" required>
                 <br>
                 <label class="t_tela" for="tela">TIPO DE TELA</label>
-                <select class="tela" id="tipo_tela" name="tipo_tela">           
+                <select class="tela" id="tipo_tela" name="tipo_tela"> 
+                    <option value="0">SELECCIONAR</option>          
                     <?php
                         $sql="SELECT * FROM tipo_tela";
                         $query=mysqli_query($conexion,$sql);
@@ -141,7 +142,8 @@ if ($usario == "" || $usario == null) {
                 <a class="d_tela" href="#">CREAR TIPO TELA</a>
                 <br>
                 <label class="t_marca" for="marca">MARCA</label>
-                <select class="marca" id="marca" name="marca">           
+                <select class="marca" id="marca" name="marca">
+                    <option value="0">SELECCIONAR</option>           
                     <?php
                         $sql="SELECT * FROM marca";
                         $query=mysqli_query($conexion,$sql);
@@ -157,7 +159,8 @@ if ($usario == "" || $usario == null) {
                 <a class="d_marca" href="#">CREAR MARCA</a>
                 <br>
                 <label class="t_color" for="color">COLOR</label>
-                <select class="color" id="color" name="color">           
+                <select class="color" id="color" name="color">
+                    <option value="0">SELECCIONAR</option>           
                     <?php
                         $sql="SELECT * FROM color";
                         $query=mysqli_query($conexion,$sql);
