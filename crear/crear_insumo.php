@@ -87,7 +87,7 @@ if ($usario == "" || $usario == null) {
                   
                     <li class="submenu"><a href="">REGISTRO<span><i class="opc fas fa-angle-down"></i></span></a>
                         <ul>
-                        <li><a href="crear_insumo.php">Crear insumos</a></li>
+                            <li><a href="crear_insumo.php">Crear insumos</a></li>
                             <li><a href="crear_maquinaria.php">Crear maquinaria</a></li>
                             <li><a href="crear_material.php">Crear material textil</a></li>
                         </ul>
@@ -133,7 +133,7 @@ if ($usario == "" || $usario == null) {
                         ?>
                 </select>
                 <br>
-                <a href="cre_tip_ins.php">Crear tipo de insumo</a>
+                <a href="" class="crear-insumo">Crear tipo de insumo</a>
                 <br>
 
                 <label class="t_insu" for="">NOMBRE DEL INSUMO</label>
@@ -179,7 +179,21 @@ if ($usario == "" || $usario == null) {
             </form>
         </div>    
     </div>
-
+    <div class="ven2">
+            <div class="ventana-modal2" id="ventana-modal2">
+                <div class="modal2 modal-close2">
+                    <a href=""><img class="cerrar2" src="../../img/cerrar.png" alt="Cerrar"></a>
+                    <div class="modal-text" id="modal-text">
+                        <h2 class="reg-user" id="reg-user">Agregar tip. insumo</h2>
+                        <form class="formul" action="../../php/cre_tip_insum.php" method="POST">
+                            <label class="dig-user" for="">Digite Tipo Insumo</label><br><br>
+                            <input type="text" class="ti-user" name="tipo-insumo" placeholder="TIPO INSUMO" autocomplete="off" required><br><br>
+                            <input type="submit" name="env-insumo" class="env-user" value="AGREGAR">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
     

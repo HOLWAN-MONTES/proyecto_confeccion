@@ -420,3 +420,86 @@ form a{
     background: #DC540C;
     box-shadow:20px 10px  20px rgba(226, 87, 6, 0.5);   
 }
+/*Ventana modal para registro de usuarios nuevos*/
+.ventana-modal2{
+    opacity: 0; 
+    visibility: hidden;
+    width: 100%;
+    height: 150%;
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    top: -2%;
+    right: 20%;
+    left: 0%;
+    bottom: 25%;
+    margin: -12% auto 0 auto;
+    padding:3vw 5px ;
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.modal2{
+    margin-top: 4%;
+    margin-left: 15%;
+    width: 35%;
+    height: 40%;
+    background: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+    transition: transform 1s;
+    transform: translateY(0%);
+}
+#reg-user{
+    margin-top: -10%;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.dig-user{
+    font-size: 18px;
+    cursor:text;
+}
+.formul{
+    background: #d6d2c4;
+    margin-top: 8%;
+    margin-left: 25%;
+    text-align: center;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #150485;
+    border: 2px solid black;
+    width: 50%;
+    max-height: -150%;
+    padding-block: 5%;
+    text-align: center;
+    
+}
+.ti-user{
+    height: 25%;
+    text-align: center;
+    padding: 3%;
+    border: 2px solid black;
+    text-transform: uppercase;
+}
+.env-user{
+    font-weight: bold;
+    border: 2px solid black;
+    padding: 5%;
+    cursor: pointer;
+}
+.modal-close2{
+    transform: translateY(-900%);
+}
+.cerrar2{
+    position: absolute;
+    right: 2%;
+    width: 11%;
+    height: 12%;
+    top: 2%;
+}
