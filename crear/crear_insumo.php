@@ -58,7 +58,7 @@ include('../includes/conection.php');
         <nav class="nav" id="nav">
             
             <div class="title_intruc">
-                <h5 class="title_int">INSTRUCTOR</h5>
+                <h5 class="title_int">ADMINISTRADOR</h5>
             </div>
             <div class="img_logo">
                 <img class="img_logo" src="../img/logo_costura.png" alt="">
@@ -69,25 +69,33 @@ include('../includes/conection.php');
 
            
                 <ul>
+                    <li class="suba submenu" id="subm"><a href="">ADMIN. USUARIOS<span><i class="opc fas fa-angle-down"></i></span></a>
+                        <ul  class="mos">
+                            <li><a href="../users/administrador/registro_users.php">Registro De Usuarios</a></li>
+                            <li><a href="../users/administrador/editar_users.php">Editar Usuario</a></li>
+                            <li><a href="../users/administrador/eliminar_users.php">Eliminar Usuario</a></li>
+                        </ul>
+                    </li>
                   
                     <li class="submenu"><a href="">REGISTRO<span><i class="opc fas fa-angle-down"></i></span></a>
                         <ul>
-                            <li><a href="#">sub Item 1</a></li>
-                            <li><a href="#">sub Item 2</a></li>
-                            <li><a href="#">sub Item 3</a></li>
-                            <li><a href="#">sub Item 4</a></li>
+                        <li><a href="crear_insumo.php">Crear insumos</a></li>
+                            <li><a href="crear_maquinaria.php">Crear maquinaria</a></li>
+                            <li><a href="crear_material.php">Crear material textil</a></li>
                         </ul>
 
                     </li>
+
                     <li class="submenu"><a href="">INVENTARIO<span><i class="opc fas fa-angle-down"></i></span></a>
-                        <ul>
-                            <li><a href="#">sub Item 1</a></li>
+                        <ul class="mos">
+                            <li><a class="mos" id="mos" href="#">sub Item 1</a></li>
                             <li><a href="#">sub Item 2</a></li>
                             <li><a href="#">sub Item 3</a></li>
                             <li><a href="#">sub Item 4</a></li>
                         </ul>
 
                     </li>
+                    
                     <li><a href="">AUTORIZACIONES </a></li>
                     <li><a href="">REPORTES</a></li>
                     <div class="logo_institu">

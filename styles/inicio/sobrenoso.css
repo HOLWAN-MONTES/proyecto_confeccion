@@ -1,0 +1,12 @@
+.sobrenoso{
+    background-color: aqua;
+    visibility: hidden;
+    margin-top: -45%;
+}
+.textprinci{
+    background-color: red;
+    text-align: center;
+}
+.info1{
+    display: flex;
+}
