@@ -28,7 +28,7 @@ require_once('includes/conection.php');
         <h1 class="tet">S.I PARA LA ENTRADA, SALIDA Y ALMACENAMIENTO DE MATERIAL TEXTIL</h1>
         <div class="log">
             <h2>INICIO DE SESION</h2>
-            <img src="img/login.png" alt="">
+            <img src="img/COSTUD.png" alt="">
             <form method="post" id="form" action="php/ingreso.php" autocomplete="off">
                     <input type="number" name="docuaprendiz" id="usuario" placeholder="DOCUMENTO" maxlength="12"  style="text-transform:uppercase">
                  
