@@ -135,10 +135,10 @@ if ($usario == "" || $usario == null) {
                 <a class="crear-doc" href="">CREAR TIPO DE DOCUMENTO</a>
             </div><br>
             
-            <input type="number" name="edad" id="edad" placeholder="EDAD" autocomplete="off" required>
-            <input type="password" name="contra" id="contra" placeholder="CONTRASEÑA" autocomplete="off" required>&nbsp;&nbsp;&nbsp;
-            <input type="number" name="tele" id="tele" placeholder="TELEFONO" autocomplete="off" required>
-            <input type="email" name="cor" id="cor" placeholder="CORREO" autocomplete="off" required><br>
+            <input type="number" name="edad" id="edad" placeholder="EDAD" autocomplete="off" min="1" max="100" required>
+            <input type="password" name="contra" id="contra" placeholder="CONTRASEÑA" autocomplete="off" pattern="[A-Za-z0-9!?-]{2,12}" required>&nbsp;&nbsp;&nbsp;
+            <input type="number" name="tele" id="tele" placeholder="TELEFONO" autocomplete="off" min="1" max="3999999999" required>
+            <input type="email" name="cor" id="cor" placeholder="CORREO" autocomplete="off" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required><br>
             <input type="submit" name="registro" id="reg" value="REGISTRAR">
         </form>
         <div class="ven1">
@@ -172,6 +172,5 @@ if ($usario == "" || $usario == null) {
             </div>
         </div>
     <script src="../../js/main.js"></script>
-    <!-- <script src="../../js/registro_users.js"></script> -->
 </body>
 </html>
