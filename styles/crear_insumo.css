@@ -420,3 +420,51 @@ form a{
     background: #DC540C;
     box-shadow:20px 10px  20px rgba(226, 87, 6, 0.5);   
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------------------------crear marca del insumo------------------------ */
+.crear_marca_insumo{
+    background-color: #228b2250;
+    z-index: 4;
+    width: 100%;
+    height: 102vh;
+    margin-top: -10%;
+    position: absolute;
+    display: none;
+}
+
+.content_form{
+    background-color: #1ddc0c;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 5%;
+}
+
+#cerrar_ventana i{
+    font-size: 40px;
+    cursor: pointer;
+    color: red;
+
+}
+
+#cerrar_ventana {
+    float: right;
+}

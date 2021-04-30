@@ -9,3 +9,6 @@ boton_Sobre.addEventListener('click', (e)=>{
     sobre_noso.style.visibility="visible"; 
     princi.style.visibility="hidden" ;
 })
+
+
+
