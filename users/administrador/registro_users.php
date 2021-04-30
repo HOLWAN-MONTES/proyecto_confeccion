@@ -138,7 +138,7 @@ if ($usario == "" || $usario == null) {
             <input type="number" name="edad" id="edad" placeholder="EDAD" autocomplete="off" required>
             <input type="password" name="contra" id="contra" placeholder="CONTRASEÑA" autocomplete="off" required>&nbsp;&nbsp;&nbsp;
             <input type="number" name="tele" id="tele" placeholder="TELEFONO" autocomplete="off" required>
-            <input type="text" name="cor" id="cor" placeholder="CORREO" autocomplete="off" required><br>
+            <input type="email" name="cor" id="cor" placeholder="CORREO" autocomplete="off" required><br>
             <input type="submit" name="registro" id="reg" value="REGISTRAR">
         </form>
         <div class="ven1">
