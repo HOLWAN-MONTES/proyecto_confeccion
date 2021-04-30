@@ -16,6 +16,11 @@ btnC.addEventListener('click',function(){
 
 
 
+
+
+
+
+
 btnmenu.addEventListener('click',function(){
     nav.classList.toggle('mostrar')
     title.classList.toggle('title-active')

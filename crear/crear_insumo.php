@@ -153,9 +153,9 @@ if ($usario == "" || $usario == null) {
                         ?>
                 </select>
                 <br>
-                <a href="cre_marc_ins.php" class="d_marca">Crear marca del insumo</a>
+                <a id="btn_salirmarca" class="d_marca">Crear marca del insumo</a>
                 <br>
-
+                
                 <label class="t_color" for="">COLOR DEL INSUMO</label>
                 <select class="color" id="color" name="color" required>
                         <?php
@@ -179,7 +179,16 @@ if ($usario == "" || $usario == null) {
             </form>
         </div>    
     </div>
-
+                    <!-- ventanitas que van a salir  -->
+    <div class="crear_marca_insumo" id="crear_marca_insumo">
+        <div class="content_form">
+            <div id="cerrar_ventana"><i class="fas fa-times-circle"></i></div>
+            <h3>HOLA AMIGOS </h3>
+            <form action="">
+                <input type="button" value="aaa">
+            </form>
+        </div>
+    </div>
 
 
     
@@ -188,6 +197,6 @@ if ($usario == "" || $usario == null) {
 
     
 <script src="../js/main.js"></script>
-    
+<script src="../js/crear_insumos.js"></script>
 </body>
 </html>
