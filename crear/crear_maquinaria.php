@@ -136,7 +136,7 @@ if ($usario == "" || $usario == null) {
                     ?>
                 </select>
                 <br>
-                <a href="#">CREAR TIPO DE MAQUINARIA</a>
+                <a id="btn_salirmaquinaria" href="#">CREAR TIPO DE MAQUINARIA</a>
                 <br>
                 <label for="marca">MARCA</label>
                 <select id="marca" name="marca" required>           
@@ -153,7 +153,7 @@ if ($usario == "" || $usario == null) {
                     ?>
                 </select>
                 <br>
-                <a href="#">CREAR MARCA</a>
+                <a id="btn_salirmarca" href="#">CREAR MARCA</a>
                 <br>
                 <label for="">COLOR DE MAQUINARIA</label>
                 <select id="color" name="color">
@@ -177,8 +177,32 @@ if ($usario == "" || $usario == null) {
             </form>
         </div>
     </div>
+
+    <div class="crear_maquinaria" id="crear_maquinaria">
+        <div class="content_formMaquinaria">
+            <div id="cerrar_ventanaMaquinaria"><i class="fas fa-times-circle"></i></div>
+            <h2 class="titulo_maquinaria">Agregar Tip. Maquinaria</h2>
+            <form action="../php/regis_tip_maqui.php" class="formularioMaquinaria" method="POST" autocomplete="off">
+                <input type="text" class="ti_maquinaria" name="agre_maquinaria" id="agre_maquinaria" placeholder="Tipo de maquinaria" required>
+                <input type="submit" class="env-maquinaria" name="env-maquinaria" value="AGREGAR">
+            </form>
+        </div>
+    </div>
+
+    <div class="crear_marca" id="crear_marca">
+        <div class="content_formMarca">
+            <div id="cerrar_ventanaMarca"><i class="fas fa-times-circle"></i></div>
+            <h2 class="titulo_marca">Agregar Marca</h2>
+            <form action="../php/regis_marca_maqui.php" class="formularioMarca" method="POST" autocomplete="off">
+                <input type="text" class="ti_marca" name="agre_marca" id="agre_marca" placeholder="Digite la marca" required>
+                <input type="submit" class="env-marca" name="env-marca" value="AGREGAR">
+            </form>
+        </div>
+    </div>
+
     
     <script src="../js/main.js"></script>
+    <script src="../js/maquinaria.js"></script>
     
 </body>
 </html>
