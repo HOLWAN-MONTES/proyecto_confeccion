@@ -37,10 +37,10 @@ if ($usario == "" || $usario == null) {
                         <span class="nam"><?php echo $_SESSION['NOMBRE'];?></span>
 
                     </div>
-                    <div class="icon">
-                        <i class="opc fas fa-angle-down"></i>
+                    <div class="icon" >
+                        <i class="opc fas fa-angle-down" id="Pmostrar"></i>
 
-                        <ul class="ul_users">
+                        <ul class="ul_users" id="mostrar">
                            <!--  <div class="a">
                                 <li><a href="#">ACTUALIZAR PERFIL</a></li>
                             </div> -->
