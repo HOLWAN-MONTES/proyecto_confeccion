@@ -123,6 +123,7 @@ if ($usario == "" || $usario == null) {
                 <br>
                 <label for="">TIPO DE MAQUINARIA</label>
                 <select id="tipo_maqui" name="tipo_maqui" required>           
+                    <option value="0">SELECCIONAR</option>
                     <?php
                         $sql="SELECT * FROM tipo_maquinaria";
                         $query=mysqli_query($conexion,$sql);
@@ -139,6 +140,7 @@ if ($usario == "" || $usario == null) {
                 <br>
                 <label for="marca">MARCA</label>
                 <select id="marca" name="marca" required>           
+                    <option value="0">SELECCIONAR</option>
                     <?php
                         $sql="SELECT * FROM marca";
                         $query=mysqli_query($conexion,$sql);
@@ -155,16 +157,17 @@ if ($usario == "" || $usario == null) {
                 <br>
                 <label for="">COLOR DE MAQUINARIA</label>
                 <select id="color" name="color">
-                        <?php
-                            $sql="SELECT*FROM color";
-                            $query=mysqli_query($conexion,$sql);
-                            while($row=mysqli_fetch_array($query)){
-                        ?>
-                            <option value="<?php echo $row['ID_COLOR']?>"> <?php echo $row['NOM_COLOR']?></option> 
+                    <option value="0">SELECCIONAR</option>   
+                    <?php
+                        $sql="SELECT*FROM color";
+                        $query=mysqli_query($conexion,$sql);
+                        while($row=mysqli_fetch_array($query)){
+                    ?>
+                        <option value="<?php echo $row['ID_COLOR']?>"> <?php echo $row['NOM_COLOR']?></option> 
 
-                        <?php
-                        }
-                        ?>
+                    <?php
+                    }
+                    ?>
                 </select>
                 <a href="cre_color_ins.php">CREAR COLOR DE MAQUINARIA</a>
                 <br>
