@@ -100,8 +100,8 @@ if ($usario == "" || $usario == null) {
     </div>
         <form class="form" action="../../php/crear.php" method="POST">
             <input type="number" name="docu" id="docu" placeholder="DOCUMENTO" autocomplete="off" required> &nbsp;&nbsp;&nbsp;
-            <input type="text" name="nom" id="nom" placeholder="NOMBRE" autocomplete="off" required>&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="text" name="apel" id="apel" placeholder="APELLIDO" autocomplete="off" required> <br><br>
+            <input type="text" name="nom" id="nom" placeholder="NOMBRE" autocomplete="off" required style="text-transform:uppercase">&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" name="apel" id="apel" placeholder="APELLIDO" autocomplete="off" required style="text-transform:uppercase"> <br><br>
             <div class="user">
                 <label id="tex-use" for="">TIPO DE USUARIO</label><br>
                 <select name="tip_us" class="tip_usu" id="tip_usu" autocomplete="off" required>
@@ -111,7 +111,7 @@ if ($usario == "" || $usario == null) {
                         $inser = mysqli_query($conexion,$tipo);
                         while($tip = mysqli_fetch_array($inser)){
                     ?>
-                    <option name="tip_user" value="<?php echo $tip[0]; ?>"><?php echo $tip[1]; ?></option>
+                    <option name="tip_user" value="<?php echo $tip[0]; ?>" style="text-transform:uppercase"><?php echo $tip[1]; ?></option>
                     <?php
                     }
                     ?>
@@ -127,7 +127,7 @@ if ($usario == "" || $usario == null) {
                         $inser2 = mysqli_query($conexion,$tipo2);
                         while($tip2 = mysqli_fetch_array($inser2)){
                     ?>
-                    <option name="tip_user" value="<?php echo $tip2[0]; ?>"><?php echo $tip2[1]; ?></option>
+                    <option name="tip_user" value="<?php echo $tip2[0]; ?>" style="text-transform:uppercase"><?php echo $tip2[1]; ?></option>
                     <?php
                     }
                     ?>
