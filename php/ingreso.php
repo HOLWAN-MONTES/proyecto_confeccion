@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once('../includes/conection.php');
 
 $documento = $_POST["docuaprendiz"];
@@ -12,7 +13,8 @@ if ($documento != "" and $clave != "" and $tipo != ""){
     $dato_SQL = mysqli_fetch_assoc($consulta);
 
     if ($dato_SQL){
-
+        $_SESSION['DOCUMENTO'] = $dato_SQL['DOCUMENTO'];
+        echo 'AAAAAAAAAAAAAAAAA       '.$_SESSION['DOCUMENTO'];
         $_SESSION['TIPO_USUARIO']= $dato_SQL['ID_TIP_USU'];
         $_SESSION['NOMBRE']= $dato_SQL['NOMBRE'];
         $_SESSION['APELLIDO']= $dato_SQL['APELLIDO'];
@@ -20,13 +22,14 @@ if ($documento != "" and $clave != "" and $tipo != ""){
         $_SESSION['CORREO']= $dato_SQL['CORREO'];
         $_SESSION['TELEFONO']= $dato_SQL['TELEFONO'];
 
-        header("location: ../users/administrador/admin.html");
+        header("location: ../users/administrador/admin.php");
 
     }else {
         echo("<script>alert('DATOS INCORRECTOS')</script>");
         header("location: ../login.php");
     }
 
+    
 }else {
     echo("<script>alert('DATOS VACIOS')</script>");
     header("location: ../login.php");

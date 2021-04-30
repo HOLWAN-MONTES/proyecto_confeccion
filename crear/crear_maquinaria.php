@@ -1,5 +1,13 @@
 <?php
+session_start();
 include('../includes/conection.php');
+
+$usario = $_SESSION["DOCUMENTO"];
+if ($usario == "" || $usario == null) {
+    header("location: ../../index.html");
+}
+
+
 ?>
 
 <!DOCTYPE html>
@@ -28,18 +36,18 @@ include('../includes/conection.php');
 
                 <div class="content_us">
                     <div class="welcome_name">
-                        <span class="nam">JOSE ALFREDO</span>
+                    <span class="nam"><?php echo $_SESSION['NOMBRE'];?></span>
                         
                     </div>
-                    <div class="icon">
-                        <i class="opc fas fa-angle-down"></i>
+                    <div class="icon" >
+                        <i class="opc fas fa-angle-down" id="Pmostrar"></i>
 
-                        <ul class="ul_users">
-                            <div class="a">
+                        <ul class="ul_users" id="mostrar">
+                           <!--  <div class="a">
                                 <li><a href="#">ACTUALIZAR PERFIL</a></li>
-                            </div>
+                            </div> -->
                             <div class="a">
-                                <li><a href="#"> CERRAR SESION</a></li>
+                                <li><a href="../includes/cerrar.php"> CERRAR SESION</a></li>
                             </div>
 
                         </ul>
@@ -57,8 +65,8 @@ include('../includes/conection.php');
     <main>
         <nav class="nav" id="nav">
             
-            <div class="title_intruc">
-                <h5 class="title_int">ADMINISTRADOR</h5>
+        <div class="title_intruc">
+                <h5 class="title_int"><a class="title_int" href="../users/administrador/admin.php"styles="text-decoration:none;">ADMINISTRADOR</a> </h5>
             </div>
             <div class="img_logo">
                 <img class="img_logo" src="../img/logo_costura.png" alt="">
