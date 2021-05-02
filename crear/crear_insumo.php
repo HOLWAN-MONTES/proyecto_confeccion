@@ -202,6 +202,5 @@ if ($usario == "" || $usario == null) {
 
     
 <script src="../js/main.js"></script>
-    
 </body>
 </html>

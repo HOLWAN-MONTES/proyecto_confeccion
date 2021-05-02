@@ -83,36 +83,6 @@ window.addEventListener("click", function (e) {
         }, 250)
     }
 })
-//ventana modal del crear_insumos para el registro de un nuevo documento
-let cerrar = document.querySelectorAll(".cerrar2")[0];
-let abrir = document.querySelectorAll(".crear-insumo")[0];
-let modal = document.querySelectorAll(".modal2")[0];
-let modalC = document.querySelectorAll(".ventana-modal2")[0];
-
-abrir.addEventListener("click", function (e) {
-    e.preventDefault();
-    modalC.style.opacity = "1";
-    modalC.style.visibility = "visible";
-    modal.classList.toggle("modal-close2");
-});
-cerrar.addEventListener("click", function () {
-    modal.classList.toggle("modal-close2");
-    setTimeout(function () {
-        modalC.style.opacity = "0";
-        modalC.style.visibility = "hidden";
-    }, 850)
-})
-window.addEventListener("click", function (e) {
-    console.log(e.target)
-    if (e.target == modalC) {
-        modal.classList.toggle("modal-close2");
-        setTimeout(function () {
-            modalC.style.opacity = "0";
-            modalC.style.visibility = "hidden";
-            alert("Digite Su Opcion Correctamente");
-        }, 250)
-    }
-})
 
 
 
