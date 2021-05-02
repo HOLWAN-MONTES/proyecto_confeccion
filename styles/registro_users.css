@@ -69,8 +69,25 @@ input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
-    }
+}
 input[type=number] { -moz-appearance:textfield; }
+
+#edad:valid {
+    background-color: #91c788;
+}
+#edad:out-of-range {
+    background-color: #fd5e53;
+}
+#tele:valid {
+    background-color: #91c788;
+}
+#tele:out-of-range {
+    background-color: #fd5e53;
+}
+#contra:valid {
+    background-color: #91c788;
+} 
+
 .ul_users{
     position: absolute;
     border-radius: 11px;
