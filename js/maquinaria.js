@@ -23,3 +23,15 @@ btn_salirmaquinaria.addEventListener('click',function(){
 cerrar_ventanaMaquinaria.addEventListener('click',function(){
     crear_maquinaria.style.display = "none";
 });
+//ventana de registrar el color de la maquinaria
+const btn_salircolor = document.getElementById('btn_salircolor');
+const crear_color = document.getElementById('crear_color');
+const cerrar_ventanaColor = document.getElementById('cerrar_ventanaColor');
+
+btn_salircolor.addEventListener('click',function(){
+    crear_color.style.display = "block";
+});
+
+cerrar_ventanaColor.addEventListener('click',function(){
+    crear_color.style.display = "none";
+});

@@ -133,7 +133,7 @@ if ($usario == "" || $usario == null) {
                         ?>
                 </select>
                 <br>
-                <a href="" class="crear-insumo">Crear tipo de insumo</a>
+                <a id="btn_salirinsu" class="d_insu" href="#">CREAR TIPO INSUMO</a>
                 <br>
 
                 <label class="t_insu" for="">NOMBRE DEL INSUMO</label>
@@ -153,7 +153,7 @@ if ($usario == "" || $usario == null) {
                         ?>
                 </select>
                 <br>
-                <a href="cre_marc_ins.php" class="d_marca">Crear marca del insumo</a>
+                <a id="btn_salirmarca" class="d_marca" href="#">CREAR MARCA</a>
                 <br>
 
                 <label class="t_color" for="">COLOR DEL INSUMO</label>
@@ -170,7 +170,7 @@ if ($usario == "" || $usario == null) {
                         ?>
                 </select>
                 <br>
-                <a href="cre_color_ins.php" class="d_color">Crear color de insumo</a>
+                <a id="btn_salircolor" href="#" class="d_color">CREAR COLOR</a>
                 <br>
                 
                
@@ -179,15 +179,42 @@ if ($usario == "" || $usario == null) {
             </form>
         </div>    
     </div>
-    
+    <div class="crear_tipo_insumo" id="crear_tipo_insumo">
+        <div class="content_from">
+            <div id="cerrar_ventana"><i class="fas fa-times-circle"></i></div>
+            <h2 class="titulo_t_insumo">Agregar Tip. Insumo</h2>
+            <form action="../php/regis_tipo_insumo.php" class="formulario_t" method="POST" autocomplete="off">
+                <input type="text" class="ti_insumo" name="agre_tipo_insumo" id="agre_tipo_insumo" placeholder="tipo insumo" required>
+                <input type="submit" class="env-insumo" name="env-insumo" value="AGREGAR">
+            </form>
+        </div>
+    </div>
+
+    <div class="crear_marca" id="crear_marca">
+        <div class="content_formMarca">
+            <div id="cerrar_ventanaMarca"><i class="fas fa-times-circle"></i></div>
+            <h2 class="titulo_marca">Agregar Marca</h2>
+            <form action="../php/regis_marca_insu.php" class="formularioMarca" method="POST" autocomplete="off">
+                <input type="text" class="ti_marca" name="agre_marca" id="agre_marca" placeholder="Digite la marca" required>
+                <input type="submit" class="env-marca" name="env-marca" value="AGREGAR">
+            </form>
+        </div>
+    </div>
+
+    <div class="crear_color" id="crear_color">
+        <div class="content_formColor">
+            <div id="cerrar_ventanaColor"><i class="fas fa-times-circle"></i></div>
+            <h2 class="titulo_color">Agregar Color</h2>
+            <form action="../php/regis_color_insu.php" class="formularioColor" method="POST" autocomplete="off">
+                <input type="text" class="ti_color" name="agre_color" id="agre_color" placeholder="Digite el color" required>
+                <input type="submit" class="env-color" name="env-color" value="AGREGAR">
+            </form>
+        </div>
+    </div>
 
 
-    
-
-
-
-    
+        
 <script src="../js/main.js"></script>
-    
+<script src="../js/crear_insumos.js"></script>
 </body>
 </html>
