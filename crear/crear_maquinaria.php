@@ -87,7 +87,7 @@ if ($usario == "" || $usario == null) {
                   
                     <li class="submenu"><a href="">REGISTRO<span><i class="opc fas fa-angle-down"></i></span></a>
                         <ul>
-                        <li><a href="crear_insumo.php">Crear insumos</a></li>
+                            <li><a href="crear_insumo.php">Crear insumos</a></li>
                             <li><a href="crear_maquinaria.php">Crear maquinaria</a></li>
                             <li><a href="crear_material.php">Crear material textil</a></li>
                         </ul>
@@ -169,7 +169,7 @@ if ($usario == "" || $usario == null) {
                     }
                     ?>
                 </select>
-                <a href="cre_color_ins.php">CREAR COLOR DE MAQUINARIA</a>
+                <a id="btn_salircolor" href="#" class="d_color">CREAR COLOR</a>
                 <br>
                  
                 <input type="hidden" name="cre_maqui" value="crearmaquina">
@@ -200,6 +200,16 @@ if ($usario == "" || $usario == null) {
         </div>
     </div>
 
+    <div class="crear_color" id="crear_color">
+        <div class="content_formColor">
+            <div id="cerrar_ventanaColor"><i class="fas fa-times-circle"></i></div>
+            <h2 class="titulo_color">Agregar Color</h2>
+            <form action="../php/regis_color_maqui.php" class="formularioColor" method="POST" autocomplete="off">
+                <input type="text" class="ti_color" name="agre_color" id="agre_color" placeholder="Digite el color" required>
+                <input type="submit" class="env-color" name="env-color" value="AGREGAR">
+            </form>
+        </div>
+    </div>                
     
     <script src="../js/main.js"></script>
     <script src="../js/maquinaria.js"></script>
