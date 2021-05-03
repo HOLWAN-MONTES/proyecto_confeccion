@@ -14,7 +14,6 @@ if ($documento != "" and $clave != "" and $tipo != ""){
 
     if ($dato_SQL){
         $_SESSION['DOCUMENTO'] = $dato_SQL['DOCUMENTO'];
-        echo 'AAAAAAAAAAAAAAAAA       '.$_SESSION['DOCUMENTO'];
         $_SESSION['TIPO_USUARIO']= $dato_SQL['ID_TIP_USU'];
         $_SESSION['NOMBRE']= $dato_SQL['NOMBRE'];
         $_SESSION['APELLIDO']= $dato_SQL['APELLIDO'];
