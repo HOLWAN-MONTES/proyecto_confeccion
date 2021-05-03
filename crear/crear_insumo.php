@@ -87,7 +87,7 @@ if ($usario == "" || $usario == null) {
                   
                     <li class="submenu"><a href="">REGISTRO<span><i class="opc fas fa-angle-down"></i></span></a>
                         <ul>
-                        <li><a href="crear_insumo.php">Crear insumos</a></li>
+                            <li><a href="crear_insumo.php">Crear insumos</a></li>
                             <li><a href="crear_maquinaria.php">Crear maquinaria</a></li>
                             <li><a href="crear_material.php">Crear material textil</a></li>
                         </ul>
@@ -121,20 +121,19 @@ if ($usario == "" || $usario == null) {
             <form action="../php/val_insumos.php" method="POST" autocomplete="off">                            
                 <label for="tipinsu">TIPO DE INSUMO</label>              
                 <select class="insumo" id="tipinsumo" name="tipinsumo" required>           
-                    <option value="0">SELECCIONAR</option>
-                    <?php
-                        $sql="SELECT*FROM tipo_insumo";
-                        $query=mysqli_query($conexion,$sql);
-                        while($row=mysqli_fetch_array($query)){
-                    ?>
-                        <option value="<?php echo $row['ID_TIPO_INSUMO']?>"> <?php echo $row['NOM_INSUMO']?></option> 
+                        <?php
+                            $sql="SELECT*FROM tipo_insumo";
+                            $query=mysqli_query($conexion,$sql);
+                            while($row=mysqli_fetch_array($query)){
+                        ?>
+                            <option value="<?php echo $row['ID_TIPO_INSUMO']?>"> <?php echo $row['NOM_INSUMO']?></option> 
 
-                    <?php
-                    }
-                    ?>
+                        <?php
+                        }
+                        ?>
                 </select>
                 <br>
-                <a href="cre_tip_ins.php">Crear tipo de insumo</a>
+                <a id="btn_salirinsu" class="d_insu" href="#">CREAR TIPO INSUMO</a>
                 <br>
 
                 <label class="t_insu" for="">NOMBRE DEL INSUMO</label>
@@ -142,37 +141,36 @@ if ($usario == "" || $usario == null) {
                 <br>
                 <label class="t_marca" for="">MARCA DEL INSUMO</label>
                 <select class="marca" id="marca" name="marca" required>
-                    <option value="0">SELECCIONAR</option>
-                    <?php
-                        $sql="SELECT*FROM marca";
-                        $query=mysqli_query($conexion,$sql);
-                        while($row=mysqli_fetch_array($query)){
-                    ?>
-                        <option value="<?php echo $row['ID_MARCA']?>"> <?php echo $row['NOM_MARCA']?></option> 
-                    <?php
-                    }
-                    ?>
+                        <?php
+                            $sql="SELECT*FROM marca";
+                            $query=mysqli_query($conexion,$sql);
+                            while($row=mysqli_fetch_array($query)){
+                        ?>
+                            <option value="<?php echo $row['ID_MARCA']?>"> <?php echo $row['NOM_MARCA']?></option> 
+
+                        <?php
+                        }
+                        ?>
                 </select>
                 <br>
-                <a id="btn_salirmarca" class="d_marca">Crear marca del insumo</a>
+                <a id="btn_salirmarca" class="d_marca" href="#">CREAR MARCA</a>
                 <br>
-                
+
                 <label class="t_color" for="">COLOR DEL INSUMO</label>
                 <select class="color" id="color" name="color" required>
-                    <option value="0">SELECCIONAR</option>
-                    <?php
-                        $sql="SELECT*FROM color";
-                        $query=mysqli_query($conexion,$sql);
-                        while($row=mysqli_fetch_array($query)){
-                    ?>
-                        <option value="<?php echo $row['ID_COLOR']?>"> <?php echo $row['NOM_COLOR']?></option> 
-                    
-                    <?php
-                    }
-                    ?>
+                        <?php
+                            $sql="SELECT*FROM color";
+                            $query=mysqli_query($conexion,$sql);
+                            while($row=mysqli_fetch_array($query)){
+                        ?>
+                            <option value="<?php echo $row['ID_COLOR']?>"> <?php echo $row['NOM_COLOR']?></option> 
+
+                        <?php
+                        }
+                        ?>
                 </select>
                 <br>
-                <a href="cre_color_ins.php" class="d_color">Crear color de insumo</a>
+                <a id="btn_salircolor" href="#" class="d_color">CREAR COLOR</a>
                 <br>
                 
                
@@ -181,18 +179,41 @@ if ($usario == "" || $usario == null) {
             </form>
         </div>    
     </div>
-                    <!-- ventanitas que van a salir  -->
-    <div class="crear_marca_insumo" id="crear_marca_insumo">
-        <div class="content_form">
+    <div class="crear_tipo_insumo" id="crear_tipo_insumo">
+        <div class="content_from">
             <div id="cerrar_ventana"><i class="fas fa-times-circle"></i></div>
-            <h3>HOLA AMIGOS </h3>
-            <form action="">
-                <input type="button" value="aaa">
+            <h2 class="titulo_t_insumo">Agregar Tip. Insumo</h2>
+            <form action="../php/regis_tipo_insumo.php" class="formulario_t" method="POST" autocomplete="off">
+                <input type="text" class="ti_insumo" name="agre_tipo_insumo" id="agre_tipo_insumo" placeholder="tipo insumo" required>
+                <input type="submit" class="env-insumo" name="env-insumo" value="AGREGAR">
+            </form>
+        </div>
+    </div>
+
+    <div class="crear_marca" id="crear_marca">
+        <div class="content_formMarca">
+            <div id="cerrar_ventanaMarca"><i class="fas fa-times-circle"></i></div>
+            <h2 class="titulo_marca">Agregar Marca</h2>
+            <form action="../php/regis_marca_insu.php" class="formularioMarca" method="POST" autocomplete="off">
+                <input type="text" class="ti_marca" name="agre_marca" id="agre_marca" placeholder="Digite la marca" required>
+                <input type="submit" class="env-marca" name="env-marca" value="AGREGAR">
+            </form>
+        </div>
+    </div>
+
+    <div class="crear_color" id="crear_color">
+        <div class="content_formColor">
+            <div id="cerrar_ventanaColor"><i class="fas fa-times-circle"></i></div>
+            <h2 class="titulo_color">Agregar Color</h2>
+            <form action="../php/regis_color_insu.php" class="formularioColor" method="POST" autocomplete="off">
+                <input type="text" class="ti_color" name="agre_color" id="agre_color" placeholder="Digite el color" required>
+                <input type="submit" class="env-color" name="env-color" value="AGREGAR">
             </form>
         </div>
     </div>
 
 
+        
 <script src="../js/main.js"></script>
 <script src="../js/crear_insumos.js"></script>
 </body>
