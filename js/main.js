@@ -1,6 +1,3 @@
-
-
-
 const btnmenu = document.getElementById('btn')
 const nav = document.getElementById('nav')
 const title = document.getElementById('title')

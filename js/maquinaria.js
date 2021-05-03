@@ -35,3 +35,17 @@ btn_salircolor.addEventListener('click',function(){
 cerrar_ventanaColor.addEventListener('click',function(){
     crear_color.style.display = "none";
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
