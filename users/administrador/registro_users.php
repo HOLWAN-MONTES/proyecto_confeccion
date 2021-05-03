@@ -105,7 +105,7 @@ if ($usario == "" || $usario == null) {
             <div class="user">
                 <label id="tex-use" for="">TIPO DE USUARIO</label><br>
                 <select name="tip_us" class="tip_usu" id="tip_usu" autocomplete="off" required>
-                    <option value="0">SELECCIONAR</option>
+                    <option value="">SELECCIONAR</option>
                     <?php
                         $tipo = "SELECT * FROM tipo_usu";
                         $inser = mysqli_query($conexion,$tipo);
@@ -121,7 +121,7 @@ if ($usario == "" || $usario == null) {
             <div class="doc">
                 <label class="tipo-doc" for="">TIPO DE DOCUMENTO</label><br>
                 <select name="tip_doc" id="tip_docu" autocomplete="off" required>
-                    <option value="0">SELECCIONAR</option>
+                    <option value="">SELECCIONAR</option>
                     <?php
                         $tipo2 = "SELECT * FROM tipo_docu";
                         $inser2 = mysqli_query($conexion,$tipo2);
