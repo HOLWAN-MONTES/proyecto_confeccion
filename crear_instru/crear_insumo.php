@@ -66,10 +66,10 @@ if ($usario == "" || $usario == null) {
         <nav class="nav" id="nav">
             
             <div class="title_intruc">
-                <h5 class="title_int"><a class="title_int" href="../users/administrador/admin.php" styles="text-decoration:none;">ADMINISTRADOR</a> </h5>
+                <h5 class="title_int"><a class="title_int" href="../users/instructor/instructor.php" styles="text-decoration:none;">INSTRUCTOR</a> </h5>
             </div>
             <div class="img_logo">
-                <img class="img_logo" src="../img/logo_costura.png" alt="">
+                <img class="img_logo" src="../img/COSTUD.png" alt="">
             </div>
 
 
@@ -96,7 +96,15 @@ if ($usario == "" || $usario == null) {
                         </ul>
 
                     </li>
-                    
+
+                    <li class="submenu"><a href="">REGISTRO<span><i class="opc fas fa-angle-down"></i></span></a>
+                        <ul>
+                            <li><a href="crear_insumo.php">CREAR INSUMOS</a></li>
+                            <li><a href="crear_maquinaria.php">CREAR MAQUINARIA</a></li>
+                            <li><a href="crear_material.php">CREAR MATERIAL TEXTIL</a></li>
+                        </ul>
+
+                    </li>
                     <li><a href="">AUTORIZACIONES </a></li>
                     <li><a href="">REPORTES</a></li>
                     <div class="logo_institu">

@@ -79,9 +79,9 @@ if ($usario == "" || $usario == null) {
                     </li>
                     <li class="suba submenu" id="subm"><a href="">REGISTRO<span><i class="opc fas fa-angle-down"></i></span></a>
                         <ul  class="mos">
-                            <li><a href="../../crear/crear_insumo.php">CREAR INSUMOS</a></li>
+                            <li><a href="../../crear_instru/crear_insumo.php">CREAR INSUMOS</a></li>
                             <li><a href="../../crear_instru/crear_maquinaria.php">CREAR MAQUINARIA</a></li>
-                            <li><a href="../../crear/crear_material.php">CREAR MATERIAL TEXTIL</a></li>
+                            <li><a href="../../crear_instru/crear_material.php">CREAR MATERIAL TEXTIL</a></li>
                         </ul>
 
                     </li>
