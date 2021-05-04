@@ -1,3 +1,14 @@
+<?php
+session_start();
+include('../../includes/conection.php');
+
+$usario = $_SESSION["DOCUMENTO"];
+if ($usario == "" || $usario == null) {
+    header("location: ../../index.html");
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,21 +32,20 @@
                 <div class="content_img_user">
                     <img class="img_user" src="../../img/img_user.png" alt="">
                 </div>
-
                 <div class="content_us">
                     <div class="welcome_name">
-                        <span class="nam">JOSE ALFREDO</span>
+                        <span class="nam"><?php echo $_SESSION['NOMBRE'];?></span>
 
                     </div>
-                    <div class="icon">
-                        <i class="opc fas fa-angle-down"></i>
+                    <div class="icon" >
+                        <i class="opc fas fa-angle-down" id="Pmostrar"></i>
 
-                        <ul class="ul_users">
-                            <div class="a">
+                        <ul class="ul_users" id="mostrar">
+                           <!--  <div class="a">
                                 <li><a href="#">ACTUALIZAR PERFIL</a></li>
-                            </div>
+                            </div> -->
                             <div class="a">
-                                <li><a href="#"> CERRAR SESION</a></li>
+                                <li><a href="../../includes/cerrar.php"> CERRAR SESION</a></li>
                             </div>
 
                         </ul>
@@ -50,7 +60,7 @@
         <nav class="nav" id="nav">
 
             <div class="title_intruc">
-                <h5 class="title_int"><a class="title_int" href="">ADMINISTRADOR</a> </h5>
+                <h5 class="title_int"><a class="title_int" href="admin.php">ADMINISTRADOR</a> </h5>
             </div>
             <div class="img_logo">
                 <img class="img_logo" src="../../img/COSTUD.png" alt="">

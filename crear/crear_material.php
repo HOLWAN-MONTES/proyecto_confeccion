@@ -1,6 +1,15 @@
 <?php
+session_start();
 include('../includes/conection.php');
+
+$usario = $_SESSION["DOCUMENTO"];
+if ($usario == "" || $usario == null) {
+    header("location: ../../index.html");
+}
+
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,18 +36,18 @@ include('../includes/conection.php');
 
                 <div class="content_us">
                     <div class="welcome_name">
-                        <span class="nam">JOSE ALFREDO</span>
+                    <span class="nam"><?php echo $_SESSION['NOMBRE'];?></span>
                         
                     </div>
-                    <div class="icon">
-                        <i class="opc fas fa-angle-down"></i>
+                    <div class="icon" >
+                        <i class="opc fas fa-angle-down" id="Pmostrar"></i>
 
-                        <ul class="ul_users">
-                            <div class="a">
+                        <ul class="ul_users" id="mostrar">
+                           <!--  <div class="a">
                                 <li><a href="#">ACTUALIZAR PERFIL</a></li>
-                            </div>
+                            </div> -->
                             <div class="a">
-                                <li><a href="#"> CERRAR SESION</a></li>
+                                <li><a href="../includes/cerrar.php"> CERRAR SESION</a></li>
                             </div>
 
                         </ul>
@@ -56,8 +65,8 @@ include('../includes/conection.php');
     <main>
         <nav class="nav" id="nav">
             
-            <div class="title_intruc">
-                <h5 class="title_int">ADMINISTRADOR</h5>
+        <div class="title_intruc">
+                <h5 class="title_int"><a class="title_int" href="../users/administrador/admin.php">ADMINISTRADOR</a> </h5>
             </div>
             <div class="img_logo">
                 <img class="img_logo" src="../img/logo_costura.png" alt="">
@@ -117,6 +126,7 @@ include('../includes/conection.php');
                 <br>
                 <label class="t_tela" for="tela">TIPO DE TELA</label>
                 <select class="tela" id="tipo_tela" name="tipo_tela">           
+                    <option value="0">SELECCIONAR</option>
                     <?php
                         $sql="SELECT * FROM tipo_tela";
                         $query=mysqli_query($conexion,$sql);
@@ -129,10 +139,11 @@ include('../includes/conection.php');
                     ?>
                 </select>
                 <br>
-                <a class="d_tela" href="#">CREAR TIPO TELA</a>
+                <a id="btn_salirtela" class="d_tela" href="#">CREAR TIPO TELA</a>
                 <br>
                 <label class="t_marca" for="marca">MARCA</label>
                 <select class="marca" id="marca" name="marca">           
+                    <option value="0">SELECCIONAR</option>
                     <?php
                         $sql="SELECT * FROM marca";
                         $query=mysqli_query($conexion,$sql);
@@ -145,10 +156,11 @@ include('../includes/conection.php');
                     ?>
                 </select>
                 <br>
-                <a class="d_marca" href="#">CREAR MARCA</a>
+                <a id="btn_salirmarca" class="d_marca" href="#">CREAR MARCA</a>
                 <br>
                 <label class="t_color" for="color">COLOR</label>
                 <select class="color" id="color" name="color">           
+                    <option value="0">SELECCIONAR</option>
                     <?php
                         $sql="SELECT * FROM color";
                         $query=mysqli_query($conexion,$sql);
@@ -161,7 +173,7 @@ include('../includes/conection.php');
                     ?>
                 </select>
                 <br>
-                <a href="#" class="d_color">CREAR COLOR</a>
+                <a id="btn_salircolor" href="#" class="d_color">CREAR COLOR</a>
                 
                 <label class="t_metraje" for="metraje">METRAJE</label>
                 <input type="number" class="metraje" name="metraje" id="metraje" placeholder="Metraje" required>
@@ -172,6 +184,40 @@ include('../includes/conection.php');
         </div>
     </div>
 
+    <div class="crear_tipo_tela" id="crear_tipo_tela">
+        <div class="content_from">
+            <div id="cerrar_ventana"><i class="fas fa-times-circle"></i></div>
+            <h2 class="titulo_t_tela">Agregar Tip. Tela</h2>
+            <form action="../php/regis_tipo_tela.php" class="formulario_t" method="POST" autocomplete="off">
+                <input type="text" class="ti_tela" name="agre_tipo_tela" id="agre_tipo_tela" placeholder="tipo tela" required>
+                <input type="submit" class="env-tela" name="env-tela" value="AGREGAR">
+            </form>
+        </div>
+    </div>
+
+    <div class="crear_marca" id="crear_marca">
+        <div class="content_formMarca">
+            <div id="cerrar_ventanaMarca"><i class="fas fa-times-circle"></i></div>
+            <h2 class="titulo_marca">Agregar Marca</h2>
+            <form action="../php/regis_marca_mater.php" class="formularioMarca" method="POST" autocomplete="off">
+                <input type="text" class="ti_marca" name="agre_marca" id="agre_marca" placeholder="Digite la marca" required>
+                <input type="submit" class="env-marca" name="env-marca" value="AGREGAR">
+            </form>
+        </div>
+    </div>
+
+    <div class="crear_color" id="crear_color">
+        <div class="content_formColor">
+            <div id="cerrar_ventanaColor"><i class="fas fa-times-circle"></i></div>
+            <h2 class="titulo_color">Agregar Color</h2>
+            <form action="../php/regis_color_mater.php" class="formularioColor" method="POST" autocomplete="off">
+                <input type="text" class="ti_color" name="agre_color" id="agre_color" placeholder="Digite el color" required>
+                <input type="submit" class="env-color" name="env-color" value="AGREGAR">
+            </form>
+        </div>
+    </div>
+
     <script src="../js/main.js"></script>
+    <script src="../js/formularios.js"></script>
 </body>
 </html>

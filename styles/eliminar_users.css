@@ -65,16 +65,27 @@ header{
     width: 100%;
     display: flex;
 }
-
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+input[type=number] { -moz-appearance:textfield; }
 .ul_users{
     position: absolute;
-    border-radius: 1px;
+    border-radius: 11px;
     margin-top: 1.3%;
     background: rgb(129, 212, 112);
-    text-align: left;
-    margin-left: -5%;
+    text-align: center;
+    margin-left: -8%;
+    font-size: 20px;
     z-index: 2;
     display: none;/* escondiendo lo de actualizar y no actualizar  */
+
+}
+
+.ul_users-active{
+    display: block;
 
 }
 .ul_users li a{
@@ -160,14 +171,24 @@ header{
     transition: all 0.9s;
 }
 
+
+.title_int{
+    text-decoration: none;
+    color: white;
+}
+
+
 .title_intruc{
-    font-size: 40px;
-    padding-top: 30px;    
+    font-size: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;   
     width: 100%;
     color: white;
-    height: 16vh;
+    height: 13vh auto;
     background: var(--coloresgenerales1);
     text-align: center;
+    text-decoration: none;
+
 }
 
 .img_logo{

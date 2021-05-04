@@ -1,6 +1,15 @@
 <?php
-require '../../includes/conection.php';
+session_start();
+include('../../includes/conection.php');
+
+$usario = $_SESSION["DOCUMENTO"];
+if ($usario == "" || $usario == null) {
+    header("location: ../../index.html");
+}
+
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,17 +34,19 @@ require '../../includes/conection.php';
                 </div>
                 <div class="content_us">
                     <div class="welcome_name">
-                        <span class="nam">JOSE ALFREDO</span> 
+                    <span class="nam"><?php echo $_SESSION['NOMBRE'];?></span> 
                     </div>
-                    <div class="icon">
-                        <i class="opc fas fa-angle-down"></i>
-                        <ul class="ul_users">
-                            <div class="a">
+                    <div class="icon" >
+                        <i class="opc fas fa-angle-down" id="Pmostrar"></i>
+
+                        <ul class="ul_users" id="mostrar">
+                           <!--  <div class="a">
                                 <li><a href="#">ACTUALIZAR PERFIL</a></li>
-                            </div>
+                            </div> -->
                             <div class="a">
-                                <li><a href="#"> CERRAR SESION</a></li>
+                                <li><a href="../../includes/cerrar.php"> CERRAR SESION</a></li>
                             </div>
+
                         </ul>
                     </div>
                 </div>
@@ -45,11 +56,11 @@ require '../../includes/conection.php';
     </header>
     <main>
         <nav class="nav" id="nav">
-            <div class="title_intruc">
-                <h5 class="title_int">INSTRUCTOR</h5>
+        <div class="title_intruc">
+                <h5 class="title_int"><a class="title_int" href="admin.php">ADMINISTRADOR</a> </h5>
             </div>
             <div class="img_logo">
-                <img class="img_logo" src="../img/logo_costura.png" alt="">
+                <img class="img_logo" src="../../img/COSTUD.png" alt="">
             </div>
            <div class="menu">
                 <ul>

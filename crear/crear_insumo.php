@@ -1,5 +1,13 @@
 <?php
+session_start();
 include('../includes/conection.php');
+
+$usario = $_SESSION["DOCUMENTO"];
+if ($usario == "" || $usario == null) {
+    header("location: ../../index.html");
+}
+
+
 ?>
 
 <!DOCTYPE html>
@@ -28,18 +36,18 @@ include('../includes/conection.php');
 
                 <div class="content_us">
                     <div class="welcome_name">
-                        <span class="nam">JOSE ALFREDO</span>
+                    <span class="nam"><?php echo $_SESSION['NOMBRE'];?></span>
                         
                     </div>
-                    <div class="icon">
-                        <i class="opc fas fa-angle-down"></i>
+                    <div class="icon" >
+                        <i class="opc fas fa-angle-down" id="Pmostrar"></i>
 
-                        <ul class="ul_users">
-                            <div class="a">
+                        <ul class="ul_users" id="mostrar">
+                           <!--  <div class="a">
                                 <li><a href="#">ACTUALIZAR PERFIL</a></li>
-                            </div>
+                            </div> -->
                             <div class="a">
-                                <li><a href="#"> CERRAR SESION</a></li>
+                                <li><a href="../includes/cerrar.php"> CERRAR SESION</a></li>
                             </div>
 
                         </ul>
@@ -58,7 +66,7 @@ include('../includes/conection.php');
         <nav class="nav" id="nav">
             
             <div class="title_intruc">
-                <h5 class="title_int">ADMINISTRADOR</h5>
+                <h5 class="title_int"><a class="title_int" href="../users/administrador/admin.php" styles="text-decoration:none;">ADMINISTRADOR</a> </h5>
             </div>
             <div class="img_logo">
                 <img class="img_logo" src="../img/logo_costura.png" alt="">
@@ -79,7 +87,7 @@ include('../includes/conection.php');
                   
                     <li class="submenu"><a href="">REGISTRO<span><i class="opc fas fa-angle-down"></i></span></a>
                         <ul>
-                        <li><a href="crear_insumo.php">Crear insumos</a></li>
+                            <li><a href="crear_insumo.php">Crear insumos</a></li>
                             <li><a href="crear_maquinaria.php">Crear maquinaria</a></li>
                             <li><a href="crear_material.php">Crear material textil</a></li>
                         </ul>
@@ -125,7 +133,7 @@ include('../includes/conection.php');
                         ?>
                 </select>
                 <br>
-                <a href="cre_tip_ins.php">Crear tipo de insumo</a>
+                <a id="btn_salirinsu" class="d_insu" href="#">CREAR TIPO INSUMO</a>
                 <br>
 
                 <label class="t_insu" for="">NOMBRE DEL INSUMO</label>
@@ -145,7 +153,7 @@ include('../includes/conection.php');
                         ?>
                 </select>
                 <br>
-                <a href="cre_marc_ins.php" class="d_marca">Crear marca del insumo</a>
+                <a id="btn_salirmarca" class="d_marca" href="#">CREAR MARCA</a>
                 <br>
 
                 <label class="t_color" for="">COLOR DEL INSUMO</label>
@@ -162,7 +170,7 @@ include('../includes/conection.php');
                         ?>
                 </select>
                 <br>
-                <a href="cre_color_ins.php" class="d_color">Crear color de insumo</a>
+                <a id="btn_salircolor" href="#" class="d_color">CREAR COLOR</a>
                 <br>
                 
                
@@ -171,15 +179,42 @@ include('../includes/conection.php');
             </form>
         </div>    
     </div>
+    <div class="crear_tipo_insumo" id="crear_tipo_insumo">
+        <div class="content_from">
+            <div id="cerrar_ventana"><i class="fas fa-times-circle"></i></div>
+            <h2 class="titulo_t_insumo">Agregar Tip. Insumo</h2>
+            <form action="../php/regis_tipo_insumo.php" class="formulario_t" method="POST" autocomplete="off">
+                <input type="text" class="ti_insumo" name="agre_tipo_insumo" id="agre_tipo_insumo" placeholder="tipo insumo" required>
+                <input type="submit" class="env-insumo" name="env-insumo" value="AGREGAR">
+            </form>
+        </div>
+    </div>
+
+    <div class="crear_marca" id="crear_marca">
+        <div class="content_formMarca">
+            <div id="cerrar_ventanaMarca"><i class="fas fa-times-circle"></i></div>
+            <h2 class="titulo_marca">Agregar Marca</h2>
+            <form action="../php/regis_marca_insu.php" class="formularioMarca" method="POST" autocomplete="off">
+                <input type="text" class="ti_marca" name="agre_marca" id="agre_marca" placeholder="Digite la marca" required>
+                <input type="submit" class="env-marca" name="env-marca" value="AGREGAR">
+            </form>
+        </div>
+    </div>
+
+    <div class="crear_color" id="crear_color">
+        <div class="content_formColor">
+            <div id="cerrar_ventanaColor"><i class="fas fa-times-circle"></i></div>
+            <h2 class="titulo_color">Agregar Color</h2>
+            <form action="../php/regis_color_insu.php" class="formularioColor" method="POST" autocomplete="off">
+                <input type="text" class="ti_color" name="agre_color" id="agre_color" placeholder="Digite el color" required>
+                <input type="submit" class="env-color" name="env-color" value="AGREGAR">
+            </form>
+        </div>
+    </div>
 
 
-
-    
-
-
-
-    
+        
 <script src="../js/main.js"></script>
-    
+<script src="../js/crear_insumos.js"></script>
 </body>
 </html>

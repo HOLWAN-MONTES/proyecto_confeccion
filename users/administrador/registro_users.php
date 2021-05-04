@@ -1,6 +1,14 @@
 <?php
-require '../../includes/conection.php';
+session_start();
+include('../../includes/conection.php');
+
+$usario = $_SESSION["DOCUMENTO"];
+if ($usario == "" || $usario == null) {
+    header("location: ../../index.html");
+}
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,17 +33,19 @@ require '../../includes/conection.php';
                 </div>
                 <div class="content_us">
                     <div class="welcome_name">
-                        <span class="nam">JOSE ALFREDO</span> 
+                    <span class="nam"><?php echo $_SESSION['NOMBRE'];?></span>
                     </div>
-                    <div class="icon">
-                        <i class="opc fas fa-angle-down"></i>
-                        <ul class="ul_users">
-                            <div class="a">
+                    <div class="icon" >
+                        <i class="opc fas fa-angle-down" id="Pmostrar"></i>
+
+                        <ul class="ul_users" id="mostrar">
+                           <!--  <div class="a">
                                 <li><a href="#">ACTUALIZAR PERFIL</a></li>
-                            </div>
+                            </div> -->
                             <div class="a">
-                                <li><a href="#"> CERRAR SESION</a></li>
+                                <li><a href="../../includes/cerrar.php"> CERRAR SESION</a></li>
                             </div>
+
                         </ul>
                     </div>
                 </div>
@@ -45,11 +55,11 @@ require '../../includes/conection.php';
     </header>
     <main>
         <nav class="nav" id="nav">
-            <div class="title_intruc">
-                <h5 class="title_int">INSTRUCTOR</h5>
+        <div class="title_intruc">
+                <h5 class="title_int"><a class="title_int" href="admin.php">ADMINISTRADOR</a> </h5>
             </div>
             <div class="img_logo">
-                <img class="img_logo" src="../img/logo_costura.png" alt="">
+                <img class="img_logo" src="../../img/COSTUD.png" alt="">
             </div>
            <div class="menu">
                 <ul>
@@ -90,18 +100,18 @@ require '../../includes/conection.php';
     </div>
         <form class="form" action="../../php/crear.php" method="POST">
             <input type="number" name="docu" id="docu" placeholder="DOCUMENTO" autocomplete="off" required> &nbsp;&nbsp;&nbsp;
-            <input type="text" name="nom" id="nom" placeholder="NOMBRE" autocomplete="off" required>&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="text" name="apel" id="apel" placeholder="APELLIDO" autocomplete="off" required> <br><br>
+            <input type="text" name="nom" id="nom" placeholder="NOMBRE" autocomplete="off" required style="text-transform:uppercase">&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" name="apel" id="apel" placeholder="APELLIDO" autocomplete="off" required style="text-transform:uppercase"> <br><br>
             <div class="user">
                 <label id="tex-use" for="">TIPO DE USUARIO</label><br>
                 <select name="tip_us" class="tip_usu" id="tip_usu" autocomplete="off" required>
-                    <option value="0">SELECCIONAR</option>
+                    <option value="">SELECCIONAR</option>
                     <?php
                         $tipo = "SELECT * FROM tipo_usu";
                         $inser = mysqli_query($conexion,$tipo);
                         while($tip = mysqli_fetch_array($inser)){
                     ?>
-                    <option name="tip_user" value="<?php echo $tip[0]; ?>"><?php echo $tip[1]; ?></option>
+                    <option name="tip_user" value="<?php echo $tip[0]; ?>" style="text-transform:uppercase"><?php echo $tip[1]; ?></option>
                     <?php
                     }
                     ?>
@@ -111,13 +121,13 @@ require '../../includes/conection.php';
             <div class="doc">
                 <label class="tipo-doc" for="">TIPO DE DOCUMENTO</label><br>
                 <select name="tip_doc" id="tip_docu" autocomplete="off" required>
-                    <option value="0">SELECCIONAR</option>
+                    <option value="">SELECCIONAR</option>
                     <?php
                         $tipo2 = "SELECT * FROM tipo_docu";
                         $inser2 = mysqli_query($conexion,$tipo2);
                         while($tip2 = mysqli_fetch_array($inser2)){
                     ?>
-                    <option name="tip_user" value="<?php echo $tip2[0]; ?>"><?php echo $tip2[1]; ?></option>
+                    <option name="tip_user" value="<?php echo $tip2[0]; ?>" style="text-transform:uppercase"><?php echo $tip2[1]; ?></option>
                     <?php
                     }
                     ?>
@@ -125,10 +135,10 @@ require '../../includes/conection.php';
                 <a class="crear-doc" href="">CREAR TIPO DE DOCUMENTO</a>
             </div><br>
             
-            <input type="number" name="edad" id="edad" placeholder="EDAD" autocomplete="off" required>
-            <input type="password" name="contra" id="contra" placeholder="CONTRASEÑA" autocomplete="off" required>&nbsp;&nbsp;&nbsp;
-            <input type="number" name="tele" id="tele" placeholder="TELEFONO" autocomplete="off" required>
-            <input type="text" name="cor" id="cor" placeholder="CORREO" autocomplete="off" required><br>
+            <input type="number" name="edad" id="edad" placeholder="EDAD" autocomplete="off" min="1" max="100" required>
+            <input type="password" name="contra" id="contra" placeholder="CONTRASEÑA" autocomplete="off" pattern="[A-Za-z0-9!?-]{2,12}" required>&nbsp;&nbsp;&nbsp;
+            <input type="number" name="tele" id="tele" placeholder="TELEFONO" autocomplete="off" min="1" max="3999999999" required>
+            <input type="email" name="cor" id="cor" placeholder="CORREO" autocomplete="off" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required><br>
             <input type="submit" name="registro" id="reg" value="REGISTRAR">
         </form>
         <div class="ven1">
@@ -162,6 +172,5 @@ require '../../includes/conection.php';
             </div>
         </div>
     <script src="../../js/main.js"></script>
-    <!-- <script src="../../js/registro_users.js"></script> -->
 </body>
 </html>

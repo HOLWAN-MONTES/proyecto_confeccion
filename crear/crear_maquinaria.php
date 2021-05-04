@@ -1,5 +1,13 @@
 <?php
+session_start();
 include('../includes/conection.php');
+
+$usario = $_SESSION["DOCUMENTO"];
+if ($usario == "" || $usario == null) {
+    header("location: ../../index.html");
+}
+
+
 ?>
 
 <!DOCTYPE html>
@@ -28,18 +36,18 @@ include('../includes/conection.php');
 
                 <div class="content_us">
                     <div class="welcome_name">
-                        <span class="nam">JOSE ALFREDO</span>
+                    <span class="nam"><?php echo $_SESSION['NOMBRE'];?></span>
                         
                     </div>
-                    <div class="icon">
-                        <i class="opc fas fa-angle-down"></i>
+                    <div class="icon" >
+                        <i class="opc fas fa-angle-down" id="Pmostrar"></i>
 
-                        <ul class="ul_users">
-                            <div class="a">
+                        <ul class="ul_users" id="mostrar">
+                           <!--  <div class="a">
                                 <li><a href="#">ACTUALIZAR PERFIL</a></li>
-                            </div>
+                            </div> -->
                             <div class="a">
-                                <li><a href="#"> CERRAR SESION</a></li>
+                                <li><a href="../includes/cerrar.php"> CERRAR SESION</a></li>
                             </div>
 
                         </ul>
@@ -57,8 +65,8 @@ include('../includes/conection.php');
     <main>
         <nav class="nav" id="nav">
             
-            <div class="title_intruc">
-                <h5 class="title_int">ADMINISTRADOR</h5>
+        <div class="title_intruc">
+                <h5 class="title_int"><a class="title_int" href="../users/administrador/admin.php"styles="text-decoration:none;">ADMINISTRADOR</a> </h5>
             </div>
             <div class="img_logo">
                 <img class="img_logo" src="../img/logo_costura.png" alt="">
@@ -79,7 +87,7 @@ include('../includes/conection.php');
                   
                     <li class="submenu"><a href="">REGISTRO<span><i class="opc fas fa-angle-down"></i></span></a>
                         <ul>
-                        <li><a href="crear_insumo.php">Crear insumos</a></li>
+                            <li><a href="crear_insumo.php">Crear insumos</a></li>
                             <li><a href="crear_maquinaria.php">Crear maquinaria</a></li>
                             <li><a href="crear_material.php">Crear material textil</a></li>
                         </ul>
@@ -115,6 +123,7 @@ include('../includes/conection.php');
                 <br>
                 <label for="">TIPO DE MAQUINARIA</label>
                 <select id="tipo_maqui" name="tipo_maqui" required>           
+                    <option value="0">SELECCIONAR</option>
                     <?php
                         $sql="SELECT * FROM tipo_maquinaria";
                         $query=mysqli_query($conexion,$sql);
@@ -127,10 +136,11 @@ include('../includes/conection.php');
                     ?>
                 </select>
                 <br>
-                <a href="#">CREAR TIPO DE MAQUINARIA</a>
+                <a id="btn_salirmaquinaria" href="#">CREAR TIPO DE MAQUINARIA</a>
                 <br>
                 <label for="marca">MARCA</label>
                 <select id="marca" name="marca" required>           
+                    <option value="0">SELECCIONAR</option>
                     <?php
                         $sql="SELECT * FROM marca";
                         $query=mysqli_query($conexion,$sql);
@@ -143,22 +153,23 @@ include('../includes/conection.php');
                     ?>
                 </select>
                 <br>
-                <a href="#">CREAR MARCA</a>
+                <a id="btn_salirmarca" href="#">CREAR MARCA</a>
                 <br>
                 <label for="">COLOR DE MAQUINARIA</label>
                 <select id="color" name="color">
-                        <?php
-                            $sql="SELECT*FROM color";
-                            $query=mysqli_query($conexion,$sql);
-                            while($row=mysqli_fetch_array($query)){
-                        ?>
-                            <option value="<?php echo $row['ID_COLOR']?>"> <?php echo $row['NOM_COLOR']?></option> 
+                    <option value="0">SELECCIONAR</option>   
+                    <?php
+                        $sql="SELECT*FROM color";
+                        $query=mysqli_query($conexion,$sql);
+                        while($row=mysqli_fetch_array($query)){
+                    ?>
+                        <option value="<?php echo $row['ID_COLOR']?>"> <?php echo $row['NOM_COLOR']?></option> 
 
-                        <?php
-                        }
-                        ?>
+                    <?php
+                    }
+                    ?>
                 </select>
-                <a href="cre_color_ins.php">CREAR COLOR DE MAQUINARIA</a>
+                <a id="btn_salircolor" href="#" class="d_color">CREAR COLOR</a>
                 <br>
                  
                 <input type="hidden" name="cre_maqui" value="crearmaquina">
@@ -166,8 +177,42 @@ include('../includes/conection.php');
             </form>
         </div>
     </div>
+
+    <div class="crear_maquinaria" id="crear_maquinaria">
+        <div class="content_formMaquinaria">
+            <div id="cerrar_ventanaMaquinaria"><i class="fas fa-times-circle"></i></div>
+            <h2 class="titulo_maquinaria">Agregar Tip. Maquinaria</h2>
+            <form action="../php/regis_tip_maqui.php" class="formularioMaquinaria" method="POST" autocomplete="off">
+                <input type="text" class="ti_maquinaria" name="agre_maquinaria" id="agre_maquinaria" placeholder="Tipo de maquinaria" required>
+                <input type="submit" class="env-maquinaria" name="env-maquinaria" value="AGREGAR">
+            </form>
+        </div>
+    </div>
+
+    <div class="crear_marca" id="crear_marca">
+        <div class="content_formMarca">
+            <div id="cerrar_ventanaMarca"><i class="fas fa-times-circle"></i></div>
+            <h2 class="titulo_marca">Agregar Marca</h2>
+            <form action="../php/regis_marca_maqui.php" class="formularioMarca" method="POST" autocomplete="off">
+                <input type="text" class="ti_marca" name="agre_marca" id="agre_marca" placeholder="Digite la marca" required>
+                <input type="submit" class="env-marca" name="env-marca" value="AGREGAR">
+            </form>
+        </div>
+    </div>
+
+    <div class="crear_color" id="crear_color">
+        <div class="content_formColor">
+            <div id="cerrar_ventanaColor"><i class="fas fa-times-circle"></i></div>
+            <h2 class="titulo_color">Agregar Color</h2>
+            <form action="../php/regis_color_maqui.php" class="formularioColor" method="POST" autocomplete="off">
+                <input type="text" class="ti_color" name="agre_color" id="agre_color" placeholder="Digite el color" required>
+                <input type="submit" class="env-color" name="env-color" value="AGREGAR">
+            </form>
+        </div>
+    </div>                
     
     <script src="../js/main.js"></script>
+    <script src="../js/maquinaria.js"></script>
     
 </body>
 </html>
