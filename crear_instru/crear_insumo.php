@@ -80,9 +80,9 @@ if ($usario == "" || $usario == null) {
                   
                     <li class="submenu"><a href="">REGISTRO<span><i class="opc fas fa-angle-down"></i></span></a>
                         <ul>
-                            <li><a href="crear_insumo.php">Crear insumos</a></li>
-                            <li><a href="crear_maquinaria.php">Crear maquinaria</a></li>
-                            <li><a href="crear_material.php">Crear material textil</a></li>
+                            <li><a href="crear_insumo.php">CREAR INSUMOS</a></li>
+                            <li><a href="crear_maquinaria.php">CREAR MAQUINARIA</a></li>
+                            <li><a href="crear_material.php">CREAR MATERIAL TEXTIL</a></li>
                         </ul>
 
                     </li>
