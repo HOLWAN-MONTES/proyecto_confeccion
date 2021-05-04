@@ -66,10 +66,10 @@ if ($usario == "" || $usario == null) {
         <nav class="nav" id="nav">
             
         <div class="title_intruc">
-                <h5 class="title_int"><a class="title_int" href="../users/administrador/admin.php"styles="text-decoration:none;">ADMINISTRADOR</a> </h5>
+                <h5 class="title_int"><a class="title_int" href="../users/instructor/instructor.php"styles="text-decoration:none;">INSTRUCTOR</a> </h5>
             </div>
             <div class="img_logo">
-                <img class="img_logo" src="../img/logo_costura.png" alt="">
+                <img class="img_logo" src="../img/COSTUD.png" alt="">
             </div>
 
 
@@ -77,28 +77,19 @@ if ($usario == "" || $usario == null) {
 
            
                 <ul>
-                    <li class="suba submenu" id="subm"><a href="">ADMIN. USUARIOS<span><i class="opc fas fa-angle-down"></i></span></a>
-                        <ul  class="mos">
-                            <li><a href="../users/administrador/registro_users.php">Registro De Usuarios</a></li>
-                            <li><a href="../users/administrador/editar_users.php">Editar Usuario</a></li>
-                            <li><a href="../users/administrador/eliminar_users.php">Eliminar Usuario</a></li>
+                    <li class="suba submenu" id="subm"><a href="">INVENTARIO<span><i class="opc fas fa-angle-down"></i></span></a>
+                        <ul class="mos">
+                            <li><a class="mos" id="mos" href="#">sub Item 1</a></li>
+                            <li><a href="#">sub Item 2</a></li>
+                            <li><a href="#">sub Item 3</a></li>
                         </ul>
                     </li>
                   
                     <li class="submenu"><a href="">REGISTRO<span><i class="opc fas fa-angle-down"></i></span></a>
                         <ul>
                             <li><a href="crear_insumo.php">Crear insumos</a></li>
-                            <li><a href="crear_maquinaria.php">Crear maquinaria</a></li>
+                            <li><a href="crear_maquinaria.php">CREAR MAQUINARIA</a></li>
                             <li><a href="crear_material.php">Crear material textil</a></li>
-                        </ul>
-
-                    </li>
-                    <li class="submenu"><a href="">INVENTARIO<span><i class="opc fas fa-angle-down"></i></span></a>
-                        <ul class="mos">
-                            <li><a class="mos" id="mos" href="#">sub Item 1</a></li>
-                            <li><a href="#">sub Item 2</a></li>
-                            <li><a href="#">sub Item 3</a></li>
-                            <li><a href="#">sub Item 4</a></li>
                         </ul>
 
                     </li>
@@ -123,7 +114,7 @@ if ($usario == "" || $usario == null) {
                 <br>
                 <label for="">TIPO DE MAQUINARIA</label>
                 <select id="tipo_maqui" name="tipo_maqui" required>           
-                    <option value="0">SELECCIONAR</option>
+                    <option value="">SELECCIONAR</option>
                     <?php
                         $sql="SELECT * FROM tipo_maquinaria";
                         $query=mysqli_query($conexion,$sql);
@@ -140,7 +131,7 @@ if ($usario == "" || $usario == null) {
                 <br>
                 <label for="marca">MARCA</label>
                 <select id="marca" name="marca" required>           
-                    <option value="0">SELECCIONAR</option>
+                    <option value="">SELECCIONAR</option>
                     <?php
                         $sql="SELECT * FROM marca";
                         $query=mysqli_query($conexion,$sql);
@@ -157,7 +148,7 @@ if ($usario == "" || $usario == null) {
                 <br>
                 <label for="">COLOR DE MAQUINARIA</label>
                 <select id="color" name="color">
-                    <option value="0">SELECCIONAR</option>   
+                    <option value="">SELECCIONAR</option>   
                     <?php
                         $sql="SELECT*FROM color";
                         $query=mysqli_query($conexion,$sql);
