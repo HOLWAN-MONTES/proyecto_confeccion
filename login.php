@@ -40,19 +40,15 @@ require_once('includes/conection.php');
                    
                     <form method="post" id="form" action="php/ingreso.php" autocomplete="off">
                         <div>
-                        
-                            <input require type="number" name="docuaprendiz" id="usuario" placeholder="DOCUMENTO" maxlength="12"
-                                style="text-transform:uppercase"> <br>
+                            <input require type="number" name="docuaprendiz" id="usuario" placeholder="DOCUMENTO" maxlength="12"style="text-transform:uppercase">
                         </div>
                        
                         <div>
-                           
-                        <input require type="password" name="claveaprendiz" id="password" placeholder="Ingrese Clave" maxlength="20" style="text-transform:uppercase">
-                       
+                            <input require type="password" name="claveaprendiz" id="password" placeholder="Ingrese Clave" maxlength="20" style="text-transform:uppercase">
                         </div>
                         <div>
                             <select require class="seleccionTipo" id="tipodocu" name="tipodocu">
-                                <option value="0">SELECCIONAR</option>
+                                <option>SELECCIONAR</option>
                                 <?php
                                 foreach ($query_re as $tipo) : ?>
             
