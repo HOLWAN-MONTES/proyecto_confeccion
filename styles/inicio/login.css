@@ -4,9 +4,7 @@
     box-sizing: border-box;
 }
 
-body{
-    background-color: rgb(230, 230, 230);    
-}
+
 .log{
     display: block;
     border: 1px solid rgba(130, 127, 133, 0.233);
@@ -50,9 +48,7 @@ body{
 
 
 .log div{
-    
-    padding: 10px;
-
+    padding: 1%;
 }
 
 input {
