@@ -17,7 +17,7 @@ if ($usario == "" || $usario == null) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/7b875e4198.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../../styles/admin.css">
+    <link rel="stylesheet" href="../../styles/vocero.css">
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <title>VOCERO</title>
 </head>
@@ -68,7 +68,7 @@ if ($usario == "" || $usario == null) {
 
 
             <div class="menu">
-                <ul>
+                <ul class="general">
 
                     <li class="suba submenu" id="subm"><a href="">PRESTAMOS<span><i class="opc fas fa-angle-down"></i></span></a>
                         <ul class="mos">
