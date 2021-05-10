@@ -35,7 +35,7 @@ if($_POST["inicio"]){
 
         
     }else {
-        echo("<script>alert('DATOS VACIOS')</script>");
+        echo "<script>alert('DATOS VACIOS')</script>";
         header("location: ../login.php");
     }
 }
