@@ -1,23 +1,23 @@
-const btnmenu = document.getElementById('btn')
-const nav = document.getElementById('nav')
-const title = document.getElementById('title')
+// const btnmenu = document.getElementById('btn')
+// const nav = document.getElementById('nav')
+// const title = document.getElementById('title')
 
-const btnC = document.getElementById('Pmostrar')
-const btnCo = document.getElementById('mostrar')
+// const btnC = document.getElementById('Pmostrar')
+// const btnCo = document.getElementById('mostrar')
 
-btnC.addEventListener('click',function(){
-    btnCo.classList.toggle('ul_users-active')
-})
-
-
+// btnC.addEventListener('click',function(){
+//     btnCo.classList.toggle('ul_users-active')
+// })
 
 
 
-btnmenu.addEventListener('click',function(){
-    nav.classList.toggle('mostrar')
-    title.classList.toggle('title-active')
-    btnmenu.classList.toggle('btn-active')
-})
+
+
+// btnmenu.addEventListener('click',function(){
+//     nav.classList.toggle('mostrar')
+//     title.classList.toggle('title-active')
+//     btnmenu.classList.toggle('btn-active')
+// })
 
 //ventana modal del registro_users en el usuario
 let cerrar1 = document.querySelectorAll(".cerrar1")[0];
