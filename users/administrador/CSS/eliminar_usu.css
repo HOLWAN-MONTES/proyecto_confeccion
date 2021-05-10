@@ -7,15 +7,7 @@
     opacity: 0;
     visibility: hidden;
 }
-.titulo{
-    margin-top: 8%;
-    margin-left: 13%;
-    text-align: center;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.form{
+.form-elim{
     margin: 2% 30%;
     width: 55%;
     height: 340px;
@@ -31,14 +23,14 @@
     font-size: 18px;
 }  
 
-.tip_usu{
+.tip_usu_elim{
     margin-top: 3%;
     width: 90%;
     border: 2px solid black;
     font-size: 14px;
 } 
 
-#docu{
+#docu-elim{
     margin-top: 2%;
     width: 30%;
     height: 8%;
@@ -47,7 +39,7 @@
     text-align: center;
     font-size: 14px;
 }
-#nom{
+#nom-elim{
     width: 30%;
     height: 8%;
     margin-left: 1%;
@@ -55,7 +47,7 @@
     text-align: center;
     font-size: 14px;
 }
-#apel{
+#apel-elim{
     width: 30%;
     height: 8%;
     margin-right: -20%;
@@ -67,14 +59,14 @@
     margin-top: -7%;
     margin-right: -2%;
 }
-#tip_docu{
+#tip_docu_elim{
     margin-top: 1%;
     width: 29%;
     border: 2px solid black;
     font-size: 14px;
 }
 
-#edad{
+#edad-elim{
     border: 2px solid black;
     margin-top: -6%;
     margin-right: 1%;
@@ -84,7 +76,7 @@
     text-align: center;
 }
 
-#tele{
+#tele-elim{
     margin-top: 4%;
     width: 30%;
     height: 8%;
@@ -93,7 +85,7 @@
     text-align: center;
     font-size: 14px;  
 }
-#cor{
+#cor-elim{
     margin-top: -3%;
     width: 30%;
     height: 8%;

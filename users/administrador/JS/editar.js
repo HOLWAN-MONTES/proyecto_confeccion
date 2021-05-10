@@ -1,14 +1,14 @@
-const formu = document.getElementById('form');
-const documento = document.getElementById('docu');
-const nomb = document.getElementById('nom');
-const apel = document.getElementById('apel');
-const sel_use = document.getElementById('tip_usu');
-const sel_docu = document.getElementById('tip_docu');
-const edad = document.getElementById('edad');
-const contra = document.getElementById('contra');
-const celu = document.getElementById('tele');
-const correo = document.getElementById('cor');
-const docmen = document.getElementById('docume');
+const formu = document.getElementById('form-edi');
+const documento = document.getElementById('docu-edi');
+const nomb = document.getElementById('nom-edi');
+const apel = document.getElementById('apel-edi');
+const sel_use = document.getElementById('tip_usu_edi');
+const sel_docu = document.getElementById('tip_docu_edi');
+const edad = document.getElementById('edad-edi');
+const contra = document.getElementById('contra-edi');
+const celu = document.getElementById('tele-edi');
+const correo = document.getElementById('cor-edi');
+const docmen = document.getElementById('docume-edi');
 document.addEventListener('keypress', (e)=>{
     if(e.keyCode === 13){
         if(e.target === documento){
