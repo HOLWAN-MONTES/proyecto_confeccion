@@ -13,7 +13,10 @@ body{
     --colorDefondoDelMenu:rgb(89,181,72);
     --colorDefondoDelMenu2:rgba(60, 151, 68, 0.699);
 }
-
+.ediusu{
+    opacity: 0;
+    visibility: hidden;
+}
 /*Estilos del formulario*/
 .titulo{
     margin-top: 8%;
