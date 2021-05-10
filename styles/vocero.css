@@ -37,7 +37,7 @@ header{
     width: 50%;
     margin-left: 25%;
     border: 1px solid transparent;
-    transform: translateX(-0%);
+    transform: translateX(0%);
     transition: all 0.4s;
     
 }
@@ -45,7 +45,7 @@ header{
 .title-active{
     width: 70%;
     margin-left: 0%;
-    transform: translateX(-0%);
+    transform: translateX(0%);
     transition: all 0.4s;
     border: 1px solid transparent;
 }
