@@ -16,10 +16,10 @@ if ($usario == "" || $usario == null) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crear maquinaria</title>
+    <title>Crear insumos</title>
     <script src="https://kit.fontawesome.com/7b875e4198.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../styles/crear_maquinaria.css">
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <link rel="stylesheet" href="../styles/crear_insumo.css">
 </head>
 <body>
     <header>
@@ -65,8 +65,8 @@ if ($usario == "" || $usario == null) {
     <main>
         <nav class="nav" id="nav">
             
-        <div class="title_intruc">
-                <h5 class="title_int"><a class="title_int" href="../users/instructor/instructor.php"styles="text-decoration:none;">INSTRUCTOR</a> </h5>
+            <div class="title_intruc">
+                <h5 class="title_int"><a class="title_int" href="../users/instructor/instructor.php" styles="text-decoration:none;">INSTRUCTOR</a> </h5>
             </div>
             <div class="img_logo">
                 <img class="img_logo" src="../img/COSTUD.png" alt="">
@@ -77,13 +77,6 @@ if ($usario == "" || $usario == null) {
 
            
                 <ul>
-                    <li class="suba submenu" id="subm"><a href="">INVENTARIO<span><i class="opc fas fa-angle-down"></i></span></a>
-                        <ul class="mos">
-                            <li><a class="mos" id="mos" href="#">sub Item 1</a></li>
-                            <li><a href="#">sub Item 2</a></li>
-                            <li><a href="#">sub Item 3</a></li>
-                        </ul>
-                    </li>
                   
                     <li class="submenu"><a href="">REGISTRO<span><i class="opc fas fa-angle-down"></i></span></a>
                         <ul>
@@ -93,7 +86,25 @@ if ($usario == "" || $usario == null) {
                         </ul>
 
                     </li>
-                    
+
+                    <li class="submenu"><a href="">INVENTARIO<span><i class="opc fas fa-angle-down"></i></span></a>
+                        <ul class="mos">
+                            <li><a class="mos" id="mos" href="#">sub Item 1</a></li>
+                            <li><a href="#">sub Item 2</a></li>
+                            <li><a href="#">sub Item 3</a></li>
+                            <li><a href="#">sub Item 4</a></li>
+                        </ul>
+
+                    </li>
+
+                    <li class="submenu"><a href="">REGISTRO<span><i class="opc fas fa-angle-down"></i></span></a>
+                        <ul>
+                            <li><a href="crear_insumo.php">CREAR INSUMOS</a></li>
+                            <li><a href="crear_maquinaria.php">CREAR MAQUINARIA</a></li>
+                            <li><a href="crear_material.php">CREAR MATERIAL TEXTIL</a></li>
+                        </ul>
+
+                    </li>
                     <li><a href="">AUTORIZACIONES </a></li>
                     <li><a href="">REPORTES</a></li>
                     <div class="logo_institu">
@@ -101,81 +112,81 @@ if ($usario == "" || $usario == null) {
                       </div>
                 </ul>
             </div>
-          
-
         </nav>
     </main>
-    
-    <div class="primer_form">
-        <h1 class="titulo_maqui">INGRESO DE MAQUINARIA</h1>
-        <div class="form_reg_maquina">
-            <form action="../php/val_maqui.php" method="POST" autocomplete="off">
-                <input type="text" name="serial" id="serial" placeholder="Serial" required>
-                <br>
-                <label for="">TIPO DE MAQUINARIA</label>
-                <select id="tipo_maqui" name="tipo_maqui" required>           
-                    <option value="">SELECCIONAR</option>
-                    <?php
-                        $sql="SELECT * FROM tipo_maquinaria";
-                        $query=mysqli_query($conexion,$sql);
-                        while($row=mysqli_fetch_array($query)){
-                    ?>
-                        <option value="<?php echo $row['ID_TIPO_MAQUI']?>"> <?php echo $row['NOM_TIPO_MAQUI']?></option> 
-                    
-                    <?php
-                    }
-                    ?>
-                </select>
-                <br>
-                <a id="btn_salirmaquinaria" href="#">CREAR TIPO DE MAQUINARIA</a>
-                <br>
-                <label for="marca">MARCA</label>
-                <select id="marca" name="marca" required>           
-                    <option value="">SELECCIONAR</option>
-                    <?php
-                        $sql="SELECT * FROM marca";
-                        $query=mysqli_query($conexion,$sql);
-                        while($row=mysqli_fetch_array($query)){
-                    ?>
-                        <option value="<?php echo $row['ID_MARCA']?>"> <?php echo $row['NOM_MARCA']?></option> 
 
-                    <?php
-                    }
-                    ?>
-                </select>
-                <br>
-                <a id="btn_salirmarca" href="#">CREAR MARCA</a>
-                <br>
-                <label for="">COLOR DE MAQUINARIA</label>
-                <select id="color" name="color">
-                    <option value="">SELECCIONAR</option>   
-                    <?php
-                        $sql="SELECT*FROM color";
-                        $query=mysqli_query($conexion,$sql);
-                        while($row=mysqli_fetch_array($query)){
-                    ?>
-                        <option value="<?php echo $row['ID_COLOR']?>"> <?php echo $row['NOM_COLOR']?></option> 
 
-                    <?php
-                    }
-                    ?>
+    <div class="primer_from">
+        <h2 class="titulo_insumo">INGRESO DE INSUMO</h2>
+        <div class="formulario">
+            <form action="../php/val_insumos.php" method="POST" autocomplete="off">                            
+                <label for="tipinsu">TIPO DE INSUMO</label>              
+                <select class="insumo" id="tipinsumo" name="tipinsumo" required>           
+                        <?php
+                            $sql="SELECT*FROM tipo_insumo";
+                            $query=mysqli_query($conexion,$sql);
+                            while($row=mysqli_fetch_array($query)){
+                        ?>
+                            <option value="<?php echo $row['ID_TIPO_INSUMO']?>"> <?php echo $row['NOM_INSUMO']?></option> 
+
+                        <?php
+                        }
+                        ?>
                 </select>
+                <br>
+                <a id="btn_salirinsu" class="d_insu" href="#">CREAR TIPO INSUMO</a>
+                <br>
+
+                <label class="t_insu" for="">NOMBRE DEL INSUMO</label>
+                <input type="text" class="insu" name="nominsumo" id="nominsumo" placeholder="Tijeras punta redonda" required>
+                <br>
+                <label class="t_marca" for="">MARCA DEL INSUMO</label>
+                <select class="marca" id="marca" name="marca" required>
+                        <?php
+                            $sql="SELECT*FROM marca";
+                            $query=mysqli_query($conexion,$sql);
+                            while($row=mysqli_fetch_array($query)){
+                        ?>
+                            <option value="<?php echo $row['ID_MARCA']?>"> <?php echo $row['NOM_MARCA']?></option> 
+
+                        <?php
+                        }
+                        ?>
+                </select>
+                <br>
+                <a id="btn_salirmarca" class="d_marca" href="#">CREAR MARCA</a>
+                <br>
+
+                <label class="t_color" for="">COLOR DEL INSUMO</label>
+                <select class="color" id="color" name="color" required>
+                        <?php
+                            $sql="SELECT*FROM color";
+                            $query=mysqli_query($conexion,$sql);
+                            while($row=mysqli_fetch_array($query)){
+                        ?>
+                            <option value="<?php echo $row['ID_COLOR']?>"> <?php echo $row['NOM_COLOR']?></option> 
+
+                        <?php
+                        }
+                        ?>
+                </select>
+                <br>
                 <a id="btn_salircolor" href="#" class="d_color">CREAR COLOR</a>
                 <br>
-                 
-                <input type="hidden" name="cre_maqui" value="crearmaquina">
-                <input type="submit" class="continuar" name="registrar_maquina" id="registrar_maquina" value="CONTINUAR">  
+                
+               
+                <input type="submit" class="btn_insumo" value="CREAR INSUMO" class="form-control">
+                <input type="hidden" name="cre_insumo" value="crearmoto">
             </form>
-        </div>
+        </div>    
     </div>
-
-    <div class="crear_maquinaria" id="crear_maquinaria">
-        <div class="content_formMaquinaria">
-            <div id="cerrar_ventanaMaquinaria"><i class="fas fa-times-circle"></i></div>
-            <h2 class="titulo_maquinaria">Agregar Tip. Maquinaria</h2>
-            <form action="../php/regis_tip_maqui.php" class="formularioMaquinaria" method="POST" autocomplete="off">
-                <input type="text" class="ti_maquinaria" name="agre_maquinaria" id="agre_maquinaria" placeholder="Tipo de maquinaria" required>
-                <input type="submit" class="env-maquinaria" name="env-maquinaria" value="AGREGAR">
+    <div class="crear_tipo_insumo" id="crear_tipo_insumo">
+        <div class="content_from">
+            <div id="cerrar_ventana"><i class="fas fa-times-circle"></i></div>
+            <h2 class="titulo_t_insumo">Agregar Tip. Insumo</h2>
+            <form action="../php/regis_tipo_insumo.php" class="formulario_t" method="POST" autocomplete="off">
+                <input type="text" class="ti_insumo" name="agre_tipo_insumo" id="agre_tipo_insumo" placeholder="tipo insumo" required>
+                <input type="submit" class="env-insumo" name="env-insumo" value="AGREGAR">
             </form>
         </div>
     </div>
@@ -184,7 +195,7 @@ if ($usario == "" || $usario == null) {
         <div class="content_formMarca">
             <div id="cerrar_ventanaMarca"><i class="fas fa-times-circle"></i></div>
             <h2 class="titulo_marca">Agregar Marca</h2>
-            <form action="../php/regis_marca_maqui.php" class="formularioMarca" method="POST" autocomplete="off">
+            <form action="../php/regis_marca_insu.php" class="formularioMarca" method="POST" autocomplete="off">
                 <input type="text" class="ti_marca" name="agre_marca" id="agre_marca" placeholder="Digite la marca" required>
                 <input type="submit" class="env-marca" name="env-marca" value="AGREGAR">
             </form>
@@ -195,15 +206,16 @@ if ($usario == "" || $usario == null) {
         <div class="content_formColor">
             <div id="cerrar_ventanaColor"><i class="fas fa-times-circle"></i></div>
             <h2 class="titulo_color">Agregar Color</h2>
-            <form action="../php/regis_color_maqui.php" class="formularioColor" method="POST" autocomplete="off">
+            <form action="../php/regis_color_insu.php" class="formularioColor" method="POST" autocomplete="off">
                 <input type="text" class="ti_color" name="agre_color" id="agre_color" placeholder="Digite el color" required>
                 <input type="submit" class="env-color" name="env-color" value="AGREGAR">
             </form>
         </div>
-    </div>                
-    
-    <script src="../js/main.js"></script>
-    <script src="../js/maquinaria.js"></script>
-    
+    </div>
+
+
+        
+<script src="../js/main.js"></script>
+<script src="../js/crear_insumos.js"></script>
 </body>
 </html>

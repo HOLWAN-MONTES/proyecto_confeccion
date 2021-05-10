@@ -6,27 +6,31 @@ require_once('includes/conection.php');
     $query_re = mysqli_query($conexion, $sql_re);
     $fila_re = mysqli_fetch_assoc($query_re);
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/7b875e4198.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/inicio/login.css">
-    <title>Document</title>
+    <title>LOGIN</title>
 </head>
+
 <body>
-    <div class="general">
-
-        <div class="uno">
-        </div>
-        <div class="dos">
-        </div>
+    <div class="atras">
+    <a href="index.html"><i class="fas fa-times-circle"></i></a>
     </div>
-
-    <div class="infor">
-        <h1 class="tet">S.I PARA LA ENTRADA, SALIDA Y ALMACENAMIENTO DE MATERIAL TEXTIL</h1>
-        <div class="log">
+    <div class="aaaaaaaaaaa">
+        <div class="infor">
+         <div class="tet">
+            <h1 >S.I PARA LA ENTRADA, SALIDA Y ALMACENAMIENTO DE MATERIAL TEXTIL</h1>
+         </div>
+           
+            <div class="content">
             <h2>INICIO DE SESION</h2>
             <img src="img/COSTUD.png" alt="">
             <form method="post" id="form" action="php/ingreso.php" autocomplete="off">
@@ -50,4 +54,5 @@ require_once('includes/conection.php');
         </div>
     </div>
 </body>
+
 </html>

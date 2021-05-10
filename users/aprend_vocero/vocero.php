@@ -17,9 +17,9 @@ if ($usario == "" || $usario == null) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/7b875e4198.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../../styles/admin.css">
+    <link rel="stylesheet" href="../../styles/vocero.css">
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <title>INSTRUCTOR</title>
+    <title>VOCERO</title>
 </head>
 
 <body>
@@ -60,7 +60,7 @@ if ($usario == "" || $usario == null) {
         <nav class="nav" id="nav">
 
             <div class="title_intruc">
-                <h5 class="title_int"><a class="title_int" href="instructor.php">INSTRUCTOR</a> </h5>
+                <h5 class="title_int"><a class="title_int" href="vocero.php">APR. VOCERO</a> </h5>
             </div>
             <div class="img_logo">
                 <img class="img_logo" src="../../img/COSTUD.png" alt="">
@@ -68,25 +68,22 @@ if ($usario == "" || $usario == null) {
 
 
             <div class="menu">
-                <ul>
+                <ul class="general">
 
-                    <li class="suba submenu" id="subm"><a href="">INVENTARIO<span><i class="opc fas fa-angle-down"></i></span></a>
+                    <li class="suba submenu" id="subm"><a href="">PRESTAMOS<span><i class="opc fas fa-angle-down"></i></span></a>
                         <ul class="mos">
                             <li><a class="mos" id="mos" href="#">sub Item 1</a></li>
                             <li><a href="#">sub Item 2</a></li>
                             <li><a href="#">sub Item 3</a></li>
                         </ul>
                     </li>
-                    <li class="suba submenu" id="subm"><a href="">REGISTRO<span><i class="opc fas fa-angle-down"></i></span></a>
-                        <ul  class="mos">
-                            <li><a href="../../crear_instru/crear_insumo.php">CREAR INSUMOS</a></li>
-                            <li><a href="../../crear_instru/crear_maquinaria.php">CREAR MAQUINARIA</a></li>
-                            <li><a href="../../crear_instru/crear_material.php">CREAR MATERIAL TEXTIL</a></li>
+                    <li class="suba submenu" id="subm"><a href="">PRESTAMOS TEXTIL<span><i class="opc fas fa-angle-down"></i></span></a>
+                        <ul class="mos">
+                            <li><a class="mos" id="mos" href="#">sub Item 1</a></li>
+                            <li><a href="#">sub Item 2</a></li>
+                            <li><a href="#">sub Item 3</a></li>
                         </ul>
-
                     </li>
-                    <li><a href="">AUTORIZACIONES </a></li>
-                    <li><a href="">REPORTES</a></li>
                     <div class="logo_institu">
                         <img class="logo_institu" src="../../img/logo_sena.png" alt="">
                     </div>
