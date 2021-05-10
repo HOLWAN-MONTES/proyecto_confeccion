@@ -1,0 +1,120 @@
+:root{
+    --coloresgenerales1:rgb(24,130,118);
+    --colorDefondoDelMenu:rgb(89,181,72);
+    --colorDefondoDelMenu2:rgba(60, 151, 68, 0.699);
+}
+.elimiusu{
+    opacity: 0;
+    visibility: hidden;
+}
+.titulo{
+    margin-top: 8%;
+    margin-left: 13%;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.form{
+    margin: 2% 30%;
+    width: 55%;
+    height: 340px;
+    padding: 2%;
+    border: 2px solid black;
+    text-align: center;
+    justify-content: center;
+    background: #d6d2c4;
+}
+.user{
+    margin-top: 3%;
+    margin-right: 67%;
+    font-size: 18px;
+}  
+
+.tip_usu{
+    margin-top: 3%;
+    width: 90%;
+    border: 2px solid black;
+    font-size: 14px;
+} 
+
+#docu{
+    margin-top: 2%;
+    width: 30%;
+    height: 8%;
+    margin-left: -20%;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 14px;
+}
+#nom{
+    width: 30%;
+    height: 8%;
+    margin-left: 1%;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 14px;
+}
+#apel{
+    width: 30%;
+    height: 8%;
+    margin-right: -20%;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 14px;
+}
+.doc{
+    margin-top: -7%;
+    margin-right: -2%;
+}
+#tip_docu{
+    margin-top: 1%;
+    width: 29%;
+    border: 2px solid black;
+    font-size: 14px;
+}
+
+#edad{
+    border: 2px solid black;
+    margin-top: -6%;
+    margin-right: 1%;
+    width: 30%;
+    height: 8%;
+    float: right;
+    text-align: center;
+}
+
+#tele{
+    margin-top: 4%;
+    width: 30%;
+    height: 8%;
+    margin-left: -40%;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 14px;  
+}
+#cor{
+    margin-top: -3%;
+    width: 30%;
+    height: 8%;
+    margin-right: 10%;
+    float: right;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 14px;    
+}
+#elimi{
+    margin-top: 4%;
+    border: 2px solid black;
+    width: 20%;
+    height: 13%;
+    font-size: 16px;
+    background: #adce74;
+    border-bottom: 6px solid #61b15a;
+    transition: border-bottom .1s ease ;
+}
+#elimi:hover{
+    cursor:pointer;
+    border: 2px solid black;
+    border-bottom: 3px solid #5aa469;
+}
