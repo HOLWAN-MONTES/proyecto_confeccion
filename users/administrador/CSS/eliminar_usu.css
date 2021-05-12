@@ -5,6 +5,7 @@
 }
 .elimiusu{
     opacity: 0;
+    display: none;
     visibility: hidden;
 }
 .titulo{
@@ -15,7 +16,7 @@
     text-transform: uppercase;
     font-family: Arial, Helvetica, sans-serif;
 }
-.form{
+/* .form{
     margin: 2% 30%;
     width: 55%;
     height: 340px;
@@ -24,7 +25,7 @@
     text-align: center;
     justify-content: center;
     background: #d6d2c4;
-}
+} */
 .user{
     margin-top: 3%;
     margin-right: 67%;
