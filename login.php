@@ -6,8 +6,6 @@ require_once('includes/conection.php');
     $query_re = mysqli_query($conexion, $sql_re);
     $fila_re = mysqli_fetch_assoc($query_re);
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 

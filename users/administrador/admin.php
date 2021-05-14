@@ -23,14 +23,14 @@ if ($usario == "" || $usario == null) {
     <link rel="stylesheet" href="CSS_CREAR/insumos.css">
     <link rel="stylesheet" href="CSS_CREAR/material_textil.css">
     <link rel="stylesheet" href="CSS_CREAR/maquina.css">
-    <title>Document</title>
+    <title>ADMINISTRADOR</title>
 </head>
 <body>
     <div class="principal">
         <div class="lateral">
             <div class="superior">
                 <br>
-                <h5 class="title_int">ADMINISTRADOR </h5>
+                <h5 class="title_int"><a class="menuaaa" href="admin.php">ADMINISTRADOR</a>  </h5>
             </div>
             <div class="navegacion">
                 <div class="img_logo">
