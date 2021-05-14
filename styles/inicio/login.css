@@ -68,3 +68,137 @@ select{
     height: 30px;
     margin-top: 4%;   
 }
+
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+
+.log{
+    display: block;
+    border: 1px solid rgba(130, 127, 133, 0.233);
+}
+
+.box_2{
+ /*    border: 1px solid red; */
+}
+
+.img{
+    width: 50%;
+    height: 33vh; 
+}
+
+.tet{
+    text-align: center;
+    color: white;
+    margin-bottom: 3%;  
+    width: 100%;
+   
+}
+
+.content{
+    width: 50%;
+    display: block;  
+    margin: 0 auto;
+   
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+}
+
+
+
+
+.atras a i{
+    font-size: 50px;
+    color: black;
+}
+
+
+
+.log div{
+    padding: 1%;
+}
+
+input {
+    padding: 9px 16px 9px 76px ;
+    text-align: center;
+    width: 60%;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid grey;outline: none;
+    margin-bottom: 10px;
+}
+
+input:focus{
+    border: 1px solid black;
+}
+
+select{
+    border-radius: 20px;outline: none;
+    padding: 9px 95px 9px 20px ;
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+
+.infor{
+    border-radius: 14px;  
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 1%;
+}
+
+.aaaaaaaaaaa{
+    background-color: rgb(24, 130, 118);  
+    width: 100vw;
+    height: 50vh;
+    position: absolute;
+}
+
+.ols{
+    text-decoration: none;
+    color: rgb(24, 130, 118); 
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+.atras{
+    position: absolute;
+    z-index: 3;
+    margin:1px solid transparent;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
+.ingresar{
+    padding: 9px 26px 9px 26px ;
+    border-radius: 20px;
+    border: 1px solid grey;outline: none;
+    color: white;
+    background-color: rgb(24, 130, 118);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+input[type=number] { -moz-appearance:textfield; }
