@@ -5,19 +5,31 @@
 }
 .elimiusu{
     opacity: 0;
+    display: none;
     visibility: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: rgb(245, 237, 237);
+}
+.titulo{
+    color: #5aa469;
+    margin-top: 10%;
+    margin-left: 30%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .form-elim{
-    margin: 2% 30%;
-    width: 55%;
-    height: 340px;
+    margin-left: 14%;
+    width: 80%;
+    height: 60%;
     padding: 2%;
     border: 2px solid black;
     text-align: center;
     justify-content: center;
     background: #d6d2c4;
-}
-.user{
+    border-radius: 16px;
+} 
+.userr{
     margin-top: 3%;
     margin-right: 67%;
     font-size: 18px;
@@ -55,7 +67,7 @@
     text-align: center;
     font-size: 14px;
 }
-.doc{
+.docc{
     margin-top: -7%;
     margin-right: -2%;
 }

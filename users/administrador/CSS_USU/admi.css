@@ -8,7 +8,7 @@
 /* --------------------div principal------------------- */
 .principal{
     width: 100%;
-    height: 665px;
+    height: 663px;
     display: flex;
     background-color: black;
     }
@@ -202,8 +202,21 @@
     .info{
         width: 100%;
         height: 90%;
-        background-color: #fff;
+        background-color: #fff; 
     }
+
+    .usuar{
+        background-color:rgb(245, 237, 237) ;
+        width: 100%;
+        height: 100%;
+        display: none;
+    }
+    .crear{
+        width: 100%;
+        height: 100%;
+        display: none;
+    }
+
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
