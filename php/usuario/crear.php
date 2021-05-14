@@ -1,5 +1,5 @@
 <?php
-    require '../includes/conection.php';
+    require '../../includes/conection.php';
 
     if($_POST["registro"]){
         //Declaramos las variables para almacenar los datos digitados
@@ -21,16 +21,16 @@
 
         if(!$query){
             echo '<script> alert ("Error al registrarlo");</script>';
-            echo '<script> window.location="../users/administrador/registro_users.php" </script>';
+            echo '<script> window.location="../../users/administrador/admin.php" </script>';
         }
         else{
             echo '<script> alert ("Exito al registrarlo");</script>';
-            echo '<script> window.location="../users/administrador/registro_users.php" </script>';
+            echo '<script> window.location="../../users/administrador/admin.php" </script>';
         }
     }
     else{
         echo '<script> alert ("Ups algo fallo, intentalo de nuevo");</script>';
-        echo '<script> window.location="../users/administrador/registro_users.php" </script>';
+        echo '<script> window.location="../../users/administrador/admin.php" </script>';
     }
 
 ?>

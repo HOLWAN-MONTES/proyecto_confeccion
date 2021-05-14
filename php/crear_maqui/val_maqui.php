@@ -1,5 +1,5 @@
 <?php
-include('../includes/conection.php');
+include('../../includes/conection.php');
 ?>
 <?php
     if(isset($_POST['cre_maqui'])){
@@ -15,12 +15,12 @@ include('../includes/conection.php');
         $resul=mysqli_query($conexion,$sql);
             if($resul){
                 echo '<script> alert ("La maquina se ha creado correctamente");</script>';
-                echo '<script> window.location="../users/administrador/admin.php" </script>';
+                echo '<script> window.location="../../users/administrador/admin.php" </script>';
             }else{
                 echo "<script language='JavaScript'>
                     alert('Los datos no fueron ingresados correctamente');
                     </script>";
-                echo '<script> window.location="../users/administrador/admin.php" </script>';
+                echo '<script> window.location="../../users/administrador/admin.php" </script>';
             }
             mysqli_close($conexion);
     }else{
