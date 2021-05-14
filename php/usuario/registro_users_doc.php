@@ -1,5 +1,5 @@
 <?php
-    require '../includes/conection.php';
+    require '../../includes/conection.php';
 
     if($_POST["env-doc"]){
         //Declaramos las variables para almacenar los datos digitados
@@ -11,11 +11,11 @@
 
         if(!$query){
             echo '<script> alert ("Error al registrar el documento");</script>';
-            echo '<script> window.location="../users/administrador/registro_users.php" </script>';
+            echo '<script> window.location="../../users/administrador/admin.php" </script>';
         }
         else{
             echo '<script> alert ("Exito al registrar el documento");</script>';
-            echo '<script> window.location="../users/administrador/registro_users.php" </script>';
+            echo '<script> window.location="../../users/administrador/admin.php" </script>';
         }
     }
     elseif($_POST["env-user"]){
@@ -27,16 +27,16 @@
 
         if(!$query){
             echo '<script> alert ("Error al registrarlo el usuario");</script>';
-            echo '<script> window.location="../users/administrador/registro_users.php" </script>';
+            echo '<script> window.location="../../users/administrador/admin.php" </script>';
         }
         else{
             echo '<script> alert ("Exito al registrarlo el usuario");</script>';
-            echo '<script> window.location="../users/administrador/registro_users.php" </script>';
+            echo '<script> window.location="../../users/administrador/admin.php" </script>';
         }
     }
     else{
         echo '<script> alert ("Ups algo fallo, intentalo de nuevo ");</script>';
-        echo '<script> window.location="../users/administrador/registro_users.php" </script>';
+        echo '<script> window.location="../../users/administrador/admin.php" </script>';
     }
     
 

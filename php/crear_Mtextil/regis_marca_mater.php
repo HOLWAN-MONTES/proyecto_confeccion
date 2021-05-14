@@ -1,6 +1,6 @@
 <?php
 
-    include('../includes/conection.php');
+    include('../../includes/conection.php');
 
     if($_POST['env-marca']){
         $marca=$_POST["agre_marca"];
@@ -10,16 +10,16 @@
     
         if(!$query_m){
             echo '<script> alert ("Error al registrar la marca del material textil");</script>';
-            echo '<script> window.location="../crear/crear_material.php" </script>';
+            echo '<script> window.location="../../users/administrador/admin.php" </script>';
         }
         else{
             echo '<script> alert ("Datos guardados correctamente al registrar la marca del material");</script>';
-            echo '<script> window.location="../crear/crear_material.php" </script>';
+            echo '<script> window.location="../../users/administrador/admin.php" </script>';
         }
     
     }
     else{
         echo '<script> alert ("Ups algo salio mal, intentalo de nuevo ");</script>';
-        echo '<script> window.location="../crear/crear_material.php" </script>';
+        echo '<script> window.location="../../users/administrador/admin.php" </script>';
     }
 ?>

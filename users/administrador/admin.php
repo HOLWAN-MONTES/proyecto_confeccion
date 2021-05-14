@@ -97,7 +97,7 @@ if ($usario == "" || $usario == null) {
                             <div class="tituloos">
                                 <h1>REGISTRO DE USUARIOS</h1>
                             </div>
-                            <form class="form1" action="../../php/crear.php" method="POST">
+                            <form class="form1" action="../../php/usuario/crear.php" method="POST">
                             <div class="one1">
                                 <input type="number" name="docu" id="docu" placeholder="DOCUMENTO" autocomplete="off" required> &nbsp;&nbsp;&nbsp;
                                 <input type="text" name="nom" id="nom" placeholder="NOMBRE" autocomplete="off" required style="text-transform:uppercase">&nbsp;&nbsp;&nbsp;&nbsp;
@@ -152,7 +152,7 @@ if ($usario == "" || $usario == null) {
                                         <a href=""><img class="cerrar1" src="../../img/cerrar.png" alt="Cerrar"></a>
                                         <div class="modal-text" id="modal-text">
                                             <h2 class="reg-user" id="reg-user">Agregar Tip. Usuario</h2>
-                                            <form class="formul" action="../../php/registro_users_doc.php" method="post">
+                                            <form class="formul" action="../../php/usuario/registro_users_doc.php" method="post">
                                                 <label class="dig-user" for="">Digite Tipo Usuario</label><br><br>
                                                 <input type="text" class="ti-user" name="tipo-user" placeholder="TIPO USUARIO" autocomplete="off" required><br><br>
                                                 <input type="submit" name="env-user" class="env-user" value="AGREGAR">
@@ -168,7 +168,7 @@ if ($usario == "" || $usario == null) {
                                         <a href=""><img class="cerrar" src="../../img/cerrar.png" alt="Cerrar"></a>
                                         <div class="modal-text" id="modal-text">
                                             <h2 class="reg-doc" id="reg-doc">Agregar Tip. Documento</h2>
-                                            <form class="formu" action="../../php/registro_users_doc.php" method="post">
+                                            <form class="formu" action="../../php/usuario/registro_users_doc.php" method="post">
                                                 <label class="dig-doc" for="">Digite Tipo Documento</label><br><br>
                                                 <input type="text" class="ti-docu" name="tipo-docume" placeholder="TIPO DOCUMENTO" autocomplete="off" required><br><br>
                                                 <input type="submit" name="env-doc" class="env-doc" value="AGREGAR">
@@ -295,7 +295,7 @@ if ($usario == "" || $usario == null) {
                                 <br>
                                 <h1 class="titulo_maqui">INGRESO DE MAQUINARIA</h1>
                                 <div class="form_reg_maquina">
-                                    <form class="formu_maquinn" action="../php/val_maqui.php" method="POST" autocomplete="off">
+                                    <form class="formu_maquinn" action="../../php/crear_maqui/val_maqui.php" method="POST" autocomplete="off">
                                         <input type="text" name="serial" id="serial" placeholder="Serial" required>
                                         <br>
                                         <label class="l_maquinn" for="">TIPO DE MAQUINARIA</label>
@@ -359,7 +359,7 @@ if ($usario == "" || $usario == null) {
                                 <div class="content_formMaquinaria">
                                     <div id="cerrar_ventanaMaquinaria"><i class="fas fa-times-circle"></i></div>
                                     <h2 class="titulo_maquinaria">Agregar Tip. Maquinaria</h2>
-                                    <form action="../php/regis_tip_maqui.php" class="formularioMaquinaria" method="POST" autocomplete="off">
+                                    <form action="../../php/crear_maqui/regis_tip_maqui.php" class="formularioMaquinaria" method="POST" autocomplete="off">
                                         <input type="text" class="ti_maquinaria" name="agre_maquinaria" id="agre_maquinaria" placeholder="Tipo de maquinaria" required>
                                         <input type="submit" class="env-maquinaria" name="env-maquinaria" value="AGREGAR">
                                     </form>
@@ -370,7 +370,7 @@ if ($usario == "" || $usario == null) {
                                 <div class="content_formMarca">
                                     <div id="cerrar_ventanaMarca"><i class="fas fa-times-circle"></i></div>
                                     <h2 class="titulo_marca">Agregar Marca</h2>
-                                    <form action="../php/regis_marca_maqui.php" class="formularioMarca" method="POST" autocomplete="off">
+                                    <form action="../../php/crear_maqui/regis_marca_maqui.php" class="formularioMarca" method="POST" autocomplete="off">
                                         <input type="text" class="ti_marca" name="agre_marca" id="agre_marca" placeholder="Digite la marca" required>
                                         <input type="submit" class="env-marca" name="env-marca" value="AGREGAR">
                                     </form>
@@ -381,7 +381,7 @@ if ($usario == "" || $usario == null) {
                                 <div class="content_formColor">
                                     <div id="cerrar_ventanaColor"><i class="fas fa-times-circle"></i></div>
                                     <h2 class="titulo_color">Agregar Color</h2>
-                                    <form action="../php/regis_color_maqui.php" class="formularioColor" method="POST" autocomplete="off">
+                                    <form action="../../php/crear_maqui/regis_color_maqui.php" class="formularioColor" method="POST" autocomplete="off">
                                         <input type="text" class="ti_color" name="agre_color" id="agre_color" placeholder="Digite el color" required>
                                         <input type="submit" class="env-color" name="env-color" value="AGREGAR">
                                     </form>

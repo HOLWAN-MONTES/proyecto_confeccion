@@ -1,5 +1,5 @@
 <?php
-include('../includes/conection.php');
+include('../../includes/conection.php');
 ?>
 <?php
 if(isset($_POST['regis_material'])){
@@ -15,17 +15,17 @@ if(isset($_POST['regis_material'])){
     
     if(!$query){
         echo '<script> alert ("Error al registrar el material");</script>';
-        echo '<script> window.location="../users/administrador/admin.php" </script>';
+        echo '<script> window.location="../../users/administrador/admin.php" </script>';
     }
     else{
         echo '<script> alert ("Se guardaron los datos exitosamente, gracias por crear el material");</script>';
-        echo '<script> window.location="../users/administrador/admin.php" </script>';
+        echo '<script> window.location="../../users/administrador/admin.php" </script>';
     }
 
 }
 else{
     echo '<script> alert ("Algo fallo, intentalo de nuevo");</script>';
-    echo '<script> window.location="../users/administrador/admin.php" </script>';
+    echo '<script> window.location="../../users/administrador/admin.php" </script>';
 }
 
 
