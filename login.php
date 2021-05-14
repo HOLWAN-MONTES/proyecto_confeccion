@@ -49,7 +49,7 @@ require_once('includes/conection.php');
                         endforeach;
                         ?>
                     </select><br> 
-                <input type="submit" name="inicio" id="inicio" value="INGRESAR">
+                <input type="submit" class="ingresar" name="inicio" id="inicio" value="INGRESAR">
             </form>
         </div>
     </div>
