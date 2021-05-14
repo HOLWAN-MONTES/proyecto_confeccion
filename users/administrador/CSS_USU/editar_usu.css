@@ -3,35 +3,56 @@
     --colorDefondoDelMenu:rgb(89,181,72);
     --colorDefondoDelMenu2:rgba(60, 151, 68, 0.699);
 }
-.elimiusu{
-    opacity: 0;
+.ediusu{
     display: none;
+    opacity: 0;
     visibility: hidden;
+    width: 100%;
+    height: 100%;
+    
 }
-.form-elim{
-    margin: 2% 30%;
-    width: 55%;
-    height: 340px;
+.nece{
+    display: flex;
+}
+.imagenn{
+    width: 10%;
+    height: 13%;
+    margin-left: -5%;
+    margin-top: 22%;
+}
+/*Estilos del formulario*/
+.form-edi{
+    margin-left: 14%;
+    width: 60%;
+    height: 60%;
     padding: 2%;
     border: 2px solid black;
     text-align: center;
     justify-content: center;
     background: #d6d2c4;
-} */
-.user{
+    border-radius: 16px;
+} 
+.titulos{
+    color: #5aa469;
+    margin-top: 10%;
+    margin-left: 30%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.userR{
     margin-top: 3%;
     margin-right: 67%;
     font-size: 18px;
 }  
 
-.tip_usu_elim{
+.tip_usu_edi{
     margin-top: 3%;
     width: 90%;
     border: 2px solid black;
     font-size: 14px;
+    border-radius: 16px;
 } 
 
-#docu-elim{
+#docu-edi{
     margin-top: 2%;
     width: 30%;
     height: 8%;
@@ -40,7 +61,8 @@
     text-align: center;
     font-size: 14px;
 }
-#nom-elim{
+#nom-edi{
+    margin-top: 2%;
     width: 30%;
     height: 8%;
     margin-left: 1%;
@@ -48,7 +70,8 @@
     text-align: center;
     font-size: 14px;
 }
-#apel-elim{
+#apel-edi{
+    margin-top: 2%;
     width: 30%;
     height: 8%;
     margin-right: -20%;
@@ -56,18 +79,25 @@
     text-align: center;
     font-size: 14px;
 }
-.doc{
-    margin-top: -7%;
-    margin-right: -2%;
+.foor{
+    display: flex;
+    background-color: aqua;
+    width: 100%;
 }
-#tip_docu_elim{
-    margin-top: 1%;
-    width: 29%;
+.docC{
+    width: 50%;
+    margin-top: -9%;
+    margin-left: 25%;
+}
+#tip_docu_edi{
+    margin-top: 3%;
+    width: 65%;
     border: 2px solid black;
     font-size: 14px;
+    border-radius: 16px;
 }
 
-#edad-elim{
+#edad-edi{
     border: 2px solid black;
     margin-top: -6%;
     margin-right: 1%;
@@ -76,28 +106,37 @@
     float: right;
     text-align: center;
 }
-
-#tele-elim{
-    margin-top: 4%;
+#contra-edi{
+    margin-top: 5%;
     width: 30%;
     height: 8%;
-    margin-left: -40%;
+    margin-left: 1.5%;
+    float: left;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 14px;    
+}
+#tele-edi{
+    margin-top: 5%;
+    width: 30%;
+    height: 8%;
+    margin-left: -0.5%;
     border: 2px solid black;
     text-align: center;
     font-size: 14px;  
 }
-#cor-elim{
-    margin-top: -3%;
+#cor-edi{
+    margin-top: 5%;
     width: 30%;
     height: 8%;
-    margin-right: 10%;
+    margin-right: 1%;
     float: right;
     border: 2px solid black;
     text-align: center;
     font-size: 14px;    
 }
-#elimi{
-    margin-top: 4%;
+#edi{
+    margin-top: 6%;
     border: 2px solid black;
     width: 20%;
     height: 13%;
@@ -106,7 +145,7 @@
     border-bottom: 6px solid #61b15a;
     transition: border-bottom .1s ease ;
 }
-#elimi:hover{
+#edi:hover{
     cursor:pointer;
     border: 2px solid black;
     border-bottom: 3px solid #5aa469;

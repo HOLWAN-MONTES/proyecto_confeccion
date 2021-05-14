@@ -1,5 +1,5 @@
 <?php
-include('../includes/conection.php');
+include('../../includes/conection.php');
 ?>
 
 <?php
@@ -18,18 +18,15 @@ include('../includes/conection.php');
                 echo "<script language='JavaScript'>
                     alert('Se ha creado el insumo correctamente');
                     </script>";
-                echo '<script> window.location="../crear/crear_insumo.php" </script>';
+                echo '<script> window.location="../../users/administrador/admin.php" </script>';
             }else{
                 echo "<script language='JavaScript'>
                     alert('los datos no fueron ingresados correctamente');
                     </script>";
-                echo '<script> window.location="../crear/crear_insumo.php" </script>';
+                echo '<script> window.location="../../users/administrador/admin.php" </script>';
             }
             mysqli_close($conexion);
     }else{
-            ?>
-   
-    
-    <?php
+            echo("fallo");
     }
     ?>

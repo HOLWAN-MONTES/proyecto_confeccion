@@ -11,11 +11,11 @@
 
         if(!$query){
             echo '<script> alert ("Error al registrar el documento");</script>';
-            echo '<script> window.location="../users/administrador/registro_users.php" </script>';
+            echo '<script> window.location="../../users/administrador/registro_users.php" </script>';
         }
         else{
             echo '<script> alert ("Exito al registrar el documento");</script>';
-            echo '<script> window.location="../users/administrador/registro_users.php" </script>';
+            echo '<script> window.location="../../users/administrador/registro_users.php" </script>';
         }
     }
 ?>
