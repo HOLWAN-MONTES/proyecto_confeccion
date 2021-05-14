@@ -22,7 +22,7 @@ document.addEventListener('keypress', (e)=>{
                     docum: docu_elim.value,
                 })
             }
-            fetch('../../../php/usuario/eliminar_users.php', option)
+            fetch('../../php/usuario/eliminar_users.php', option)
                 .then(res => res.ok ? res.json() : Promise.reject(res))
                 .then(datos => {
                 console.log(datos);
@@ -67,17 +67,17 @@ document.addEventListener('submit', (e)=>{
                 docum: docmen_eli.value,
             })
         }
-        fetch('../../../php/usuario/eliminar_users.php', option)
+        fetch('../../php/usuario/eliminar_users.php', option)
             .then(res => res.ok ? res.json() : Promise.reject(res))
             .then(datos => {
             const {err, status, statusText} = datos;
             if(status >= 200 && status < 300){
                 alert("Se ha eliminado correctamente");
-                window.location.href="../../../users/administrador/admin.php";
+                window.location.href="../../users/administrador/admin.php";
             }
             else{
                 alert("No se ha eliminado correctamente");
-                window.location.href="../../../users/administrador/admin.php";
+                window.location.href="../../users/administrador/admin.php";
             }
             console.log(datos);
             })

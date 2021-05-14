@@ -23,7 +23,7 @@ document.addEventListener('keypress', (e)=>{
                     docum: documento.value,
                 })
             }
-            fetch('../../../php/usuario/editar_user.php', option)
+            fetch('../../php/usuario/editar_user.php', option)
              .then(res => res.ok ? res.json() : Promise.reject(res))
              .then(datos => {
                 console.log(datos);
@@ -70,17 +70,17 @@ document.addEventListener('submit', (e)=>{
                 contra: contra.value,
             })
         }
-        fetch('../../../php/usuario/editar_user.php', option)
+        fetch('../../php/usuario/editar_user.php', option)
          .then(res => res.ok ? res.json() : Promise.reject(res))
          .then(datos => {
             const {err, status, statusText} = datos;
             if(status >= 200 && status < 300){
                 alert("Se ha actualizado correctamente");
-                window.location.href="../../../users/administrador/admin.php";
+                window.location.href="../../users/administrador/admin.php";
             }
             else{
                 alert("No se ha actualizado correctamente");
-                window.location.href="../../../users/administrador/admin.php";
+                window.location.href="../../users/administrador/admin.php";
             }
             console.log(datos);
          })
