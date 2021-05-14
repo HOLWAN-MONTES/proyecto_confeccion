@@ -242,3 +242,11 @@ input[type=number] { -moz-appearance:textfield; }
 #cor:valid{
     background-color: #91c788;
 }
+
+
+
+.menuaaa{
+    text-decoration: none;
+    color: white;
+    
+}
