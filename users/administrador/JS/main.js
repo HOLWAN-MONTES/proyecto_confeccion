@@ -13,11 +13,11 @@
 
 
 
-btnmenu.addEventListener('click',function(){
-    nav.classList.toggle('mostrar')
-    title.classList.toggle('title-active')
-    btnmenu.classList.toggle('btn-active')
-})
+// btnmenu.addEventListener('click',function(){
+//     nav.classList.toggle('mostrar')
+//     title.classList.toggle('title-active')
+//     btnmenu.classList.toggle('btn-active')
+// })
 
 //ventana modal del registro_users en el usuario
 let cerrar1 = document.querySelectorAll(".cerrar1")[0];
