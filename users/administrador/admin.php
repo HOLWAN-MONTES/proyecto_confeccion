@@ -152,7 +152,7 @@ if ($usario == "" || $usario == null) {
                                         <a href=""><img class="cerrar1" src="../../img/cerrar.png" alt="Cerrar"></a>
                                         <div class="modal-text" id="modal-text">
                                             <h2 class="reg-user" id="reg-user">Agregar Tip. Usuario</h2>
-                                            <form class="formul" action="../../php/usuario/registro_users_doc.php" method="post">
+                                            <form class="formul" action="../../php/usuario/registro_users_doc.php" method="POST">
                                                 <label class="dig-user" for="">Digite Tipo Usuario</label><br><br>
                                                 <input type="text" class="ti-user" name="tipo-user" placeholder="TIPO USUARIO" autocomplete="off" required><br><br>
                                                 <input type="submit" name="env-user" class="env-user" value="AGREGAR">
