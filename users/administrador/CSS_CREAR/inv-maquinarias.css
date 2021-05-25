@@ -4,26 +4,26 @@
     z-index: 0;
     position: absolute;
     margin-left: 35%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 40%;
-    margin-top: 10%;
+ 
     padding: 10px;
     
     
 }
 
 .tabla-inv{
-  border: 1px solid red;
+  
   border-collapse: collapse;
 }
 
-
+/* 
 .tabla-inv tr{
   border: 1px solid red;
-}
+} */
 
 .tabla-inv td{
-  border: 1px solid red;
+  border: 1px solid rgb(0, 0, 0);
   padding:3px 10px 3px 10px;
 }
 
