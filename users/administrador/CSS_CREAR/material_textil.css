@@ -1,4 +1,9 @@
-
+:root{
+    --coloresgenerales1:rgb(24,130,118);
+    --colorDefondoDelMenu:rgb(89,181,72);
+    --colorDefondoDelMenu2:rgba(60, 151, 68, 0.699);
+}
+/*-------------estilos --------*/
 #cre_mate{
     display: none;
     opacity: 0;
