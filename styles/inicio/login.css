@@ -167,19 +167,12 @@ select{
     cursor: pointer;
 }
 
-
 .atras{
     position: absolute;
     z-index: 3;
     margin:1px solid transparent;
     border-radius: 50%;
 }
-
-
-
-
-
-
 
 .ingresar{
     padding: 9px 26px 9px 26px ;
@@ -189,12 +182,6 @@ select{
     background-color: rgb(24, 130, 118);
     cursor: pointer;
 }
-
-
-
-
-
-
 
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
