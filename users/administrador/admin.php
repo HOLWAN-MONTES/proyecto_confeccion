@@ -734,16 +734,39 @@ if ($usario == "" || $usario == null) {
 
             </div>
         </div>
+
         <div class="inv-maquinaria" id="inv-maquinaria">
-                            <h1>holaaa</h1>
-                            <h1>aaaaaaaaaaa</h1>
-                            <h1>aaaaaaaaaaa</h1>
-                            <h1>aaaaaaaaaaa</h1>
+
+
+            <table class="tabla-inv">
+                <tr>
+                    <td>SERIAL</td>
+                    <td>NOMBRE DE LA MAQUINA</td>
+                    <td>MARCA</td>
+                    <td>COLOR</td>
+                    
+                </tr>
+
+                <?php
+                    $sql = "SELECT maquinaria.SERIAL,tipo_maquinaria.NOM_TIPO_MAQUI,marca.NOM_MARCA,color.NOM_COLOR from maquinaria,tipo_maquinaria,marca,color where maquinaria.ID_TIPO_MAQUI=tipo_maquinaria.ID_TIPO_MAQUI and maquinaria.ID_MARCA=marca.ID_MARCA and maquinaria.ID_COLOR=color.ID_COLOR";
+                    $result = mysqli_query($conexion, $sql);
+                
+                    while($mostrar=mysqli_fetch_array($result)){
+                ?>
+
+                <tr>
+                    <td><?php echo $mostrar["SERIAL"]?></td>
+                    <td><?php echo $mostrar["NOM_TIPO_MAQUI"]?></td>
+                    <td><?php echo $mostrar["NOM_MARCA"]?></td>
+                    <td><?php echo $mostrar["NOM_COLOR"]?></td>
+                    
+                </tr>
+                <?php
+                       }
+                ?>
+            
+            </table>
         </div>
-       
-       
-       
-       
        
        
         <script src="JS/editar.js"></script>

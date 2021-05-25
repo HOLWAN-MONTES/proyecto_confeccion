@@ -145,24 +145,8 @@ btn_maqui.addEventListener('click', function(e){
     eliminar_usu.style.display = "none";
     crea_insu.style.display = "none";
     crea_material.style.display = "none";
+    crea_maquina.style.display = "none";
     
-
-
-/*     
-    registrar_usu.style.display="none";
-    usuario.style.display="none";
-    editar_usu.style.opacity = "0";
-    editar_usu.style.visibility = "hidden";
-    editar_usu.style.display="none";
-    eliminar_usu.style.opacity = "0";
-    eliminar_usu.style.visibility = "hidden";
-    eliminar_usu.style.display="none";
-    crea_insu.style.opacity = "0";
-    crea_insu.style.visibility = "hidden";
-    crea_insu.style.display="none";
-    crear.style.display="none";
-    maqui.style.display = "none" */
-
 
 })
 
