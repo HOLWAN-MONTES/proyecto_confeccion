@@ -101,21 +101,18 @@ if ($usario == "" || $usario == null) {
                                 <h1>REGISTRO DE USUARIOS</h1>
                             </div>
                             <form class="form1" action="../../php/usuario/crear.php" method="POST">
-                                <div class="one1">
-                                    <input type="number" name="docu" id="docu" placeholder="DOCUMENTO"
-                                        autocomplete="off" required> &nbsp;&nbsp;&nbsp;
-                                    <input type="text" name="nom" id="nom" placeholder="NOMBRE" autocomplete="off"
-                                        required style="text-transform:uppercase">&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <input type="text" name="apel" id="apel" placeholder="APELLIDO" autocomplete="off"
-                                        required style="text-transform:uppercase"> <br><br>
-                                </div>
-                                <div class="one">
-                                    <div class="user">
-                                        <label id="tex-use" for="">TIPO DE USUARIO</label><br>
-                                        <select name="tip_us" class="tip_usu" id="tip_usu" autocomplete="off" required>
-                                            <option value="">SELECCIONAR</option>
-                                            <?php
-                                            $tipo = "SELECT * FROM tipo_usu";
+                            <div class="one1">
+                                <input type="number" name="docu" id="docu" placeholder="DOCUMENTO" autocomplete="off" required> &nbsp;&nbsp;&nbsp;
+                                <input type="text" name="nom" id="nom" placeholder="NOMBRE" autocomplete="off" required style="text-transform:uppercase">&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="text" name="apel" id="apel" placeholder="APELLIDO" autocomplete="off" required style="text-transform:uppercase"> <br><br>
+                            </div>
+                            <div class="one">
+                                <div class="user">
+                                    <label id="tex-use" for="">TIPO DE USUARIO</label><br>
+                                    <select name="tip_us" class="tip_usu" id="tip_usu" autocomplete="off" required>
+                                        <option value="">SELECCIONAR</option>
+                                        <?php
+                                            $tipo = "SELECT * FROM tipo_usu ORDER BY NOM_TIPO_USU ASC";                                
                                             $inser = mysqli_query($conexion,$tipo);
                                             while($tip = mysqli_fetch_array($inser)){
                                         ?>
@@ -126,16 +123,16 @@ if ($usario == "" || $usario == null) {
                                             <?php
                                         }
                                         ?>
-                                        </select><br>
-                                        <a class="crear-user" href="">CREAR TIPO DE USUARIO</a>
-                                    </div>
-                                    <br>
-                                    <div class="doc">
-                                        <label class="tipo-doc" for="">TIPO DE DOCUMENTO</label><br>
-                                        <select name="tip_doc" id="tip_docu" autocomplete="off" required>
-                                            <option value="">SELECCIONAR</option>
-                                            <?php
-                                            $tipo2 = "SELECT * FROM tipo_docu";
+                                    </select><br>
+                                    <a class="crear-user" href="">CREAR TIPO DE USUARIO</a>
+                                </div>
+                                <br>
+                                <div class="doc">
+                                    <label class="tipo-doc" for="">TIPO DE DOCUMENTO</label><br>
+                                    <select name="tip_doc" id="tip_docu" autocomplete="off" required>
+                                        <option value="">SELECCIONAR</option>
+                                        <?php
+                                            $tipo2 = "SELECT * FROM tipo_docu ORDER BY NOM_TIPO_DOCU ASC";
                                             $inser2 = mysqli_query($conexion,$tipo2);
                                             while($tip2 = mysqli_fetch_array($inser2)){
                                         ?>
@@ -169,9 +166,8 @@ if ($usario == "" || $usario == null) {
                                         <a href=""><img class="cerrar1" src="../../img/cerrar.png" alt="Cerrar"></a>
                                         <div class="modal-text" id="modal-text">
                                             <h2 class="reg-user" id="reg-user">Agregar Tip. Usuario</h2>
-                                            <form class="formul" action="../../php/usuario/registro_users_doc.php"
-                                                method="post">
-                                                <label class="dig-user" for="">Digite Tipo Usuario</label><br><br>
+                                            <form class="formul" action="../../php/usuario/registro_users_doc.php" method="POST">
+                          <label class="dig-user" for="">Digite Tipo Usuario</label><br><br>
                                                 <input type="text" class="ti-user" name="tipo-user"
                                                     placeholder="TIPO USUARIO" autocomplete="off" required><br><br>
                                                 <input type="submit" name="env-user" class="env-user" value="AGREGAR">
