@@ -8,9 +8,10 @@ if(isset($_POST['regis_material'])){
     $marca=$_POST['marca'];
     $color=$_POST['color'];
     $metraje=$_POST['metraje'];
+    $cant_rollos=$_POST['cant_rollos'];
 
-    $sql="INSERT INTO material_textil(NOM_M_TEXTIL, ID_TIPO_TELA, ID_MARCA, ID_COLOR, METRAJE) 
-    VALUES('$nom_material', '$tipo_tela', '$marca', '$color', '$metraje')";
+    $sql="INSERT INTO material_textil(NOM_M_TEXTIL, ID_TIPO_TELA, ID_MARCA, ID_COLOR, METRAJE, CANT_ROLLO) 
+    VALUES('$nom_material', '$tipo_tela', '$marca', '$color', '$metraje', '$cant_rollos')";
     $query = mysqli_query($conexion,$sql);
     
     if(!$query){
