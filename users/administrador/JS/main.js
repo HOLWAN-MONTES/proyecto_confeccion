@@ -31,7 +31,8 @@ abrir1.addEventListener("click", function (e) {
     modalC1.style.visibility = "visible";
     modal1.classList.toggle("modal-close1");
 });
-cerrar1.addEventListener("click", function () {
+cerrar1.addEventListener("click", function (e) {
+    e.preventDefault();
     modal1.classList.toggle("modal-close1");
     setTimeout(function () {
         modalC1.style.opacity = "0";
