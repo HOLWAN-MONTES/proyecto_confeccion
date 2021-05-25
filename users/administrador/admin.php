@@ -109,7 +109,7 @@ if ($usario == "" || $usario == null) {
                                     <select name="tip_us" class="tip_usu" id="tip_usu" autocomplete="off" required>
                                         <option value="">SELECCIONAR</option>
                                         <?php
-                                            $tipo = "SELECT * FROM tipo_usu";
+                                            $tipo = "SELECT * FROM tipo_usu ORDER BY NOM_TIPO_USU ASC";
                                             $inser = mysqli_query($conexion,$tipo);
                                             while($tip = mysqli_fetch_array($inser)){
                                         ?>
@@ -126,7 +126,7 @@ if ($usario == "" || $usario == null) {
                                     <select name="tip_doc" id="tip_docu" autocomplete="off" required>
                                         <option value="">SELECCIONAR</option>
                                         <?php
-                                            $tipo2 = "SELECT * FROM tipo_docu";
+                                            $tipo2 = "SELECT * FROM tipo_docu ORDER BY NOM_TIPO_DOCU ASC";
                                             $inser2 = mysqli_query($conexion,$tipo2);
                                             while($tip2 = mysqli_fetch_array($inser2)){
                                         ?>
