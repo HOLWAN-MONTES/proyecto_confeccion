@@ -1,6 +1,10 @@
 .inv-maquinaria{
-    display: hidden;
-    visibility: hidden;
+    display: none;
+    color: blue;
+    position: absolute;
+    
+    
+    
 }
 
 
