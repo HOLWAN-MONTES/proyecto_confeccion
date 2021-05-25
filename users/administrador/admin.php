@@ -19,7 +19,7 @@ if ($usario == "" || $usario == null) {
     <link rel="stylesheet" href="CSS_USU/regi_usu.css">
     <link rel="stylesheet" href="CSS_USU/editar_usu.css">
     <link rel="stylesheet" href="CSS_USU/eliminar_usu.css">
-
+    <link rel="stylesheet" href="CSS_CREAR/inv-maquinarias.css">
     <link rel="stylesheet" href="CSS_CREAR/insumos.css">
     <link rel="stylesheet" href="CSS_CREAR/material_textil.css">
     <link rel="stylesheet" href="CSS_CREAR/maquina.css">
@@ -54,9 +54,9 @@ if ($usario == "" || $usario == null) {
                         </li>
                         <li class="suba_submenu">INVENTARIO ⬇
                             <ul class="mostrar">
-                                <li>INV DE MAQUINARIA</li>
-                                <li>INV DE MATERIAL TEXTIL</li>
-                                <li>INV DE INSUMOS</li>
+                                <li id="btn-inv-maquinaria" >INV DE MAQUINARIA</li>
+                                <li id="btn-inv-maquinarial-textil" >INV DE MATERIAL TEXTIL</li>
+                                <li id="btn-inv-insumos" >INV DE INSUMOS</li>
                             </ul>
                         </li>
                         <li class="suba_submenu">REPORTES</li>
@@ -595,6 +595,9 @@ if ($usario == "" || $usario == null) {
                 </div>
 
             </div>
+            <div class="inv-maquinaria" id="inv-maquinaria">
+                <h1>holaaa</h1>
+            </div>
 
         </div>
 
@@ -606,5 +609,6 @@ if ($usario == "" || $usario == null) {
     <script src="JS/crear_insumos.js"></script>
     <script src="JS/crear_material.js"></script>
     <script src="JS/maquinaria.js"></script>
+    <script src="JS/inv-maquinarias.js"></script>
 </body>
 </html>
