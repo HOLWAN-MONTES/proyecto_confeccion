@@ -508,6 +508,78 @@ if ($usario == "" || $usario == null) {
                                 </form>
                             </div>
                         </div>
+                        <div class="crear_mtextil" id=cre_mate>
+                            <div class="primer_from">
+                                <br>
+                                <h1 class="titulo_material">INGRESO DE MATERIAL TEXTIL</h1>
+                                <div class="formul_TEXT">
+                                    <form class="for_mtex" action="../../php/crear_Mtextil/val_material.php" method="POST" autocomplete="off">
+                                        <label class="l_text" for="">MATERIAL TEXTIL</label>
+                                        <input type="text" class="nom_material" name="nom_material" id="nom_material" placeholder="NOMBRE MATERIAL" required style="text-transform:uppercase">
+                                        <br>
+                                        <label id="t_tela" for="tela">TIPO DE TELA</label>
+                                        <select class="tela" id="tipo_tela" name="tipo_tela">           
+                                            <option value="0">SELECCIONAR</option>
+                                            <?php
+                                                $sql="SELECT * FROM tipo_tela";
+                                                $query=mysqli_query($conexion,$sql);
+                                                while($row=mysqli_fetch_array($query)){
+                                            ?>
+                                                <option value="<?php echo $row['ID_TIPO_TELA']?>" style="text-transform:uppercase"> <?php echo $row['NOM_TIPO_TELA']?></option> 
+
+                                            <?php
+                                            }
+                                            ?>
+                                        </select>
+                                        <br>
+                                        <a id="btn_salirtela_textil" class="d_tela" href="#">CREAR TIPO TELA</a>
+                                        <br>
+                                        <label class="tit_marca" for="marca">MARCA</label>
+                                        <select class="marca_tex" id="marca_tex" name="marca">           
+                                            <option value="0">SELECCIONAR</option>
+                                            <?php
+                                                $sql="SELECT * FROM marca";
+                                                $query=mysqli_query($conexion,$sql);
+                                                while($row=mysqli_fetch_array($query)){
+                                            ?>
+                                                <option value="<?php echo $row['ID_MARCA']?>" style="text-transform:uppercase"> <?php echo $row['NOM_MARCA']?></option> 
+
+                                            <?php
+                                            }
+                                            ?>
+                                        </select>
+                                        <br>
+                                        <a id="btn_salirmarca_textil" class="ul_marca" href="#">CREAR MARCA</a>
+                                        <br>
+                                        <label class="titl_color">COLOR</label>
+                                        <select class="color_tex" id="color_tex" name="color">           
+                                            <option value="0">SELECCIONAR</option>
+                                            <?php
+                                                $sql="SELECT * FROM color";
+                                                $query=mysqli_query($conexion,$sql);
+                                                while($row = mysqli_fetch_array($query)){
+                                            ?>
+                                                <option value="<?php echo $row['ID_COLOR']?>" style="text-transform:uppercase"> <?php echo $row['NOM_COLOR']?></option> 
+
+                                            <?php
+                                            }
+                                            ?>
+                                        </select>
+                                        <br>
+                                        <a id="btn_salircolor_textil" href="#" class="dir_color">CREAR COLOR</a>
+                                        
+                                        <label class="t_metraje" for="metraje">METRAJE</label>
+                                        <input type="number" class="metraje" name="metraje" id="metraje" placeholder="METRAJE" required>
+
+                                        <label class="t_rollos">ROLLOS</label>
+                                        <input type="number" class="cant_rollos" name="cant_rollos" id="cant_rollos" placeholder="CANT. ROLLOS" required>
+
+                                        <input type="hidden" name="cre_tela" value="crearmaterial">
+                                        <input type="submit" class="continuar" name="regis_material" id="regis_material" value="CONTINUAR">
+                                        
+                                    </form>
+                                </div>
+                            </div>
 
                         <div class="crear_tipo_tela_textil" id="crear_tipo_tela_textil">
                             <div class="content_from_textil">
