@@ -15,6 +15,7 @@ if ($usario == "" || $usario == null) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="CSS_USU/admi.css">
     <link rel="stylesheet" href="CSS_USU/regi_usu.css">
     <link rel="stylesheet" href="CSS_USU/editar_usu.css">
@@ -296,9 +297,9 @@ if ($usario == "" || $usario == null) {
                                 <h1 class="titulo_maqui">INGRESO DE MAQUINARIA</h1>
                                 <div class="form_reg_maquina">
                                     <form class="formu_maquinn" action="../../php/crear_maqui/val_maqui.php" method="POST" autocomplete="off">
-                                        <input type="text" name="serial" id="serial" placeholder="Serial" required>
+                                        <input type="number" name="serial" id="serial" placeholder="SERIAL" required>
                                         <br>
-                                        <label class="l_maquinn" for="">TIPO DE MAQUINARIA</label>
+                                        <label id="l_maquinn" for="">TIPO DE MAQUINARIA</label>
                                         <select id="tipo_maqui" name="tipo_maqui" required>           
                                             <option value="0">SELECCIONAR</option>
                                             <?php
@@ -315,7 +316,7 @@ if ($usario == "" || $usario == null) {
                                         <br>
                                         <a id="btn_salirmaquinaria" href="#">CREAR TIPO DE MAQUINARIA</a>
                                         <br>
-                                        <label class="l_maquinn" for="marca">MARCA</label>
+                                        <label class="l_marca" for="marca">MARCA DE MAQUINARIA</label>
                                         <select id="marca" name="marca" required>           
                                             <option value="0">SELECCIONAR</option>
                                             <?php
@@ -330,9 +331,9 @@ if ($usario == "" || $usario == null) {
                                             ?>
                                         </select>
                                         <br>
-                                        <a id="btn_salirmarca" href="#">CREAR MARCA</a>
+                                        <a id="btn_salirmarca" class="tress" href="#">CREAR MARCA</a>
                                         <br>
-                                        <label class="l_maquinn" for="">COLOR DE MAQUINARIA</label>
+                                        <label class="t_color" for="">COLOR DE MAQUINARIA</label>
                                         <select id="color" name="color">
                                             <option value="0">SELECCIONAR</option>   
                                             <?php
@@ -350,7 +351,7 @@ if ($usario == "" || $usario == null) {
                                         <br>
                                         
                                         <input type="hidden" name="cre_maqui" value="crearmaquina">
-                                        <input type="submit" class="continuar" name="registrar_maquina" id="registrar_maquina" value="CONTINUAR">  
+                                        <input type="submit" name="registrar_maquina" id="registrar_maquina" value="CONTINUAR">  
                                     </form>
                                 </div>
                             </div>
