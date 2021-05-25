@@ -34,7 +34,8 @@
     text-align: center;
     font-size: 14px; 
 }
-#tipo_maqui{    
+#tipo_maqui{ 
+    margin-top: 1px;   
     width: 40%;
     height: 6%;
     margin-right: 40px;
@@ -73,9 +74,8 @@
     font-size: 13px;
     float: right;
 }
-.t_color{
-    font-weight: none;
-    margin-top: 5px;
+#t_color{ 
+    margin-top: 6px;
     float: right;
     padding-right: 60px;
 }
@@ -112,7 +112,7 @@
 
 /*--------------------crear tipo maquinaria------------------*/
 /*----------------crear color del material textil------------------------*/
-.crear_maquinaria{
+.crear_maquis{
     background-color: rgba(0,0,0,0.5);  
     width: 100%;
     height: 120%;
@@ -127,10 +127,10 @@
     
 }
 .content_formMaquinaria{
-    margin-top: 20%;
-    margin-left: 42%;
+    margin-top: 17%;
+    margin-left: 40%;
     width: 35%;
-    height: 40%;
+    height: 47%;
     background: #fff;
     text-align: center;
     display: flex;
@@ -140,14 +140,14 @@
     transition: transform 1s;
     transform: translateY(0%);
 }
-#cerrar_ventanaMaquinaria i{
+#cerrar_ventanaMaquis img{
     font-size: 40px;
     cursor: pointer;
     color: red;
 
 }
 
-#cerrar_ventanaMaquinaria {
+#cerrar_ventanaMaquis {
     float: right;
 }
 .formularioMaquinaria{
@@ -161,11 +161,12 @@
     border: 2px solid black;
     width: 60%;
     max-height: -150%;
-    padding-block: 5%;
+    padding-block: 3%;
     text-align: center;
 }
 .titulo_maquinaria{
     margin-top: -10%;
+    margin-left: 10px;
     font-size: 25px;
     text-transform: uppercase;
     font-family: Arial, Helvetica, sans-serif;
@@ -200,10 +201,10 @@
     display: none; 
 }
 .content_formMarca{
-    margin-top: 20%;
-    margin-left: 42%;
+    margin-top: 17%;
+    margin-left: 40%;
     width: 35%;
-    height: 40%;
+    height: 47%;
     background: #fff;
     text-align: center;
     display: flex;
@@ -213,13 +214,13 @@
     transition: transform 1s;
     transform: translateY(0%);
 }
-#cerrar_ventanaMarca i{
+#cerrar_ventanaMarca img{
     font-size: 40px;
     cursor: pointer;
     color: red;
 }
 
-#cerrar_ventanaMarca i{
+#cerrar_ventanaMarca {
     float: right;
 }
 .formularioMarca{
@@ -233,10 +234,11 @@
     border: 2px solid black;
     width: 60%;
     max-height: -150%;
-    padding-block: 5%;
+    padding-block: 3%;
     text-align: center;
 }
 .titulo_marca{
+    margin-left: 10px;
     margin-top: -10%;
     font-size: 25px;
     text-transform: uppercase;
@@ -272,10 +274,10 @@
     display: none; 
 }
 .content_formColor{
-    margin-top: 20%;
-    margin-left: 42%;
+    margin-top: 17%;
+    margin-left: 40%;
     width: 35%;
-    height: 40%;
+    height: 47%;
     background: #fff;
     text-align: center;
     display: flex;
@@ -285,36 +287,33 @@
     transition: transform 1s;
     transform: translateY(0%);
 }
-#cerrar_ventanaColor i{
+#cerrar_ventanaColor img{
     font-size: 40px;
     cursor: pointer;
     color: red;
-    position: absolute;
-    right: 2%;
-    width: 11%;
-    height: 12%;
-    top: 2%;
+   
 }
 
 #cerrar_ventanaColor {
     float: right;
-    margin-top: 10px;
 }
 .formularioColor{
     background: #d6d2c4;
-    margin-top: 7%;
-    margin-left: 22%;
+    margin-top: 2%;
+    margin-left: 20%;
     text-align: center;
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
     color: #150485;
     border: 1px solid black;
-    width: 54%;
-    height: 192px;
+    width: 60%;
+    max-height: -150%;
+    padding-block: 3%;
     text-align: center;
 }
 .titulo_color{
     margin-top: -10%;
+    margin-left: 10px;
     font-size: 25px;
     text-transform: uppercase;
     font-family: Arial, Helvetica, sans-serif;

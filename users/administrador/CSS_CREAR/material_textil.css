@@ -9,363 +9,384 @@
     opacity: 0;
     visibility: hidden;
     width: 100%;
-    height: 100%;
+    height: 500px;
+    background-color: rgb(245, 237, 237)
+}
+.crear_mtextil{
+    margin-top: -55.2%;
 }
 
 .titulo_material{
-    margin-top: 5%;
-    font-size: 20px;
-    color: #2A906E;
-    text-align: center;
+    color: #5aa469;
+    margin-top: 3%;
+    margin-left: 25%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .for_mtex{
-    border: 1px solid #000;
-    width: 500px;
-    height: 40%px;
-    padding: 23px;
-    border-radius: 15px;
-    margin-top: 5%;
-    margin-left: 25%;
+    margin-left: 10%;
+    width: 850px;
+    height: 440px;
+    padding: 2%;
+    border: 2px solid black;
+    text-align: center;
+    justify-content: center;
+    background: #d6d2c4;
+    border-radius: 16px;
+}
+.for_mtex a{
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: orangered;
 }
 .l_text{
-    padding: 8px;
-    font-weight: bold;
-    display: block;
-    color: black;
-    font-family: serif;
-    margin-left: 20px;
+    margin-top: 30px;
+    float: left;
+    padding-left: 24px;
 }
-.nom_material{
-    margin-left: 5px;
-    font-size: 15px;
-    padding: 8px;
-    width: 210px;
-    border: 1px solid #000;
-
+#nom_material{
+    margin-top: 7%;
+    width: 28%;
+    height: 6%;
+    margin-left: -93%;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 13px;
 }
 .tela{
-    border: 1px solid #000;
-    font-size: 15px;
-    padding: 8px;
-    width: 210px;
-    float: right;
-    margin-right: 5px;
-    margin-top: -36px;  
+    margin-top: -3.1%;
+    width: 28%;
+    height: 6%;
+    float: left;
+    margin-left: 34%;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 13px;
 }
-.t_tela{
-    margin-top: -71px;
+#t_tela{
+    margin-top: -51px;
     float: right;
-    font-weight: bold;
-    display: block;
-    color: black;
-    font-family: serif;
-    padding-right: 70px;
+    padding-right: 380px;
 }
 .d_tela{
-    text-decoration: none;
-    font-size: 15px;
     float: right;
-    margin-right: 50px;
-    margin-top: -15px;
-    color: #228B22;
+    margin-right: 43%;
+    margin-top: -3%;
 }
-.marca{
-    margin-top: 10px;
-    margin-left: 5px;
-    font-size: 15px;
-    padding: 8px;
-    width: 210px;
-    border: 1px solid #000;
-}
-.t_marca{
-    margin-bottom: -8px;
-    padding: 8px;
-    font-weight: bold;
-    display: block;
-    color: black;
-    font-family: serif;
-    margin-left: 20px;
-}
-.d_marca{
-    padding-top: 60px;
-    padding: 10px;
-    text-decoration: none;
-    font-size: 15px;
-    margin-left: 15px;
-    color: #228B22;
-}
-.color{
-    border: 1px solid #000;
-    font-size: 15px;
-    padding: 8px;
-    width: 210px;
+.marca_tex{
+    margin-top: -8%;
+    width: 28%;
+    height: 6%;
     float: right;
-    margin-right: 5px;
-    margin-top: -54px;
+    margin-right: 25px;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 13px;
 }
-.t_color{
-    margin-top: -89px;
+.tit_marca{
+    margin-top: -90px;
     float: right;
-    font-weight: bold;
-    display: block;
-    color: black;
-    font-family: serif;
-    padding-right: 100px;
+    padding-right: 120px;
 }
-.d_color{
-    text-decoration: none;
-    font-size: 15px;
+.ul_marca{
     float: right;
-    margin-right: 70px;
-    margin-top: -32px;
-    color: #228B22;
+    margin-right: 82px;
+    margin-top: -8%;
+}
+#color_tex{
+    margin-top: 1px;
+    width: 28%;
+    height: 6%;
+    margin-left: -72%;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 13px; 
+}
+.titl_color{
+    margin-top: -3%;
+    float: left;
+    padding-left: 54px;
+}
+.dir_color{
+    float: left;
+    margin-left: 35px;
 }
 .metraje{
-    margin-top: 10px;
-    margin-left: 118px;
-    font-size: 15px;
-    padding: 8px;
-    width: 210px;
-    border: 1px solid #000;
+    margin-top: -2.9%;
+    width: 28%;
+    height: 6%;
+    float: left;
+    margin-left: 110px;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 13px;
 }
 .t_metraje{
-    margin-bottom: -8px;
-    font-weight: bold;
-    display: block;
-    color: black;
-    font-family: serif;
-    margin-left: 170px;
+    margin-top: -48px;
+    float: right;
+    padding-right: 391px;
+}
+.cant_rollos{
+    margin-top: -3%;
+    width: 28%;
+    height: 6%;
+    float: right;
+    margin-right: 25px;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 13px;
+}
+.t_rollos{
+    margin-top: -48px;
+    float: right;
+    padding-right: 120px;
 }
 
-.continuar{
-    font-weight: bold;
-    margin-left: 160px;
-    padding: 10px;
-    margin-top: 23px;
-    border: 0;
-    border-radius: 10px;
-    width: 120px;
-    height: 35px;
-    font-size: 14px;
-    cursor: pointer;
-    color: #000;
-    background: #DC540C;
-    box-shadow:20px 10px  20px rgba(226, 87, 6, 0.5);   
+#regis_material{
+    margin-top: 11%;
+    border: 2px solid black;
+    width: 30%;
+    height: 13%;
+    font-size: 16px;
+    background: #adce74;
+    border-bottom: 6px solid #61b15a;
+    transition: border-bottom .1s ease ;
+    margin-right: 292px;
+    float: right;
+    align-items: center;   
+}
+#regis_material:hover{
+    cursor:pointer;
+    border: 2px solid black;
+    border-bottom: 3px solid #5aa469;
 }
 /*--------------------crear tipo tela-------------------*/
 
-.crear_tipo_tela{
-    background-color: #0e57f550;
-    z-index: 4;
-    width: 80%;
-    height: 80%;
-    margin-top: -35%;
-    position: absolute;
-    display: none;
+.crear_tipo_tela_textil{
+    background-color: rgba(0,0,0,0.5);  
+    width: 100%;
+    height: 120%;
+    position: fixed;
+    top: -20%;
+    right: 20%;
+    left: 0%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    display: none; 
 }
 
-.content_from{
-    margin-top: 11%;
-    margin-left: 35%;
-    width: 42%;
+.content_from_textil{
+    margin-top: 17%;
+    margin-left: 40%;
+    width: 35%;
     height: 47%;
     background: #fff;
-    text-align: center;  
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+    transition: transform 1s;
+    transform: translateY(0%); 
 }
 
-#cerrar_ventana i{
+#cerrar_ventana_textil img{
     font-size: 40px;
     cursor: pointer;
     color: red;
 
 }
 
-#cerrar_ventana {
+#cerrar_ventana_textil {
     float: right;
 }
 
 .formulario_t{
     background: #d6d2c4;
-    margin-top: 7%;
-    margin-left: 22%;
+    margin-top: 2%;
+    margin-left: 20%;
     text-align: center;
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
     color: #150485;
-    border: 1px solid black;
-    width: 54%;
-    height: 192px;
+    border: 2px solid black;
+    width: 60%;
+    max-height: -150%;
+    padding-block: 3%;
     text-align: center;
 }
-.titulo_t_tela{
-   padding: 8px;
-   font-size: 25px;
-   font-weight: bold;
-   text-align: center;
-   margin-left: 44px;
+.titulo_tipo_tela{
+    margin-left: 10px;
+    margin-top: -10%;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
 
 }
-.ti_tela{
-    margin-top: 10px;
-    margin-left: 10px;
-    font-size: 15px;
-    padding: 8px;
-    border: 1px solid #000;
+.tipoMax_tela{
+    margin-top: 10%;
+    height: 15%;
+    text-align: center;
+    padding: 5%;
+    border: 2px solid black;
+    text-transform: uppercase;
 }
 .env-tela{
+    margin-top: 8%;
     font-weight: bold;
-    margin-left: 13px;
-    padding: 10px;
-    margin-top: 23px;
-    border: 0;
-    border-radius: 10px;
-    width: 120px;
-    height: 35px;
-    font-size: 14px;
-    cursor: pointer;
-    color: #000;
-    background: #DC540C;
-    box-shadow:20px 10px  20px rgba(226, 87, 6, 0.5);
+    border: 2px solid black;
+    padding: 5%;
+    cursor: pointer; 
+    text-align: center;
 }
 /*--------------------crear marca de material textil-------------------*/
 
-.crear_marca{
-    background-color: #0e57f550;
-    z-index: 4;
-    width: 80%;
-    height: 80%;
-    margin-top: -35%;
-    position: absolute;
-    display: none;
+.crear_marca_textil{
+    background-color: rgba(0,0,0,0.5);  
+    width: 100%;
+    height: 120%;
+    position: fixed;
+    top: -20%;
+    right: 20%;
+    left: 0%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    display: none; 
 }
-.content_formMarca{
-    margin-top: 11%;
-    margin-left: 35%;
-    width: 42%;
+.content_formMarca_textil{
+    margin-top: 17%;
+    margin-left: 40%;
+    width: 35%;
     height: 47%;
     background: #fff;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+    transition: transform 1s;
+    transform: translateY(0%);
 }
-#cerrar_ventanaMarca i{
+#cerrar_ventanaMarca_textil img{
     font-size: 40px;
     cursor: pointer;
     color: red;
 
 }
 
-#cerrar_ventanaMarca {
+#cerrar_ventanaMarca_textil {
     float: right;
 }
-.formularioMarca{
+.formularioMarca_textil{
     background: #d6d2c4;
-    margin-top: 7%;
-    margin-left: 22%;
+    margin-top: 2%;
+    margin-left: 20%;
     text-align: center;
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
     color: #150485;
     border: 1px solid black;
-    width: 54%;
-    height: 192px;
+    width: 60%;
+    max-height: -150%;
+    padding-block: 3%;
     text-align: center;
 }
-.titulo_marca{
-    padding: 8px;
-    font-size: 25px;
-    font-weight: bold;
-    text-align: center;
-     margin-left: 44px;
-}
-.ti_marca{
-    margin-top: 10px;
+.titulo_marca_textil{
+    margin-top: -10%;
     margin-left: 10px;
-    font-size: 15px;
-    padding: 8px;
-    border: 1px solid #000; 
-}
-.env-marca{
+    font-size: 25px;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    margin-left: 13px;
-    padding: 10px;
-    margin-top: 23px;
-    border: 0;
-    border-radius: 10px;
-    width: 120px;
-    height: 35px;
-    font-size: 14px;
-    cursor: pointer;
-    color: #000;
-    background: #DC540C;
-    box-shadow:20px 10px  20px rgba(226, 87, 6, 0.5); 
+}
+.ti_marca_textil{
+    height: 15%;
+    text-align: center;
+    padding: 3%;
+    border: 2px solid black;
+    text-transform: uppercase; 
+}
+.env-marca_textil{
+    font-weight: bold;
+    border: 2px solid black;
+    padding: 5%;
+    cursor: pointer; 
+    text-align: center; 
 }
 
 /*----------------crear color del material textil------------------------*/
-.crear_color{
-    background-color: #0e57f550;
-    z-index: 4;
-    width: 80%;
-    height: 80%;
-    margin-top: -35%;
-    position: absolute;
-    display: none;
+.crear_color_textil{
+    background-color: rgba(0,0,0,0.5);  
+    width: 100%;
+    height: 120%;
+    position: fixed;
+    top: 60%;
+    right: 20%;
+    left: 0%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    display: none; 
 }
-.content_formColor{
-    margin-top: 11%;
-    margin-left: 35%;
-    width: 42%;
+.content_formColor_textil{
+    margin-top: 17%;
+    margin-left: 40%;
+    width: 35%;
     height: 47%;
     background: #fff;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+    transition: transform 1s;
+    transform: translateY(0%);
 }
-#cerrar_ventanaColor i{
+#cerrar_ventanaColor_textil img{
     font-size: 40px;
     cursor: pointer;
     color: red;
 
 }
 
-#cerrar_ventanaColor {
+#cerrar_ventanaColor_textil {
     float: right;
 }
-.formularioColor{
+.formularioColor_textil{
     background: #d6d2c4;
-    margin-top: 7%;
-    margin-left: 22%;
+    margin-top: 2%;
+    margin-left: 20%;
     text-align: center;
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
     color: #150485;
     border: 1px solid black;
-    width: 54%;
-    height: 192px;
+    width: 60%;
+    max-height: -150%;
+    padding-block: 3%;
     text-align: center;
 }
-.titulo_color{
+.titulo_color_textil{
     padding: 8px;
     font-size: 25px;
     font-weight: bold;
     text-align: center;
     margin-left: 44px;
 }
-.ti_color{
-    margin-top: 10px;
-    margin-left: 10px;
-    font-size: 15px;
-    padding: 8px;
-    border: 1px solid #000;
+.ti_color_textil{
+    height: 15%;
+    text-align: center;
+    padding: 3%;
+    border: 2px solid black;
+    text-transform: uppercase;
 }
-.env-color{
+.env-color_textil{
     font-weight: bold;
-    margin-left: 13px;
-    padding: 10px;
-    margin-top: 23px;
-    border: 0;
-    border-radius: 10px;
-    width: 120px;
-    height: 35px;
-    font-size: 14px;
-    cursor: pointer;
-    color: #000;
-    background: #DC540C;
-    box-shadow:20px 10px  20px rgba(226, 87, 6, 0.5); 
+    border: 2px solid black;
+    padding: 5%;
+    cursor: pointer; 
+    text-align: center;
 }
