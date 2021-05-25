@@ -686,16 +686,20 @@ if ($usario == "" || $usario == null) {
 
             </div>
         </div>
+
         <div class="inv-maquinaria" id="inv-maquinaria">
+
+        <?php
+         $sql = "SELECT * FROM aprendices WHERE $usuario";
+         $query_foto = mysqli_query($connection, $sql);
+         $fila_foto = mysqli_fetch_assoc($query_foto);
+        
+        ?>
                             <h1>holaaa</h1>
                             <h1>aaaaaaaaaaa</h1>
                             <h1>aaaaaaaaaaa</h1>
                             <h1>aaaaaaaaaaa</h1>
         </div>
-       
-       
-       
-       
        
        
         <script src="JS/editar.js"></script>

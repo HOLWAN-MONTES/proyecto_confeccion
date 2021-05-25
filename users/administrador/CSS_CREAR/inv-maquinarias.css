@@ -1,8 +1,12 @@
 .inv-maquinaria{
-    display: none;
+  /*   display: none; */
     color: blue;
+    z-index: 0;
     position: absolute;
-    
+    margin-left: 30%;
+    border: 1px solid red;
+    width: 40%;
+    margin-top: 10%;
     
     
 }
