@@ -12,16 +12,16 @@ cerrar_ventanaMarca.addEventListener('click',function(){
 });
 
 //ventana de registro del tipo de maquinaria 
-const btn_SalirMaquinarias = document.getElementById('btn_SalirMaquinarias');
-const crear_maquinarias = document.getElementById('crear_maquinarias');
-const cerrar_ventanaMaqui = document.getElementById('cerrar_ventanaMaqui');
+const btn_SalirMaquis = document.getElementById('btn_SalirMaquis');
+const crear_maquis = document.getElementById('crear_maquis');
+const cerrar_ventanaMaquis = document.getElementById('cerrar_ventanaMaquis');
 
-btn_SalirMaquinarias.addEventListener('click',function(){
-    crear_maquinarias.style.display = "block";
+btn_SalirMaquis.addEventListener('click',function(){
+    crear_maquis.style.display = "block";
 });
 
-cerrar_ventanaMaqui.addEventListener('click',function(){
-    crear_maquinarias.style.display = "none";
+cerrar_ventanaMaquis.addEventListener('click',function(){
+    crear_maquis.style.display = "none";
 });
 
 //ventana de registrar el color de la maquinaria
