@@ -1,19 +1,20 @@
 .inv-maquinaria{
     display: none;
-    color: blue;
+   text-align: center;
     z-index: 0;
     position: absolute;
-    margin-left: 35%;
-    /* border: 1px solid red; */
-    width: 40%;
- 
+    margin-left: 30%;
+    border: 1px solid rgb(47, 160, 70);
+    width: 60%;
+    margin-top: 10%;
     padding: 10px;
     
     
 }
 
 .tabla-inv{
-  
+  margin-left: 18%;
+  margin-top: 6%;
   border-collapse: collapse;
 }
 
