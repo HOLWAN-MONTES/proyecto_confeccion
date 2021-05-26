@@ -73,7 +73,7 @@ if ($usario == "" || $usario == null) {
             <div class="cabecera">
                 <div class="info_per">
                     <div class="foto">
-                        <img src="../../img/img_user.png" alt="">
+                        <img src="../../images/<?php echo $_SESSION['FOTO']; ?>">
                     </div>
                     <div class="men">
                         <ul>
@@ -98,7 +98,7 @@ if ($usario == "" || $usario == null) {
                             <div class="tituloos">
                                 <h1>REGISTRO DE USUARIOS</h1>
                             </div>
-                            <form class="form1" action="../../php/usuario/crear.php" method="POST">
+                            <form class="form1" action="../../php/usuario/crear.php" method="POST" enctype="multipart/form-data" >
                             <div class="one1">
                                 <input type="number" name="docu" id="docu" placeholder="DOCUMENTO" autocomplete="off" required> &nbsp;&nbsp;&nbsp;
                                 <input type="text" name="nom" id="nom" placeholder="NOMBRE" autocomplete="off" required style="text-transform:uppercase">&nbsp;&nbsp;&nbsp;&nbsp;
@@ -138,13 +138,15 @@ if ($usario == "" || $usario == null) {
                                     </select><br>
                                     <a class="crear-doc" href="">CREAR TIPO DE DOCUMENTO</a>
                                 </div>
-                                <br>
-                                
-                                <input type="number" name="edad" class="edadd" id="edad" placeholder="EDAD" autocomplete="off" min="1" max="100" required>
-                            </div>
-                                <input type="password" name="contra" id="contra" placeholder="CONTRASEÑA" autocomplete="off" pattern="[A-Za-z0-9!?-]{2,12}" required>&nbsp;&nbsp;&nbsp;
-                                <input type="number" name="tele" id="tele" placeholder="TELEFONO" autocomplete="off" min="1" max="3999999999" required>
-                                <input type="email" name="cor" id="cor" placeholder="CORREO" autocomplete="off" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required><br>
+                                <input type="password" name="contra" id="contra" placeholder="CONTRASEÑA"
+                                    autocomplete="off" pattern="[A-Za-z0-9!?-]{2,12}" required>&nbsp;&nbsp;&nbsp;
+                                <input type="number" name="tele" id="tele" placeholder="TELEFONO" autocomplete="off"
+                                    min="1" max="3999999999" required>
+                                <input type="email" name="cor" id="cor" placeholder="CORREO" autocomplete="off"
+                                    pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+                                    required><br>
+                                    <input type="file" required name="imagen"/>
+
                                 <input type="submit" name="registro" id="reg" value="REGISTRAR">
                             </form>
                             <div class="ven1">
@@ -599,24 +601,55 @@ if ($usario == "" || $usario == null) {
 
                 </div>
 
-            </div>
-
-        </div>
-
+            </div>           
         <div class="inv-maquinaria" id="inv-maquinaria">
-                            <h1>holaaa</h1>
-                            <h1>aaaaaaaaaaa</h1>
-                            <h1>aaaaaaaaaaa</h1>
-                            <h1>aaaaaaaaaaa</h1>
+
+                <h1>INVENTARIO DE MAQUINARIA</h1>
+<table class="tabla-inv">
+    <tr>
+        <td>SERIAL</td>
+        <td>NOMBRE DE LA MAQUINA</td>
+        <td>MARCA</td>
+        <td>COLOR</td>
+        
+    </tr>
+
+    <?php
+        $sql = "SELECT maquinaria.SERIAL,tipo_maquinaria.NOM_TIPO_MAQUI,marca.NOM_MARCA,color.NOM_COLOR from maquinaria,tipo_maquinaria,marca,color where maquinaria.ID_TIPO_MAQUI=tipo_maquinaria.ID_TIPO_MAQUI and maquinaria.ID_MARCA=marca.ID_MARCA and maquinaria.ID_COLOR=color.ID_COLOR";
+        $result = mysqli_query($conexion, $sql);
+    
+        while($mostrar=mysqli_fetch_array($result)){
+    ?>
+
+    <tr>
+        <td><?php echo $mostrar["SERIAL"]?></td>
+        <td><?php echo $mostrar["NOM_TIPO_MAQUI"]?></td>
+        <td><?php echo $mostrar["NOM_MARCA"]?></td>
+        <td><?php echo $mostrar["NOM_COLOR"]?></td>
+        
+    </tr>
+    <?php
+           }
+    ?>
+
+</table>
+</div>
         </div>
 
-    </div>
-    <script src="JS/editar.js"></script>
-    <script src="JS/main.js"></script>
-    <script src="JS/admi.js"></script>
-    <script src="JS/eliminar_usu.js"></script>
-    <script src="JS/crear_insumos.js"></script>
-    <script src="JS/crear_material.js"></script>
-    <script src="JS/maquinaria.js"></script>
+       
+       
+        <script src="JS/editar.js"></script>
+        <script src="JS/main.js"></script>
+        <script src="JS/admi.js"></script>
+        <script src="JS/eliminar_usu.js"></script>
+        <script src="JS/crear_insumos.js"></script>
+        <script src="JS/crear_material.js"></script>
+        <script src="JS/maquinaria.js"></script>
+        <script src="JS/inv-maquinarias.js"></script>
+
+
+
+    
+   
 </body>
 </html>
