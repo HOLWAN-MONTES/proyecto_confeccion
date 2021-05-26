@@ -92,8 +92,6 @@ btninsu.addEventListener("click", function (e) {
     crea_maquina.style.opacity = "0";
     crea_maquina.style.visibility = "hidden";
     crea_maquina.style.display="none";
-
-
     
 });
 btnmatextil.addEventListener("click", function (e) {
