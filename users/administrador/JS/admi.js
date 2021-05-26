@@ -12,7 +12,6 @@ const registrar_usu = document.getElementById("regi_usu")
 const editar_usu = document.getElementById("edi_usu")
 const eliminar_usu = document.getElementById("eli_usu")
 
-
 const crea_insu = document.getElementById("crea_insu")
 const crea_material = document.getElementById("cre_mate")
 const crea_maquina = document.getElementById("crea_maquinn")
@@ -21,26 +20,16 @@ const crea_maquina = document.getElementById("crea_maquinn")
 const crear = document.getElementById("crear")
 const usuario = document.getElementById("usuar")
 
+
+
 /* inventario de maquinaria  */
 const btn_maqui = document.getElementById('btn-inv-maquinaria');
 const maqui = document.getElementById('inv-maquinaria');
 
+
 btnregi.addEventListener("click", function (e) {
     e.preventDefault();
-    registrar_usu.style.opacity = "1";
-    registrar_usu.style.visibility = "visible";
-    registrar_usu.style.display="block";
-    usuario.style.display="block";
-    editar_usu.style.opacity = "0";
-    editar_usu.style.visibility = "hidden";
-    editar_usu.style.display="none";
-    eliminar_usu.style.opacity = "0";
-    eliminar_usu.style.visibility = "hidden";
-    eliminar_usu.style.display="none";
-    crea_insu.style.opacity = "0";
-    crea_insu.style.visibility = "hidden";
-    crea_insu.style.display="none";
-    crear.style.display="none";
+
 });
 
 btnedi.addEventListener("click", function (e) {
@@ -59,6 +48,8 @@ btnedi.addEventListener("click", function (e) {
     crea_insu.style.visibility = "hidden";
     crea_insu.style.display="none";
     crear.style.display="none";
+    maqui.style.display = "none"
+    crea_material.style.display = "none";
 });
 
 btnelimi.addEventListener("click", function (e) {
@@ -77,6 +68,8 @@ btnelimi.addEventListener("click", function (e) {
     crea_insu.style.visibility = "hidden";
     crea_insu.style.display="none";
     crear.style.display="none";
+    maqui.style.display = "none"
+    crea_material.style.display = "none";
 });
 
 btninsu.addEventListener("click", function (e) {
@@ -92,9 +85,7 @@ btninsu.addEventListener("click", function (e) {
     crea_maquina.style.opacity = "0";
     crea_maquina.style.visibility = "hidden";
     crea_maquina.style.display="none";
-
-
-    
+    maqui.style.display = "none"
 });
 btnmatextil.addEventListener("click", function (e) {
     e.preventDefault();
@@ -109,6 +100,7 @@ btnmatextil.addEventListener("click", function (e) {
     crea_maquina.style.opacity = "0";
     crea_maquina.style.visibility = "hidden";
     crea_maquina.style.display="none";
+    maqui.style.display = "none"
 });
 btnmaquina.addEventListener("click", function (e) {
     e.preventDefault();
@@ -123,4 +115,28 @@ btnmaquina.addEventListener("click", function (e) {
     crea_material.style.opacity = "0";
     crea_material.style.visibility = "hidden";
     crea_material.style.display="none";
+    maqui.style.display = "none"
 });
+
+
+
+
+
+
+
+btn_maqui.addEventListener('click', function(e){
+    e.preventDefault();
+    
+    maqui.style.display = "block";
+    registrar_usu.style.display = "none";
+    editar_usu.style.display = "none";
+    eliminar_usu.style.display = "none";
+    crea_insu.style.display = "none";
+    crea_material.style.display = "none";
+    crea_maquina.style.display = "none";
+    
+
+})
+
+
+
