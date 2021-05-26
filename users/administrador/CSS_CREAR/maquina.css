@@ -110,7 +110,7 @@
 }
 
 /*--------------------crear tipo maquinaria------------------*/
-/*----------------crear color del material textil------------------------*/
+
 .crear_maquis{
     background-color: rgba(0,0,0,0.5);  
     width: 100%;
@@ -236,6 +236,10 @@
     padding-block: 3%;
     text-align: center;
 }
+.dig-mar{
+    font-size: 18px;
+    cursor:text;
+}
 .titulo_marca{
     margin-left: 10px;
     margin-top: -10%;
@@ -298,21 +302,25 @@
 }
 .formularioColor{
     background: #d6d2c4;
-    margin-top: 2%;
-    margin-left: 20%;
+    margin-top: -3%;
+    margin-left: 19%;
     text-align: center;
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
     color: #150485;
     border: 1px solid black;
     width: 60%;
-    max-height: -150%;
+    max-height: -160%;
     padding-block: 3%;
     text-align: center;
 }
+.dig-col{
+    font-size: 18px;
+    cursor:text;
+}
 .titulo_color{
-    margin-top: -10%;
-    margin-left: 10px;
+    margin-top: -4%;
+    margin-left: 3px;
     font-size: 25px;
     text-transform: uppercase;
     font-family: Arial, Helvetica, sans-serif;
@@ -321,7 +329,7 @@
 .ti_color{
     height: 15%;
     text-align: center;
-    padding: 3%;
+    padding: 6%;
     border: 2px solid black;
     text-transform: uppercase;
 }
