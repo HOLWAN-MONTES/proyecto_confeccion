@@ -100,22 +100,20 @@ if ($usario == "" || $usario == null) {
                             <div class="tituloos">
                                 <h1>REGISTRO DE USUARIOS</h1>
                             </div>
-                            <form class="form1" action="../../php/usuario/crear.php" method="POST"
-                                enctype="multipart/form-data">
-                                <div class="one1">
-                                    <input type="number" name="docu" id="docu" placeholder="DOCUMENTO"
-                                        autocomplete="off" required> &nbsp;&nbsp;&nbsp;
-                                    <input type="text" name="nom" id="nom" placeholder="NOMBRE" autocomplete="off"
-                                        required style="text-transform:uppercase">&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <input type="text" name="apel" id="apel" placeholder="APELLIDO" autocomplete="off"
-                                        required style="text-transform:uppercase"> <br><br>
-                                </div>
-                                <div class="one">
-                                    <div class="user">
-                                        <label id="tex-use" for="">TIPO DE USUARIO</label><br>
-                                        <select name="tip_us" class="tip_usu" id="tip_usu" autocomplete="off" required>
-                                            <option value="">SELECCIONAR</option>
-                                            <?php
+
+                            <form class="form1" action="../../php/usuario/crear.php" method="POST" enctype="multipart/form-data">
+                            <div class="one1">
+                                <input type="number" name="docu" id="docu" placeholder="DOCUMENTO" autocomplete="off" required> &nbsp;&nbsp;&nbsp;
+                                <input type="text" name="nom" id="nom" placeholder="NOMBRE" autocomplete="off" required style="text-transform:uppercase">&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="text" name="apel" id="apel" placeholder="APELLIDO" autocomplete="off" required style="text-transform:uppercase"> <br><br>
+                            </div>
+                            <div class="one">
+                                <div class="user">
+                                    <label id="tex-use" for="">TIPO DE USUARIO</label><br>
+                                    <select name="tip_us" class="tip_usu" id="tip_usu" autocomplete="off" required>
+                                        <option value="">SELECCIONAR</option>
+                                        <?php
+
                                             $tipo = "SELECT * FROM tipo_usu ORDER BY NOM_TIPO_USU ASC";                                
                                             $inser = mysqli_query($conexion,$tipo);
                                             while($tip = mysqli_fetch_array($inser)){
@@ -162,7 +160,9 @@ if ($usario == "" || $usario == null) {
                                 <input type="email" name="cor" id="cor" placeholder="CORREO" autocomplete="off"
                                     pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
                                     required><br>
-                                <input type="file" required name="imagen" />
+
+                                <input type="file" required name="imagen"/>
+
                                 <input type="submit" name="registro" id="reg" value="REGISTRAR">
                             </form>
                             <div class="ven1">

@@ -63,7 +63,8 @@ abrir.addEventListener("click", function (e) {
     modalC.style.visibility = "visible";
     modal.classList.toggle("modal-close");
 });
-cerrar.addEventListener("click", function () {
+cerrar.addEventListener("click", function (e) {
+    e.preventDefault();
     modal.classList.toggle("modal-close");
     setTimeout(function () {
         modalC.style.opacity = "0";
