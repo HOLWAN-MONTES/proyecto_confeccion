@@ -74,7 +74,7 @@ if ($usario == "" || $usario == null) {
             <div class="cabecera">
                 <div class="info_per">
                     <div class="foto">
-                        <img src="../../img/img_user.png" alt="">
+                        <img src="../../images/<?php echo $_SESSION['FOTO']; ?>">
                     </div>
                     <div class="men">
                         <ul>
@@ -100,7 +100,7 @@ if ($usario == "" || $usario == null) {
                             <div class="tituloos">
                                 <h1>REGISTRO DE USUARIOS</h1>
                             </div>
-                            <form class="form1" action="../../php/usuario/crear.php" method="POST">
+                            <form class="form1" action="../../php/usuario/crear.php" method="POST" enctype="multipart/form-data">
                             <div class="one1">
                                 <input type="number" name="docu" id="docu" placeholder="DOCUMENTO" autocomplete="off" required> &nbsp;&nbsp;&nbsp;
                                 <input type="text" name="nom" id="nom" placeholder="NOMBRE" autocomplete="off" required style="text-transform:uppercase">&nbsp;&nbsp;&nbsp;&nbsp;
@@ -158,6 +158,7 @@ if ($usario == "" || $usario == null) {
                                 <input type="email" name="cor" id="cor" placeholder="CORREO" autocomplete="off"
                                     pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
                                     required><br>
+                                <input type="file" required name="imagen"/>
                                 <input type="submit" name="registro" id="reg" value="REGISTRAR">
                             </form>
                             <div class="ven1">
