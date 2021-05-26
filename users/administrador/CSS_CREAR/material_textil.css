@@ -12,9 +12,9 @@
     height: 500px;
     background-color: rgb(245, 237, 237);
 }
-.crear_mtextil{
+/* .crear_mtextil{
     margin-top: -55.2%;
-}
+} */
 
 .titulo_material{
     color: #5aa469;
@@ -23,7 +23,7 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .for_mtex{
-    margin-left: 10%;
+    margin-left: 20%;
     width: 850px;
     height: 440px;
     padding: 2%;
