@@ -90,10 +90,13 @@ if ($usario == "" || $usario == null) {
                 </div>
             </div>
 
+            <!--div que contiene todos los formularios-->
             <div class="info">
 
+                <!--formularios de admin. usuarios-->
                 <div class="usuar" id="usuar">
-
+                    
+                    <!--formulario de registro de usuarios-->
                     <div class="regusu" id="regi_usu">
                         <br>
                         <div class="regg">
@@ -204,7 +207,7 @@ if ($usario == "" || $usario == null) {
                         <img class="imagen" src="../../img/fondo.jpg" alt="">
                     </div>
 
-
+                    <!--formulario para editar usuarios-->
                     <div class="ediusu" id="edi_usu">
                         <br>
                         <div class="titulos">
@@ -271,7 +274,7 @@ if ($usario == "" || $usario == null) {
                         </div>
                     </div>
 
-
+                    <!--formulario para eliminar usuarios-->
                     <div class="elimiusu" id="eli_usu">
                         <br>
                         <div class="titulo">
@@ -332,9 +335,11 @@ if ($usario == "" || $usario == null) {
                     </div>
 
                 </div>
-
+                
+                <!--formularios de registros-->
                 <div class="crear" id="crear">
-
+                    
+                    <!--formulario de registro de maquinaria-->
                     <div class="maquina" id="crea_maquinn">
 
                         <div class="primer_form">
@@ -410,6 +415,7 @@ if ($usario == "" || $usario == null) {
                             </div>
                         </div>
 
+                        <!--formulario para crear tipo de maquinaria-->
                         <div class="crear_maquinarias" id="crear_maquinarias">
                             <div class="content_formMaquinaria">
                                 <div id="cerrar_ventanaMaqui"><img class="cerrar1" src="../../img/cerrar.png"
@@ -423,128 +429,35 @@ if ($usario == "" || $usario == null) {
                                 </form>
                             </div>
                         </div>
-                    </div>
-
-                            <div class="crear_marca" id="crear_marca">
-                                <div class="content_formMarca">
-                                    <div id="cerrar_ventanaMarca"><img class="cerrar1" src="../../img/cerrar.png" alt="Cerrar"></div>
-                                    <h2 class="titulo_marca">AGREGAR MARCA</h2>
-                                    <form action="../../php/crear_maqui/regis_marca_maqui.php" class="formularioMarca" method="POST" autocomplete="off">
-                                        <input type="text" class="ti_marca" name="agre_marca" id="agre_marca" placeholder="MARCA" required style="text-transform:uppercase">
-                                        <input type="submit" class="env-marca" name="env-marca" value="AGREGAR">
-                                    </form>
-                                </div>
+                        
+                        <!--formulario para crear la marca de maquinaria-->
+                        <div class="crear_marca" id="crear_marca">
+                            <div class="content_formMarca">
+                                <div id="cerrar_ventanaMarca"><img class="cerrar1" src="../../img/cerrar.png" alt="Cerrar"></div>
+                                <h2 class="titulo_marca">AGREGAR MARCA</h2>
+                                <form action="../../php/crear_maqui/regis_marca_maqui.php" class="formularioMarca" method="POST" autocomplete="off">
+                                    <input type="text" class="ti_marca" name="agre_marca" id="agre_marca" placeholder="MARCA" required style="text-transform:uppercase">
+                                    <input type="submit" class="env-marca" name="env-marca" value="AGREGAR">
+                                </form>
                             </div>
-                            <h2 class="titulo_marca">AGREGAR MARCA</h2>
-                            <form action="../../php/crear_maqui/regis_marca_maqui.php" class="formularioMarca"
-                                method="POST" autocomplete="off">
-                                <input type="text" class="ti_marca" name="agre_marca" id="agre_marca"
-                                    placeholder="MARCA" required style="text-transform:uppercase">
-                                <input type="submit" class="env-marca" name="env-marca" value="AGREGAR">
-                            </form>
                         </div>
+
+                        <!--formulario para crear el color de maquinaria-->
+                        <div class="crear_color" id="crear_color">
+                            <div class="content_formColor">
+                                <div id="cerrar_ventanaColor"><img class="cerrar1" src="../../img/cerrar.png" alt="Cerrar"></div>
+                                <h2 class="titulo_color">AGREGAR COLOR</h2>
+                                <form action="../../php/crear_maqui/regis_color_maqui.php" class="formularioColor" method="POST" autocomplete="off">
+                                    <input type="text" class="ti_color" name="agre_color" id="agre_color" placeholder="COLOR" required style="text-transform:uppercase">
+                                    <input type="submit" class="env-color" name="env-color" value="AGREGAR">
+                                </form>
+                            </div>
+                        </div> 
+                        
                     </div>
                 </div>
-
-                            <div class="crear_color" id="crear_color">
-                                <div class="content_formColor">
-                                    <div id="cerrar_ventanaColor"><img class="cerrar1" src="../../img/cerrar.png" alt="Cerrar"></div>
-                                    <h2 class="titulo_color">AGREGAR COLOR</h2>
-                                    <form action="../../php/crear_maqui/regis_color_maqui.php" class="formularioColor" method="POST" autocomplete="off">
-                                        <input type="text" class="ti_color" name="agre_color" id="agre_color" placeholder="COLOR" required style="text-transform:uppercase">
-                                        <input type="submit" class="env-color" name="env-color" value="AGREGAR">
-                                    </form>
-                                </div>
-                            </div> 
-
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="crear_mtextil" id=cre_mate>
-                <div class="primer_from">
-                    <br>
-                    <h1 class="titulo_material">INGRESO DE MATERIAL TEXTIL</h1>
-                    <div class="formul_TEXT">
-                        <form class="for_mtex" action="../../php/crear_Mtextil/val_material.php" method="POST"
-                            autocomplete="off">
-                            <label class="l_text" for="">MATERIAL TEXTIL</label>
-                            <input type="text" class="nom_material" name="nom_material" id="nom_material"
-                                placeholder="NOMBRE MATERIAL" required style="text-transform:uppercase">
-                            <br>
-                            <label id="t_tela" for="tela">TIPO DE TELA</label>
-                            <select class="tela" id="tipo_tela" name="tipo_tela">
-                                <option value="0">SELECCIONAR</option>
-                                <?php
-                                            $sql="SELECT * FROM tipo_tela";
-                                            $query=mysqli_query($conexion,$sql);
-                                            while($row=mysqli_fetch_array($query)){
-                                        ?>
-                                <option value="<?php echo $row['ID_TIPO_TELA']?>" style="text-transform:uppercase">
-                                    <?php echo $row['NOM_TIPO_TELA']?>
-                                </option>
-
-                                <?php
-                                        }
-                                        ?>
-                            </select>
-                            <br>
-                            <a id="btn_salirtela_textil" class="d_tela" href="#">CREAR TIPO TELA</a>
-                            <br>
-                            <label class="tit_marca" for="marca">MARCA</label>
-                            <select class="marca_tex" id="marca_tex" name="marca">
-                                <option value="0">SELECCIONAR</option>
-                                <?php
-                                            $sql="SELECT * FROM marca";
-                                            $query=mysqli_query($conexion,$sql);
-                                            while($row=mysqli_fetch_array($query)){
-                                        ?>
-                                <option value="<?php echo $row['ID_MARCA']?>" style="text-transform:uppercase">
-                                    <?php echo $row['NOM_MARCA']?>
-                                </option>
-
-                                <?php
-                                        }
-                                        ?>
-                            </select>
-                            <br>
-                            <a id="btn_salirmarca_textil" class="ul_marca" href="#">CREAR MARCA</a>
-                            <br>
-                            <label class="titl_color">COLOR</label>
-                            <select class="color_tex" id="color_tex" name="color">
-                                <option value="0">SELECCIONAR</option>
-                                <?php
-                                            $sql="SELECT * FROM color";
-                                            $query=mysqli_query($conexion,$sql);
-                                            while($row = mysqli_fetch_array($query)){
-                                        ?>
-                                <option value="<?php echo $row['ID_COLOR']?>" style="text-transform:uppercase">
-                                    <?php echo $row['NOM_COLOR']?>
-                                </option>
-
-                                <?php
-                                        }
-                                        ?>
-                            </select>
-                            <br>
-                            <a id="btn_salircolor_textil" href="#" class="dir_color">CREAR COLOR</a>
-
-                            <label class="t_metraje" for="metraje">METRAJE</label>
-                            <input type="number" class="metraje" name="metraje" id="metraje" placeholder="METRAJE"
-                                required>
-
-                            <label class="t_rollos">ROLLOS</label>
-                            <input type="number" class="cant_rollos" name="cant_rollos" id="cant_rollos"
-                                placeholder="CANT. ROLLOS" required>
-
-                            <input type="hidden" name="cre_tela" value="crearmaterial">
-                            <input type="submit" class="continuar" name="regis_material" id="regis_material"
-                                value="CONTINUAR">
-
-                        </form>
-                    </div>
-                </div>
+                
+                <!--formulario de registro de material textil-->
                 <div class="crear_mtextil" id=cre_mate>
                     <div class="primer_from">
                         <br>
@@ -560,17 +473,17 @@ if ($usario == "" || $usario == null) {
                                 <select class="tela" id="tipo_tela" name="tipo_tela">
                                     <option value="0">SELECCIONAR</option>
                                     <?php
-                                                $sql="SELECT * FROM tipo_tela";
-                                                $query=mysqli_query($conexion,$sql);
-                                                while($row=mysqli_fetch_array($query)){
-                                            ?>
+                                        $sql="SELECT * FROM tipo_tela";
+                                        $query=mysqli_query($conexion,$sql);
+                                        while($row=mysqli_fetch_array($query)){
+                                    ?>
                                     <option value="<?php echo $row['ID_TIPO_TELA']?>" style="text-transform:uppercase">
                                         <?php echo $row['NOM_TIPO_TELA']?>
                                     </option>
 
                                     <?php
-                                            }
-                                            ?>
+                                        }
+                                    ?>
                                 </select>
                                 <br>
                                 <a id="btn_salirtela_textil" class="d_tela" href="#">CREAR TIPO TELA</a>
@@ -579,36 +492,36 @@ if ($usario == "" || $usario == null) {
                                 <select class="marca_tex" id="marca_tex" name="marca">
                                     <option value="0">SELECCIONAR</option>
                                     <?php
-                                                $sql="SELECT * FROM marca";
-                                                $query=mysqli_query($conexion,$sql);
-                                                while($row=mysqli_fetch_array($query)){
-                                            ?>
+                                        $sql="SELECT * FROM marca";
+                                        $query=mysqli_query($conexion,$sql);
+                                        while($row=mysqli_fetch_array($query)){
+                                    ?>
                                     <option value="<?php echo $row['ID_MARCA']?>" style="text-transform:uppercase">
                                         <?php echo $row['NOM_MARCA']?>
                                     </option>
 
                                     <?php
-                                            }
-                                            ?>
+                                        }
+                                    ?>
                                 </select>
-                                <br>
+                                    <br>
                                 <a id="btn_salirmarca_textil" class="ul_marca" href="#">CREAR MARCA</a>
                                 <br>
                                 <label class="titl_color">COLOR</label>
                                 <select class="color_tex" id="color_tex" name="color">
                                     <option value="0">SELECCIONAR</option>
                                     <?php
-                                                $sql="SELECT * FROM color";
-                                                $query=mysqli_query($conexion,$sql);
-                                                while($row = mysqli_fetch_array($query)){
-                                            ?>
+                                        $sql="SELECT * FROM color";
+                                        $query=mysqli_query($conexion,$sql);
+                                        while($row = mysqli_fetch_array($query)){
+                                    ?>
                                     <option value="<?php echo $row['ID_COLOR']?>" style="text-transform:uppercase">
                                         <?php echo $row['NOM_COLOR']?>
                                     </option>
 
                                     <?php
-                                            }
-                                            ?>
+                                        }
+                                    ?>
                                 </select>
                                 <br>
                                 <a id="btn_salircolor_textil" href="#" class="dir_color">CREAR COLOR</a>
@@ -629,6 +542,7 @@ if ($usario == "" || $usario == null) {
                         </div>
                     </div>
 
+                    <!--formulario para crear tipo de tela-->
                     <div class="crear_tipo_tela_textil" id="crear_tipo_tela_textil">
                         <div class="content_from_textil">
                             <div id="cerrar_ventana_textil"><img class="cerrar1" src="../../img/cerrar.png"
@@ -643,6 +557,7 @@ if ($usario == "" || $usario == null) {
                         </div>
                     </div>
 
+                    <!--formulario para crear marca del mat_texil-->
                     <div class="crear_marca_textil" id="crear_marca_textil">
                         <div class="content_formMarca_textil">
                             <div id="cerrar_ventanaMarca_textil"><img class="cerrar1" src="../../img/cerrar.png"
@@ -657,6 +572,7 @@ if ($usario == "" || $usario == null) {
                         </div>
                     </div>
 
+                    <!--formulario para crear color del mat_textil-->
                     <div class="crear_color_textil" id="crear_color_textil">
                         <div class="content_formColor_textil">
                             <div id="cerrar_ventanaColor_textil"><img class="cerrar1" src="../../img/cerrar.png"
@@ -670,9 +586,12 @@ if ($usario == "" || $usario == null) {
                             </form>
                         </div>
                     </div>
-                </div>
 
+                </div>
+                
+                <!--formulario de registro de insumos-->
                 <div class="crea_insu" id="crea_insu">
+                    
                     <div class="primer_from">
                         <br>
                         <h2 class="titulo_insumo">INGRESO DE INSUMO</h2>
@@ -682,17 +601,17 @@ if ($usario == "" || $usario == null) {
                                 <label class="tip_in" for="tipinsu">TIPO DE INSUMO</label>
                                 <select class="insumo" id="tipinsumo" name="tipinsumo" required>
                                     <?php
-                                                $sql="SELECT*FROM tipo_insumo";
-                                                $query=mysqli_query($conexion,$sql);
-                                                while($row=mysqli_fetch_array($query)){
-                                            ?>
+                                        $sql="SELECT*FROM tipo_insumo";
+                                        $query=mysqli_query($conexion,$sql);
+                                        while($row=mysqli_fetch_array($query)){
+                                    ?>
                                     <option value="<?php echo $row['ID_TIPO_INSUMO']?>">
                                         <?php echo $row['NOM_INSUMO']?>
                                     </option>
 
                                     <?php
-                                            }
-                                            ?>
+                                        }
+                                    ?>
                                 </select>
                                 <br>
                                 <a id="btn_salirinsu" class="d_insu" href="#">CREAR TIPO INSUMO</a>
@@ -705,17 +624,17 @@ if ($usario == "" || $usario == null) {
                                 <label class="t_marca" for="">MARCA DEL INSUMO</label>
                                 <select class="marca" id="marca" name="marca" required>
                                     <?php
-                                                $sql="SELECT*FROM marca";
-                                                $query=mysqli_query($conexion,$sql);
-                                                while($row=mysqli_fetch_array($query)){
-                                            ?>
+                                        $sql="SELECT*FROM marca";
+                                        $query=mysqli_query($conexion,$sql);
+                                        while($row=mysqli_fetch_array($query)){
+                                    ?>
                                     <option value="<?php echo $row['ID_MARCA']?>">
                                         <?php echo $row['NOM_MARCA']?>
                                     </option>
 
                                     <?php
-                                            }
-                                            ?>
+                                        }
+                                    ?>
                                 </select>
                                 <br>
                                 <a id="btn_salirmarca" class="d_marca" href="#">CREAR MARCA</a>
@@ -724,17 +643,17 @@ if ($usario == "" || $usario == null) {
                                 <label class="t_color" for="">COLOR DEL INSUMO</label>
                                 <select class="color" id="color" name="color" required>
                                     <?php
-                                                $sql="SELECT*FROM color";
-                                                $query=mysqli_query($conexion,$sql);
-                                                while($row=mysqli_fetch_array($query)){
-                                            ?>
+                                        $sql="SELECT*FROM color";
+                                        $query=mysqli_query($conexion,$sql);
+                                        while($row=mysqli_fetch_array($query)){
+                                    ?>
                                     <option value="<?php echo $row['ID_COLOR']?>">
                                         <?php echo $row['NOM_COLOR']?>
                                     </option>
 
                                     <?php
-                                            }
-                                            ?>
+                                        }
+                                    ?>
                                 </select>
                                 <br>
                                 <a id="btn_salircolor" href="#" class="d_color">CREAR COLOR</a>
@@ -746,6 +665,8 @@ if ($usario == "" || $usario == null) {
                             </form>
                         </div>
                     </div>
+                    
+                    <!--formulario para crear tipo de insumo-->
                     <div class="crear_tipo_insumo" id="crear_tipo_insumo">
                         <div class="content_from">
                             <div id="cerrar_ventana"><i class="fas fa-times-circle"></i></div>
@@ -759,6 +680,7 @@ if ($usario == "" || $usario == null) {
                         </div>
                     </div>
 
+                    <!--formulario para crear marca de insumo-->
                     <div class="crear_marca" id="crear_marca">
                         <div class="content_formMarca">
                             <div id="cerrar_ventanaMarca"><i class="fas fa-times-circle"></i></div>
@@ -772,6 +694,7 @@ if ($usario == "" || $usario == null) {
                         </div>
                     </div>
 
+                    <!--formulario para crear color de insumo-->
                     <div class="crear_color" id="crear_color">
                         <div class="content_formColor">
                             <div id="cerrar_ventanaColor"><i class="fas fa-times-circle"></i></div>
@@ -784,122 +707,7 @@ if ($usario == "" || $usario == null) {
                             </form>
                         </div>
                     </div>
-
-                    <div class="crea_insu" id="crea_insu">
-                        <div class="primer_from">
-                            <br>
-                            <h2 class="titulo_insumo">INGRESO DE INSUMO</h2>
-                            <div class="formulario">
-                                <form class="cre_in" action="../../php/crear_insumo/val_insumos.php" method="POST"
-                                    autocomplete="off">
-                                    <label class="tip_in" for="tipinsu">TIPO DE INSUMO</label>
-                                    <select class="insumo" id="tipinsumo" name="tipinsumo" required>
-                                        <?php
-                                                $sql="SELECT*FROM tipo_insumo";
-                                                $query=mysqli_query($conexion,$sql);
-                                                while($row=mysqli_fetch_array($query)){
-                                            ?>
-                                        <option value="<?php echo $row['ID_TIPO_INSUMO']?>">
-                                            <?php echo $row['NOM_INSUMO']?>
-                                        </option>
-
-                                        <?php
-                                            }
-                                            ?>
-                                    </select>
-                                    <br>
-                                    <a id="btn_salirinsu" class="d_insu" href="#">CREAR TIPO INSUMO</a>
-                                    <br>
-
-                                    <label class="t_insu" for="">NOMBRE DEL INSUMO</label>
-                                    <input type="text" class="insu" name="nominsumo" id="nominsumo"
-                                        placeholder="Tijeras punta redonda" required>
-                                    <br>
-                                    <label class="t_marca" for="">MARCA DEL INSUMO</label>
-                                    <select class="marca" id="marca" name="marca" required>
-                                        <?php
-                                                $sql="SELECT*FROM marca";
-                                                $query=mysqli_query($conexion,$sql);
-                                                while($row=mysqli_fetch_array($query)){
-                                            ?>
-                                        <option value="<?php echo $row['ID_MARCA']?>">
-                                            <?php echo $row['NOM_MARCA']?>
-                                        </option>
-
-                                        <?php
-                                            }
-                                            ?>
-                                    </select>
-                                    <br>
-                                    <a id="btn_salirmarca" class="d_marca" href="#">CREAR MARCA</a>
-                                    <br>
-
-                                    <label class="t_color" for="">COLOR DEL INSUMO</label>
-                                    <select class="color" id="color" name="color" required>
-                                        <?php
-                                                $sql="SELECT*FROM color";
-                                                $query=mysqli_query($conexion,$sql);
-                                                while($row=mysqli_fetch_array($query)){
-                                            ?>
-                                        <option value="<?php echo $row['ID_COLOR']?>">
-                                            <?php echo $row['NOM_COLOR']?>
-                                        </option>
-
-                                        <?php
-                                            }
-                                            ?>
-                                    </select>
-                                    <br>
-                                    <a id="btn_salircolor" href="#" class="d_color">CREAR COLOR</a>
-                                    <br>
-
-
-                                    <input type="submit" class="btn_insumo" value="CREAR INSUMO" class="form-control">
-                                    <input type="hidden" name="cre_insumo" value="crearmoto">
-                                </form>
-                            </div>
-                        </div>
-                        <div class="crear_tipo_insumo" id="crear_tipo_insumo">
-                            <div class="content_from">
-                                <div id="cerrar_ventana"><i class="fas fa-times-circle"></i></div>
-                                <h2 class="titulo_t_insumo">Agregar Tip. Insumo</h2>
-                                <form action="../../php/crear_insumo/regis_tipo_insumo.php" class="formulario_t"
-                                    method="POST" autocomplete="off">
-                                    <input type="text" class="ti_insumo" name="agre_tipo_insumo" id="agre_tipo_insumo"
-                                        placeholder="tipo insumo" required>
-                                    <input type="submit" class="env-insumo" name="env-insumo" value="AGREGAR">
-                                </form>
-                            </div>
-                        </div>
-
-                        <div class="crear_marca" id="crear_marca">
-                            <div class="content_formMarca">
-                                <div id="cerrar_ventanaMarca"><i class="fas fa-times-circle"></i></div>
-                                <h2 class="titulo_marca">Agregar Marca</h2>
-                                <form action="../../php/crear_insumo/regis_marca_insu.php" class="formularioMarca"
-                                    method="POST" autocomplete="off">
-                                    <input type="text" class="ti_marca" name="agre_marca" id="agre_marca"
-                                        placeholder="Digite la marca" required>
-                                    <input type="submit" class="env-marca" name="env-marca" value="AGREGAR">
-                                </form>
-                            </div>
-                        </div>
-
-                        <div class="crear_color" id="crear_color">
-                            <div class="content_formColor">
-                                <div id="cerrar_ventanaColor"><i class="fas fa-times-circle"></i></div>
-                                <h2 class="titulo_color">Agregar Color</h2>
-                                <form action="../../php/crear_insumo/regis_color_insu.php" class="formularioColor"
-                                    method="POST" autocomplete="off">
-                                    <input type="text" class="ti_color" name="agre_color" id="agre_color"
-                                        placeholder="Digite el color" required>
-                                    <input type="submit" class="env-color" name="env-color" value="AGREGAR">
-                                </form>
-                            </div>
-                        </div>
-
-                    </div>
-                   
+    
                 </div>
 
             </div>
