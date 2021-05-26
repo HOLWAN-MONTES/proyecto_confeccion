@@ -64,8 +64,7 @@
     margin-top: 60px;
     margin-left: -35%;  
 }
-#color{
-    
+#color{    
     width: 40%;
     height: 6%;
     margin-right: 40px;
@@ -111,8 +110,8 @@
 }
 
 /*--------------------crear tipo maquinaria------------------*/
-
-.crear_maquinarias{
+/*----------------crear color del material textil------------------------*/
+.crear_maquis{
     background-color: rgba(0,0,0,0.5);  
     width: 100%;
     height: 120%;
@@ -140,14 +139,14 @@
     transition: transform 1s;
     transform: translateY(0%);
 }
-#cerrar_ventanaMaqui img{
+#cerrar_ventanaMaquis img{
     font-size: 40px;
     cursor: pointer;
     color: red;
 
 }
 
-#cerrar_ventanaMaqui {
+#cerrar_ventanaMaquis {
     float: right;
 }
 .formularioMaquinaria{
