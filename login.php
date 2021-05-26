@@ -1,5 +1,6 @@
 <?php
 require_once('includes/conection.php');
+
 ?>
 <?php
     $sql_re = "SELECT * FROM tipo_usu";
@@ -41,7 +42,7 @@ require_once('includes/conection.php');
                         foreach ($query_re as $tipo) : ?>
     
                         <option value="<?php echo $tipo['ID_TIPO_USU'] ?>">
-                            <?php echo $tipo['ID_TIPO_USU'] ?>
+                            
                             <?php echo $tipo['NOM_TIPO_USU'] ?></option>
                         <?php
                         endforeach;

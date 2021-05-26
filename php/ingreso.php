@@ -25,7 +25,7 @@ if($_POST["inicio"]){
             $_SESSION['EDAD']= $dato_SQL['EDAD'];
             $_SESSION['CORREO']= $dato_SQL['CORREO'];
             $_SESSION['TELEFONO']= $dato_SQL['TELEFONO'];
-
+            $_SESSION['FOTO']= $dato_SQL['FOTO'];
             if($_SESSION['TIPO_USUARIO'] == 1){
                 header("location: ../users/administrador/admin.php");
             }
