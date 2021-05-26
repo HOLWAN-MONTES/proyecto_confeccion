@@ -74,7 +74,7 @@ if ($usario == "" || $usario == null) {
             <div class="cabecera">
                 <div class="info_per">
                     <div class="foto">
-                        <img src="../../images/<?php echo $_SESSION['FOTO']; ?>">
+                        <img src="../../img/img_user.png" alt="">
                     </div>
                     <div class="men">
                         <ul>
@@ -100,7 +100,7 @@ if ($usario == "" || $usario == null) {
                             <div class="tituloos">
                                 <h1>REGISTRO DE USUARIOS</h1>
                             </div>
-                            <form class="form1" action="../../php/usuario/crear.php" method="POST" enctype="multipart/form-data" >
+                            <form class="form1" action="../../php/usuario/crear.php" method="POST">
                             <div class="one1">
                                 <input type="number" name="docu" id="docu" placeholder="DOCUMENTO" autocomplete="off" required> &nbsp;&nbsp;&nbsp;
                                 <input type="text" name="nom" id="nom" placeholder="NOMBRE" autocomplete="off" required style="text-transform:uppercase">&nbsp;&nbsp;&nbsp;&nbsp;
@@ -158,7 +158,6 @@ if ($usario == "" || $usario == null) {
                                 <input type="email" name="cor" id="cor" placeholder="CORREO" autocomplete="off"
                                     pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
                                     required><br>
-                                    <input type="file" required name="imagen"/>
                                 <input type="submit" name="registro" id="reg" value="REGISTRAR">
                             </form>
                             <div class="ven1">
@@ -415,6 +414,7 @@ if ($usario == "" || $usario == null) {
                                     <div id="cerrar_ventanaMarca"><img class="cerrar1" src="../../img/cerrar.png" alt="Cerrar"></div>
                                     <h2 class="titulo_marca">AGREGAR MARCA</h2>
                                     <form action="../../php/crear_maqui/regis_marca_maqui.php" class="formularioMarca" method="POST" autocomplete="off">
+                                        <label class="dig-mar" for="">Digite Marca</label>
                                         <input type="text" class="ti_marca" name="agre_marca" id="agre_marca" placeholder="MARCA" required style="text-transform:uppercase">
                                         <input type="submit" class="env-marca" name="env-marca" value="AGREGAR">
                                     </form>
@@ -427,6 +427,7 @@ if ($usario == "" || $usario == null) {
                                     <div id="cerrar_ventanaColor"><img class="cerrar1" src="../../img/cerrar.png" alt="Cerrar"></div>
                                     <h2 class="titulo_color">AGREGAR COLOR</h2>
                                     <form action="../../php/crear_maqui/regis_color_maqui.php" class="formularioColor" method="POST" autocomplete="off">
+                                        <label class="dig-col" for="">Digite Color</label>
                                         <input type="text" class="ti_color" name="agre_color" id="agre_color" placeholder="COLOR" required style="text-transform:uppercase">
                                         <input type="submit" class="env-color" name="env-color" value="AGREGAR">
                                     </form>
@@ -621,41 +622,17 @@ if ($usario == "" || $usario == null) {
                 </div>
 
             </div>
-            
-        <div class="inv-maquinaria" id="inv-maquinaria">
-
-                <h1>INVENTARIO DE MAQUINARIA</h1>
-<table class="tabla-inv">
-    <tr>
-        <td>SERIAL</td>
-        <td>NOMBRE DE LA MAQUINA</td>
-        <td>MARCA</td>
-        <td>COLOR</td>
-        
-    </tr>
-
-    <?php
-        $sql = "SELECT maquinaria.SERIAL,tipo_maquinaria.NOM_TIPO_MAQUI,marca.NOM_MARCA,color.NOM_COLOR from maquinaria,tipo_maquinaria,marca,color where maquinaria.ID_TIPO_MAQUI=tipo_maquinaria.ID_TIPO_MAQUI and maquinaria.ID_MARCA=marca.ID_MARCA and maquinaria.ID_COLOR=color.ID_COLOR";
-        $result = mysqli_query($conexion, $sql);
-    
-        while($mostrar=mysqli_fetch_array($result)){
-    ?>
-
-    <tr>
-        <td><?php echo $mostrar["SERIAL"]?></td>
-        <td><?php echo $mostrar["NOM_TIPO_MAQUI"]?></td>
-        <td><?php echo $mostrar["NOM_MARCA"]?></td>
-        <td><?php echo $mostrar["NOM_COLOR"]?></td>
-        
-    </tr>
-    <?php
-           }
-    ?>
-
-</table>
-</div>
         </div>
-
+        <div class="inv-maquinaria" id="inv-maquinaria">
+                            <h1>holaaa</h1>
+                            <h1>aaaaaaaaaaa</h1>
+                            <h1>aaaaaaaaaaa</h1>
+                            <h1>aaaaaaaaaaa</h1>
+        </div>
+       
+       
+       
+       
        
        
         <script src="JS/editar.js"></script>

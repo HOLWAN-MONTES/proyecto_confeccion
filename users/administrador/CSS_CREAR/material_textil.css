@@ -9,10 +9,10 @@
     opacity: 0;
     visibility: hidden;
     width: 100%;
-    height: 500px;
+    height: 600px;
     background-color: rgb(245, 237, 237);
 }
-.crear_mtextil{
+#cre_mate{
     margin-top: -55.2%;
 }
 
@@ -116,7 +116,7 @@
     width: 28%;
     height: 6%;
     float: left;
-    margin-left: 110px;
+    margin-left: 126px;
     border: 2px solid black;
     text-align: center;
     font-size: 13px;
@@ -323,7 +323,7 @@
     width: 100%;
     height: 120%;
     position: fixed;
-    top: 60%;
+    top: -20%;
     right: 20%;
     left: 0%;
     justify-content: center;
