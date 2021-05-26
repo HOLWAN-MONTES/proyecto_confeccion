@@ -337,7 +337,7 @@ if ($usario == "" || $usario == null) {
                             <div class="form_reg_maquina">
                                 <form class="formu_maquinn" action="../../php/crear_maqui/val_maqui.php" method="POST"
                                     autocomplete="off">
-                                    <input type="text" name="serial" id="serial" placeholder="Serial" required>
+                                    <input type="number" name="serial" id="serial" placeholder="SERIAL" required>
                                     <br>
                                     <label class="l_maquinn" for="">TIPO DE MAQUINARIA</label>
                                     <select id="tipo_maqui" name="tipo_maqui" required>
@@ -354,7 +354,7 @@ if ($usario == "" || $usario == null) {
                                             ?>
                                         </select>
                                         <br>
-                                        <a id="btn_SalirMaquis" href="#">CREAR TIPO DE MAQUINARIA</a>
+                                        <a id="btn_SalirMaquinarias" href="#">CREAR TIPO DE MAQUINARIA</a>
                                         <br>
                                         <label class="l_marca" for="marca">MARCA DE MAQUINARIA</label>
                                         <select id="marca" name="marca" required>           
@@ -397,9 +397,9 @@ if ($usario == "" || $usario == null) {
                             </div>
                         </div>
 
-                            <div class="crear_maquis" id="crear_maquis">
+                            <div class="crear_maquinarias" id="crear_maquinarias">
                                 <div class="content_formMaquinaria">
-                                    <div id="cerrar_ventanaMaquis"><img class="cerrar1" src="../../img/cerrar.png" alt="Cerrar"></div>
+                                    <div id="cerrar_ventanaMaqui"><img class="cerrar1" src="../../img/cerrar.png" alt="Cerrar"></div>
                                     <h2 class="titulo_maquinaria">AGREGAR TIP. MAQUINARIA</h2>
                                     <form action="../../php/crear_maqui/regis_tip_maqui.php" class="formularioMaquinaria" method="POST" autocomplete="off">
                                         <input type="text" class="ti_maquinaria" name="agre_maquinaria" id="agre_maquinaria" placeholder="TIPO DE MAQUINARIA" required style="text-transform:uppercase">
