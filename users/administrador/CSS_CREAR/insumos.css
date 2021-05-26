@@ -1,26 +1,34 @@
+:root{
+    --coloresgenerales1:rgb(24,130,118);
+    --colorDefondoDelMenu:rgb(89,181,72);
+    --colorDefondoDelMenu2:rgba(60, 151, 68, 0.699);
+}
 #crea_insu{
     display: none;
     opacity: 0;
     visibility: hidden;
     width: 100%;
     height: 100%;
+    background-color: rgb(245, 237, 237);
 }
 /*----------formulario-------------*/
 
 .titulo_insumo{
-    margin-top: 5%;
-    font-size: 20px;
-    color: #2A906E;
-    text-align: center;
+    color: #5aa469;
+    margin-top: 3%;
+    margin-left: 25%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .cre_in{
-    border: 1px solid #000;
-    width: 500px;
-    height: 40%px;
-    padding: 23px;
-    border-radius: 15px;
-    margin-top: 5%;
-    margin-left: 25%;
+    margin-left: 20%;
+    width: 620px;
+    height: 400px;
+    padding: 2%;
+    border: 2px solid black;
+    text-align: center;
+    justify-content: center;
+    background: #d6d2c4;
+    border-radius: 16px;
 }
 .tip_in{
     padding: 10px;

@@ -9,8 +9,11 @@
     opacity: 0;
     visibility: hidden;
     width: 100%;
-    height: 100%;
-    background-color: rgb(245, 237, 237)
+    height: 600px;
+    background-color: rgb(245, 237, 237);
+}
+#cre_mate{
+    margin-top: -55.2%;
 }
 
 .titulo_material{
@@ -113,7 +116,7 @@
     width: 28%;
     height: 6%;
     float: left;
-    margin-left: 110px;
+    margin-left: 126px;
     border: 2px solid black;
     text-align: center;
     font-size: 13px;
