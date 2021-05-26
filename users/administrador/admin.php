@@ -414,7 +414,6 @@ if ($usario == "" || $usario == null) {
                                     <div id="cerrar_ventanaMarca"><img class="cerrar1" src="../../img/cerrar.png" alt="Cerrar"></div>
                                     <h2 class="titulo_marca">AGREGAR MARCA</h2>
                                     <form action="../../php/crear_maqui/regis_marca_maqui.php" class="formularioMarca" method="POST" autocomplete="off">
-                                        <label class="dig-mar" for="">Digite Marca</label>
                                         <input type="text" class="ti_marca" name="agre_marca" id="agre_marca" placeholder="MARCA" required style="text-transform:uppercase">
                                         <input type="submit" class="env-marca" name="env-marca" value="AGREGAR">
                                     </form>
@@ -427,7 +426,6 @@ if ($usario == "" || $usario == null) {
                                     <div id="cerrar_ventanaColor"><img class="cerrar1" src="../../img/cerrar.png" alt="Cerrar"></div>
                                     <h2 class="titulo_color">AGREGAR COLOR</h2>
                                     <form action="../../php/crear_maqui/regis_color_maqui.php" class="formularioColor" method="POST" autocomplete="off">
-                                        <label class="dig-col" for="">Digite Color</label>
                                         <input type="text" class="ti_color" name="agre_color" id="agre_color" placeholder="COLOR" required style="text-transform:uppercase">
                                         <input type="submit" class="env-color" name="env-color" value="AGREGAR">
                                     </form>
