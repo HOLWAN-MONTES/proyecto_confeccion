@@ -955,7 +955,7 @@ if ($usario == "" || $usario == null) {
     <script src="JS/crear_insumos.js"></script>
     <script src="JS/crear_material.js"></script>
     <script src="JS/maquinaria.js"></script>
-    <script src="JS/inv-maquinarias.js"></script>
+    <!-- <script src="JS/inv-maquinarias.js"></script> -->
 </body>
 
 </html>

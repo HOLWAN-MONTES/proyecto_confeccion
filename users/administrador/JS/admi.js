@@ -29,7 +29,22 @@ const maqui = document.getElementById('inv-maquinaria');
 
 btnregi.addEventListener("click", function (e) {
     e.preventDefault();
-
+    registrar_usu.style.opacity = "1";
+    registrar_usu.style.visibility = "visible";
+    registrar_usu.style.display="block";
+    editar_usu.style.opacity = "0";
+    editar_usu.style.visibility = "hidden";
+    editar_usu.style.display="none";
+    usuario.style.display="block";
+    eliminar_usu.style.opacity = "0";
+    eliminar_usu.style.visibility = "hidden";
+    eliminar_usu.style.display="none";
+    crea_insu.style.opacity = "0";
+    crea_insu.style.visibility = "hidden";
+    crea_insu.style.display="none";
+    crear.style.display="none";
+    maqui.style.display = "none"
+    crea_material.style.display = "none";
 });
 
 btnedi.addEventListener("click", function (e) {
@@ -76,7 +91,7 @@ btninsu.addEventListener("click", function (e) {
     e.preventDefault();
     crea_insu.style.opacity = "1";
     crea_insu.style.visibility = "visible";
-    crea_insu.style.display="block";
+    crea_insu.style.display = "block";
     crear.style.display="block";
     usuario.style.display="none";
     crea_material.style.opacity = "0";
@@ -85,7 +100,8 @@ btninsu.addEventListener("click", function (e) {
     crea_maquina.style.opacity = "0";
     crea_maquina.style.visibility = "hidden";
     crea_maquina.style.display="none";
-    
+    maqui.style.display = "none";
+
 });
 btnmatextil.addEventListener("click", function (e) {
     e.preventDefault();
