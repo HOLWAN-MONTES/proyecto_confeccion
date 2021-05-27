@@ -350,7 +350,7 @@ if ($usario == "" || $usario == null) {
                                     autocomplete="off">
                                     <input type="number" name="serial" id="serial" placeholder="SERIAL" required>
                                     <br>
-                                    <label class="l_maquinn" for="">TIPO DE MAQUINARIA</label>
+                                    <label id="l_maquinn" for="">TIPO DE MAQUINARIA</label>
                                     <select id="tipo_maqui" name="tipo_maqui" required>
                                         <option value="0">SELECCIONAR</option>
                                         <?php
@@ -368,7 +368,7 @@ if ($usario == "" || $usario == null) {
                                             ?>
                                     </select>
                                     <br>
-                                    <a id="btn_SalirMaquinarias" href="#">CREAR TIPO DE MAQUINARIA</a>
+                                    <a id="btn_SalirMaquinarias" class="maquis_fo" href="#">CREAR TIPO DE MAQUINARIA</a>
                                     <br>
                                     <label class="l_marca" for="marca">MARCA DE MAQUINARIA</label>
                                     <select id="marca" name="marca" required>
@@ -598,14 +598,15 @@ if ($usario == "" || $usario == null) {
                             <div class="formulario">
                                 <form class="cre_in" action="../../php/crear_insumo/val_insumos.php" method="POST"
                                     autocomplete="off">
-                                    <label class="tip_in" for="tipinsu">TIPO DE INSUMO</label>
-                                    <select class="insumo" id="tipinsumo" name="tipinsumo" required>
+                                    <label id="tip_ins">TIPO DE INSUMO</label>
+                                    <select id="tipo_insumos" name="tipinsumo" required>
+                                        <option value="0">SELECCIONAR</option>
                                         <?php
                                             $sql="SELECT*FROM tipo_insumo";
                                             $query=mysqli_query($conexion,$sql);
                                             while($row=mysqli_fetch_array($query)){
                                         ?>
-                                        <option value="<?php echo $row['ID_TIPO_INSUMO']?>">
+                                        <option value="<?php echo $row['ID_TIPO_INSUMO']?>" style="text-transform:uppercase">
                                             <?php echo $row['NOM_INSUMO']?>
                                         </option>
 
@@ -618,17 +619,18 @@ if ($usario == "" || $usario == null) {
                                     <br>
 
                                     <label class="t_insu" for="">NOMBRE DEL INSUMO</label>
-                                    <input type="text" class="insu" name="nominsumo" id="nominsumo"
-                                        placeholder="Tijeras punta redonda" required>
+                                    <input type="text" name="nominsumo" id="nom_insumo"
+                                        placeholder="NOMBRE DE INSUMO" required style="text-transform:uppercase">
                                     <br>
                                     <label class="t_marca" for="">MARCA DEL INSUMO</label>
                                     <select class="marca" id="marca" name="marca" required>
+                                        <option value="0">SELECCIONAR</option>
                                         <?php
                                             $sql="SELECT*FROM marca";
                                             $query=mysqli_query($conexion,$sql);
                                             while($row=mysqli_fetch_array($query)){
                                         ?>
-                                        <option value="<?php echo $row['ID_MARCA']?>">
+                                        <option value="<?php echo $row['ID_MARCA']?>" style="text-transform:uppercase">
                                             <?php echo $row['NOM_MARCA']?>
                                         </option>
 
@@ -642,12 +644,13 @@ if ($usario == "" || $usario == null) {
 
                                     <label class="t_color" for="">COLOR DEL INSUMO</label>
                                     <select class="color" id="color" name="color" required>
+                                        <option value="0">SELECCIONAR</option>
                                         <?php
                                             $sql="SELECT*FROM color";
                                             $query=mysqli_query($conexion,$sql);
                                             while($row=mysqli_fetch_array($query)){
                                         ?>
-                                        <option value="<?php echo $row['ID_COLOR']?>">
+                                        <option value="<?php echo $row['ID_COLOR']?>" style="text-transform:uppercase">
                                             <?php echo $row['NOM_COLOR']?>
                                         </option>
 
@@ -660,7 +663,7 @@ if ($usario == "" || $usario == null) {
                                     <br>
 
 
-                                    <input type="submit" class="btn_insumo" value="CREAR INSUMO" class="form-control">
+                                    <input type="submit" class="btn_insumo" value="CONTINUAR" class="form-control">
                                     <input type="hidden" name="cre_insumo" value="crearmoto">
                                 </form>
                             </div>
@@ -734,7 +737,7 @@ if ($usario == "" || $usario == null) {
             $result = mysqli_query($conexion, $sql);
     
             while($mostrar=mysqli_fetch_array($result)){
-        ?>
+            ?>
 
                 <tr>
                     <td>

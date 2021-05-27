@@ -15,7 +15,7 @@
 
 .titulo_insumo{
     color: #5aa469;
-    margin-top: 3%;
+    margin-top: 6%;
     margin-left: 25%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -30,22 +30,40 @@
     background: #d6d2c4;
     border-radius: 16px;
 }
-.tip_in{
+/* .tip_in{
     padding: 10px;
     font-weight: bold;
     display: block;
     color: black;
     font-family: serif;
     margin-left: 30px;
+} */
+#tipo_insumos{
+    margin-top: 7%;
+    width: 40%;
+    height: 6%;
+    float: left;
+    margin-left: 20px;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 14px;
 }
-.insumo{
-    margin-left: 5px;
-    font-size: 15px;
-    padding: 8px;
-    width: 210px;
-    border: 1px solid #000;
+#nom_insumo{
+    margin-top: 1px;   
+    width: 40%;
+    height: 6%;
+    margin-right: 40px;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 13px;
+    float: right;
 }
-.insu{
+#tip_ins{
+    margin-top: 40px;
+    float: left;
+    padding-left: 24px;
+}
+/* .insu{
     border: 1px solid #000;
     font-size: 15px;
     padding: 8px;
@@ -149,7 +167,7 @@ form a{
     color: #000;
     background: #DC540C;
     box-shadow:20px 10px  20px rgba(226, 87, 6, 0.5);   
-}
+} */
 /* -----------------------------------crear marca del insumo------------------------ */
 .crear_marca_insumo{
     background-color: #0e57f550;

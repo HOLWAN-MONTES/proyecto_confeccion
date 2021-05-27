@@ -18,14 +18,14 @@
 
 .titulo_material{
     color: #5aa469;
-    margin-top: 3%;
+    margin-top: 6%;
     margin-left: 25%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .for_mtex{
-    margin-left: 20%;
+    margin-left: 10%;
     width: 850px;
-    height: 440px;
+    height: 390px;
     padding: 2%;
     border: 2px solid black;
     text-align: center;
@@ -40,12 +40,12 @@
     color: orangered;
 }
 .l_text{
-    margin-top: 30px;
+    margin-top: 1px;
     float: left;
-    padding-left: 24px;
+    padding-left: 26px;
 }
 #nom_material{
-    margin-top: 7%;
+    margin-top: 3.2%;
     width: 28%;
     height: 6%;
     margin-left: -93%;
@@ -54,27 +54,27 @@
     font-size: 13px;
 }
 .tela{
-    margin-top: -3.1%;
+    margin-top: -2.8%;
     width: 28%;
     height: 6%;
     float: left;
-    margin-left: 34%;
+    margin-left: 34.1%;
     border: 2px solid black;
     text-align: center;
     font-size: 13px;
 }
 #t_tela{
-    margin-top: -51px;
+    margin-top: -46px;
     float: right;
-    padding-right: 380px;
+    padding-right: 387px;
 }
 .d_tela{
     float: right;
-    margin-right: 43%;
-    margin-top: -3%;
+    margin-right: 44.5%;
+    margin-top: -1.8%;
 }
 .marca_tex{
-    margin-top: -8%;
+    margin-top: -7.7%;
     width: 28%;
     height: 6%;
     float: right;
@@ -84,14 +84,14 @@
     font-size: 13px;
 }
 .tit_marca{
-    margin-top: -90px;
+    margin-top: -86px;
     float: right;
     padding-right: 120px;
 }
 .ul_marca{
     float: right;
-    margin-right: 82px;
-    margin-top: -8%;
+    margin-right: 85px;
+    margin-top: -7%;
 }
 #color_tex{
     margin-top: 1px;
@@ -109,25 +109,26 @@
 }
 .dir_color{
     float: left;
-    margin-left: 35px;
+    margin-left: 45px;
+    margin-top: 5px;
 }
 .metraje{
-    margin-top: -2.9%;
+    margin-top: -2.5%;
     width: 28%;
     height: 6%;
     float: left;
-    margin-left: 110px;
+    margin-left: 134px;
     border: 2px solid black;
     text-align: center;
     font-size: 13px;
 }
 .t_metraje{
-    margin-top: -48px;
+    margin-top: -47px;
     float: right;
     padding-right: 391px;
 }
 .cant_rollos{
-    margin-top: -3%;
+    margin-top: -2.6%;
     width: 28%;
     height: 6%;
     float: right;
@@ -323,7 +324,7 @@
     width: 100%;
     height: 120%;
     position: fixed;
-    top: 60%;
+    top: -20%;
     right: 20%;
     left: 0%;
     justify-content: center;
