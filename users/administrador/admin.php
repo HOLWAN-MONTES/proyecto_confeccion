@@ -348,6 +348,7 @@ if ($usario == "" || $usario == null) {
                             <div class="form_reg_maquina">
                                 <form class="formu_maquinn" action="../../php/crear_maqui/val_maqui.php" method="POST"
                                     autocomplete="off">
+                                    <label id="serial_maq">SERIAL</label>
                                     <input type="number" name="serial" id="serial" placeholder="SERIAL" required>
                                     <br>
                                     <label id="l_maquinn" for="">TIPO DE MAQUINARIA</label>
@@ -615,15 +616,15 @@ if ($usario == "" || $usario == null) {
                                         ?>
                                     </select>
                                     <br>
-                                    <a id="btn_salirinsu" class="d_insu" href="#">CREAR TIPO INSUMO</a>
+                                    <a id="btn_salirinsu" class="dir_insu" href="#">CREAR TIPO INSUMO</a>
                                     <br>
 
-                                    <label class="t_insu" for="">NOMBRE DEL INSUMO</label>
+                                    <label class="tit_insu" for="">NOMBRE DEL INSUMO</label>
                                     <input type="text" name="nominsumo" id="nom_insumo"
                                         placeholder="NOMBRE DE INSUMO" required style="text-transform:uppercase">
                                     <br>
-                                    <label class="t_marca" for="">MARCA DEL INSUMO</label>
-                                    <select class="marca" id="marca" name="marca" required>
+                                    <label class="ins_marca" for="">MARCA DEL INSUMO</label>
+                                    <select  id="marca_insu" name="marca" required>
                                         <option value="0">SELECCIONAR</option>
                                         <?php
                                             $sql="SELECT*FROM marca";
@@ -639,11 +640,11 @@ if ($usario == "" || $usario == null) {
                                         ?>
                                     </select>
                                     <br>
-                                    <a id="btn_salirmarca" class="d_marca" href="#">CREAR MARCA</a>
+                                    <a id="btn_salirmarca" class="dir_i_marca" href="#">CREAR MARCA</a>
                                     <br>
 
-                                    <label class="t_color" for="">COLOR DEL INSUMO</label>
-                                    <select class="color" id="color" name="color" required>
+                                    <label id="titl_color" for="">COLOR DEL INSUMO</label>
+                                    <select  id="color_insu" name="color" required>
                                         <option value="0">SELECCIONAR</option>
                                         <?php
                                             $sql="SELECT*FROM color";
@@ -659,7 +660,7 @@ if ($usario == "" || $usario == null) {
                                         ?>
                                     </select>
                                     <br>
-                                    <a id="btn_salircolor" href="#" class="d_color">CREAR COLOR</a>
+                                    <a id="btn_salircolor" href="#" class="direc_color">CREAR COLOR</a>
                                     <br>
 
 

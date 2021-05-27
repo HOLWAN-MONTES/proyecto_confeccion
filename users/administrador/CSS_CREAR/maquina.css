@@ -10,8 +10,9 @@
 .titulo_maqui{
     color: #5aa469;
     margin-top: 6%;
-    margin-left: 27%;
+    margin-left: 28%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 28px;
 }
 .formu_maquinn{
     margin-left: 20%;
@@ -29,10 +30,15 @@
     width: 40%;
     height: 6%;
     float: left;
-    margin-left: 20px;
+    margin-left: -22.6%;
     border: 2px solid black;
     text-align: center;
     font-size: 14px; 
+}
+#serial_maq{
+    margin-top: 1%;
+    float: left;
+    margin-left: 88px;
 }
 #tipo_maqui{ 
     margin-top: 2px;   
