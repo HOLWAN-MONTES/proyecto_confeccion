@@ -417,9 +417,9 @@ if ($usario == "" || $usario == null) {
                         </div>
 
                         <!--formulario para crear tipo de maquinaria-->
-                        <div class="crear_maquinarias" id="crear_maquinarias">
+                        <div class="crear_maquinaria" id="crear_maquinaria">
                             <div class="content_formMaquinaria">
-                                <div id="cerrar_ventanaMaqui"><img class="cerrar1" src="../../img/cerrar.png"
+                                <div id="cerrar_ventana_maquinaria"><img class="cerrar1" src="../../img/cerrar.png"
                                         alt="Cerrar"></div>
                                 <h2 class="titulo_maquinaria">AGREGAR TIP. MAQUINARIA</h2>
                                 <form action="../../php/crear_maqui/regis_tip_maqui.php" class="formularioMaquinaria"
@@ -551,6 +551,7 @@ if ($usario == "" || $usario == null) {
                                 <h2 class="titulo_tipo_tela">AGREGAR TIP TELA</h2>
                                 <form action="../../php/crear_Mtextil/regis_tipo_tela.php" class="formulario_t"
                                     method="POST" autocomplete="off">
+                                    <label class="dig-tip-t" for="">Digite Tipo Tela</label>
                                     <input type="text" class="tipoMax_tela" name="agre_tipo_tela" id="agre_tipo_tela"
                                         placeholder="TIPO TELA" required style="text-transform:uppercase">
                                     <input type="submit" class="env-tela" name="env-tela" value="AGREGAR">
@@ -566,6 +567,7 @@ if ($usario == "" || $usario == null) {
                                 <h2 class="titulo_marca_textil">AGREGAR MARCA</h2>
                                 <form action="../../php/crear_Mtextil/regis_marca_mater.php" class="formularioMarca_textil"
                                     method="POST" autocomplete="off">
+                                    <label class="dig-mar-t" for="">Digite la Marca</label>
                                     <input type="text" class="ti_marca_textil" name="agre_marca" id="agre_marca"
                                         placeholder="MARCA" required style="text-transform:uppercase">
                                     <input type="submit" class="env-marca_textil" name="env-marca" value="AGREGAR">
@@ -581,6 +583,7 @@ if ($usario == "" || $usario == null) {
                                 <h2 class="titulo_color_textil">AGREGAR COLOR</h2>
                                 <form action="../../php/crear_Mtextil/regis_color_mater.php" class="formularioColor_textil"
                                     method="POST" autocomplete="off">
+                                    <label class="dig-col-t" for="">Digite el Color</label>
                                     <input type="text" class="ti_color_textil" name="agre_color" id="agre_color"
                                         placeholder="COLOR" required style="text-transform:uppercase">
                                     <input type="submit" class="env-color_textil" name="env-color" value="AGREGAR">

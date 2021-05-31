@@ -13,8 +13,8 @@ cerrar_ventanaMarca.addEventListener('click',function(){
 
 //ventana de registro del tipo de maquinaria 
 const btn_SalirMaquinarias = document.getElementById('btn_SalirMaquinarias');
-const crear_maquinarias = document.getElementById('crear_maquinarias');
-const cerrar_ventanaMaqui = document.getElementById('cerrar_ventanaMaqui');
+const crear_maquinarias = document.getElementById('crear_maquinaria');
+const cerrar_ventanaMaqui = document.getElementById('cerrar_ventana_maquinaria');
 
 btn_SalirMaquinarias.addEventListener('click',function(){
     crear_maquinarias.style.display = "block";

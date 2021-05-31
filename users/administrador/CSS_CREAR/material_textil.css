@@ -179,10 +179,10 @@
 }
 
 .content_from_textil{
-    margin-top: 17%;
+    margin-top: 22%;
     margin-left: 40%;
     width: 35%;
-    height: 47%;
+    height: 45%;
     background: #fff;
     text-align: center;
     display: flex;
@@ -206,29 +206,33 @@
 
 .formulario_t{
     background: #d6d2c4;
-    margin-top: 2%;
-    margin-left: 20%;
+    margin-top: -5%;
+    margin-left: 22%;
     text-align: center;
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
     color: #150485;
     border: 2px solid black;
-    width: 60%;
-    max-height: -150%;
+    width: 55%;
+    max-height: -120%;
     padding-block: 3%;
     text-align: center;
 }
 .titulo_tipo_tela{
-    margin-left: 10px;
-    margin-top: -10%;
+    margin-left: -10px;
+    margin-top: -11%;
     font-size: 25px;
     text-transform: uppercase;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 
 }
+.dig-tip-t{
+    font-size: 18px;
+    cursor:text;
+}
 .tipoMax_tela{
-    margin-top: 10%;
+    margin-top: 7%;
     height: 15%;
     text-align: center;
     padding: 5%;
@@ -259,10 +263,10 @@
     display: none; 
 }
 .content_formMarca_textil{
-    margin-top: 17%;
+    margin-top: 22%;
     margin-left: 40%;
     width: 35%;
-    height: 47%;
+    height: 45%;
     background: #fff;
     text-align: center;
     display: flex;
@@ -284,34 +288,40 @@
 }
 .formularioMarca_textil{
     background: #d6d2c4;
-    margin-top: 2%;
-    margin-left: 20%;
+    margin-top: -5%;
+    margin-left: 22%;
     text-align: center;
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
     color: #150485;
-    border: 1px solid black;
-    width: 60%;
-    max-height: -150%;
+    border: 2px solid black;
+    width: 55%;
+    max-height: -120%;
     padding-block: 3%;
     text-align: center;
 }
 .titulo_marca_textil{
-    margin-top: -10%;
-    margin-left: 10px;
+    margin-top: -11%;
+    margin-left: -10px;
     font-size: 25px;
     text-transform: uppercase;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
 .ti_marca_textil{
+    margin-top: 7%;
     height: 15%;
     text-align: center;
-    padding: 3%;
+    padding: 5%;
     border: 2px solid black;
     text-transform: uppercase; 
 }
+.dig-mar-t{
+    font-size: 18px;
+    cursor:text;
+}
 .env-marca_textil{
+    margin-top: 8%;
     font-weight: bold;
     border: 2px solid black;
     padding: 5%;
@@ -334,10 +344,10 @@
     display: none; 
 }
 .content_formColor_textil{
-    margin-top: 17%;
+    margin-top: 22%;
     margin-left: 40%;
     width: 35%;
-    height: 47%;
+    height: 45%;
     background: #fff;
     text-align: center;
     display: flex;
@@ -359,33 +369,41 @@
 }
 .formularioColor_textil{
     background: #d6d2c4;
-    margin-top: 2%;
-    margin-left: 20%;
+    margin-top: -5%;
+    margin-left: 22%;
     text-align: center;
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
     color: #150485;
-    border: 1px solid black;
-    width: 60%;
-    max-height: -150%;
+    border: 2px solid black;
+    width: 55%;
+    max-height: -120%;
     padding-block: 3%;
     text-align: center;
 }
 .titulo_color_textil{
-    padding: 8px;
+    margin-left: -10px;
+    margin-top: -11%;
     font-size: 25px;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    text-align: center;
-    margin-left: 44px;
+
+}
+.dig-col-t{
+    font-size: 18px;
+    cursor:text;
 }
 .ti_color_textil{
+    margin-top: 7%;
     height: 15%;
     text-align: center;
-    padding: 3%;
+    padding: 5%;
     border: 2px solid black;
     text-transform: uppercase;
 }
 .env-color_textil{
+    margin-top: 8%;
     font-weight: bold;
     border: 2px solid black;
     padding: 5%;
