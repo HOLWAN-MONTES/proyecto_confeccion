@@ -25,6 +25,8 @@ if ($usario == "" || $usario == null) {
     <link rel="stylesheet" href="CSS_CREAR/insumos.css">
     <link rel="stylesheet" href="CSS_CREAR/material_textil.css">
     <link rel="stylesheet" href="CSS_CREAR/maquina.css">
+    
+    <link rel="stylesheet" href="CSS_USU/form-ingreso.css">
     <title>ADMINISTRADOR</title>
 </head>
 
@@ -48,7 +50,7 @@ if ($usario == "" || $usario == null) {
                                 <li id="eliminaar">ELIMINAR USUARIOS</li>
                             </ul>
                         </li>
-                        <li class="suba_submenu" id="subm">INGRESO <!-- dar click y sacar un formulario  -->
+                        <li class="suba_submenu" id="btn_ingreso">INGRESO <!-- dar click y sacar un formulario  -->
                           <!--   <ul class="mostr">
                                 <li id="insu">CREAR INSUMOS</li>
                                 <li id="maquinaa">CREAR MAQUINARIA</li>
@@ -732,8 +734,83 @@ if ($usario == "" || $usario == null) {
 
 
                 </div>
-                
+    
             </div>
+
+        </div>
+
+        <div class="form-ingre" id="form_ingre">
+            <h1 class="titulo_form">REGISTRO DE INGRESO</h1>
+            <form action="#" class="form_ingreso" method="POST" autocomplete="off">
+                <label class="in_insumo">INSUMO</label>
+                <select name="insumo" id="insumo">
+                    <option value="0">SELECCIONAR</option>
+                    <?php
+                        $sql="SELECT * FROM insumos";
+                        $query=mysqli_query($conexion,$sql);
+                            while($row=mysqli_fetch_array($query)){
+                        ?>
+                    <option value="<?php echo $row['ID_INSUMOS']?>"
+                        style="text-transform:uppercase">
+                        <?php echo $row['NOM_INSUMOS']?>
+                    </option>
+
+                    <?php
+                        }
+                    ?> 
+                </select>
+                <a href="#" id="reg_insu" class="uno">CREAR INSUMO</a>
+                <br>
+                <label class="cant_in">CANTIDAD INSUMOS</label>
+                <input type="number" name="cant_insumo" id="cant_insumo" placeholder="CANTIDAD" required>
+                <br>
+                <label class="mat_tex">MATERIAL TEXTIL</label>
+                <select name="mate_textil" id="mate_textil">
+                    <option value="0">SELECCIONAR</option>
+                    <?php
+                        $sql="SELECT * FROM material_textil";
+                        $query=mysqli_query($conexion,$sql);
+                            while($row=mysqli_fetch_array($query)){
+                        ?>
+                    <option value="<?php echo $row['ID_MATERIAL_TEXTIL']?>"
+                        style="text-transform:uppercase">
+                        <?php echo $row['NOM_M_TEXTIL']?>
+                    </option>
+
+                    <?php
+                        }
+                    ?> 
+                </select>
+                <a href="#" id="reg_m_textil" class="dos">CREAR MATERIAL TEXTIL</a>
+                <br>
+                <label class="cant_mat">CANTIDAD MATERIAL TEXTIL</label>
+                <input type="number" name="cant_m_textil" id="cant_m_textil" placeholder="CANTIDAD" required>
+                <br>
+                <label class="maqui">MAQUINARIA</label>
+                <select name="maquinaria" id="maquinaria">
+                    <option value="0">SELECCIONAR</option>
+                    <?php
+                        $sql="SELECT * FROM maquinaria";
+                        $query=mysqli_query($conexion,$sql);
+                            while($row=mysqli_fetch_array($query)){
+                        ?>
+                    <option value="<?php echo $row['SERIAL']?>"
+                        style="text-transform:uppercase">
+                        <?php echo $row['SERIAL']?>
+                    </option>
+
+                    <?php
+                        }
+                    ?> 
+                </select>
+                <a href="#" id="reg_maqui" class="tres">CREAR MAQUINARIA</a>
+                <br>
+                <label class="cant_maq">CANTIDAD MAQUINARIA</label>
+                <input type="number" name="cant_maquinaria" id="cant_maquinaria" placeholder="CANTIDAD" required>
+                <br>
+                <input type="submit" name="ingreso" id="ingreso" value="REGISTRAR">
+
+            </form>
 
         </div>
 
