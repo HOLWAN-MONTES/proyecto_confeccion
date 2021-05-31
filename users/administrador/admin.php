@@ -47,13 +47,21 @@ if ($usario == "" || $usario == null) {
                                 <li id="eliminaar">ELIMINAR USUARIOS</li>
                             </ul>
                         </li>
-                        <li class="suba_submenu" id="subm">REGISTRO ⬇
-                            <ul class="mostr">
+                        <li class="suba_submenu" id="subm">INGRESO <!-- dar click y sacar un formulario  -->
+                          <!--   <ul class="mostr">
                                 <li id="insu">CREAR INSUMOS</li>
                                 <li id="maquinaa">CREAR MAQUINARIA</li>
                                 <li id="mate_tex">CREAR MATERIAL TEXTIL</li>
-                            </ul>
+                                
+                            </ul> -->
                         </li>
+                        <li class="suba_submenu"> PRESTAMOS <!-- clicl el formulario de prestamos  -->
+
+                        </li>
+                        <li class="suba_submenu"> DEVOLUCIONES <!-- clicl el formulario de DEVOLUCIONES  -->
+
+                        </li>
+
                         <li class="suba_submenu">INVENTARIO ⬇
                             <ul class="mostrar">
                                 <li id="btn-inv-maquinaria">INV DE MAQUINARIA</li>
@@ -468,7 +476,7 @@ if ($usario == "" || $usario == null) {
                                     autocomplete="off">
                                     <label class="l_text" for="">MATERIAL TEXTIL</label>
                                     <input type="text" class="nom_material" name="nom_material" id="nom_material"
-                                        placeholder="NOMBRE MATERIAL" required style="text-transform:uppercase">
+                                        placeholder="TWEED 200X300" required style="text-transform:uppercase">
                                     <br>
                                     <label id="t_tela" for="tela">TIPO DE TELA</label>
                                     <select class="tela" id="tipo_tela" name="tipo_tela">

@@ -55,13 +55,16 @@
                 width: 100%;
             }
 
+            
             .suba_submenu{
                 width: 100%;
-                font-size: 22px;
+                font-size: 15px;
                 padding: 5%;
                 border-top: 1px solid black;
                 cursor: pointer;
+                margin-bottom: 0px;
             }
+        
             .menu ul li ul{
                 display: none;
             }
