@@ -237,12 +237,13 @@
 .modal-close{
     transform: translateY(-900%);
 }
-.cerrar{
-    position: absolute;
-    right: 2%;
-    width: 11%;
-    height: 12%;
-    top: 2%;
+.cerrar a i{
+    font-size: 40px;
+    color: red;
+    float: right;
+    margin-top: -35px;
+    margin-left: 100px;
+    margin-right: 10px;
 }
 /*Ventana modal para registro de usuarios nuevos*/
 .ventana-modal1{
@@ -320,10 +321,11 @@
 .modal-close1{
     transform: translateY(-900%);
 }
-.cerrar1{
-    position: absolute;
-    right: 2%;
-    width: 11%;
-    height: 12%;
-    top: 2%;
+.cerrar1 a i{
+    font-size: 40px;
+    color: red;
+    float: right;
+    margin-top: -35px;
+    margin-left: 100px;
+    margin-right: 10px;
 }
