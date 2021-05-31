@@ -15,6 +15,7 @@ if ($usario == "" || $usario == null) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/7b875e4198.js" crossorigin="anonymous"></script>
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <link rel="stylesheet" href="CSS_USU/admi.css">
     <link rel="stylesheet" href="CSS_USU/regi_usu.css">
@@ -179,7 +180,9 @@ if ($usario == "" || $usario == null) {
                             <div class="ven1">
                                 <div class="ventana-modal1" id="ventana-modal1">
                                     <div class="modal1 modal-close1">
-                                        <a href=""><img class="cerrar1" src="../../img/cerrar.png" alt="Cerrar"></a>
+                                        <div class="cerrar1">
+                                            <a href=""><i class="fas fa-times-circle"></i></a>
+                                        </div>
                                         <div class="modal-text" id="modal-text">
                                             <h2 class="reg-user" id="reg-user">Agregar Tip. Usuario</h2>
                                             <form class="formul" action="../../php/usuario/registro_users_doc.php"
@@ -197,7 +200,9 @@ if ($usario == "" || $usario == null) {
                             <div class="ven">
                                 <div class="ventana-modal" id="ventana-modal">
                                     <div class="modal modal-close">
-                                        <a href=""><img class="cerrar" src="../../img/cerrar.png" alt="Cerrar"></a>
+                                        <div class="cerrar">
+                                            <a href=""><i class="fas fa-times-circle"></i></a>
+                                        </div>
                                         <div class="modal-text" id="modal-text">
                                             <h2 class="reg-doc" id="reg-doc">Agregar Tip. Documento</h2>
                                             <form class="formu" action="../../php/usuario/registro_users_doc.php"
