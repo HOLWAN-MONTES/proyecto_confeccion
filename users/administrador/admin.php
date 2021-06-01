@@ -15,6 +15,7 @@ if ($usario == "" || $usario == null) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/7b875e4198.js" crossorigin="anonymous"></script>
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <link rel="stylesheet" href="CSS_USU/admi.css">
     <link rel="stylesheet" href="CSS_USU/regi_usu.css">
@@ -24,6 +25,8 @@ if ($usario == "" || $usario == null) {
     <link rel="stylesheet" href="CSS_CREAR/insumos.css">
     <link rel="stylesheet" href="CSS_CREAR/material_textil.css">
     <link rel="stylesheet" href="CSS_CREAR/maquina.css">
+    
+    <link rel="stylesheet" href="CSS_USU/form-ingreso.css">
     <title>ADMINISTRADOR</title>
 </head>
 
@@ -47,7 +50,7 @@ if ($usario == "" || $usario == null) {
                                 <li id="eliminaar">ELIMINAR USUARIOS</li>
                             </ul>
                         </li>
-                        <li class="suba_submenu" id="subm">INGRESO <!-- dar click y sacar un formulario  -->
+                        <li class="suba_submenu" id="btn_ingreso">INGRESO <!-- dar click y sacar un formulario  -->
                           <!--   <ul class="mostr">
                                 <li id="insu">CREAR INSUMOS</li>
                                 <li id="maquinaa">CREAR MAQUINARIA</li>
@@ -183,7 +186,9 @@ if ($usario == "" || $usario == null) {
                             <div class="ven1">
                                 <div class="ventana-modal1" id="ventana-modal1">
                                     <div class="modal1 modal-close1">
-                                        <a href=""><img class="cerrar1" src="../../img/cerrar.png" alt="Cerrar"></a>
+                                        <div class="cerrar1">
+                                            <a href=""><i class="fas fa-times-circle"></i></a>
+                                        </div>
                                         <div class="modal-text" id="modal-text">
                                             <h2 class="reg-user" id="reg-user">Agregar Tip. Usuario</h2>
                                             <form class="formul" action="../../php/usuario/registro_users_doc.php"
@@ -201,7 +206,9 @@ if ($usario == "" || $usario == null) {
                             <div class="ven">
                                 <div class="ventana-modal" id="ventana-modal">
                                     <div class="modal modal-close">
-                                        <a href=""><img class="cerrar" src="../../img/cerrar.png" alt="Cerrar"></a>
+                                        <div class="cerrar">
+                                            <a href=""><i class="fas fa-times-circle"></i></a>
+                                        </div>
                                         <div class="modal-text" id="modal-text">
                                             <h2 class="reg-doc" id="reg-doc">Agregar Tip. Documento</h2>
                                             <form class="formu" action="../../php/usuario/registro_users_doc.php"
@@ -429,9 +436,9 @@ if ($usario == "" || $usario == null) {
                         </div>
 
                         <!--formulario para crear tipo de maquinaria-->
-                        <div class="crear_maquinarias" id="crear_maquinarias">
+                        <div class="crear_maquinaria" id="crear_maquinaria">
                             <div class="content_formMaquinaria">
-                                <div id="cerrar_ventanaMaqui"><img class="cerrar1" src="../../img/cerrar.png"
+                                <div id="cerrar_ventana_maquinaria"><img class="cerrar1" src="../../img/cerrar.png"
                                         alt="Cerrar"></div>
                                 <h2 class="titulo_maquinaria">AGREGAR TIP. MAQUINARIA</h2>
                                 <form action="../../php/crear_maqui/regis_tip_maqui.php" class="formularioMaquinaria"
@@ -563,6 +570,7 @@ if ($usario == "" || $usario == null) {
                                 <h2 class="titulo_tipo_tela">AGREGAR TIP TELA</h2>
                                 <form action="../../php/crear_Mtextil/regis_tipo_tela.php" class="formulario_t"
                                     method="POST" autocomplete="off">
+                                    <label class="dig-tip-t" for="">Digite Tipo Tela</label>
                                     <input type="text" class="tipoMax_tela" name="agre_tipo_tela" id="agre_tipo_tela"
                                         placeholder="TIPO TELA" required style="text-transform:uppercase">
                                     <input type="submit" class="env-tela" name="env-tela" value="AGREGAR">
@@ -578,6 +586,7 @@ if ($usario == "" || $usario == null) {
                                 <h2 class="titulo_marca_textil">AGREGAR MARCA</h2>
                                 <form action="../../php/crear_Mtextil/regis_marca_mater.php" class="formularioMarca_textil"
                                     method="POST" autocomplete="off">
+                                    <label class="dig-mar-t" for="">Digite la Marca</label>
                                     <input type="text" class="ti_marca_textil" name="agre_marca" id="agre_marca"
                                         placeholder="MARCA" required style="text-transform:uppercase">
                                     <input type="submit" class="env-marca_textil" name="env-marca" value="AGREGAR">
@@ -593,6 +602,7 @@ if ($usario == "" || $usario == null) {
                                 <h2 class="titulo_color_textil">AGREGAR COLOR</h2>
                                 <form action="../../php/crear_Mtextil/regis_color_mater.php" class="formularioColor_textil"
                                     method="POST" autocomplete="off">
+                                    <label class="dig-col-t" for="">Digite el Color</label>
                                     <input type="text" class="ti_color_textil" name="agre_color" id="agre_color"
                                         placeholder="COLOR" required style="text-transform:uppercase">
                                     <input type="submit" class="env-color_textil" name="env-color" value="AGREGAR">
@@ -728,8 +738,83 @@ if ($usario == "" || $usario == null) {
 
 
                 </div>
-                
+    
             </div>
+
+        </div>
+
+        <div class="form-ingre" id="form_ingre">
+            <h1 class="titulo_form">REGISTRO DE INGRESO</h1>
+            <form action="#" class="form_ingreso" method="POST" autocomplete="off">
+                <label class="in_insumo">INSUMO</label>
+                <select name="insumo" id="insumo">
+                    <option value="0">SELECCIONAR</option>
+                    <?php
+                        $sql="SELECT * FROM insumos";
+                        $query=mysqli_query($conexion,$sql);
+                            while($row=mysqli_fetch_array($query)){
+                        ?>
+                    <option value="<?php echo $row['ID_INSUMOS']?>"
+                        style="text-transform:uppercase">
+                        <?php echo $row['NOM_INSUMOS']?>
+                    </option>
+
+                    <?php
+                        }
+                    ?> 
+                </select>
+                <a href="#" id="reg_insu" class="uno">CREAR INSUMO</a>
+                <br>
+                <label class="cant_in">CANTIDAD INSUMOS</label>
+                <input type="number" name="cant_insumo" id="cant_insumo" placeholder="CANTIDAD" required>
+                <br>
+                <label class="mat_tex">MATERIAL TEXTIL</label>
+                <select name="mate_textil" id="mate_textil">
+                    <option value="0">SELECCIONAR</option>
+                    <?php
+                        $sql="SELECT * FROM material_textil";
+                        $query=mysqli_query($conexion,$sql);
+                            while($row=mysqli_fetch_array($query)){
+                        ?>
+                    <option value="<?php echo $row['ID_MATERIAL_TEXTIL']?>"
+                        style="text-transform:uppercase">
+                        <?php echo $row['NOM_M_TEXTIL']?>
+                    </option>
+
+                    <?php
+                        }
+                    ?> 
+                </select>
+                <a href="#" id="reg_m_textil" class="dos">CREAR MATERIAL TEXTIL</a>
+                <br>
+                <label class="cant_mat">CANTIDAD MATERIAL TEXTIL</label>
+                <input type="number" name="cant_m_textil" id="cant_m_textil" placeholder="CANTIDAD" required>
+                <br>
+                <label class="maqui">MAQUINARIA</label>
+                <select name="maquinaria" id="maquinaria">
+                    <option value="0">SELECCIONAR</option>
+                    <?php
+                        $sql="SELECT * FROM maquinaria";
+                        $query=mysqli_query($conexion,$sql);
+                            while($row=mysqli_fetch_array($query)){
+                        ?>
+                    <option value="<?php echo $row['SERIAL']?>"
+                        style="text-transform:uppercase">
+                        <?php echo $row['SERIAL']?>
+                    </option>
+
+                    <?php
+                        }
+                    ?> 
+                </select>
+                <a href="#" id="reg_maqui" class="tres">CREAR MAQUINARIA</a>
+                <br>
+                <label class="cant_maq">CANTIDAD MAQUINARIA</label>
+                <input type="number" name="cant_maquinaria" id="cant_maquinaria" placeholder="CANTIDAD" required>
+                <br>
+                <input type="submit" name="ingreso" id="ingreso" value="REGISTRAR">
+
+            </form>
 
         </div>
 

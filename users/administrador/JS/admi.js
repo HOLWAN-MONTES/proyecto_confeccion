@@ -27,6 +27,10 @@ const btn_maqui = document.getElementById('btn-inv-maquinaria');
 const maqui = document.getElementById('inv-maquinaria');
 
 
+//---------formulario de ingreso-----------
+const btn_ingreso = document.getElementById('btn_ingreso');
+const form_ingreso = document.getElementById('form_ingre');
+
 btnregi.addEventListener("click", function (e) {
     e.preventDefault();
     registrar_usu.style.opacity = "1";
@@ -137,9 +141,6 @@ btnmaquina.addEventListener("click", function (e) {
 
 
 
-
-
-
 btn_maqui.addEventListener('click', function(e){
     e.preventDefault();
     
@@ -152,7 +153,14 @@ btn_maqui.addEventListener('click', function(e){
     crea_maquina.style.display = "none";
     
 
-})
+});
 
+btn_ingreso.addEventListener('click', function(e){
+    e.preventDefault();
+    form_ingreso.style.display = "block";
+    registrar_usu.style.display = "none";
+    editar_usu.style.display = "none";
+    eliminar_usu.style.display = "none";
+});
 
 
