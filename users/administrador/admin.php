@@ -98,7 +98,11 @@ if ($usario == "" || $usario == null) {
                 </div>
             </div>
 
-            <!--div que contiene todos los formularios-->
+            <div class="info">
+
+                <div class="usuar" id="usuar">
+
+                        <!--div que contiene todos los formularios-->
             <div class="info">
 
                 <!--formularios de admin. usuarios-->
@@ -475,8 +479,8 @@ if ($usario == "" || $usario == null) {
                                 <form class="for_mtex" action="../../php/crear_Mtextil/val_material.php" method="POST"
                                     autocomplete="off">
                                     <label class="l_text" for="">MATERIAL TEXTIL</label>
-                                    <input type="text" class="nom_material" name="nom_material" id="nom_material"
-                                        placeholder="TWEED 200X300" required style="text-transform:uppercase">
+                                    <input type="text" class="nom_materiTWEED 200X300aterial" id="nom_material"
+                                        placeholder="NOMBRE MATERIAL" required style="text-transform:uppercase">
                                     <br>
                                     <label id="t_tela" for="tela">TIPO DE TELA</label>
                                     <select class="tela" id="tipo_tela" name="tipo_tela">
@@ -779,6 +783,3 @@ if ($usario == "" || $usario == null) {
     <script src="JS/crear_material.js"></script>
     <script src="JS/maquinaria.js"></script>
     <!-- <script src="JS/inv-maquinarias.js"></script> -->
-</body>
-
-</html>
