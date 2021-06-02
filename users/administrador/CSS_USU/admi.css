@@ -93,6 +93,7 @@
                 position:absolute;
                 top:34%;
                 left:19%;
+                z-index: 10;
             }
 
             .menu ul li .mostr{
@@ -110,8 +111,9 @@
                 background-color:rgb(124, 214, 204);
                 display:none;
                 position:absolute;
-                top:50%;
+                top:63%;
                 left:19%;
+                z-index: 10;
             }
 
 
@@ -245,11 +247,15 @@ input[type=number] { -moz-appearance:textfield; }
 #cor:valid{
     background-color: #91c788;
 }
-
-
-
 .menuaaa{
     text-decoration: none;
     color: white;
     
+}
+ a i {
+    top: 40%;
+    left: 33%;
+    font-size: 40px;
+    position: relative;
+    color: orangered;
 }
