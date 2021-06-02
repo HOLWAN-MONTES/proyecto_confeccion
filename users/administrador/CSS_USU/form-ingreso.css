@@ -1,5 +1,7 @@
 .form-ingre{
+    opacity: 0;
     display: none;
+    visibility: hidden;
     text-align: center;
     z-index: 0;
     position: absolute;

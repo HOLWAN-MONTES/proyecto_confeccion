@@ -614,7 +614,7 @@ if ($usario == "" || $usario == null) {
                         <div class="primer_from">
                             <br>
                             <h2 class="titulo_insumo">INGRESO DE INSUMO</h2>
-                            <div class="formulario">
+                            <div class="formulario" id="formulario12">
                                 <form class="cre_in" action="../../php/crear_insumo/val_insumos.php" method="POST"
                                     autocomplete="off">
                                     <label id="tip_ins">TIPO DE INSUMO</label>
