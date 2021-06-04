@@ -738,7 +738,7 @@ if ($usario == "" || $usario == null) {
             </div>
 
         </div>
-
+        <!--formulario de ingreso-->
         <div class="form-ingre" id="form_ingre">
             <h1 class="titulo_form">REGISTRO DE INGRESO</h1>
             <form action="#" class="form_ingreso" method="POST" autocomplete="off">
@@ -814,6 +814,7 @@ if ($usario == "" || $usario == null) {
 
         </div>
 
+        <!--inventario de la maquinaria-->
         <div class="inv-maquinaria" id="inv-maquinaria">
 
             <h1>INVENTARIO DE MAQUINARIA</h1>
