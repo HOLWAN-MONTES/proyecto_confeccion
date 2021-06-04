@@ -1,0 +1,9 @@
+.form_reg_pres{
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(245, 237, 237);
+      
+}
