@@ -38,6 +38,8 @@ btn_prestamo.addEventListener('click', function(e){
     form_prestamo.style.opacity = "1"; 
     crear.style.display = "block";
     form_registro.style.display = "none";
+    form_registro.style.visibility = "hide";
+    form_registro.style.opacity = "0";
 
 });
 
@@ -47,7 +49,9 @@ btn_registro.addEventListener('click', function(e){
     form_registro.style.visibility = "visible";
     form_registro.style.opacity = "1"; 
     crear.style.display = "block";
-    form_prestamo.style.display = "none";  
+    form_prestamo.style.display = "none";
+    form_prestamo.style.visibility = "hide";
+    form_prestamo.style.opacity = "0";
 
 });
 
