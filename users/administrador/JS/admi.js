@@ -186,6 +186,8 @@ btn_maqui.addEventListener('click', function(e){
     registrar_usu.style.display = "none";
     editar_usu.style.display = "none";
     eliminar_usu.style.display = "none";
+    // crea_insu.style.opacity = "0";
+    // crea_insu.style.visibility = "hidden";
     crea_insu.style.display = "none";
     crea_material.style.display = "none";
     crea_maquina.style.display = "none";
@@ -204,6 +206,9 @@ btn_ingreso.addEventListener('click', function(e){
     editar_usu.style.display = "none";
     eliminar_usu.style.display = "none";
     maqui.style.display = "none";
+    crea_material.style.display = "none";
+    crea_maquina.style.display = "none";
+    crea_insu.style.display = "none";
 });
 
 
