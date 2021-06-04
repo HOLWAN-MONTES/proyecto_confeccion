@@ -109,8 +109,8 @@ if ($usario == "" || $usario == null) {
 
                 <!--formulario de registro de prestamo-->
                 <div class="form_reg_pres" id="form_reg_pres">
-                    <h1 class="titulo_form">REGISTRO DE INGRESO</h1>
-                    <form action="#" class="form_ingreso" method="POST" autocomplete="off">
+                    <h1 class="titulo_form">REGISTRO DE PRESTAMOS</h1>
+                    <form action="#" class="form_press" method="POST" autocomplete="off">
                         <label class="in_insumo">INSUMO</label>
                         <select name="insumo" id="insumo">
                             <option value="0">SELECCIONAR</option>
@@ -128,7 +128,6 @@ if ($usario == "" || $usario == null) {
                                 }
                             ?> 
                         </select>
-                        <a href="#" id="reg_insu" class="uno">CREAR INSUMO</a>
                         <br>
                         <label class="cant_in">CANTIDAD INSUMOS</label>
                         <input type="number" name="cant_insumo" id="cant_insumo" placeholder="CANTIDAD" required>
@@ -150,12 +149,11 @@ if ($usario == "" || $usario == null) {
                                 }
                             ?> 
                         </select>
-                        <a href="#" id="reg_m_textil" class="dos">CREAR MATERIAL TEXTIL</a>
                         <br>
                         <label class="cant_mat">CANTIDAD MATERIAL TEXTIL</label>
                         <input type="number" name="cant_m_textil" id="cant_m_textil" placeholder="CANTIDAD" required>
                         <br>
-                        <input type="submit" name="ingreso" id="ingreso" value="REGISTRAR">
+                        <input type="submit" name="regis_prestamo" id="regis_prestamo" value="REGISTRAR">
 
                     </form>
 
