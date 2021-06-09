@@ -193,15 +193,14 @@
     transform: translateY(0%); 
 }
 
-#cerrar_ventana_textil img{
-    font-size: 40px;
+#cerrar_ventana_textil i{
     cursor: pointer;
+    font-size: 40px;
     color: red;
-
-}
-
-#cerrar_ventana_textil {
     float: right;
+    margin-top: -45px;
+    margin-left: 100px;
+    margin-right: 7px;
 }
 
 .formulario_t{
@@ -276,16 +275,16 @@
     transition: transform 1s;
     transform: translateY(0%);
 }
-#cerrar_ventanaMarca_textil img{
-    font-size: 40px;
+#cerrar_ventanaMarca_textil i{
     cursor: pointer;
+    font-size: 40px;
     color: red;
-
-}
-
-#cerrar_ventanaMarca_textil {
     float: right;
+    margin-top: -45px;
+    margin-left: 100px;
+    margin-right: 7px;
 }
+
 .formularioMarca_textil{
     background: #d6d2c4;
     margin-top: -5%;
@@ -357,16 +356,16 @@
     transition: transform 1s;
     transform: translateY(0%);
 }
-#cerrar_ventanaColor_textil img{
-    font-size: 40px;
+#cerrar_ventanaColor_textil i{
     cursor: pointer;
+    font-size: 40px;
     color: red;
-
-}
-
-#cerrar_ventanaColor_textil {
     float: right;
+    margin-top: -45px;
+    margin-left: 100px;
+    margin-right: 7px;
 }
+
 .formularioColor_textil{
     background: #d6d2c4;
     margin-top: -5%;

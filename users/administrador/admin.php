@@ -434,11 +434,11 @@ if ($usario == "" || $usario == null) {
                         <!--formulario para crear tipo de maquinaria-->
                         <div class="crear_maquinaria" id="crear_maquinaria">
                             <div class="content_formMaquinaria">
-                                <div id="cerrar_ventana_maquinaria"><img class="cerrar1" src="../../img/cerrar.png"
-                                        alt="Cerrar"></div>
+                                <div id="cerrar_ventana_maquinaria"><i class="fas fa-times-circle"></i></div>
                                 <h2 class="titulo_maquinaria">AGREGAR TIP. MAQUINARIA</h2>
                                 <form action="../../php/crear_maqui/regis_tip_maqui.php" class="formularioMaquinaria"
                                     method="POST" autocomplete="off">
+                                    <label class="dig-tip-maqu" for="">Digite tipo maquinaria</label>
                                     <input type="text" class="ti_maquinaria" name="agre_maquinaria" id="agre_maquinaria"
                                         placeholder="TIPO DE MAQUINARIA" required style="text-transform:uppercase">
                                     <input type="submit" class="env-maquinaria" name="env-maquinaria" value="AGREGAR">
@@ -449,9 +449,10 @@ if ($usario == "" || $usario == null) {
                         <!--formulario para crear la marca de maquinaria-->
                         <div class="crear_marca" id="crear_marca">
                             <div class="content_formMarca">
-                                <div id="cerrar_ventanaMarca"><img class="cerrar1" src="../../img/cerrar.png" alt="Cerrar"></div>
+                                <div id="cerrar_ventanaMarca"><i class="fas fa-times-circle"></i></div>
                                 <h2 class="titulo_marca">AGREGAR MARCA</h2>
                                 <form action="../../php/crear_maqui/regis_marca_maqui.php" class="formularioMarca" method="POST" autocomplete="off">
+                                    <label class="dig-mar" for="">Digite marca</label>
                                     <input type="text" class="ti_marca" name="agre_marca" id="agre_marca" placeholder="MARCA" required style="text-transform:uppercase">
                                     <input type="submit" class="env-marca" name="env-marca" value="AGREGAR">
                                 </form>
@@ -461,9 +462,10 @@ if ($usario == "" || $usario == null) {
                         <!--formulario para crear el color de maquinaria-->
                         <div class="crear_color" id="crear_color">
                             <div class="content_formColor">
-                                <div id="cerrar_ventanaColor"><img class="cerrar1" src="../../img/cerrar.png" alt="Cerrar"></div>
+                                <div id="cerrar_ventanaColor"><i class="fas fa-times-circle"></i></div>
                                 <h2 class="titulo_color">AGREGAR COLOR</h2>
                                 <form action="../../php/crear_maqui/regis_color_maqui.php" class="formularioColor" method="POST" autocomplete="off">
+                                    <label class="dig-colores" for="">Digite color</label>
                                     <input type="text" class="ti_color" name="agre_color" id="agre_color" placeholder="COLOR" required style="text-transform:uppercase">
                                     <input type="submit" class="env-color" name="env-color" value="AGREGAR">
                                 </form>
@@ -561,8 +563,7 @@ if ($usario == "" || $usario == null) {
                         <!--formulario para crear tipo de tela-->
                         <div class="crear_tipo_tela_textil" id="crear_tipo_tela_textil">
                             <div class="content_from_textil">
-                                <div id="cerrar_ventana_textil"><img class="cerrar1" src="../../img/cerrar.png"
-                                        alt="Cerrar"></div>
+                                <div id="cerrar_ventana_textil"><i class="fas fa-times-circle"></i></div>
                                 <h2 class="titulo_tipo_tela">AGREGAR TIP TELA</h2>
                                 <form action="../../php/crear_Mtextil/regis_tipo_tela.php" class="formulario_t"
                                     method="POST" autocomplete="off">
@@ -577,8 +578,7 @@ if ($usario == "" || $usario == null) {
                         <!--formulario para crear marca del mat_texil-->
                         <div class="crear_marca_textil" id="crear_marca_textil">
                             <div class="content_formMarca_textil">
-                                <div id="cerrar_ventanaMarca_textil"><img class="cerrar1" src="../../img/cerrar.png"
-                                        alt="Cerrar"></div>
+                                <div id="cerrar_ventanaMarca_textil"><i class="fas fa-times-circle"></i></div>
                                 <h2 class="titulo_marca_textil">AGREGAR MARCA</h2>
                                 <form action="../../php/crear_Mtextil/regis_marca_mater.php" class="formularioMarca_textil"
                                     method="POST" autocomplete="off">
@@ -593,8 +593,7 @@ if ($usario == "" || $usario == null) {
                         <!--formulario para crear color del mat_textil-->
                         <div class="crear_color_textil" id="crear_color_textil">
                             <div class="content_formColor_textil">
-                                <div id="cerrar_ventanaColor_textil"><img class="cerrar1" src="../../img/cerrar.png"
-                                        alt="Cerrar"></div>
+                                <div id="cerrar_ventanaColor_textil"><i class="fas fa-times-circle"></i></div>
                                 <h2 class="titulo_color_textil">AGREGAR COLOR</h2>
                                 <form action="../../php/crear_Mtextil/regis_color_mater.php" class="formularioColor_textil"
                                     method="POST" autocomplete="off">
@@ -658,7 +657,7 @@ if ($usario == "" || $usario == null) {
                                         ?>
                                     </select>
                                     <br>
-                                    <a id="btn_salirmarca" class="dir_i_marca" href="#">CREAR MARCA</a>
+                                    <a id="btn_salirmarca_insumo" class="dir_i_marca" href="#">CREAR MARCA</a>
                                     <br>
 
                                     <label id="titl_color" for="">COLOR DEL INSUMO</label>
@@ -678,7 +677,7 @@ if ($usario == "" || $usario == null) {
                                         ?>
                                     </select>
                                     <br>
-                                    <a id="btn_salircolor" href="#" class="direc_color">CREAR COLOR</a>
+                                    <a id="btn_salircolor_insumo" href="#" class="direc_color">CREAR COLOR</a>
                                     <br>
 
 
@@ -690,42 +689,45 @@ if ($usario == "" || $usario == null) {
                         
                         <!--formulario para crear tipo de insumo-->
                         <div class="crear_tipo_insumo" id="crear_tipo_insumo">
-                            <div class="content_from">
+                            <div class="content_from_ins">
                                 <div id="cerrar_ventana"><i class="fas fa-times-circle"></i></div>
-                                <h2 class="titulo_t_insumo">Agregar Tip. Insumo</h2>
-                                <form action="../../php/crear_insumo/regis_tipo_insumo.php" class="formulario_t"
+                                <h2 class="titulo_t_insumo">AGREGAR TIP. INSUMO</h2>
+                                <form action="../../php/crear_insumo/regis_tipo_insumo.php" class="formulario_tip"
                                     method="POST" autocomplete="off">
+                                    <label class="dig-tip-insu" for="">Digite Tipo Insumo</label>
                                     <input type="text" class="ti_insumo" name="agre_tipo_insumo" id="agre_tipo_insumo"
-                                        placeholder="tipo insumo" required>
+                                        placeholder="TIPO INSUMO" required style="text-transform:uppercase">
                                     <input type="submit" class="env-insumo" name="env-insumo" value="AGREGAR">
                                 </form>
                             </div>
                         </div>
 
                         <!--formulario para crear marca de insumo-->
-                        <div class="crear_marca" id="crear_marca">
-                            <div class="content_formMarca">
-                                <div id="cerrar_ventanaMarca"><i class="fas fa-times-circle"></i></div>
-                                <h2 class="titulo_marca">Agregar Marca</h2>
-                                <form action="../../php/crear_insumo/regis_marca_insu.php" class="formularioMarca"
+                        <div class="crear_marca_insumo" id="crear_marca_insumo">
+                            <div class="content_formMarca_insu">
+                                <div id="cerrar_ventanaMarca_insu"><i class="fas fa-times-circle"></i></div>
+                                <h2 class="titulo_marca_insu">AGREGAR MARCA</h2>
+                                <form action="../../php/crear_insumo/regis_marca_insu.php" class="formularioMarca_insu"
                                     method="POST" autocomplete="off">
-                                    <input type="text" class="ti_marca" name="agre_marca" id="agre_marca"
-                                        placeholder="Digite la marca" required>
-                                    <input type="submit" class="env-marca" name="env-marca" value="AGREGAR">
+                                    <label class="dig-mar-in" for="">Digite Marca</label>
+                                    <input type="text" class="ti_marca_insu" name="agre_marca" id="agre_marca"
+                                        placeholder="MARCA" required style="text-transform:uppercase">
+                                    <input type="submit" class="env-marca_insu" name="env-marca" value="AGREGAR">
                                 </form>
                             </div>
                         </div>
 
                         <!--formulario para crear color de insumo-->
-                        <div class="crear_color" id="crear_color">
-                            <div class="content_formColor">
-                                <div id="cerrar_ventanaColor"><i class="fas fa-times-circle"></i></div>
-                                <h2 class="titulo_color">Agregar Color</h2>
-                                <form action="../../php/crear_insumo/regis_color_insu.php" class="formularioColor"
+                        <div class="crear_color_insu" id="crear_color_insu">
+                            <div class="content_formColor_insu">
+                                <div id="cerrar_ventanaColor_insu"><i class="fas fa-times-circle"></i></div>
+                                <h2 class="titulo_color_insu">AGREGAR COLOR</h2>
+                                <form action="../../php/crear_insumo/regis_color_insu.php" class="formularioColor_insu"
                                     method="POST" autocomplete="off">
-                                    <input type="text" class="ti_color" name="agre_color" id="agre_color"
-                                        placeholder="Digite el color" required>
-                                    <input type="submit" class="env-color" name="env-color" value="AGREGAR">
+                                    <label class="dig-col-in" for="">Digite Color</label>
+                                    <input type="text" class="ti_color_insu" name="agre_color" id="agre_color"
+                                        placeholder="COLOR" required style="text-transform:uppercase">
+                                    <input type="submit" class="env-color_insu" name="env-color" value="AGREGAR">
                                 </form>
                             </div>
                         </div>
