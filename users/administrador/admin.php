@@ -438,7 +438,7 @@ if ($usario == "" || $usario == null) {
                                 <h2 class="titulo_maquinaria">AGREGAR TIP. MAQUINARIA</h2>
                                 <form action="../../php/crear_maqui/regis_tip_maqui.php" class="formularioMaquinaria"
                                     method="POST" autocomplete="off">
-                                    <label class="dig-tip-maqu" for="">Digite tipo maquinaria</label>
+                                    <label class="dig-tip-maqu" for="">Digite Tipo Maquinaria</label>
                                     <input type="text" class="ti_maquinaria" name="agre_maquinaria" id="agre_maquinaria"
                                         placeholder="TIPO DE MAQUINARIA" required style="text-transform:uppercase">
                                     <input type="submit" class="env-maquinaria" name="env-maquinaria" value="AGREGAR">
@@ -452,7 +452,7 @@ if ($usario == "" || $usario == null) {
                                 <div id="cerrar_ventanaMarca"><i class="fas fa-times-circle"></i></div>
                                 <h2 class="titulo_marca">AGREGAR MARCA</h2>
                                 <form action="../../php/crear_maqui/regis_marca_maqui.php" class="formularioMarca" method="POST" autocomplete="off">
-                                    <label class="dig-mar" for="">Digite marca</label>
+                                    <label class="dig-mar" for="">Digite Marca</label>
                                     <input type="text" class="ti_marca" name="agre_marca" id="agre_marca" placeholder="MARCA" required style="text-transform:uppercase">
                                     <input type="submit" class="env-marca" name="env-marca" value="AGREGAR">
                                 </form>
@@ -465,7 +465,7 @@ if ($usario == "" || $usario == null) {
                                 <div id="cerrar_ventanaColor"><i class="fas fa-times-circle"></i></div>
                                 <h2 class="titulo_color">AGREGAR COLOR</h2>
                                 <form action="../../php/crear_maqui/regis_color_maqui.php" class="formularioColor" method="POST" autocomplete="off">
-                                    <label class="dig-colores" for="">Digite color</label>
+                                    <label class="dig-colores" for="">Digite Color</label>
                                     <input type="text" class="ti_color" name="agre_color" id="agre_color" placeholder="COLOR" required style="text-transform:uppercase">
                                     <input type="submit" class="env-color" name="env-color" value="AGREGAR">
                                 </form>
@@ -582,7 +582,7 @@ if ($usario == "" || $usario == null) {
                                 <h2 class="titulo_marca_textil">AGREGAR MARCA</h2>
                                 <form action="../../php/crear_Mtextil/regis_marca_mater.php" class="formularioMarca_textil"
                                     method="POST" autocomplete="off">
-                                    <label class="dig-mar-t" for="">Digite la Marca</label>
+                                    <label class="dig-mar-t" for="">Digite Marca</label>
                                     <input type="text" class="ti_marca_textil" name="agre_marca" id="agre_marca"
                                         placeholder="MARCA" required style="text-transform:uppercase">
                                     <input type="submit" class="env-marca_textil" name="env-marca" value="AGREGAR">
@@ -597,7 +597,7 @@ if ($usario == "" || $usario == null) {
                                 <h2 class="titulo_color_textil">AGREGAR COLOR</h2>
                                 <form action="../../php/crear_Mtextil/regis_color_mater.php" class="formularioColor_textil"
                                     method="POST" autocomplete="off">
-                                    <label class="dig-col-t" for="">Digite el Color</label>
+                                    <label class="dig-col-t" for="">Digite Color</label>
                                     <input type="text" class="ti_color_textil" name="agre_color" id="agre_color"
                                         placeholder="COLOR" required style="text-transform:uppercase">
                                     <input type="submit" class="env-color_textil" name="env-color" value="AGREGAR">

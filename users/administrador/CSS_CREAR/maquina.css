@@ -138,7 +138,6 @@
     left: 0%;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
     display: none; 
     
 }
@@ -217,8 +216,7 @@
     right: 20%;
     left: 0%;
     justify-content: center;
-    align-items: center;
-    border-radius: 10px;
+    align-items: center;   
     display: none;
 }
 .content_formMarca{
@@ -299,7 +297,6 @@
     left: 0%;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
     display: none; 
 }
 .content_formColor{

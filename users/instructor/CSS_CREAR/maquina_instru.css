@@ -138,7 +138,7 @@
     left: 0%;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
+    border-radius: 5px;
     display: none; 
 }
 .content_formMaquinaria{
@@ -155,15 +155,14 @@
     transition: transform 1s;
     transform: translateY(0%);
 }
-#cerrar_ventanaMaqui img{
-    font-size: 40px;
+#cerrar_ventanaMaqui i{
     cursor: pointer;
+    font-size: 40px;
     color: red;
-
-}
-
-#cerrar_ventanaMaqui {
     float: right;
+    margin-top: -45px;
+    margin-left: 100px;
+    margin-right: 7px;
 }
 .formularioMaquinaria{
     background: #d6d2c4;
@@ -187,7 +186,7 @@
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
-.dig-tip-maqu{
+.dig-tip-maq{
     font-size: 18px;
     cursor:text;
 }
@@ -218,7 +217,7 @@
     left: 0%;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
+    border-radius: 5px;
     display: none;
 }
 .content_formMarca_maq{
@@ -235,15 +234,16 @@
     transition: transform 1s;
     transform: translateY(0%);
 }
-#cerrar_ventanaMarca_maq img{
-    font-size: 40px;
+#cerrar_ventanaMarca i{
     cursor: pointer;
+    font-size: 40px;
     color: red;
+    float: right;
+    margin-top: -45px;
+    margin-left: 100px;
+    margin-right: 7px;
 }
 
-#cerrar_ventanaMarca_maq {
-    float: right;
-}
 .formularioMarca_maq{
     background: #d6d2c4;
     margin-top: -5%;
@@ -266,7 +266,7 @@
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
-.ti_marca_maq{
+.ti_marca_ma{
     margin-top: 7%;
     height: 15%;
     text-align: center;
@@ -274,11 +274,11 @@
     border: 2px solid black;
     text-transform: uppercase; 
 }
-.dig-mar_maq{
+.dig-marc{
     font-size: 18px;
     cursor:text;
 }
-.env-marca_maq{
+#env-marca_maq{
     margin-top: 8%;
     font-weight: bold;
     border: 2px solid black;
@@ -292,19 +292,19 @@
     width: 100%;
     height: 120%;
     position: fixed;
-    top: 60%;
+    top: -20%;
     right: 20%;
     left: 0%;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
+    border-radius: 5px;
     display: none; 
 }
-.content_formColor{
-    margin-top: 17%;
+.content_formColor_maq{
+    margin-top: 22%;
     margin-left: 40%;
     width: 35%;
-    height: 47%;
+    height: 45%;
     background: #fff;
     text-align: center;
     display: flex;
@@ -314,46 +314,52 @@
     transition: transform 1s;
     transform: translateY(0%);
 }
-#cerrar_ventanaColor img{
-    font-size: 40px;
+#cerrar_ventanaColor i{
     cursor: pointer;
+    font-size: 40px;
     color: red;
-   
+    float: right;
+    margin-top: -45px;
+    margin-left: 100px;
+    margin-right: 7px;  
 }
 
-#cerrar_ventanaColor {
-    float: right;
-}
-.formularioColor{
+.formularioColor_maq{
     background: #d6d2c4;
-    margin-top: 2%;
-    margin-left: 20%;
+    margin-top: -5%;
+    margin-left: 22%;
     text-align: center;
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
     color: #150485;
     border: 1px solid black;
-    width: 60%;
-    max-height: -150%;
+    width: 55%;
+    max-height: -120%;
     padding-block: 3%;
     text-align: center;
 }
-.titulo_color{
-    margin-top: -10%;
-    margin-left: 10px;
+.titulo_color_ma{
+    margin-top: -11%;
+    margin-left: -10px;
     font-size: 25px;
     text-transform: uppercase;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
-.ti_color{
+.dig-colores{
+    font-size: 18px;
+    cursor:text;
+}
+.ti_color_maq{
+    margin-top: 7%;
     height: 15%;
     text-align: center;
-    padding: 3%;
+    padding: 5%;
     border: 2px solid black;
     text-transform: uppercase;
 }
-.env-color{
+#env-color_maqui{
+    margin-top: 8%;
     font-weight: bold;
     border: 2px solid black;
     padding: 5%;
