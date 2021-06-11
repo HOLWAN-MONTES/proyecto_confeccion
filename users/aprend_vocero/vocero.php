@@ -6,8 +6,16 @@ $usario = $_SESSION["DOCUMENTO"];
 if ($usario == "" || $usario == null) {
     header("location: ../../index.html");
 }
+?>
+
+<?php
+$consulta_usu = "SELECT * FROM usuario, tipo_usu WHERE DOCUMENTO = '".$_SESSION['DOCUMENTO']."' and usuario.ID_TIPO_USU = tipo_usu.ID_TIPO_USU";
+$query_usu = mysqli_query($conexion, $consulta_usu);
+$fila_usu = mysqli_fetch_assoc($query_usu);
+$_SESSION['DOCUMENTO'] = $fila_usu['DOCUMENTO'];
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,10 +45,10 @@ if ($usario == "" || $usario == null) {
                 </div>
                 <div class="menu">
                     <ul>
-                        <li class="suba_submenu" id="btn_prestamo">PRESTAMOS 
-                        </li>
+                        <!-- <li class="suba_submenu" id="btn_prestamo">PRESTAMOS 
+                        </li> -->
 
-                        <li class="suba_submenu" id="btn_registro">PRESTAMOS TEXTIL 
+                        <li class="suba_submenu" id="btn_registro">REGISTRO PRESTAMO  
                         </li>
 
                         <li class="suba_submenu">REPORTES</li>
@@ -76,41 +84,11 @@ if ($usario == "" || $usario == null) {
             <!--div que tiene toda la informacion que se le ofrece al vocero-->
             <div class="info">
 
-                <!--formulario de prestamo-->
-                <div class="form-prestamo" id="form_prestamo">
-                    <div class="primer_form">
-                        <h1 class="titulo_form">REGISTRO DE PRESTAMOS</h1>
-                        <form action="#" class="form_prest" method="POST" autocomplete="off">
-                            <label class="aprend_pres">APRENDIZ</label>
-                            <select name="aprendiz" id="aprendiz">
-                                <option value="0">SELECCIONAR</option>
-                                <?php
-                                    $sql="SELECT * FROM usuario";
-                                    $query=mysqli_query($conexion,$sql);
-                                        while($row=mysqli_fetch_array($query)){
-                                    ?>
-                                <option value="<?php echo $row['DOCUMENTO']?>"
-                                    style="text-transform:uppercase">
-                                    <?php echo $row['NOMBRE']?>
-                                </option>
-
-                                <?php
-                                    }
-                                ?> 
-                            </select>
-                            <br>
-                            <input type="submit" name="reg_prestamo" id="reg_prestamo" value="CONTINUAR">
-
-                        </form>
-
-                    </div>
-                    
-                </div>
-
                 <!--formulario de registro de prestamo-->
                 <div class="form_reg_pres" id="form_reg_pres">
                     <h1 class="titulo_form">REGISTRO DE PRESTAMOS</h1>
-                    <form action="#" class="form_press" method="POST" autocomplete="off">
+                    <form action="../../php/prestamo_aprendiz/reg_prestamo.php" class="form_press" method="POST" autocomplete="off">
+                        <input type="hidden" name="aprendiz" id="aprendiz" class="aprendiz" value="<?php echo($fila_usu['DOCUMENTO'])?>">
                         <label class="in_insumo">INSUMO</label>
                         <select name="insumo" id="insumo">
                             <option value="0">SELECCIONAR</option>

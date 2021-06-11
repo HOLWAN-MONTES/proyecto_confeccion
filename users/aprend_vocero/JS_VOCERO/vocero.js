@@ -1,6 +1,6 @@
 //---------formulario de prestamo-----------
-const btn_prestamo = document.getElementById('btn_prestamo');
-const form_prestamo = document.getElementById('form_prestamo');
+// const btn_prestamo = document.getElementById('btn_prestamo');
+// const form_prestamo = document.getElementById('form_prestamo');
 
 
 //------------formulario de registro de prestamo--------------
@@ -31,17 +31,17 @@ const form_registro = document.getElementById('form_reg_pres');
 //     form_ingreso.style.opacity = "0"; 
 // });
 
-btn_prestamo.addEventListener('click', function(e){
-    e.preventDefault();
-    form_prestamo.style.display = "block";
-    form_prestamo.style.visibility = "visible";
-    form_prestamo.style.opacity = "1"; 
-    crear.style.display = "block";
-    form_registro.style.display = "none";
-    form_registro.style.visibility = "hide";
-    form_registro.style.opacity = "0";
+// btn_prestamo.addEventListener('click', function(e){
+//     e.preventDefault();
+//     form_prestamo.style.display = "block";
+//     form_prestamo.style.visibility = "visible";
+//     form_prestamo.style.opacity = "1"; 
+//     crear.style.display = "block";
+//     form_registro.style.display = "none";
+//     form_registro.style.visibility = "hide";
+//     form_registro.style.opacity = "0";
 
-});
+// });
 
 btn_registro.addEventListener('click', function(e){
     e.preventDefault();
