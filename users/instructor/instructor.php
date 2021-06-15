@@ -62,7 +62,7 @@ if ($usario == "" || $usario == null) {
             <div class="cabecera">
                 <div class="info_per">
                     <div class="foto">
-                        <img src="../../images/<?php echo $_SESSION['FOTO']; ?>">
+                        <!-- <img src="../../images/<?php //echo $_SESSION['FOTO']; ?>"> -->
                     </div>
                     <div class="men">
                         <ul>
@@ -472,7 +472,7 @@ if ($usario == "" || $usario == null) {
         <!--formulario de ingreso-->
         <div class="form-ingre" id="form_ingre">
             <h1 class="titulo_form">REGISTRO DE INGRESO</h1>
-            <form action="#" class="form_ingreso" method="POST" autocomplete="off">
+            <form class="form_ingreso" id="form_ingreso" method="POST" autocomplete="off">
                 <label class="in_insumo">INSUMO</label>
                 <select name="insumo" id="insumo">
                     <option value="0">SELECCIONAR</option>
@@ -540,7 +540,7 @@ if ($usario == "" || $usario == null) {
                 <input type="number" name="cant_maquinaria" id="cant_maquinaria" placeholder="CANTIDAD" required>
                 <br>
                 <input type="submit" name="ingreso" id="ingreso" value="REGISTRAR">
-
+                <input type="hidden" name="usuario" id="user" value="<?php echo $usario; ?>">
             </form>
 
         </div>

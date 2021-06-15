@@ -14,7 +14,7 @@ const ajax = ({ url, data, succes })=>{
 
 window.addEventListener('submit', (e)=> {
     e.preventDefault();
-    if(e.target.matches('#form_insum')){
+    if(e.target.matches('#form_ingreso')){
         ajax({
             url: "../../php/crear_insumo_instru/formu_ingreso_instru.php", 
             data: {
@@ -24,9 +24,11 @@ window.addEventListener('submit', (e)=> {
                 cant_m_textil: document.getElementById('cant_m_textil').value,
                 maquinaria: document.getElementById('maquinaria').value,
                 cant_maquinaria: document.getElementById('cant_maquinaria').value,
+                user: parseInt(document.getElementById('user').value),
             },
             succes: (data) => {
                 alert("Correcto");
+                document.getElementById('form_ingreso').reset();
             }
         })
     }
