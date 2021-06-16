@@ -8,14 +8,6 @@ if ($usario == "" || $usario == null) {
 }
 ?>
 
-<?php
-$consulta_usu = "SELECT * FROM usuario, tipo_usu WHERE DOCUMENTO = '".$_SESSION['DOCUMENTO']."' and usuario.ID_TIPO_USU = tipo_usu.ID_TIPO_USU";
-$query_usu = mysqli_query($conexion, $consulta_usu);
-$fila_usu = mysqli_fetch_assoc($query_usu);
-$_SESSION['DOCUMENTO'] = $fila_usu['DOCUMENTO'];
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -84,14 +76,14 @@ $_SESSION['DOCUMENTO'] = $fila_usu['DOCUMENTO'];
             <!--div que tiene toda la informacion que se le ofrece al vocero-->
             <div class="info">
 
-                <!--formulario de registro de prestamo-->
+                <!--formulario de registro de prestamos-->
                 <div class="form_reg_pres" id="form_reg_pres">
                     <h1 class="titulo_form">REGISTRO DE PRESTAMOS</h1>
                     <form action="../../php/prestamo_aprendiz/reg_prestamo.php" class="form_press" method="POST" autocomplete="off">
-                        <input type="hidden" name="aprendiz" id="aprendiz" class="aprendiz" value="<?php echo($fila_usu['DOCUMENTO'])?>">
+                        <input type="hidden" name="aprendiz" id="aprendiz" class="aprendiz" value="<?php echo $usario; ?>">
                         <label class="in_insumo">INSUMO</label>
                         <select name="insumo" id="insumo">
-                            <option value="0">SELECCIONAR</option>
+                            <option value="0" >SELECCIONAR</option>
                             <?php
                                 $sql="SELECT * FROM insumos";
                                 $query=mysqli_query($conexion,$sql);
