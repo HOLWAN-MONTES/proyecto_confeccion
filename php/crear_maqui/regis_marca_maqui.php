@@ -9,11 +9,11 @@
         $query_m = mysqli_query($conexion,$consultar_m);
     
         if(!$query_m){
-            echo '<script> alert ("Error al registrar la marca de la maquinaria");</script>';
+            echo '<script> alert ("Error al registrar");</script>';
             echo '<script> window.location="../../users/administrador/admin.php" </script>';
         }
         else{
-            echo '<script> alert ("Datos guardados correctamente al registrar la marca de la maquinaria");</script>';
+            echo '<script> alert ("Datos guardados exitosamente.");</script>';
             echo '<script> window.location="../../users/administrador/admin.php" </script>';
         }
     

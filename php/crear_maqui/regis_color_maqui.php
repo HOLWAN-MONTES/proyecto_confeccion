@@ -9,11 +9,11 @@
         $query_c = mysqli_query($conexion,$consultar_c);
     
         if(!$query_c){
-            echo '<script> alert ("Error al registrar el color de la maquinaria");</script>';
+            echo '<script> alert ("Error al registrar");</script>';
             echo '<script> window.location="../../users/administrador/admin.php" </script>';
         }
         else{
-            echo '<script> alert ("Datos guardados correctamente al registrar el color de la maquinaria");</script>';
+            echo '<script> alert ("Datos guardados exitosamente");</script>';
             echo '<script> window.location="../../users/administrador/admin.php" </script>';
         }
     
