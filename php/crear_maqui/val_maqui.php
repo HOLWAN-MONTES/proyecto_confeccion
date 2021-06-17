@@ -14,11 +14,11 @@ include('../../includes/conection.php');
             
         $resul=mysqli_query($conexion,$sql);
             if($resul){
-                echo '<script> alert ("Se guardaron los datos de la maquinaria correctamente");</script>';
+                echo '<script> alert ("La maquina se ha creado correctamente");</script>';
                 echo '<script> window.location="../../users/administrador/admin.php" </script>';
             }else{
                 echo "<script language='JavaScript'>
-                    alert('Error al registrar');
+                    alert('Los datos no fueron ingresados correctamente');
                     </script>";
                 echo '<script> window.location="../../users/administrador/admin.php" </script>';
             }

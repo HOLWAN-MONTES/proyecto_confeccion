@@ -124,7 +124,7 @@ if ($usario == "" || $usario == null) {
                             <div class="one">
                                 <div class="user">
                                     <label id="tex-use" for="">TIPO DE USUARIO</label><br>
-                                    <select name="tip_us" class="tip_usu" id="tip_usu" autocomplete="off" required style="text-transform:uppercase">
+                                    <select name="tip_us" class="tip_usu" id="tip_usu" autocomplete="off" required>
                                         <option value="">SELECCIONAR</option>
                                         <?php
 
@@ -145,7 +145,7 @@ if ($usario == "" || $usario == null) {
                                     <br>
                                     <div class="doc">
                                         <label class="tipo-doc" for="">TIPO DE DOCUMENTO</label><br>
-                                        <select name="tip_doc" id="tip_docu" autocomplete="off" required style="text-transform:uppercase">
+                                        <select name="tip_doc" id="tip_docu" autocomplete="off" required>
                                             <option value="">SELECCIONAR</option>
                                             <?php
                                             $tipo2 = "SELECT * FROM tipo_docu ORDER BY NOM_TIPO_DOCU ASC";
@@ -304,7 +304,7 @@ if ($usario == "" || $usario == null) {
                                 required> <br><br>
                             <div class="userr">
                                 <label id="tex-use" for="">TIPO DE USUARIO</label><br>
-                                <select name="tip_us_elim" class="tip_usu_elim" id="tip_usu_elim" autocomplete="off" style="text-transform:uppercase"
+                                <select name="tip_us_elim" class="tip_usu_elim" id="tip_usu_elim" autocomplete="off"
                                     required>
                                     <option value="">SELECCIONAR</option>
                                     <?php
@@ -322,7 +322,7 @@ if ($usario == "" || $usario == null) {
                             </div>
                             <div class="docc">
                                 <label for="">TIPO DE DOCUMENTO</label><br>
-                                <select name="tip_doc_elim" id="tip_docu_elim" autocomplete="off" required style="text-transform:uppercase">
+                                <select name="tip_doc_elim" id="tip_docu_elim" autocomplete="off" required>
                                     <option value="">SELECCIONAR</option>
                                     <?php
                                         $tipo2 = "SELECT * FROM tipo_docu";
@@ -364,10 +364,10 @@ if ($usario == "" || $usario == null) {
                                 <form class="formu_maquinn" action="../../php/crear_maqui/val_maqui.php" method="POST"
                                     autocomplete="off">
                                     <label id="serial_maq">SERIAL</label>
-                                    <input type="number" name="serial" id="serial" placeholder="SERIAL" required style="text-transform:uppercase">
+                                    <input type="number" name="serial" id="serial" placeholder="SERIAL" required>
                                     <br>
                                     <label id="l_maquinn" for="">TIPO DE MAQUINARIA</label>
-                                    <select id="tipo_maqui" name="tipo_maqui" required style="text-transform:uppercase">
+                                    <select id="tipo_maqui" name="tipo_maqui" required>
                                         <option value="0">SELECCIONAR</option>
                                         <?php
                                                 $sql="SELECT * FROM tipo_maquinaria";
@@ -387,7 +387,7 @@ if ($usario == "" || $usario == null) {
                                     <a id="btn_SalirMaquinarias" class="maquis_fo" href="#">CREAR TIPO DE MAQUINARIA</a>
                                     <br>
                                     <label class="l_marca" for="marca">MARCA DE MAQUINARIA</label>
-                                    <select id="marca" name="marca" required style="text-transform:uppercase">
+                                    <select id="marca" name="marca" required>
                                         <option value="0">SELECCIONAR</option>
                                         <?php
                                                 $sql="SELECT * FROM marca";
@@ -406,7 +406,7 @@ if ($usario == "" || $usario == null) {
                                     <a id="btn_salirmarca" class="tress" href="#">CREAR MARCA</a>
                                     <br>
                                     <label id="t_color" for="">COLOR DE MAQUINARIA</label>
-                                    <select id="color" name="color"required style="text-transform:uppercase">
+                                    <select id="color" name="color">
                                         <option value="0">SELECCIONAR</option>
                                         <?php
                                                 $sql="SELECT*FROM color";
@@ -488,7 +488,7 @@ if ($usario == "" || $usario == null) {
                                         placeholder="TWEED 200X300" required style="text-transform:uppercase">
                                     <br>
                                     <label id="t_tela" for="tela">TIPO DE TELA</label>
-                                    <select class="tela" id="tipo_tela" name="tipo_tela" style="text-transform:uppercase" required>
+                                    <select class="tela" id="tipo_tela" name="tipo_tela">
                                         <option value="0">SELECCIONAR</option>
                                         <?php
                                             $sql="SELECT * FROM tipo_tela";
@@ -507,7 +507,7 @@ if ($usario == "" || $usario == null) {
                                     <a id="btn_salirtela_textil" class="d_tela" href="#">CREAR TIPO TELA</a>
                                     <br>
                                     <label class="tit_marca" for="marca">MARCA</label>
-                                    <select class="marca_tex" id="marca_tex" name="marca" style="text-transform:uppercase" required>
+                                    <select class="marca_tex" id="marca_tex" name="marca">
                                         <option value="0">SELECCIONAR</option>
                                         <?php
                                             $sql="SELECT * FROM marca";
@@ -526,7 +526,7 @@ if ($usario == "" || $usario == null) {
                                     <a id="btn_salirmarca_textil" class="ul_marca" href="#">CREAR MARCA</a>
                                     <br>
                                     <label class="titl_color">COLOR</label>
-                                    <select class="color_tex" id="color_tex" name="color" style="text-transform:uppercase" required>
+                                    <select class="color_tex" id="color_tex" name="color">
                                         <option value="0">SELECCIONAR</option>
                                         <?php
                                             $sql="SELECT * FROM color";
@@ -546,11 +546,11 @@ if ($usario == "" || $usario == null) {
 
                                     <label class="t_metraje" for="metraje">METRAJE</label>
                                     <input type="number" class="metraje" name="metraje" id="metraje" placeholder="METRAJE"
-                                        required style="text-transform:uppercase">
+                                        required>
 
                                     <label class="t_rollos">ROLLOS</label>
                                     <input type="number" class="cant_rollos" name="cant_rollos" id="cant_rollos"
-                                        placeholder="CANT. ROLLOS" required style="text-transform:uppercase">
+                                        placeholder="CANT. ROLLOS" required>
 
                                     <input type="hidden" name="cre_tela" value="crearmaterial">
                                     <input type="submit" class="continuar" name="regis_material" id="regis_material"
@@ -617,7 +617,7 @@ if ($usario == "" || $usario == null) {
                                 <form class="cre_in" action="../../php/crear_insumo/val_insumos.php" method="POST"
                                     autocomplete="off">
                                     <label id="tip_ins">TIPO DE INSUMO</label>
-                                    <select id="tipo_insumos" name="tipinsumo" required style="text-transform:uppercase">
+                                    <select id="tipo_insumos" name="tipinsumo" required>
                                         <option value="0">SELECCIONAR</option>
                                         <?php
                                             $sql="SELECT*FROM tipo_insumo";
@@ -641,7 +641,7 @@ if ($usario == "" || $usario == null) {
                                         placeholder="NOMBRE DE INSUMO" required style="text-transform:uppercase">
                                     <br>
                                     <label class="ins_marca" for="">MARCA DEL INSUMO</label>
-                                    <select  id="marca_insu" name="marca" required style="text-transform:uppercase">
+                                    <select  id="marca_insu" name="marca" required>
                                         <option value="0">SELECCIONAR</option>
                                         <?php
                                             $sql="SELECT*FROM marca";
@@ -661,7 +661,7 @@ if ($usario == "" || $usario == null) {
                                     <br>
 
                                     <label id="titl_color" for="">COLOR DEL INSUMO</label>
-                                    <select  id="color_insu" name="color" required style="text-transform:uppercase">
+                                    <select  id="color_insu" name="color" required>
                                         <option value="0">SELECCIONAR</option>
                                         <?php
                                             $sql="SELECT*FROM color";
@@ -742,9 +742,9 @@ if ($usario == "" || $usario == null) {
         <!--formulario de ingreso-->
         <div class="form-ingre" id="form_ingre">
             <h1 class="titulo_form">REGISTRO DE INGRESO</h1>
-            <form action="../../php/crear_Mtextil/formul_ingreso.php" class="form_ingreso" method="POST" autocomplete="off">
+            <form action="#" class="form_ingreso" method="POST" autocomplete="off">
                 <label class="in_insumo">INSUMO</label>
-                <select name="insumo" id="insumo" style="text-transform:uppercase">
+                <select name="insumo" id="insumo">
                     <option value="0">SELECCIONAR</option>
                     <?php
                         $sql="SELECT * FROM insumos";
@@ -763,10 +763,10 @@ if ($usario == "" || $usario == null) {
                 <a href="#" id="reg_insu" class="uno">CREAR INSUMO</a>
                 <br>
                 <label class="cant_in">CANTIDAD INSUMOS</label>
-                <input type="number" name="cant_insumo" id="cant_insumo" placeholder="CANTIDAD" required style="text-transform:uppercase">
+                <input type="number" name="cant_insumo" id="cant_insumo" placeholder="CANTIDAD" required>
                 <br>
                 <label class="mat_tex">MATERIAL TEXTIL</label>
-                <select required name="mate_textil" id="mate_textil" style="text-transform:uppercase">
+                <select name="mate_textil" id="mate_textil">
                     <option value="0">SELECCIONAR</option>
                     <?php
                         $sql="SELECT * FROM material_textil";
@@ -788,7 +788,7 @@ if ($usario == "" || $usario == null) {
                 <input type="number" name="cant_m_textil" id="cant_m_textil" placeholder="CANTIDAD" required>
                 <br>
                 <label class="maqui">MAQUINARIA</label>
-                <select name="maquinaria" id="maquinaria" required style="text-transform:uppercase">
+                <select name="maquinaria" id="maquinaria">
                     <option value="0">SELECCIONAR</option>
                     <?php
                         $sql="SELECT * FROM maquinaria";
@@ -807,9 +807,7 @@ if ($usario == "" || $usario == null) {
                 <a href="#" id="reg_maqui" class="tres">CREAR MAQUINARIA</a>
                 <br>
                 <label class="cant_maq">CANTIDAD MAQUINARIA</label>
-                <input type="number" name="cant_maquinaria" id="cant_maquinaria" placeholder="CANTIDAD" required style="text-transform:uppercase">
-                <br>
-                <input type="hidden" name="usuario_ingreso" id="usuario_ingreso" class="aprendiz" value="<?php echo $usario; ?>">
+                <input type="number" name="cant_maquinaria" id="cant_maquinaria" placeholder="CANTIDAD" required>
                 <br>
                 <input type="submit" name="ingreso" id="ingreso" value="REGISTRAR">
 

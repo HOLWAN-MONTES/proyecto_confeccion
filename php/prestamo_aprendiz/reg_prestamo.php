@@ -23,7 +23,7 @@ if(isset($_POST['regis_prestamo'])){
         echo '<script> window.location="../../users/aprend_vocero/vocero.php" </script>';
     }
     else{
-        echo '<script> alert ("Se guardaron los datos del prestamo exitosamente.");</script>';
+        echo '<script> alert ("Se guardaron los datos exitosamente, gracias por registrar el prestamo");</script>';
         echo '<script> window.location="../../users/aprend_vocero/vocero.php" </script>';
     }
 }

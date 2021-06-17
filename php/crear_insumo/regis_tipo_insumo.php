@@ -10,11 +10,11 @@
         $query_t = mysqli_query($conexion,$consultar_t);
 
         if(!$query_t){
-            echo '<script> alert ("Error al registrar");</script>';
+            echo '<script> alert ("Error al registrar el tipo de insumo");</script>';
             echo '<script> window.location="../../users/administrador/admin.php" </script>';
         }
         else{
-            echo '<script> alert ("Datos guardados exitosamente");</script>';
+            echo '<script> alert ("Datos guardados correctamente al registrar el tipo de insumo");</script>';
             echo '<script> window.location="../../users/administrador/admin.php" </script>';
         }
     }

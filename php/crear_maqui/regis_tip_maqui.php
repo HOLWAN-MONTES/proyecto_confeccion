@@ -9,11 +9,11 @@
         $query_maq = mysqli_query($conexion,$consultar_maq);
     
         if(!$query_maq){
-            echo '<script> alert ("Error al registrar");</script>';
+            echo '<script> alert ("Error al registrar el tipo de maquinaria");</script>';
             echo '<script> window.location="../../users/administrador/admin.php" </script>';
         }
         else{
-            echo '<script> alert ("Datos guardados exitosamente");</script>';
+            echo '<script> alert ("Datos guardados correctamente al registrar el tipo de maquinaria");</script>';
             echo '<script> window.location="../../users/administrador/admin.php" </script>';
         }
     
