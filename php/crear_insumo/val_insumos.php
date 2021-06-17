@@ -16,12 +16,12 @@ include('../../includes/conection.php');
         $resul=mysqli_query($conexion,$sql);
             if($resul){
                 echo "<script language='JavaScript'>
-                    alert('Se ha creado el insumo correctamente');
+                    alert('Se guardaron los datos del insumo correctamente');
                     </script>";
                 echo '<script> window.location="../../users/administrador/admin.php" </script>';
             }else{
                 echo "<script language='JavaScript'>
-                    alert('los datos no fueron ingresados correctamente');
+                    alert('Error al registrar');
                     </script>";
                 echo '<script> window.location="../../users/administrador/admin.php" </script>';
             }
