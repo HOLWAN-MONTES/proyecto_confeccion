@@ -6,16 +6,25 @@
     if($_POST['env-insumo']){
         $tip_insumo=$_POST["agre_tipo_insumo"];
 
-        $consultar_t = "INSERT INTO tipo_insumo (NOM_INSUMO) VALUES('$tip_insumo')";
-        $query_t = mysqli_query($conexion,$consultar_t);
-
-        if(!$query_t){
-            echo '<script> alert ("Error al registrar");</script>';
+        $consulta = "SELECT * FROM tipo_insumo WHERE NOM_INSUMO = '$tip_insumo'";
+        $rray = $conexion->query($consulta);
+        $arreg= $rray->num_rows;
+        if($arreg >= 1){
+            echo '<script> alert ("Este Insumo Ya Esta Registrado");</script>';
             echo '<script> window.location="../../users/administrador/admin.php" </script>';
         }
         else{
-            echo '<script> alert ("Datos guardados exitosamente");</script>';
-            echo '<script> window.location="../../users/administrador/admin.php" </script>';
+            $consultar_t = "INSERT INTO tipo_insumo (NOM_INSUMO) VALUES('$tip_insumo')";
+            $query_t = mysqli_query($conexion,$consultar_t);
+
+            if(!$query_t){
+                echo '<script> alert ("Error al registrar");</script>';
+                echo '<script> window.location="../../users/administrador/admin.php" </script>';
+            }
+            else{
+                echo '<script> alert ("Datos guardados exitosamente");</script>';
+                echo '<script> window.location="../../users/administrador/admin.php" </script>';
+            }
         }
     }
     else{

@@ -1,21 +1,17 @@
 .form-ingre{
     opacity: 0;
     display: none;
-    visibility: hidden;
-    text-align: center;
-    z-index: 0;
-    position: absolute;
-    margin-left: 20%;
+    visibility: hidden;   
     width: 80%;
     height: 90%;
+    margin-left: -80%;
     background-color: rgb(245, 237, 237);
-    margin-top: 5%;
-    padding: 10px;    
+    margin-top: 5%;     
 }
 .titulo_form{
     color: #5aa469;
-    margin-top: 3%;
-    margin-left: 1%;
+    margin-top: 5%;
+    margin-left: 32%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 28px;
 }
