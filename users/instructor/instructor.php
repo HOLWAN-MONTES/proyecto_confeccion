@@ -32,7 +32,7 @@ if ($usario == "" || $usario == null) {
         <div class="lateral">
             <div class="superior">
                 <br>
-                <h5 class="title_int"><a class="menuaaa" href="admin.php">INSTRUCTOR</a> </h5>
+                <h5 class="title_int"><a class="menuaaa" href="instructor.php">INSTRUCTOR</a> </h5>
             </div>
             <div class="navegacion">
                 <div class="img_logo">
@@ -99,7 +99,7 @@ if ($usario == "" || $usario == null) {
                                     <select id="tipo_maqui" name="tipo_maqui" required style="text-transform:uppercase">
                                         <option value="0">SELECCIONAR</option>
                                         <?php
-                                                $sql="SELECT * FROM tipo_maquinaria";
+                                                $sql="SELECT * FROM tipo_maquinaria ORDER BY NOM_TIPO_MAQUI ASC";
                                                 $query=mysqli_query($conexion,$sql);
                                                 while($row=mysqli_fetch_array($query)){
                                             ?>
@@ -119,7 +119,7 @@ if ($usario == "" || $usario == null) {
                                     <select id="marca" name="marca" required style="text-transform:uppercase">
                                         <option value="0">SELECCIONAR</option>
                                         <?php
-                                                $sql="SELECT * FROM marca";
+                                                $sql="SELECT * FROM marca ORDER BY NOM_MARCA ASC";
                                                 $query=mysqli_query($conexion,$sql);
                                                 while($row=mysqli_fetch_array($query)){
                                             ?>
@@ -138,7 +138,7 @@ if ($usario == "" || $usario == null) {
                                     <select id="color" name="color" required style="text-transform:uppercase">
                                         <option value="0">SELECCIONAR</option>
                                         <?php
-                                                $sql="SELECT*FROM color";
+                                                $sql="SELECT * FROM color ORDER BY NOM_COLOR ASC";
                                                 $query=mysqli_query($conexion,$sql);
                                                 while($row=mysqli_fetch_array($query)){
                                             ?>
@@ -220,7 +220,7 @@ if ($usario == "" || $usario == null) {
                                     <select class="tela" id="tipo_tela" name="tipo_tela" required style="text-transform:uppercase">
                                         <option value="0">SELECCIONAR</option>
                                         <?php
-                                            $sql="SELECT * FROM tipo_tela";
+                                            $sql="SELECT * FROM tipo_tela ORDER BY NOM_TIPO_TELA ASC";
                                             $query=mysqli_query($conexion,$sql);
                                             while($row=mysqli_fetch_array($query)){
                                         ?>
@@ -239,7 +239,7 @@ if ($usario == "" || $usario == null) {
                                     <select class="marca_tex" id="marca_tex" name="marca" required style="text-transform:uppercase">
                                         <option value="0">SELECCIONAR</option>
                                         <?php
-                                            $sql="SELECT * FROM marca";
+                                            $sql="SELECT * FROM marca ORDER BY NOM_MARCA ASC";
                                             $query=mysqli_query($conexion,$sql);
                                             while($row=mysqli_fetch_array($query)){
                                         ?>
@@ -258,7 +258,7 @@ if ($usario == "" || $usario == null) {
                                     <select class="color_tex" id="color_tex" name="color" required style="text-transform:uppercase">
                                         <option value="0">SELECCIONAR</option>
                                         <?php
-                                            $sql="SELECT * FROM color";
+                                            $sql="SELECT * FROM color ORDER BY NOM_COLOR ASC";
                                             $query=mysqli_query($conexion,$sql);
                                             while($row = mysqli_fetch_array($query)){
                                         ?>
@@ -348,7 +348,7 @@ if ($usario == "" || $usario == null) {
                                     <select id="tipo_insumos" name="tipinsumo" required style="text-transform:uppercase">
                                         <option value="0">SELECCIONAR</option>
                                         <?php
-                                            $sql="SELECT*FROM tipo_insumo";
+                                            $sql="SELECT * FROM tipo_insumo ORDER BY NOM_INSUMO ASC";
                                             $query=mysqli_query($conexion,$sql);
                                             while($row=mysqli_fetch_array($query)){
                                         ?>
@@ -372,7 +372,7 @@ if ($usario == "" || $usario == null) {
                                     <select  id="marca_insu" name="marca" required style="text-transform:uppercase">
                                         <option value="0">SELECCIONAR</option>
                                         <?php
-                                            $sql="SELECT*FROM marca";
+                                            $sql="SELECT * FROM marca ORDER BY NOM_MARCA ASC";
                                             $query=mysqli_query($conexion,$sql);
                                             while($row=mysqli_fetch_array($query)){
                                         ?>
@@ -392,7 +392,7 @@ if ($usario == "" || $usario == null) {
                                     <select  id="color_insu" name="color" required style="text-transform:uppercase">
                                         <option value="0">SELECCIONAR</option>
                                         <?php
-                                            $sql="SELECT*FROM color";
+                                            $sql="SELECT * FROM color ORDER BY NOM_COLOR ASC";
                                             $query=mysqli_query($conexion,$sql);
                                             while($row=mysqli_fetch_array($query)){
                                         ?>
@@ -477,7 +477,7 @@ if ($usario == "" || $usario == null) {
                 <select name="insumo" id="insumo" style="text-transform:uppercase" required>
                     <option value="0">SELECCIONAR</option>
                     <?php
-                        $sql="SELECT * FROM insumos";
+                        $sql="SELECT * FROM insumos ORDER BY NOM_INSUMOS ASC";
                         $query=mysqli_query($conexion,$sql);
                             while($row=mysqli_fetch_array($query)){
                         ?>
@@ -499,7 +499,7 @@ if ($usario == "" || $usario == null) {
                 <select name="mate_textil" id="mate_textil" required style="text-transform:uppercase">
                     <option value="0">SELECCIONAR</option>
                     <?php
-                        $sql="SELECT * FROM material_textil";
+                        $sql="SELECT * FROM material_textil ORDER BY NOM_M_TEXTIL ASC";
                         $query=mysqli_query($conexion,$sql);
                             while($row=mysqli_fetch_array($query)){
                         ?>
@@ -521,7 +521,7 @@ if ($usario == "" || $usario == null) {
                 <select name="maquinaria" id="maquinaria" required style="text-transform:uppercase">
                     <option value="0">SELECCIONAR</option>
                     <?php
-                        $sql="SELECT * FROM maquinaria";
+                        $sql="SELECT * FROM maquinaria ORDER BY SERIAL ASC";
                         $query=mysqli_query($conexion,$sql);
                             while($row=mysqli_fetch_array($query)){
                         ?>

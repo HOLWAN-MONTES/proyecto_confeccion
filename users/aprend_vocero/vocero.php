@@ -85,7 +85,7 @@ if ($usario == "" || $usario == null) {
                         <select name="insumo" id="insumo">
                             <option value="0" >SELECCIONAR</option>
                             <?php
-                                $sql="SELECT * FROM insumos";
+                                $sql="SELECT * FROM insumos ORDER BY NOM_INSUMOS ASC";
                                 $query=mysqli_query($conexion,$sql);
                                     while($row=mysqli_fetch_array($query)){
                                 ?>
@@ -106,7 +106,7 @@ if ($usario == "" || $usario == null) {
                         <select name="mate_textil" id="mate_textil">
                             <option value="0">SELECCIONAR</option>
                             <?php
-                                $sql="SELECT * FROM material_textil";
+                                $sql="SELECT * FROM material_textil ORDER BY NOM_M_TEXTIL ASC";
                                 $query=mysqli_query($conexion,$sql);
                                     while($row=mysqli_fetch_array($query)){
                                 ?>
