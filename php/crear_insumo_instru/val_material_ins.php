@@ -18,17 +18,17 @@ if(isset($_POST['regis_material'])){
     
     if(!$query){
         echo '<script> alert ("Error al registrar el material");</script>';
-        echo '<script> window.location="../../users/administrador/admin.php" </script>';
+        echo '<script> window.location="../../users/instructor/instructor.php" </script>';
     }
     else{
-        echo '<script> alert ("Se guardaron los datos del material exitosamente");</script>';
-        echo '<script> window.location="../../users/administrador/admin.php" </script>';
+        echo '<script> alert ("Se guardaron los datos del material correctamente.");</script>';
+        echo '<script> window.location="../../users/instructor/instructor.php" </script>';
     }
 
 }
 else{
     echo '<script> alert ("Algo fallo, intentalo de nuevo");</script>';
-    echo '<script> window.location="../../users/administrador/admin.php" </script>';
+    echo '<script> window.location="../../users/instructor/instructor.php" </script>';
 }
 
 

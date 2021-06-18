@@ -16,6 +16,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
             "status" => http_response_code(201),
             "statusText" => "Se registro el insumo", 
             
+
         );
         echo json_encode($query);
     }
@@ -27,6 +28,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
            
         );
         echo json_encode($query);
+
     }
 }
 else{
