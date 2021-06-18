@@ -9,7 +9,14 @@ if(isset($_POST['regis_prestamo'])){
     $cant_textil=$_POST['cant_m_textil'];
     $aprendiz=$_POST['aprendiz'];
 
-    $seleccionar = "SELECT * FROM prestamo_material WHERE ID_APRENDIZ = '$aprendiz'";
+    $regis_voc= "INSERT INTO prestamo_material(ID_PRES_MATE, ID_APRENDIZ) VALUES ('','$aprendiz')";
+    $query_voc = mysqli_query($conexion,$regis_voc);
+    // if(!$query_voc) {
+    //     var_dump(mysqli_error($conexion));
+    //     exit;
+    // }
+
+    $seleccionar = "SELECT * FROM prestamo_material WHERE ID_APRENDIZ = '$aprendiz' ORDER BY ID_PRES_MATE DESC LIMIT 1";
     $query_pres = mysqli_query($conexion,$seleccionar);
     $fila_pres = mysqli_fetch_assoc($query_pres);
     $id = $fila_pres['ID_PRES_MATE'];
