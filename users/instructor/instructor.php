@@ -32,7 +32,7 @@ if ($usario == "" || $usario == null) {
         <div class="lateral">
             <div class="superior">
                 <br>
-                <h5 class="title_int"><a class="menuaaa" href="admin.php">INSTRUCTOR</a> </h5>
+                <h5 class="title_int"><a class="menuaaa" href="instructor.php">INSTRUCTOR</a> </h5>
             </div>
             <div class="navegacion">
                 <div class="img_logo">
@@ -90,8 +90,7 @@ if ($usario == "" || $usario == null) {
                             <br>
                             <h1 class="titulo_maqui">INGRESO DE MAQUINARIA</h1>
                             <div class="form_reg_maquina">
-                                <form class="formu_maquinn" action="../../php/crear_maqui/val_maqui.php" method="POST"
-                                    autocomplete="off">
+                                <form class="formu_maquinn" id="form_maqui" method="POST" autocomplete="off">
                                     <label id="serial_maq">SERIAL</label>
                                     <input type="number" name="serial" id="serial" placeholder="SERIAL" required>
                                     <br>
@@ -210,7 +209,7 @@ if ($usario == "" || $usario == null) {
                             <br>
                             <h1 class="titulo_material">INGRESO DE MATERIAL TEXTIL</h1>
                             <div class="formul_TEXT">
-                                <form class="for_mtex" action="../../php/crear_Mtextil/val_material.php" method="POST"
+                                <form class="for_mtex" id="mat_textil" method="POST"
                                     autocomplete="off">
                                     <label class="l_text" for="">MATERIAL TEXTIL</label>
                                     <input type="text" class="nom_material" name="nom_material" id="nom_material"
@@ -343,12 +342,12 @@ if ($usario == "" || $usario == null) {
                             <br>
                             <h2 class="titulo_insumo">INGRESO DE INSUMO</h2>
                             <div class="formulario">
-                                <form class="cre_in" id="form_insum" autocomplete="off">
+                                <form method="POST" class="cre_in" id="form_ins" autocomplete="off">
                                     <label id="tip_ins">TIPO DE INSUMO</label>
-                                    <select id="tipo_insumos" name="tipinsumo" required>
+                                    <select id="tipo_insumos" name="tip_insumo" required>
                                         <option value="0">SELECCIONAR</option>
                                         <?php
-                                            $sql="SELECT*FROM tipo_insumo";
+                                            $sql="SELECT * FROM tipo_insumo";
                                             $query=mysqli_query($conexion,$sql);
                                             while($row=mysqli_fetch_array($query)){
                                         ?>
@@ -365,11 +364,11 @@ if ($usario == "" || $usario == null) {
                                     <br>
 
                                     <label class="tit_insu" for="">NOMBRE DEL INSUMO</label>
-                                    <input type="text" name="nominsumo" id="nom_insumo"
+                                    <input type="text" name="nom_insumo" id="nom_insumo"
                                         placeholder="NOMBRE DE INSUMO" required style="text-transform:uppercase">
                                     <br>
                                     <label class="ins_marca" for="">MARCA DEL INSUMO</label>
-                                    <select  id="marca_insu" name="marca" required>
+                                    <select  id="marca_insu" name="marca_in" required>
                                         <option value="0">SELECCIONAR</option>
                                         <?php
                                             $sql="SELECT*FROM marca";
@@ -389,7 +388,7 @@ if ($usario == "" || $usario == null) {
                                     <br>
 
                                     <label id="titl_color" for="">COLOR DEL INSUMO</label>
-                                    <select  id="color_insu" name="color" required>
+                                    <select  id="color_insu" name="color_in" required>
                                         <option value="0">SELECCIONAR</option>
                                         <?php
                                             $sql="SELECT*FROM color";
@@ -409,8 +408,8 @@ if ($usario == "" || $usario == null) {
                                     <br>
 
 
-                                    <input type="submit" class="btn_insumo" value="CONTINUAR" class="form-control">
-                                    <input type="hidden" name="cre_insumo" value="crearmoto">
+                                    <input type="submit" name="crea_insum" class="btn_insumo" value="CONTINUAR">
+                                    <!-- <input type="hidden" name="cre_insu" value="crearmoto"> -->
                                 </form>
                             </div>
                         </div>
