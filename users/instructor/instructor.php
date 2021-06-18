@@ -165,7 +165,7 @@ if ($usario == "" || $usario == null) {
                             <div class="content_formMaquinaria">
                                 <div id="cerrar_ventanaMaqui"><i class="fas fa-times-circle"></i></div>
                                 <h2 class="titulo_maquinaria">AGREGAR TIP. MAQUINARIA</h2>
-                                <form action="../../php/crear_insumo_instru/rmaqui_inst.php" class="formularioMaquinaria"
+                                <form action="../../php/crear_maqui_instru/regis_tip_maqui_instru.php" class="formularioMaquinaria"
                                     method="POST" autocomplete="off">
                                         <label class="dig-tip-maq" for="">Digite Tipo Maquinaria</label>
                                         <input type="text" class="ti_maquinaria" name="agre_maquinaria" id="agre_maquinaria"
@@ -180,7 +180,7 @@ if ($usario == "" || $usario == null) {
                             <div class="content_formMarca_maq">
                                 <div id="cerrar_ventanaMarca"><i class="fas fa-times-circle"></i></div>
                                 <h2 class="titulo_marca_maq">AGREGAR MARCA</h2>
-                                <form action="../../php/crear_insumo_instru/rmarca_insu_inst.php" method="POST" autocomplete="off">
+                                <form action="../../php/crear_maqui_instru/regis_marca_maqui_instru.php" method="POST" autocomplete="off">
                                     <label class="dig-marc" for="">Digite Marca</label>
                                     <input type="text" class="ti_marca_ma" name="agre_marca" id="agre_marca" placeholder="MARCA" required style="text-transform:uppercase">
                                     <input type="submit" id="env-marca_maq" name="env-marca" value="AGREGAR">
@@ -193,7 +193,7 @@ if ($usario == "" || $usario == null) {
                             <div class="content_formColor_maq">
                                 <div id="cerrar_ventanaColor"><i class="fas fa-times-circle"></i></div>
                                 <h2 class="titulo_color_ma">AGREGAR COLOR</h2>
-                                <form action="../../php/crear_insumo_instru/rcolor_insu_inst.php" class="formularioColor_maq" method="POST" autocomplete="off">
+                                <form action="../../php/crear_maqui_instru/regis_color_maqui_instru.php" class="formularioColor_maq" method="POST" autocomplete="off">
                                     <label class="dig-colores" for="">Digite Color</label>
                                     <input type="text" class="ti_color_maq" name="agre_color" id="agre_color" placeholder="COLOR" required style="text-transform:uppercase">
                                     <input type="submit" id="env-color_maqui" name="env-color" value="AGREGAR">
@@ -294,7 +294,7 @@ if ($usario == "" || $usario == null) {
                             <div class="content_from_textil">
                                 <div id="cerrar_ventana_textil"><i class="fas fa-times-circle"></i></div>
                                 <h2 class="titulo_tipo_tela">AGREGAR TIP. TELA</h2>
-                                <form action="../../php/crear_insumo_instru/rtela_mate_inst.php" class="formulario_t"
+                                <form action="../../php/crear_mtextil_instru/regis_tipo_tela_instru.php" class="formulario_t"
                                     method="POST" autocomplete="off">
                                     <label class="dig-tip-t" for="">Digite Tipo Tela</label>
                                     <input type="text" class="tipoMax_tela" name="agre_tipo_tela" id="agre_tipo_tela"
@@ -309,7 +309,7 @@ if ($usario == "" || $usario == null) {
                             <div class="content_formMarca_textil">
                                 <div id="cerrar_ventanaMarca_textil"><i class="fas fa-times-circle"></i></div>
                                 <h2 class="titulo_marca_textil">AGREGAR MARCA</h2>
-                                <form action="../../php/crear_insumo_instru/rmarca_insu_inst.php" class="formularioMarca_textil"
+                                <form action="../../php/crear_mtextil_instru/regis_marca_mater_instru.php" class="formularioMarca_textil"
                                     method="POST" autocomplete="off">
                                     <label class="dig-mar-t" for="">Digite Marca</label>
                                     <input type="text" class="ti_marca_textil" name="agre_marca" id="agre_marca"
@@ -324,7 +324,7 @@ if ($usario == "" || $usario == null) {
                             <div class="content_formColor_textil">
                                 <div id="cerrar_ventanaColor_textil"><i class="fas fa-times-circle"></i></div>
                                 <h2 class="titulo_color_textil">AGREGAR COLOR</h2>
-                                <form action="../../php/crear_insumo_instru/rcolor_insu_inst.php" class="formularioColor_textil"
+                                <form action="../../php/crear_mtextil_instru/regis_color_mater_instru.php" class="formularioColor_textil"
                                     method="POST" autocomplete="off">
                                     <label class="dig-col-t" for="">Digite Color</label>
                                     <input type="text" class="ti_color_textil" name="agre_color" id="agre_color"
@@ -348,7 +348,7 @@ if ($usario == "" || $usario == null) {
                                     <select id="tipo_insumos" name="tip_insumo" required>
                                         <option value="0">SELECCIONAR</option>
                                         <?php
-                                            $sql="SELECT * FROM tipo_insumo";
+                                            $sql="SELECT * FROM tipo_insumo ORDER BY NOM_INSUMO ASC";
                                             $query=mysqli_query($conexion,$sql);
                                             while($row=mysqli_fetch_array($query)){
                                         ?>
@@ -421,7 +421,7 @@ if ($usario == "" || $usario == null) {
                             <div class="content_from_ins">
                                 <div id="cerrar_ventana"><i class="fas fa-times-circle"></i></div>
                                 <h2 class="titulo_t_insumo">AGREGAR TIP. INSUMO</h2>
-                                <form action="../../php/crear_insumo_instru/rtipo_insumo_inst.php" class="formulario_t"
+                                <form action="../../php/crear_insumo_instru/tipo_insumo_instru.php" class="formulario_t"
                                     method="POST" autocomplete="off">
                                     <label class="dig-tip-insu" for="">Digite Tipo Insumo</label>
                                     <input type="text" class="ti_insumo" name="agre_tipo_insumo" id="agre_tipo_insumo"
@@ -436,7 +436,7 @@ if ($usario == "" || $usario == null) {
                             <div class="content_formMarca_ins">
                                 <div id="cerrar_ventanaMarca_ins"><i class="fas fa-times-circle"></i></div>
                                 <h2 class="titulo_marca_ins">AGREGAR MARCA</h2>
-                                <form action="../../php/crear_insumo_instru/rmarca_insu_inst.php" class="formularioMarca_ins"
+                                <form action="../../php/crear_insumo_instru/marca_insu_instru.php" class="formularioMarca_ins"
                                     method="POST" autocomplete="off">
                                     <label class="dig-mar-in" for="">Digite Marca</label>
                                     <input type="text" class="ti_marca_ins" name="agre_marca" id="agre_marca"
@@ -451,7 +451,7 @@ if ($usario == "" || $usario == null) {
                             <div class="content_formColor_insu">
                                 <div id="cerrar_ventanaColor_insu"><i class="fas fa-times-circle"></i></div>
                                 <h2 class="titulo_color_insu">AGREGAR COLOR</h2>
-                                <form action="../../php/crear_insumo_instru/rcolor_insu_inst.php" class="formularioColor_insu"
+                                <form action="../../php/crear_insumo_instru/color_insu_instru.php" class="formularioColor_insu"
                                     method="POST" autocomplete="off">
                                     <label class="dig-col-in" for="">Digite Color</label>
                                     <input type="text" class="ti_color_insu" name="agre_color" id="agre_color"
