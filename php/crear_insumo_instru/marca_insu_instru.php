@@ -2,22 +2,22 @@
 
     include('../../includes/conection.php');
 
+    if($_POST['env-marca']){
+        $marca=$_POST["agre_marca"];
+    
 
-    if($_POST['env-tela']){
-        $tip_tela=$_POST["agre_tipo_tela"];
-
-        $consulta = "SELECT * FROM tipo_tela WHERE NOM_TIPO_TELA = '$tip_tela'";
+        $consulta = "SELECT * FROM marca WHERE NOM_MARCA = '$marca'";
         $rray = $conexion->query($consulta);
         $arreg= $rray->num_rows;
         if($arreg >= 1){
-            echo '<script> alert ("Esta Tela Ya Esta Registrada");</script>';
+            echo '<script> alert ("Esta Marca Ya Esta Registrada");</script>';
             echo '<script> window.location="../../users/instructor/instructor.php" </script>';
         }
         else{
-            $consultar_t = "INSERT INTO tipo_tela (NOM_TIPO_TELA) VALUES('$tip_tela')";
-            $query_t = mysqli_query($conexion,$consultar_t);
-
-            if(!$query_t){
+            $consultar_m = "INSERT INTO marca (NOM_MARCA) VALUES('$marca')";
+            $query_m = mysqli_query($conexion,$consultar_m);
+        
+            if(!$query_m){
                 echo '<script> alert ("Error al registrar");</script>';
                 echo '<script> window.location="../../users/instructor/instructor.php" </script>';
             }

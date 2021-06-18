@@ -4,8 +4,16 @@
 
     if($_POST['env-color']){
         $color=$_POST["agre_color"];
-    
-        $consultar_c = "INSERT INTO color (NOM_COLOR) VALUES('$color')";
+
+        $consulta = "SELECT * FROM color WHERE NOM_COLOR = '$color'";
+        $rray = $conexion->query($consulta);
+        $arreg= $rray->num_rows;
+        if($arreg >= 1){
+            echo '<script> alert ("Este Color Ya Esta Registrado");</script>';
+            echo '<script> window.history.back();</script>';
+        }
+        else{
+            $consultar_c = "INSERT INTO color (NOM_COLOR) VALUES('$color')";
         $query_c = mysqli_query($conexion,$consultar_c);
     
         if(!$query_c){
@@ -16,6 +24,9 @@
             echo '<scrip> alert ("Datos guardados exitosamente");</scrip>';
             echo '<script> window.history.back();</script>';
         }
+
+        }
+    
     
     }
     else{

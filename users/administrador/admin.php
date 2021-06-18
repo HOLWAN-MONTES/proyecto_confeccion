@@ -51,13 +51,8 @@ if ($usario == "" || $usario == null) {
                             </ul>
                         </li>
                         <li class="suba_submenu" id="btn_ingreso">INGRESO <!-- dar click y sacar un formulario  -->
-                          <!--   <ul class="mostr">
-                                <li id="insu">CREAR INSUMOS</li>
-                                <li id="maquinaa">CREAR MAQUINARIA</li>
-                                <li id="mate_tex">CREAR MATERIAL TEXTIL</li>
-                                
-                            </ul> -->
                         </li>
+                        
                         <li class="suba_submenu"> PRESTAMOS <!-- clicl el formulario de prestamos  -->
 
                         </li>
