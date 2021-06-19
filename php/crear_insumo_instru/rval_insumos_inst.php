@@ -29,6 +29,35 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
         echo json_encode($query);
     }
 }
+elseif($_SERVER['REQUEST_METHOD'] == "GET"){
+    $tabla = $_GET['tabla'];
+    if($tabla === "insumo"){
+        $sql="SELECT * FROM insumos";
+        $query_insu=mysqli_query($conexion,$sql);
+        $data = [];
+        while($row=mysqli_fetch_array($query_insu)){
+            array_push($data, $row);
+            
+        }
+        if($query_insu){
+            $res = array(
+                "err" => false,
+                "status" => http_response_code(200),
+                "statusText" => "Datos Encontrados con Ezyto",
+                "data" => $data,
+            );
+            echo json_encode($res);
+        }
+        else{
+            $res = array(
+                "err" => true,
+                "status" => http_response_code(500),
+                "statusText" => "Datos No Encontrados",
+            );
+            echo json_encode($res);
+        }
+    }
+}
 else{
     echo '<script> alert ("Error al registrar el insumo");</script>';
 }

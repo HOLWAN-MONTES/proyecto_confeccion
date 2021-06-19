@@ -9,9 +9,17 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     $cant_m_textil = $_POST['cant_m_textil'];
     $maquinaria = $_POST['maquinaria'];
     $cant_maquinaria = $_POST['cant_maquinaria'];
+    $docu_pro = $_POST['doc_pro'];
     $user = $_POST['user'];
 
-    $selec = "SELECT * FROM ingreso_material WHERE ID_INSTRUCTOR = '$user'";
+    date_default_timezone_set("America/Bogota");
+    $fecha = date("o-m-d");
+    $hora = date("H:i:s");
+    $cons_ing = "INSERT INTO ingreso_material(ID_INGRESO_MATERIAL, ID_INSTRUCTOR, DOCUMENTO_PROVE, FECHA, HORA) 
+            VALUES('', '$user', '$docu_pro', '$fecha', '$hora')";
+    $query = mysqli_query($conexion, $cons_ing);
+
+    $selec = "SELECT * FROM ingreso_material WHERE ID_INSTRUCTOR = '$user' ORDER BY ID_INGRESO_MATERIAL DESC LIMIT 1";
     $query2 = mysqli_query($conexion,$selec);
     $fila2 = mysqli_fetch_assoc($query2);
     $ingre = $fila2['ID_INGRESO_MATERIAL'];

@@ -1,6 +1,6 @@
-const ajax = ({ url, data, succes })=>{
+const ajax = ({ url, data, succes, method })=>{
     const option = {
-        method: "POST",
+        method,
         headers: {
             'Content-type': 'application/json',
         },
@@ -18,6 +18,7 @@ window.addEventListener('submit', (e)=> {
         ajax({
             url: "../../php/crear_insumo_instru/formu_ingreso_instru.php", 
             data: {
+                doc_pro: document.getElementById('doc_prove').value,
                 insumo: document.getElementById('insumo').value,
                 cant_insumo: document.getElementById('cant_insumo').value,
                 mate_textil: document.getElementById('mate_textil').value,
@@ -29,7 +30,8 @@ window.addEventListener('submit', (e)=> {
             succes: (data) => {
                 alert("Correcto");
                 document.getElementById('form_ingreso').reset();
-            }
+            },
+            method: "POST"
         })
     }
     else if(e.target.matches('#form_ins')){
@@ -44,7 +46,22 @@ window.addEventListener('submit', (e)=> {
             succes: (data) => {
                 alert("Correcto, Insumo Registrado");
                 document.getElementById('form_ins').reset();
-            }
+                const selec = document.getElementById('insumo');
+                ajax({
+                    url: "../../php/crear_insumo_instru/rval_insumos_inst.php?tabla=insumo",
+                    succes: ({data}) => {
+                        let html = "";
+                        html+=`<option>SELECCIONAR</option>`;
+                        data.forEach((e,i) => {
+                            html+=`<option value="${data[i].ID_INSUMOS}" style="text-transform:uppercase">${data[i].NOM_INSUMOS}</option>`;
+
+                        });
+                        selec.innerHTML = html;
+                    },
+                    method: "GET"
+                })
+            },
+            method: "POST"
         })
     }
     else if(e.target.matches('#mat_textil')){
@@ -61,7 +78,8 @@ window.addEventListener('submit', (e)=> {
             succes: (data) => {
                 alert("Correcto, Material Textil Registrado");
                 document.getElementById('mat_textil').reset();
-            }
+            },
+            method: "POST"
         })
     }
     else if(e.target.matches('#form_maqui')){
@@ -76,7 +94,8 @@ window.addEventListener('submit', (e)=> {
             succes: (data) => {
                 alert("Correcto, Maquinaria Registrada");
                 document.getElementById('form_maqui').reset();
-            }
+            },
+            method: "POST"
         })
     }
 })
