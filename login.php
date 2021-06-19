@@ -37,7 +37,7 @@ require_once('includes/conection.php');
                  
                     <input type="password" name="claveaprendiz" id="password" placeholder="Ingrese Clave" maxlength="20"  style="text-transform:uppercase">
                     <select class="seleccionTipo" id="tipodocu" name="tipodocu">
-                        <option value="0">Seleccione su cargo</option>
+                        <option value="0">SELECCIONE SU CARGO</option>
                         <?php
                         foreach ($query_re as $tipo) : ?>
     
