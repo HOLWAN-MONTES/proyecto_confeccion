@@ -51,13 +51,8 @@ if ($usario == "" || $usario == null) {
                             </ul>
                         </li>
                         <li class="suba_submenu" id="btn_ingreso">INGRESO <!-- dar click y sacar un formulario  -->
-                          <!--   <ul class="mostr">
-                                <li id="insu">CREAR INSUMOS</li>
-                                <li id="maquinaa">CREAR MAQUINARIA</li>
-                                <li id="mate_tex">CREAR MATERIAL TEXTIL</li>
-                                
-                            </ul> -->
                         </li>
+                        
                         <li class="suba_submenu"> PRESTAMOS <!-- clicl el formulario de prestamos  -->
 
                         </li>
@@ -124,7 +119,7 @@ if ($usario == "" || $usario == null) {
                             <div class="one">
                                 <div class="user">
                                     <label id="tex-use" for="">TIPO DE USUARIO</label><br>
-                                    <select name="tip_us" class="tip_usu" id="tip_usu" autocomplete="off" required>
+                                    <select name="tip_us" class="tip_usu" id="tip_usu" autocomplete="off" required style="text-transform:uppercase">
                                         <option value="">SELECCIONAR</option>
                                         <?php
 
@@ -145,7 +140,7 @@ if ($usario == "" || $usario == null) {
                                     <br>
                                     <div class="doc">
                                         <label class="tipo-doc" for="">TIPO DE DOCUMENTO</label><br>
-                                        <select name="tip_doc" id="tip_docu" autocomplete="off" required>
+                                        <select name="tip_doc" id="tip_docu" autocomplete="off" required style="text-transform:uppercase">
                                             <option value="">SELECCIONAR</option>
                                             <?php
                                             $tipo2 = "SELECT * FROM tipo_docu ORDER BY NOM_TIPO_DOCU ASC";
@@ -304,7 +299,7 @@ if ($usario == "" || $usario == null) {
                                 required> <br><br>
                             <div class="userr">
                                 <label id="tex-use" for="">TIPO DE USUARIO</label><br>
-                                <select name="tip_us_elim" class="tip_usu_elim" id="tip_usu_elim" autocomplete="off"
+                                <select name="tip_us_elim" class="tip_usu_elim" id="tip_usu_elim" autocomplete="off" style="text-transform:uppercase"
                                     required>
                                     <option value="">SELECCIONAR</option>
                                     <?php
@@ -322,7 +317,7 @@ if ($usario == "" || $usario == null) {
                             </div>
                             <div class="docc">
                                 <label for="">TIPO DE DOCUMENTO</label><br>
-                                <select name="tip_doc_elim" id="tip_docu_elim" autocomplete="off" required>
+                                <select name="tip_doc_elim" id="tip_docu_elim" autocomplete="off" required style="text-transform:uppercase">
                                     <option value="">SELECCIONAR</option>
                                     <?php
                                         $tipo2 = "SELECT * FROM tipo_docu";
@@ -364,13 +359,13 @@ if ($usario == "" || $usario == null) {
                                 <form class="formu_maquinn" action="../../php/crear_maqui/val_maqui.php" method="POST"
                                     autocomplete="off">
                                     <label id="serial_maq">SERIAL</label>
-                                    <input type="number" name="serial" id="serial" placeholder="SERIAL" required>
+                                    <input type="number" name="serial" id="serial" placeholder="SERIAL" required style="text-transform:uppercase">
                                     <br>
                                     <label id="l_maquinn" for="">TIPO DE MAQUINARIA</label>
-                                    <select id="tipo_maqui" name="tipo_maqui" required>
+                                    <select id="tipo_maqui" name="tipo_maqui" required style="text-transform:uppercase">
                                         <option value="0">SELECCIONAR</option>
                                         <?php
-                                                $sql="SELECT * FROM tipo_maquinaria";
+                                                $sql="SELECT * FROM tipo_maquinaria ORDER BY NOM_TIPO_MAQUI ASC";
                                                 $query=mysqli_query($conexion,$sql);
                                                 while($row=mysqli_fetch_array($query)){
                                             ?>
@@ -387,10 +382,10 @@ if ($usario == "" || $usario == null) {
                                     <a id="btn_SalirMaquinarias" class="maquis_fo" href="#">CREAR TIPO DE MAQUINARIA</a>
                                     <br>
                                     <label class="l_marca" for="marca">MARCA DE MAQUINARIA</label>
-                                    <select id="marca" name="marca" required>
+                                    <select id="marca" name="marca" required style="text-transform:uppercase">
                                         <option value="0">SELECCIONAR</option>
                                         <?php
-                                                $sql="SELECT * FROM marca";
+                                                $sql="SELECT * FROM marca ORDER BY NOM_MARCA ASC";
                                                 $query=mysqli_query($conexion,$sql);
                                                 while($row=mysqli_fetch_array($query)){
                                             ?>
@@ -406,10 +401,10 @@ if ($usario == "" || $usario == null) {
                                     <a id="btn_salirmarca" class="tress" href="#">CREAR MARCA</a>
                                     <br>
                                     <label id="t_color" for="">COLOR DE MAQUINARIA</label>
-                                    <select id="color" name="color">
+                                    <select id="color" name="color"required style="text-transform:uppercase">
                                         <option value="0">SELECCIONAR</option>
                                         <?php
-                                                $sql="SELECT*FROM color";
+                                                $sql="SELECT*FROM color ORDER BY NOM_COLOR ASC";
                                                 $query=mysqli_query($conexion,$sql);
                                                 while($row=mysqli_fetch_array($query)){
                                             ?>
@@ -488,10 +483,10 @@ if ($usario == "" || $usario == null) {
                                         placeholder="TWEED 200X300" required style="text-transform:uppercase">
                                     <br>
                                     <label id="t_tela" for="tela">TIPO DE TELA</label>
-                                    <select class="tela" id="tipo_tela" name="tipo_tela">
+                                    <select class="tela" id="tipo_tela" name="tipo_tela" style="text-transform:uppercase" required>
                                         <option value="0">SELECCIONAR</option>
                                         <?php
-                                            $sql="SELECT * FROM tipo_tela";
+                                            $sql="SELECT * FROM tipo_tela ORDER BY NOM_TIPO_TELA ASC";
                                             $query=mysqli_query($conexion,$sql);
                                             while($row=mysqli_fetch_array($query)){
                                         ?>
@@ -507,10 +502,10 @@ if ($usario == "" || $usario == null) {
                                     <a id="btn_salirtela_textil" class="d_tela" href="#">CREAR TIPO TELA</a>
                                     <br>
                                     <label class="tit_marca" for="marca">MARCA</label>
-                                    <select class="marca_tex" id="marca_tex" name="marca">
+                                    <select class="marca_tex" id="marca_tex" name="marca" style="text-transform:uppercase" required>
                                         <option value="0">SELECCIONAR</option>
                                         <?php
-                                            $sql="SELECT * FROM marca";
+                                            $sql="SELECT * FROM marca ORDER BY NOM_MARCA ASC";
                                             $query=mysqli_query($conexion,$sql);
                                             while($row=mysqli_fetch_array($query)){
                                         ?>
@@ -526,10 +521,10 @@ if ($usario == "" || $usario == null) {
                                     <a id="btn_salirmarca_textil" class="ul_marca" href="#">CREAR MARCA</a>
                                     <br>
                                     <label class="titl_color">COLOR</label>
-                                    <select class="color_tex" id="color_tex" name="color">
+                                    <select class="color_tex" id="color_tex" name="color" style="text-transform:uppercase" required>
                                         <option value="0">SELECCIONAR</option>
                                         <?php
-                                            $sql="SELECT * FROM color";
+                                            $sql="SELECT * FROM color ORDER BY NOM_COLOR ASC";
                                             $query=mysqli_query($conexion,$sql);
                                             while($row = mysqli_fetch_array($query)){
                                         ?>
@@ -546,11 +541,11 @@ if ($usario == "" || $usario == null) {
 
                                     <label class="t_metraje" for="metraje">METRAJE</label>
                                     <input type="number" class="metraje" name="metraje" id="metraje" placeholder="METRAJE"
-                                        required>
+                                        required style="text-transform:uppercase">
 
                                     <label class="t_rollos">ROLLOS</label>
                                     <input type="number" class="cant_rollos" name="cant_rollos" id="cant_rollos"
-                                        placeholder="CANT. ROLLOS" required>
+                                        placeholder="CANT. ROLLOS" required style="text-transform:uppercase">
 
                                     <input type="hidden" name="cre_tela" value="crearmaterial">
                                     <input type="submit" class="continuar" name="regis_material" id="regis_material"
@@ -617,10 +612,10 @@ if ($usario == "" || $usario == null) {
                                 <form class="cre_in" action="../../php/crear_insumo/val_insumos.php" method="POST"
                                     autocomplete="off">
                                     <label id="tip_ins">TIPO DE INSUMO</label>
-                                    <select id="tipo_insumos" name="tipinsumo" required>
+                                    <select id="tipo_insumos" name="tipinsumo" required style="text-transform:uppercase">
                                         <option value="0">SELECCIONAR</option>
                                         <?php
-                                            $sql="SELECT*FROM tipo_insumo";
+                                            $sql="SELECT * FROM tipo_insumo ORDER BY NOM_INSUMO ASC";
                                             $query=mysqli_query($conexion,$sql);
                                             while($row=mysqli_fetch_array($query)){
                                         ?>
@@ -641,10 +636,10 @@ if ($usario == "" || $usario == null) {
                                         placeholder="NOMBRE DE INSUMO" required style="text-transform:uppercase">
                                     <br>
                                     <label class="ins_marca" for="">MARCA DEL INSUMO</label>
-                                    <select  id="marca_insu" name="marca" required>
+                                    <select  id="marca_insu" name="marca" required style="text-transform:uppercase">
                                         <option value="0">SELECCIONAR</option>
                                         <?php
-                                            $sql="SELECT*FROM marca";
+                                            $sql="SELECT * FROM marca ORDER BY NOM_MARCA ASC";
                                             $query=mysqli_query($conexion,$sql);
                                             while($row=mysqli_fetch_array($query)){
                                         ?>
@@ -661,10 +656,10 @@ if ($usario == "" || $usario == null) {
                                     <br>
 
                                     <label id="titl_color" for="">COLOR DEL INSUMO</label>
-                                    <select  id="color_insu" name="color" required>
+                                    <select  id="color_insu" name="color" required style="text-transform:uppercase">
                                         <option value="0">SELECCIONAR</option>
                                         <?php
-                                            $sql="SELECT*FROM color";
+                                            $sql="SELECT * FROM color ORDER BY NOM_COLOR ASC";
                                             $query=mysqli_query($conexion,$sql);
                                             while($row=mysqli_fetch_array($query)){
                                         ?>
@@ -742,12 +737,12 @@ if ($usario == "" || $usario == null) {
         <!--formulario de ingreso-->
         <div class="form-ingre" id="form_ingre">
             <h1 class="titulo_form">REGISTRO DE INGRESO</h1>
-            <form action="#" class="form_ingreso" method="POST" autocomplete="off">
+            <form action="../../php/crear_Mtextil/formul_ingreso.php" class="form_ingreso" method="POST" autocomplete="off">
                 <label class="in_insumo">INSUMO</label>
-                <select name="insumo" id="insumo">
+                <select name="insumo" id="insumo" style="text-transform:uppercase">
                     <option value="0">SELECCIONAR</option>
                     <?php
-                        $sql="SELECT * FROM insumos";
+                        $sql="SELECT * FROM insumos ORDER BY NOM_INSUMOS ASC";
                         $query=mysqli_query($conexion,$sql);
                             while($row=mysqli_fetch_array($query)){
                         ?>
@@ -763,13 +758,13 @@ if ($usario == "" || $usario == null) {
                 <a href="#" id="reg_insu" class="uno">CREAR INSUMO</a>
                 <br>
                 <label class="cant_in">CANTIDAD INSUMOS</label>
-                <input type="number" name="cant_insumo" id="cant_insumo" placeholder="CANTIDAD" required>
+                <input type="number" name="cant_insumo" id="cant_insumo" placeholder="CANTIDAD" required style="text-transform:uppercase">
                 <br>
                 <label class="mat_tex">MATERIAL TEXTIL</label>
-                <select name="mate_textil" id="mate_textil">
+                <select required name="mate_textil" id="mate_textil" style="text-transform:uppercase">
                     <option value="0">SELECCIONAR</option>
                     <?php
-                        $sql="SELECT * FROM material_textil";
+                        $sql="SELECT * FROM material_textil ORDER BY NOM_M_TEXTIL ASC";
                         $query=mysqli_query($conexion,$sql);
                             while($row=mysqli_fetch_array($query)){
                         ?>
@@ -788,10 +783,10 @@ if ($usario == "" || $usario == null) {
                 <input type="number" name="cant_m_textil" id="cant_m_textil" placeholder="CANTIDAD" required>
                 <br>
                 <label class="maqui">MAQUINARIA</label>
-                <select name="maquinaria" id="maquinaria">
+                <select name="maquinaria" id="maquinaria" required style="text-transform:uppercase">
                     <option value="0">SELECCIONAR</option>
                     <?php
-                        $sql="SELECT * FROM maquinaria";
+                        $sql="SELECT * FROM maquinaria ORDER BY SERIAL ASC";
                         $query=mysqli_query($conexion,$sql);
                             while($row=mysqli_fetch_array($query)){
                         ?>
@@ -807,7 +802,9 @@ if ($usario == "" || $usario == null) {
                 <a href="#" id="reg_maqui" class="tres">CREAR MAQUINARIA</a>
                 <br>
                 <label class="cant_maq">CANTIDAD MAQUINARIA</label>
-                <input type="number" name="cant_maquinaria" id="cant_maquinaria" placeholder="CANTIDAD" required>
+                <input type="number" name="cant_maquinaria" id="cant_maquinaria" placeholder="CANTIDAD" required style="text-transform:uppercase">
+                <br>
+                <input type="hidden" name="usuario_ingreso" id="usuario_ingreso" class="aprendiz" value="<?php echo $usario; ?>">
                 <br>
                 <input type="submit" name="ingreso" id="ingreso" value="REGISTRAR">
 

@@ -9,9 +9,11 @@ if(isset($_POST['regis_material'])){
     $color=$_POST['color'];
     $metraje=$_POST['metraje'];
     $cant_rollos=$_POST['cant_rollos'];
+    
+    $cant_total = $metraje * $cant_rollos;
 
-    $sql="INSERT INTO material_textil(NOM_M_TEXTIL, ID_TIPO_TELA, ID_MARCA, ID_COLOR, METRAJE, CANT_ROLLO) 
-    VALUES('$nom_material', '$tipo_tela', '$marca', '$color', '$metraje', '$cant_rollos')";
+    $sql="INSERT INTO material_textil(NOM_M_TEXTIL, ID_TIPO_TELA, ID_MARCA, ID_COLOR, METRAJE, CANT_ROLLO, TOTAL_METRAJE) 
+    VALUES('$nom_material', '$tipo_tela', '$marca', '$color', '$metraje', '$cant_rollos','$cant_total')";
     $query = mysqli_query($conexion,$sql);
     
     if(!$query){
@@ -19,7 +21,7 @@ if(isset($_POST['regis_material'])){
         echo '<script> window.location="../../users/administrador/admin.php" </script>';
     }
     else{
-        echo '<script> alert ("Se guardaron los datos exitosamente, gracias por crear el material");</script>';
+        echo '<script> alert ("Se guardaron los datos del material exitosamente");</script>';
         echo '<script> window.location="../../users/administrador/admin.php" </script>';
     }
 

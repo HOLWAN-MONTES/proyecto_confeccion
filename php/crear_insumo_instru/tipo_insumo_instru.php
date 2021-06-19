@@ -3,18 +3,18 @@
     include('../../includes/conection.php');
 
 
-    if($_POST['env-tela']){
-        $tip_tela=$_POST["agre_tipo_tela"];
+    if($_POST['env-insumo']){
+        $tip_insumo=$_POST["agre_tipo_insumo"];
 
-        $consulta = "SELECT * FROM tipo_tela WHERE NOM_TIPO_TELA = '$tip_tela'";
+        $consulta = "SELECT * FROM tipo_insumo WHERE NOM_INSUMO = '$tip_insumo'";
         $rray = $conexion->query($consulta);
         $arreg= $rray->num_rows;
         if($arreg >= 1){
-            echo '<script> alert ("Esta Tela Ya Esta Registrada");</script>';
+            echo '<script> alert ("Este Insumo Ya Esta Registrado");</script>';
             echo '<script> window.location="../../users/instructor/instructor.php" </script>';
         }
         else{
-            $consultar_t = "INSERT INTO tipo_tela (NOM_TIPO_TELA) VALUES('$tip_tela')";
+            $consultar_t = "INSERT INTO tipo_insumo (NOM_INSUMO) VALUES('$tip_insumo')";
             $query_t = mysqli_query($conexion,$consultar_t);
 
             if(!$query_t){
