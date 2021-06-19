@@ -469,32 +469,49 @@ if ($usario == "" || $usario == null) {
             </div>
 
         </div>
-       
+        
         <!--formulario de ingreso-->
         <div class="form-ingre" id="form_ingre">
             <h1 class="titulo_form">REGISTRO DE INGRESO</h1>
-            <form class="form_ingreso" id="form_ingreso" method="POST" autocomplete="off">
+            <form class="form_ingreso" id="form_ingreso" autocomplete="off">
+                <select name="doc_prov" class="docu_prove" id="doc_prove">
+                    <option value="0">SELECCIONAR</option>
+                    <?php
+                        $sql="SELECT * FROM proveedor";
+                        $query=mysqli_query($conexion,$sql);
+                        while($row=mysqli_fetch_array($query)){
+                    ?>
+                    <option value="<?php echo $row['DOCUMENTO_PROVE']?>"
+                        style="text-transform:uppercase">
+                        <?php echo $row['NOMBRE_PRO']?>
+                    </option>
+                    <?php
+                        }
+                    ?> 
+                </select>
                 <label class="in_insumo">INSUMO</label>
                 <select name="insumo" id="insumo" style="text-transform:uppercase" required>
                     <option value="0">SELECCIONAR</option>
                     <?php
-                        $sql="SELECT * FROM insumos ORDER BY NOM_INSUMOS ASC";
-                        $query=mysqli_query($conexion,$sql);
-                            while($row=mysqli_fetch_array($query)){
+                        $sql="SELECT * FROM insumos";
+                        $query_insu=mysqli_query($conexion,$sql);
+                        while($row=mysqli_fetch_array($query_insu)){
                         ?>
                     <option value="<?php echo $row['ID_INSUMOS']?>"
-                        style="text-transform:uppercase">
+                        style="text-transform:uppercase" id="op_insu">
                         <?php echo $row['NOM_INSUMOS']?>
                     </option>
 
                     <?php
                         }
+                        
                     ?> 
                 </select>
                 <a href="#" id="reg_insu" class="uno">CREAR INSUMO</a>
                 <br>
                 <label class="cant_in">CANTIDAD INSUMOS</label>
-                <input type="number" name="cant_insumo" id="cant_insumo" placeholder="CANTIDAD" required style="text-transform:uppercase">
+                <a href="" class="mas"><i class="mas fas fa-plus"></i></a>
+                <input type="number" name="cant_insumo" id="cant_insumo" placeholder="CANTIDAD" required>
                 <br>
                 <label class="mat_tex">MATERIAL TEXTIL</label>
                 <select name="mate_textil" id="mate_textil" required style="text-transform:uppercase">
@@ -516,7 +533,8 @@ if ($usario == "" || $usario == null) {
                 <a href="#" id="reg_m_textil" class="dos">CREAR MATERIAL TEXTIL</a>
                 <br>
                 <label class="cant_mat">CANTIDAD MATERIAL TEXTIL</label>
-                <input type="number" name="cant_m_textil" id="cant_m_textil" placeholder="CANTIDAD" required style="text-transform:uppercase">
+                <a href="" class="mas_mat"><i class="mas_mat fas fa-plus"></i></a>
+                <input type="number" name="cant_m_textil" id="cant_m_textil" placeholder="CANTIDAD" required>
                 <br>
                 <label class="maqui">MAQUINARIA</label>
                 <select name="maquinaria" id="maquinaria" required style="text-transform:uppercase">
@@ -538,7 +556,8 @@ if ($usario == "" || $usario == null) {
                 <a href="#" id="reg_maqui" class="tres">CREAR MAQUINARIA</a>
                 <br>
                 <label class="cant_maq">CANTIDAD MAQUINARIA</label>
-                <input type="number" name="cant_maquinaria" id="cant_maquinaria" placeholder="CANTIDAD" required style="text-transform:uppercase">
+                <a href="" class="mas_maq"><i class="mas_maq fas fa-plus"></i></a>
+                <input type="number" name="cant_maquinaria" id="cant_maquinaria" placeholder="CANTIDAD" required>
                 <br>
                 <input type="submit" name="ingreso" id="ingreso" value="REGISTRAR">
                 <input type="hidden" name="usuario" id="user" value="<?php echo $usario; ?>">
