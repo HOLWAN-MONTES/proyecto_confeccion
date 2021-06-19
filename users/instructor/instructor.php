@@ -493,7 +493,7 @@ if ($usario == "" || $usario == null) {
                 <select name="insumo" id="insumo" style="text-transform:uppercase" required>
                     <option value="0">SELECCIONAR</option>
                     <?php
-                        $sql="SELECT * FROM insumos";
+                        $sql="SELECT * FROM insumos ORDER BY NOM_INSUMOS ASC";
                         $query_insu=mysqli_query($conexion,$sql);
                         while($row=mysqli_fetch_array($query_insu)){
                         ?>
