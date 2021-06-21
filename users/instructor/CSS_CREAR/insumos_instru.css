@@ -130,249 +130,239 @@
     border-bottom: 3px solid #5aa469;
 }
 
-/* -----------------------------------crear marca del insumo------------------------ */
-.crear_marca_insumo{
-    background-color: #0e57f550;
-    z-index: 4;
-    width: 80%;
-    height: 80%;
-    margin-top: -35%;
-    position: absolute;
-    display: none;
+/*--------------------crear tipo insumo-------------------*/
+.crear_tipo_insumo{
+    background-color: rgba(0,0,0,0.5);  
+    width: 100%;
+    height: 120%;
+    position: fixed;
+    top: -20%;
+    right: 20%;
+    left: 0%;
+    justify-content: center;
+    align-items: center;
+    display: none;  
 }
-
-.content_form{
-    margin-top: 5%;
-    margin-left: 15%;
-    width: 70%;
-    height: 70%;
+.content_from_ins{
+    margin-top: 22%;
+    margin-left: 40%;
+    width: 35%;
+    height: 45%;
     background: #fff;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+    transition: transform 1s;
+    transform: translateY(0%);  
 }
-
 #cerrar_ventana i{
-    font-size: 40px;
     cursor: pointer;
-    color: red;
-
-}
-
-#cerrar_ventana {
-    float: right;
-}
-/*--------------------crear tipo insumo-------------------*/
-
-.crear_tipo_insumo{
-    background-color: #0e57f550;
-    z-index: 4;
-    width: 80%;
-    height: 80%;
-    margin-top: -35%;
-    position: absolute;
-    display: none;
-}
-
-.content_from{
-    margin-top: 5%;
-    margin-left: 15%;
-    width: 70%;
-    height: 70%;
-    background: #fff;
-    text-align: center;  
-}
-
-#cerrar_ventana i{
     font-size: 40px;
-    cursor: pointer;
     color: red;
-
-}
-
-#cerrar_ventana {
     float: right;
+    margin-top: -45px;
+    margin-left: 100px;
+    margin-right: 7px;
 }
-
 .formulario_t{
     background: #d6d2c4;
-    margin-top: 7%;
+    margin-top: -5%;
     margin-left: 22%;
     text-align: center;
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
     color: #150485;
-    border: 1px solid black;
-    width: 54%;
-    height: 192px;
+    border: 2px solid black;
+    width: 55%;
+    max-height: -120%;
+    padding-block: 3%;
     text-align: center;
 }
 .titulo_t_insumo{
-   padding: 8px;
-   font-size: 25px;
-   font-weight: bold;
-   text-align: center;
-   margin-left: 44px;
-
+    margin-left: -10px;
+    margin-top: -11%;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.dig-tip-insu{
+    font-size: 18px;
+    cursor:text; 
 }
 .ti_insumo{
-    margin-top: 10px;
-    margin-left: 10px;
-    font-size: 15px;
-    padding: 8px;
-    border: 1px solid #000;
+    margin-top: 7%;
+    height: 15%;
+    text-align: center;
+    padding: 5%;
+    border: 2px solid black;
+    text-transform: uppercase;
 }
 .env-insumo{
+    margin-top: 8%;
     font-weight: bold;
-    margin-left: 13px;
-    padding: 10px;
-    margin-top: 23px;
-    border: 0;
-    border-radius: 10px;
-    width: 120px;
-    height: 35px;
-    font-size: 14px;
-    cursor: pointer;
-    color: #000;
-    background: #DC540C;
-    box-shadow:20px 10px  20px rgba(226, 87, 6, 0.5);
+    border: 2px solid black;
+    padding: 5%;
+    cursor: pointer; 
+    text-align: center;
 }
 /*--------------------crear marca de insumo-------------------*/
-
-.crear_marca{
-    background-color: #0e57f550;
-    z-index: 4;
-    width: 80%;
-    height: 80%;
-    margin-top: -35%;
-    position: absolute;
-    display: none;
-}
-.content_formMarca{
-    margin-top: 5%;
-    margin-left: 15%;
-    width: 70%;
-    height: 70%;
-    background: #fff;
-    text-align: center;
-}
-#cerrar_ventanaMarca i{
-    font-size: 40px;
-    cursor: pointer;
-    color: red;
-
-}
-
-#cerrar_ventanaMarca {
-    float: right;
-}
-.formularioMarca{
-    background: #d6d2c4;
-    margin-top: 7%;
-    margin-left: 22%;
-    text-align: center;
-    font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #150485;
-    border: 1px solid black;
-    width: 54%;
-    height: 192px;
-    text-align: center;
-}
-.titulo_marca{
-    padding: 8px;
-    font-size: 25px;
-    font-weight: bold;
-    text-align: center;
-     margin-left: 44px;
-}
-.ti_marca{
-    margin-top: 10px;
-    margin-left: 10px;
-    font-size: 15px;
-    padding: 8px;
-    border: 1px solid #000; 
-}
-.env-marca{
-    font-weight: bold;
-    margin-left: 13px;
-    padding: 10px;
-    margin-top: 23px;
-    border: 0;
-    border-radius: 10px;
-    width: 120px;
-    height: 35px;
-    font-size: 14px;
-    cursor: pointer;
-    color: #000;
-    background: #DC540C;
-    box-shadow:20px 10px  20px rgba(226, 87, 6, 0.5); 
-}
-/*----------------crear color del insumo------------------------*/
-.crear_color{
-    background-color: #0e57f550;
-    z-index: 4;
-    width: 80%;
-    height: 80%;
-    margin-top: -35%;
-    position: absolute;
+.crear_marca_ins{
+    background-color: rgba(0,0,0,0.5);  
+    width: 100%;
+    height: 120%;
+    position: fixed;
+    top: -20%;
+    right: 20%;
+    left: 0%;
+    justify-content: center;
+    align-items: center;
     display: none; 
 }
-.content_formColor{
-    margin-top: 5%;
-    margin-left: 15%;
-    width: 70%;
-    height: 70%;
+.content_formMarca_ins{
+    margin-top: 22%;
+    margin-left: 40%;
+    width: 35%;
+    height: 45%;
     background: #fff;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+    transition: transform 1s;
+    transform: translateY(0%);
 }
-#cerrar_ventanaColor i{
-    font-size: 40px;
+#cerrar_ventanaMarca_ins i{
     cursor: pointer;
+    font-size: 40px;
     color: red;
-
-}
-
-#cerrar_ventanaColor {
     float: right;
+    margin-top: -45px;
+    margin-left: 100px;
+    margin-right: 7px;
 }
-.formularioColor{
+.formularioMarca_ins{
     background: #d6d2c4;
-    margin-top: 7%;
+    margin-top: -5%;
     margin-left: 22%;
     text-align: center;
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
     color: #150485;
-    border: 1px solid black;
-    width: 54%;
-    height: 192px;
-    text-align: center;
+    border: 2px solid black;
+    width: 55%;
+    max-height: -120%;
+    padding-block: 3%;
+    text-align: center;  
 }
-.titulo_color{
-    padding: 8px;
+.titulo_marca_ins{
+    margin-top: -11%;
+    margin-left: -10px;
     font-size: 25px;
-    font-weight: bold;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold; 
+}
+.dig-mar-in{
+    font-size: 18px;
+    cursor:text;
+}
+.ti_marca_ins{
+    margin-top: 7%;
+    height: 15%;
     text-align: center;
-    margin-left: 44px;
+    padding: 5%;
+    border: 2px solid black;
+    text-transform: uppercase;
 }
-.ti_color{
-    margin-top: 10px;
-    margin-left: 10px;
-    font-size: 15px;
-    padding: 8px;
-    border: 1px solid #000;
-}
-.env-color{
+.env-marca_ins{
+    margin-top: 8%;
     font-weight: bold;
-    margin-left: 13px;
-    padding: 10px;
-    margin-top: 23px;
-    border: 0;
-    border-radius: 10px;
-    width: 120px;
-    height: 35px;
-    font-size: 14px;
+    border: 2px solid black;
+    padding: 5%;
+    cursor: pointer; 
+    text-align: center;
+}
+
+
+/*----------------crear color del insumo------------------------*/
+.crear_color_insu{
+    background-color: rgba(0,0,0,0.5);  
+    width: 100%;
+    height: 120%;
+    position: fixed;
+    top: -20%;
+    right: 20%;
+    left: 0%;
+    justify-content: center;
+    align-items: center;
+    display: none;  
+}
+.content_formColor_insu{
+    margin-top: 22%;
+    margin-left: 40%;
+    width: 35%;
+    height: 45%;
+    background: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+    transition: transform 1s;
+    transform: translateY(0%);
+}
+#cerrar_ventanaColor_insu i{
     cursor: pointer;
-    color: #000;
-    background: #DC540C;
-    box-shadow:20px 10px  20px rgba(226, 87, 6, 0.5); 
+    font-size: 40px;
+    color: red;
+    float: right;
+    margin-top: -45px;
+    margin-left: 100px;
+    margin-right: 7px;
+}
+.formularioColor_insu{
+    background: #d6d2c4;
+    margin-top: -5%;
+    margin-left: 22%;
+    text-align: center;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #150485;
+    border: 2px solid black;
+    width: 55%;
+    max-height: -120%;
+    padding-block: 3%;
+    text-align: center; 
+}
+.titulo_color_insu{
+    margin-top: -11%;
+    margin-left: -10px;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;  
+}
+.dig-col-in{
+    font-size: 18px;
+    cursor:text;
+}
+.ti_color_insu{
+    margin-top: 7%;
+    height: 15%;
+    text-align: center;
+    padding: 5%;
+    border: 2px solid black;
+    text-transform: uppercase;
+}
+.env-color_insu{
+    margin-top: 8%;
+    font-weight: bold;
+    border: 2px solid black;
+    padding: 5%;
+    cursor: pointer; 
+    text-align: center; 
 }

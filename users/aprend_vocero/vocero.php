@@ -6,8 +6,8 @@ $usario = $_SESSION["DOCUMENTO"];
 if ($usario == "" || $usario == null) {
     header("location: ../../index.html");
 }
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,10 +37,10 @@ if ($usario == "" || $usario == null) {
                 </div>
                 <div class="menu">
                     <ul>
-                        <li class="suba_submenu" id="btn_prestamo">PRESTAMOS 
-                        </li>
+                        <!-- <li class="suba_submenu" id="btn_prestamo">PRESTAMOS 
+                        </li> -->
 
-                        <li class="suba_submenu" id="btn_registro">PRESTAMOS TEXTIL 
+                        <li class="suba_submenu" id="btn_registro">REGISTRO PRESTAMO  
                         </li>
 
                         <li class="suba_submenu">REPORTES</li>
@@ -76,46 +76,16 @@ if ($usario == "" || $usario == null) {
             <!--div que tiene toda la informacion que se le ofrece al vocero-->
             <div class="info">
 
-                <!--formulario de prestamo-->
-                <div class="form-prestamo" id="form_prestamo">
-                    <div class="primer_form">
-                        <h1 class="titulo_form">REGISTRO DE PRESTAMOS</h1>
-                        <form action="#" class="form_prest" method="POST" autocomplete="off">
-                            <label class="aprend_pres">APRENDIZ</label>
-                            <select name="aprendiz" id="aprendiz">
-                                <option value="0">SELECCIONAR</option>
-                                <?php
-                                    $sql="SELECT * FROM usuario";
-                                    $query=mysqli_query($conexion,$sql);
-                                        while($row=mysqli_fetch_array($query)){
-                                    ?>
-                                <option value="<?php echo $row['DOCUMENTO']?>"
-                                    style="text-transform:uppercase">
-                                    <?php echo $row['NOMBRE']?>
-                                </option>
-
-                                <?php
-                                    }
-                                ?> 
-                            </select>
-                            <br>
-                            <input type="submit" name="reg_prestamo" id="reg_prestamo" value="CONTINUAR">
-
-                        </form>
-
-                    </div>
-                    
-                </div>
-
-                <!--formulario de registro de prestamo-->
+                <!--formulario de registro de prestamos-->
                 <div class="form_reg_pres" id="form_reg_pres">
                     <h1 class="titulo_form">REGISTRO DE PRESTAMOS</h1>
-                    <form action="#" class="form_press" method="POST" autocomplete="off">
+                    <form action="../../php/prestamo_aprendiz/reg_prestamo.php" class="form_press" method="POST" autocomplete="off">
+                        <input type="hidden" name="aprendiz" id="aprendiz" class="aprendiz" value="<?php echo $usario; ?>">
                         <label class="in_insumo">INSUMO</label>
                         <select name="insumo" id="insumo">
-                            <option value="0">SELECCIONAR</option>
+                            <option value="0" >SELECCIONAR</option>
                             <?php
-                                $sql="SELECT * FROM insumos";
+                                $sql="SELECT * FROM insumos ORDER BY NOM_INSUMOS ASC";
                                 $query=mysqli_query($conexion,$sql);
                                     while($row=mysqli_fetch_array($query)){
                                 ?>
@@ -136,7 +106,7 @@ if ($usario == "" || $usario == null) {
                         <select name="mate_textil" id="mate_textil">
                             <option value="0">SELECCIONAR</option>
                             <?php
-                                $sql="SELECT * FROM material_textil";
+                                $sql="SELECT * FROM material_textil ORDER BY NOM_M_TEXTIL ASC";
                                 $query=mysqli_query($conexion,$sql);
                                     while($row=mysqli_fetch_array($query)){
                                 ?>

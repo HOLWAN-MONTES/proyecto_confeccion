@@ -9,7 +9,7 @@
     opacity: 0;
     visibility: hidden;
     width: 100%;
-    height: 500px;
+    height: 600px;
     background-color: rgb(245, 237, 237);
 }
 /* .crear_mtextil{
@@ -174,7 +174,6 @@
     left: 0%;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
     display: none; 
 }
 
@@ -193,15 +192,14 @@
     transform: translateY(0%); 
 }
 
-#cerrar_ventana_textil img{
-    font-size: 40px;
+#cerrar_ventana_textil i{
     cursor: pointer;
+    font-size: 40px;
     color: red;
-
-}
-
-#cerrar_ventana_textil {
     float: right;
+    margin-top: -45px;
+    margin-left: 100px;
+    margin-right: 7px;
 }
 
 .formulario_t{
@@ -259,7 +257,6 @@
     left: 0%;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
     display: none; 
 }
 .content_formMarca_textil{
@@ -276,16 +273,16 @@
     transition: transform 1s;
     transform: translateY(0%);
 }
-#cerrar_ventanaMarca_textil img{
-    font-size: 40px;
+#cerrar_ventanaMarca_textil i{
     cursor: pointer;
+    font-size: 40px;
     color: red;
-
-}
-
-#cerrar_ventanaMarca_textil {
     float: right;
+    margin-top: -45px;
+    margin-left: 100px;
+    margin-right: 7px;
 }
+
 .formularioMarca_textil{
     background: #d6d2c4;
     margin-top: -5%;
@@ -340,7 +337,6 @@
     left: 0%;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
     display: none; 
 }
 .content_formColor_textil{
@@ -357,16 +353,16 @@
     transition: transform 1s;
     transform: translateY(0%);
 }
-#cerrar_ventanaColor_textil img{
-    font-size: 40px;
+#cerrar_ventanaColor_textil i{
     cursor: pointer;
+    font-size: 40px;
     color: red;
-
-}
-
-#cerrar_ventanaColor_textil {
     float: right;
+    margin-top: -45px;
+    margin-left: 100px;
+    margin-right: 7px;
 }
+
 .formularioColor_textil{
     background: #d6d2c4;
     margin-top: -5%;

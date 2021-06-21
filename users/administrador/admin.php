@@ -51,13 +51,8 @@ if ($usario == "" || $usario == null) {
                             </ul>
                         </li>
                         <li class="suba_submenu" id="btn_ingreso">INGRESO <!-- dar click y sacar un formulario  -->
-                          <!--   <ul class="mostr">
-                                <li id="insu">CREAR INSUMOS</li>
-                                <li id="maquinaa">CREAR MAQUINARIA</li>
-                                <li id="mate_tex">CREAR MATERIAL TEXTIL</li>
-                                
-                            </ul> -->
                         </li>
+                        
                         <li class="suba_submenu"> PRESTAMOS <!-- clicl el formulario de prestamos  -->
 
                         </li>
@@ -120,6 +115,7 @@ if ($usario == "" || $usario == null) {
                             </div>
 
                             <form class="form1" action="../../php/usuario/crear.php" method="POST" enctype="multipart/form-data">
+<<<<<<< HEAD
                                 <div class="one1">
                                     <input type="number" name="docu" id="docu" placeholder="DOCUMENTO" autocomplete="off" required> &nbsp;&nbsp;&nbsp;
                                     <input type="text" name="nom" id="nom" placeholder="NOMBRE" autocomplete="off" required style="text-transform:uppercase">&nbsp;&nbsp;&nbsp;&nbsp;
@@ -130,6 +126,38 @@ if ($usario == "" || $usario == null) {
                                     <div class="user">
                                         <label id="tex-use" for="">TIPO DE USUARIO</label><br>
                                         <select name="tip_us" class="tip_usu" id="tip_usu" autocomplete="off" required>
+=======
+                            <div class="one1">
+                                <input type="number" name="docu" id="docu" placeholder="DOCUMENTO" autocomplete="off" required> &nbsp;&nbsp;&nbsp;
+                                <input type="text" name="nom" id="nom" placeholder="NOMBRE" autocomplete="off" required style="text-transform:uppercase">&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="text" name="apel" id="apel" placeholder="APELLIDO" autocomplete="off" required style="text-transform:uppercase"> <br><br>
+                            </div>
+                            <div class="one">
+                                <div class="user">
+                                    <label id="tex-use" for="">TIPO DE USUARIO</label><br>
+                                    <select name="tip_us" class="tip_usu" id="tip_usu" autocomplete="off" required style="text-transform:uppercase">
+                                        <option value="">SELECCIONAR</option>
+                                        <?php
+
+                                            $tipo = "SELECT * FROM tipo_usu ORDER BY NOM_TIPO_USU ASC";                                
+                                            $inser = mysqli_query($conexion,$tipo);
+                                            while($tip = mysqli_fetch_array($inser)){
+                                        ?>
+                                            <option name="tip_user" value="<?php echo $tip[0]; ?>"
+                                                style="text-transform:uppercase">
+                                                <?php echo $tip[1]; ?>
+                                            </option>
+                                            <?php
+                                        }
+                                        ?>
+                                        </select><br>
+                                        <a class="crear-user" href="">CREAR TIPO DE USUARIO</a>
+                                    </div>
+                                    <br>
+                                    <div class="doc">
+                                        <label class="tipo-doc" for="">TIPO DE DOCUMENTO</label><br>
+                                        <select name="tip_doc" id="tip_docu" autocomplete="off" required style="text-transform:uppercase">
+>>>>>>> a3732e0c237d1a77c5a5301a4dcc567966aba837
                                             <option value="">SELECCIONAR</option>
                                             <?php
 
@@ -309,7 +337,7 @@ if ($usario == "" || $usario == null) {
                                 required> <br><br>
                             <div class="userr">
                                 <label id="tex-use" for="">TIPO DE USUARIO</label><br>
-                                <select name="tip_us_elim" class="tip_usu_elim" id="tip_usu_elim" autocomplete="off"
+                                <select name="tip_us_elim" class="tip_usu_elim" id="tip_usu_elim" autocomplete="off" style="text-transform:uppercase"
                                     required>
                                     <option value="">SELECCIONAR</option>
                                     <?php
@@ -327,7 +355,7 @@ if ($usario == "" || $usario == null) {
                             </div>
                             <div class="docc">
                                 <label for="">TIPO DE DOCUMENTO</label><br>
-                                <select name="tip_doc_elim" id="tip_docu_elim" autocomplete="off" required>
+                                <select name="tip_doc_elim" id="tip_docu_elim" autocomplete="off" required style="text-transform:uppercase">
                                     <option value="">SELECCIONAR</option>
                                     <?php
                                         $tipo2 = "SELECT * FROM tipo_docu";
@@ -369,13 +397,13 @@ if ($usario == "" || $usario == null) {
                                 <form class="formu_maquinn" action="../../php/crear_maqui/val_maqui.php" method="POST"
                                     autocomplete="off">
                                     <label id="serial_maq">SERIAL</label>
-                                    <input type="number" name="serial" id="serial" placeholder="SERIAL" required>
+                                    <input type="number" name="serial" id="serial" placeholder="SERIAL" required style="text-transform:uppercase">
                                     <br>
                                     <label id="l_maquinn" for="">TIPO DE MAQUINARIA</label>
-                                    <select id="tipo_maqui" name="tipo_maqui" required>
+                                    <select id="tipo_maqui" name="tipo_maqui" required style="text-transform:uppercase">
                                         <option value="0">SELECCIONAR</option>
                                         <?php
-                                                $sql="SELECT * FROM tipo_maquinaria";
+                                                $sql="SELECT * FROM tipo_maquinaria ORDER BY NOM_TIPO_MAQUI ASC";
                                                 $query=mysqli_query($conexion,$sql);
                                                 while($row=mysqli_fetch_array($query)){
                                             ?>
@@ -392,10 +420,10 @@ if ($usario == "" || $usario == null) {
                                     <a id="btn_SalirMaquinarias" class="maquis_fo" href="#">CREAR TIPO DE MAQUINARIA</a>
                                     <br>
                                     <label class="l_marca" for="marca">MARCA DE MAQUINARIA</label>
-                                    <select id="marca" name="marca" required>
+                                    <select id="marca" name="marca" required style="text-transform:uppercase">
                                         <option value="0">SELECCIONAR</option>
                                         <?php
-                                                $sql="SELECT * FROM marca";
+                                                $sql="SELECT * FROM marca ORDER BY NOM_MARCA ASC";
                                                 $query=mysqli_query($conexion,$sql);
                                                 while($row=mysqli_fetch_array($query)){
                                             ?>
@@ -411,10 +439,10 @@ if ($usario == "" || $usario == null) {
                                     <a id="btn_salirmarca" class="tress" href="#">CREAR MARCA</a>
                                     <br>
                                     <label id="t_color" for="">COLOR DE MAQUINARIA</label>
-                                    <select id="color" name="color">
+                                    <select id="color" name="color"required style="text-transform:uppercase">
                                         <option value="0">SELECCIONAR</option>
                                         <?php
-                                                $sql="SELECT*FROM color";
+                                                $sql="SELECT*FROM color ORDER BY NOM_COLOR ASC";
                                                 $query=mysqli_query($conexion,$sql);
                                                 while($row=mysqli_fetch_array($query)){
                                             ?>
@@ -439,11 +467,11 @@ if ($usario == "" || $usario == null) {
                         <!--formulario para crear tipo de maquinaria-->
                         <div class="crear_maquinaria" id="crear_maquinaria">
                             <div class="content_formMaquinaria">
-                                <div id="cerrar_ventana_maquinaria"><img class="cerrar1" src="../../img/cerrar.png"
-                                        alt="Cerrar"></div>
+                                <div id="cerrar_ventana_maquinaria"><i class="fas fa-times-circle"></i></div>
                                 <h2 class="titulo_maquinaria">AGREGAR TIP. MAQUINARIA</h2>
                                 <form action="../../php/crear_maqui/regis_tip_maqui.php" class="formularioMaquinaria"
                                     method="POST" autocomplete="off">
+                                    <label class="dig-tip-maqu" for="">Digite Tipo Maquinaria</label>
                                     <input type="text" class="ti_maquinaria" name="agre_maquinaria" id="agre_maquinaria"
                                         placeholder="TIPO DE MAQUINARIA" required style="text-transform:uppercase">
                                     <input type="submit" class="env-maquinaria" name="env-maquinaria" value="AGREGAR">
@@ -454,9 +482,10 @@ if ($usario == "" || $usario == null) {
                         <!--formulario para crear la marca de maquinaria-->
                         <div class="crear_marca" id="crear_marca">
                             <div class="content_formMarca">
-                                <div id="cerrar_ventanaMarca"><img class="cerrar1" src="../../img/cerrar.png" alt="Cerrar"></div>
+                                <div id="cerrar_ventanaMarca"><i class="fas fa-times-circle"></i></div>
                                 <h2 class="titulo_marca">AGREGAR MARCA</h2>
                                 <form action="../../php/crear_maqui/regis_marca_maqui.php" class="formularioMarca" method="POST" autocomplete="off">
+                                    <label class="dig-mar" for="">Digite Marca</label>
                                     <input type="text" class="ti_marca" name="agre_marca" id="agre_marca" placeholder="MARCA" required style="text-transform:uppercase">
                                     <input type="submit" class="env-marca" name="env-marca" value="AGREGAR">
                                 </form>
@@ -466,9 +495,10 @@ if ($usario == "" || $usario == null) {
                         <!--formulario para crear el color de maquinaria-->
                         <div class="crear_color" id="crear_color">
                             <div class="content_formColor">
-                                <div id="cerrar_ventanaColor"><img class="cerrar1" src="../../img/cerrar.png" alt="Cerrar"></div>
+                                <div id="cerrar_ventanaColor"><i class="fas fa-times-circle"></i></div>
                                 <h2 class="titulo_color">AGREGAR COLOR</h2>
                                 <form action="../../php/crear_maqui/regis_color_maqui.php" class="formularioColor" method="POST" autocomplete="off">
+                                    <label class="dig-colores" for="">Digite Color</label>
                                     <input type="text" class="ti_color" name="agre_color" id="agre_color" placeholder="COLOR" required style="text-transform:uppercase">
                                     <input type="submit" class="env-color" name="env-color" value="AGREGAR">
                                 </form>
@@ -491,10 +521,10 @@ if ($usario == "" || $usario == null) {
                                         placeholder="NOMBRE MATERIAL" required style="text-transform:uppercase">
                                     <br>
                                     <label id="t_tela" for="tela">TIPO DE TELA</label>
-                                    <select class="tela" id="tipo_tela" name="tipo_tela">
+                                    <select class="tela" id="tipo_tela" name="tipo_tela" style="text-transform:uppercase" required>
                                         <option value="0">SELECCIONAR</option>
                                         <?php
-                                            $sql="SELECT * FROM tipo_tela";
+                                            $sql="SELECT * FROM tipo_tela ORDER BY NOM_TIPO_TELA ASC";
                                             $query=mysqli_query($conexion,$sql);
                                             while($row=mysqli_fetch_array($query)){
                                         ?>
@@ -510,10 +540,10 @@ if ($usario == "" || $usario == null) {
                                     <a id="btn_salirtela_textil" class="d_tela" href="#">CREAR TIPO TELA</a>
                                     <br>
                                     <label class="tit_marca" for="marca">MARCA</label>
-                                    <select class="marca_tex" id="marca_tex" name="marca">
+                                    <select class="marca_tex" id="marca_tex" name="marca" style="text-transform:uppercase" required>
                                         <option value="0">SELECCIONAR</option>
                                         <?php
-                                            $sql="SELECT * FROM marca";
+                                            $sql="SELECT * FROM marca ORDER BY NOM_MARCA ASC";
                                             $query=mysqli_query($conexion,$sql);
                                             while($row=mysqli_fetch_array($query)){
                                         ?>
@@ -529,10 +559,10 @@ if ($usario == "" || $usario == null) {
                                     <a id="btn_salirmarca_textil" class="ul_marca" href="#">CREAR MARCA</a>
                                     <br>
                                     <label class="titl_color">COLOR</label>
-                                    <select class="color_tex" id="color_tex" name="color">
+                                    <select class="color_tex" id="color_tex" name="color" style="text-transform:uppercase" required>
                                         <option value="0">SELECCIONAR</option>
                                         <?php
-                                            $sql="SELECT * FROM color";
+                                            $sql="SELECT * FROM color ORDER BY NOM_COLOR ASC";
                                             $query=mysqli_query($conexion,$sql);
                                             while($row = mysqli_fetch_array($query)){
                                         ?>
@@ -549,11 +579,11 @@ if ($usario == "" || $usario == null) {
 
                                     <label class="t_metraje" for="metraje">METRAJE</label>
                                     <input type="number" class="metraje" name="metraje" id="metraje" placeholder="METRAJE"
-                                        required>
+                                        required style="text-transform:uppercase">
 
                                     <label class="t_rollos">ROLLOS</label>
                                     <input type="number" class="cant_rollos" name="cant_rollos" id="cant_rollos"
-                                        placeholder="CANT. ROLLOS" required>
+                                        placeholder="CANT. ROLLOS" required style="text-transform:uppercase">
 
                                     <input type="hidden" name="cre_tela" value="crearmaterial">
                                     <input type="submit" class="continuar" name="regis_material" id="regis_material"
@@ -566,8 +596,7 @@ if ($usario == "" || $usario == null) {
                         <!--formulario para crear tipo de tela-->
                         <div class="crear_tipo_tela_textil" id="crear_tipo_tela_textil">
                             <div class="content_from_textil">
-                                <div id="cerrar_ventana_textil"><img class="cerrar1" src="../../img/cerrar.png"
-                                        alt="Cerrar"></div>
+                                <div id="cerrar_ventana_textil"><i class="fas fa-times-circle"></i></div>
                                 <h2 class="titulo_tipo_tela">AGREGAR TIP TELA</h2>
                                 <form action="../../php/crear_Mtextil/regis_tipo_tela.php" class="formulario_t"
                                     method="POST" autocomplete="off">
@@ -582,12 +611,11 @@ if ($usario == "" || $usario == null) {
                         <!--formulario para crear marca del mat_texil-->
                         <div class="crear_marca_textil" id="crear_marca_textil">
                             <div class="content_formMarca_textil">
-                                <div id="cerrar_ventanaMarca_textil"><img class="cerrar1" src="../../img/cerrar.png"
-                                        alt="Cerrar"></div>
+                                <div id="cerrar_ventanaMarca_textil"><i class="fas fa-times-circle"></i></div>
                                 <h2 class="titulo_marca_textil">AGREGAR MARCA</h2>
                                 <form action="../../php/crear_Mtextil/regis_marca_mater.php" class="formularioMarca_textil"
                                     method="POST" autocomplete="off">
-                                    <label class="dig-mar-t" for="">Digite la Marca</label>
+                                    <label class="dig-mar-t" for="">Digite Marca</label>
                                     <input type="text" class="ti_marca_textil" name="agre_marca" id="agre_marca"
                                         placeholder="MARCA" required style="text-transform:uppercase">
                                     <input type="submit" class="env-marca_textil" name="env-marca" value="AGREGAR">
@@ -598,12 +626,11 @@ if ($usario == "" || $usario == null) {
                         <!--formulario para crear color del mat_textil-->
                         <div class="crear_color_textil" id="crear_color_textil">
                             <div class="content_formColor_textil">
-                                <div id="cerrar_ventanaColor_textil"><img class="cerrar1" src="../../img/cerrar.png"
-                                        alt="Cerrar"></div>
+                                <div id="cerrar_ventanaColor_textil"><i class="fas fa-times-circle"></i></div>
                                 <h2 class="titulo_color_textil">AGREGAR COLOR</h2>
                                 <form action="../../php/crear_Mtextil/regis_color_mater.php" class="formularioColor_textil"
                                     method="POST" autocomplete="off">
-                                    <label class="dig-col-t" for="">Digite el Color</label>
+                                    <label class="dig-col-t" for="">Digite Color</label>
                                     <input type="text" class="ti_color_textil" name="agre_color" id="agre_color"
                                         placeholder="COLOR" required style="text-transform:uppercase">
                                     <input type="submit" class="env-color_textil" name="env-color" value="AGREGAR">
@@ -623,10 +650,10 @@ if ($usario == "" || $usario == null) {
                                 <form class="cre_in" action="../../php/crear_insumo/val_insumos.php" method="POST"
                                     autocomplete="off">
                                     <label id="tip_ins">TIPO DE INSUMO</label>
-                                    <select id="tipo_insumos" name="tipinsumo" required>
+                                    <select id="tipo_insumos" name="tipinsumo" required style="text-transform:uppercase">
                                         <option value="0">SELECCIONAR</option>
                                         <?php
-                                            $sql="SELECT*FROM tipo_insumo";
+                                            $sql="SELECT * FROM tipo_insumo ORDER BY NOM_INSUMO ASC";
                                             $query=mysqli_query($conexion,$sql);
                                             while($row=mysqli_fetch_array($query)){
                                         ?>
@@ -647,10 +674,10 @@ if ($usario == "" || $usario == null) {
                                         placeholder="NOMBRE DE INSUMO" required style="text-transform:uppercase">
                                     <br>
                                     <label class="ins_marca" for="">MARCA DEL INSUMO</label>
-                                    <select  id="marca_insu" name="marca" required>
+                                    <select  id="marca_insu" name="marca" required style="text-transform:uppercase">
                                         <option value="0">SELECCIONAR</option>
                                         <?php
-                                            $sql="SELECT*FROM marca";
+                                            $sql="SELECT * FROM marca ORDER BY NOM_MARCA ASC";
                                             $query=mysqli_query($conexion,$sql);
                                             while($row=mysqli_fetch_array($query)){
                                         ?>
@@ -663,14 +690,14 @@ if ($usario == "" || $usario == null) {
                                         ?>
                                     </select>
                                     <br>
-                                    <a id="btn_salirmarca" class="dir_i_marca" href="#">CREAR MARCA</a>
+                                    <a id="btn_salirmarca_insumo" class="dir_i_marca" href="#">CREAR MARCA</a>
                                     <br>
 
                                     <label id="titl_color" for="">COLOR DEL INSUMO</label>
-                                    <select  id="color_insu" name="color" required>
+                                    <select  id="color_insu" name="color" required style="text-transform:uppercase">
                                         <option value="0">SELECCIONAR</option>
                                         <?php
-                                            $sql="SELECT*FROM color";
+                                            $sql="SELECT * FROM color ORDER BY NOM_COLOR ASC";
                                             $query=mysqli_query($conexion,$sql);
                                             while($row=mysqli_fetch_array($query)){
                                         ?>
@@ -683,7 +710,7 @@ if ($usario == "" || $usario == null) {
                                         ?>
                                     </select>
                                     <br>
-                                    <a id="btn_salircolor" href="#" class="direc_color">CREAR COLOR</a>
+                                    <a id="btn_salircolor_insumo" href="#" class="direc_color">CREAR COLOR</a>
                                     <br>
 
 
@@ -695,42 +722,45 @@ if ($usario == "" || $usario == null) {
                         
                         <!--formulario para crear tipo de insumo-->
                         <div class="crear_tipo_insumo" id="crear_tipo_insumo">
-                            <div class="content_from">
+                            <div class="content_from_ins">
                                 <div id="cerrar_ventana"><i class="fas fa-times-circle"></i></div>
-                                <h2 class="titulo_t_insumo">Agregar Tip. Insumo</h2>
-                                <form action="../../php/crear_insumo/regis_tipo_insumo.php" class="formulario_t"
+                                <h2 class="titulo_t_insumo">AGREGAR TIP. INSUMO</h2>
+                                <form action="../../php/crear_insumo/regis_tipo_insumo.php" class="formulario_tip"
                                     method="POST" autocomplete="off">
+                                    <label class="dig-tip-insu" for="">Digite Tipo Insumo</label>
                                     <input type="text" class="ti_insumo" name="agre_tipo_insumo" id="agre_tipo_insumo"
-                                        placeholder="tipo insumo" required>
+                                        placeholder="TIPO INSUMO" required style="text-transform:uppercase">
                                     <input type="submit" class="env-insumo" name="env-insumo" value="AGREGAR">
                                 </form>
                             </div>
                         </div>
 
                         <!--formulario para crear marca de insumo-->
-                        <div class="crear_marca" id="crear_marca">
-                            <div class="content_formMarca">
-                                <div id="cerrar_ventanaMarca"><i class="fas fa-times-circle"></i></div>
-                                <h2 class="titulo_marca">Agregar Marca</h2>
-                                <form action="../../php/crear_insumo/regis_marca_insu.php" class="formularioMarca"
+                        <div class="crear_marca_insumo" id="crear_marca_insumo">
+                            <div class="content_formMarca_insu">
+                                <div id="cerrar_ventanaMarca_insu"><i class="fas fa-times-circle"></i></div>
+                                <h2 class="titulo_marca_insu">AGREGAR MARCA</h2>
+                                <form action="../../php/crear_insumo/regis_marca_insu.php" class="formularioMarca_insu"
                                     method="POST" autocomplete="off">
-                                    <input type="text" class="ti_marca" name="agre_marca" id="agre_marca"
-                                        placeholder="Digite la marca" required>
-                                    <input type="submit" class="env-marca" name="env-marca" value="AGREGAR">
+                                    <label class="dig-mar-in" for="">Digite Marca</label>
+                                    <input type="text" class="ti_marca_insu" name="agre_marca" id="agre_marca"
+                                        placeholder="MARCA" required style="text-transform:uppercase">
+                                    <input type="submit" class="env-marca_insu" name="env-marca" value="AGREGAR">
                                 </form>
                             </div>
                         </div>
 
                         <!--formulario para crear color de insumo-->
-                        <div class="crear_color" id="crear_color">
-                            <div class="content_formColor">
-                                <div id="cerrar_ventanaColor"><i class="fas fa-times-circle"></i></div>
-                                <h2 class="titulo_color">Agregar Color</h2>
-                                <form action="../../php/crear_insumo/regis_color_insu.php" class="formularioColor"
+                        <div class="crear_color_insu" id="crear_color_insu">
+                            <div class="content_formColor_insu">
+                                <div id="cerrar_ventanaColor_insu"><i class="fas fa-times-circle"></i></div>
+                                <h2 class="titulo_color_insu">AGREGAR COLOR</h2>
+                                <form action="../../php/crear_insumo/regis_color_insu.php" class="formularioColor_insu"
                                     method="POST" autocomplete="off">
-                                    <input type="text" class="ti_color" name="agre_color" id="agre_color"
-                                        placeholder="Digite el color" required>
-                                    <input type="submit" class="env-color" name="env-color" value="AGREGAR">
+                                    <label class="dig-col-in" for="">Digite Color</label>
+                                    <input type="text" class="ti_color_insu" name="agre_color" id="agre_color"
+                                        placeholder="COLOR" required style="text-transform:uppercase">
+                                    <input type="submit" class="env-color_insu" name="env-color" value="AGREGAR">
                                 </form>
                             </div>
                         </div>
@@ -745,12 +775,12 @@ if ($usario == "" || $usario == null) {
         <!--formulario de ingreso-->
         <div class="form-ingre" id="form_ingre">
             <h1 class="titulo_form">REGISTRO DE INGRESO</h1>
-            <form action="#" class="form_ingreso" method="POST" autocomplete="off">
+            <form action="../../php/crear_Mtextil/formul_ingreso.php" class="form_ingreso" method="POST" autocomplete="off">
                 <label class="in_insumo">INSUMO</label>
-                <select name="insumo" id="insumo">
+                <select name="insumo" id="insumo" style="text-transform:uppercase">
                     <option value="0">SELECCIONAR</option>
                     <?php
-                        $sql="SELECT * FROM insumos";
+                        $sql="SELECT * FROM insumos ORDER BY NOM_INSUMOS ASC";
                         $query=mysqli_query($conexion,$sql);
                             while($row=mysqli_fetch_array($query)){
                         ?>
@@ -766,13 +796,13 @@ if ($usario == "" || $usario == null) {
                 <a href="#" id="reg_insu" class="uno">CREAR INSUMO</a>
                 <br>
                 <label class="cant_in">CANTIDAD INSUMOS</label>
-                <input type="number" name="cant_insumo" id="cant_insumo" placeholder="CANTIDAD" required>
+                <input type="number" name="cant_insumo" id="cant_insumo" placeholder="CANTIDAD" required style="text-transform:uppercase">
                 <br>
                 <label class="mat_tex">MATERIAL TEXTIL</label>
-                <select name="mate_textil" id="mate_textil">
+                <select required name="mate_textil" id="mate_textil" style="text-transform:uppercase">
                     <option value="0">SELECCIONAR</option>
                     <?php
-                        $sql="SELECT * FROM material_textil";
+                        $sql="SELECT * FROM material_textil ORDER BY NOM_M_TEXTIL ASC";
                         $query=mysqli_query($conexion,$sql);
                             while($row=mysqli_fetch_array($query)){
                         ?>
@@ -791,10 +821,10 @@ if ($usario == "" || $usario == null) {
                 <input type="number" name="cant_m_textil" id="cant_m_textil" placeholder="CANTIDAD" required>
                 <br>
                 <label class="maqui">MAQUINARIA</label>
-                <select name="maquinaria" id="maquinaria">
+                <select name="maquinaria" id="maquinaria" required style="text-transform:uppercase">
                     <option value="0">SELECCIONAR</option>
                     <?php
-                        $sql="SELECT * FROM maquinaria";
+                        $sql="SELECT * FROM maquinaria ORDER BY SERIAL ASC";
                         $query=mysqli_query($conexion,$sql);
                             while($row=mysqli_fetch_array($query)){
                         ?>
@@ -810,7 +840,9 @@ if ($usario == "" || $usario == null) {
                 <a href="#" id="reg_maqui" class="tres">CREAR MAQUINARIA</a>
                 <br>
                 <label class="cant_maq">CANTIDAD MAQUINARIA</label>
-                <input type="number" name="cant_maquinaria" id="cant_maquinaria" placeholder="CANTIDAD" required>
+                <input type="number" name="cant_maquinaria" id="cant_maquinaria" placeholder="CANTIDAD" required style="text-transform:uppercase">
+                <br>
+                <input type="hidden" name="usuario_ingreso" id="usuario_ingreso" class="aprendiz" value="<?php echo $usario; ?>">
                 <br>
                 <input type="submit" name="ingreso" id="ingreso" value="REGISTRAR">
 

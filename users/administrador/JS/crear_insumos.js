@@ -10,27 +10,29 @@ btn_salirtela.addEventListener('click',function(){
 cerrar_ventana.addEventListener('click',function(){
     crear_tipo_tela.style.display = "none";
 });
+
 //ventana de registro de la marca del insumo
-const btn_salirmarca = document.getElementById('btn_salirmarca');
-const crear_marca = document.getElementById('crear_marca');
-const cerrar_ventanaMarca = document.getElementById('cerrar_ventanaMarca');
+const btn_salirmarca_insumo = document.getElementById('btn_salirmarca_insumo');
+const crear_marca_insumo = document.getElementById('crear_marca_insumo');
+const cerrar_ventanaMarca_insu = document.getElementById('cerrar_ventanaMarca_insu');
 
-btn_salirmarca.addEventListener('click',function(){
-    crear_marca.style.display = "block";
+btn_salirmarca_insumo.addEventListener('click',function(){
+    crear_marca_insumo.style.display = "block";
 });
 
-cerrar_ventanaMarca.addEventListener('click',function(){
-    crear_marca.style.display = "none";
+cerrar_ventanaMarca_insu.addEventListener('click',function(){
+    crear_marca_insumo.style.display = "none";
 });
+
 //ventana de registrar el color del insumo
-const btn_salircolor = document.getElementById('btn_salircolor');
-const crear_color = document.getElementById('crear_color');
-const cerrar_ventanaColor = document.getElementById('cerrar_ventanaColor');
+const btn_salircolor_insumo = document.getElementById('btn_salircolor_insumo');
+const crear_color_insu = document.getElementById('crear_color_insu');
+const cerrar_ventanaColor_insu = document.getElementById('cerrar_ventanaColor_insu');
 
-btn_salircolor.addEventListener('click',function(){
-    crear_color.style.display = "block";
+btn_salircolor_insumo.addEventListener('click',function(){
+    crear_color_insu.style.display = "block";
 });
 
-cerrar_ventanaColor.addEventListener('click',function(){
-    crear_color.style.display = "none";
+cerrar_ventanaColor_insu.addEventListener('click',function(){
+    crear_color_insu.style.display = "none";
 });
