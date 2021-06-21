@@ -1,0 +1,99 @@
+.servicios{
+    background-color: rgb(245, 237, 237);
+    opacity: 0;
+    display: none;
+    visibility: hidden;   
+    width: 100%;
+    height: 1100px; 
+}
+.primera{
+    padding-top: 50px;  
+}
+.servis{
+    text-align: center;
+    color: orangered;
+    font-size: 20px;
+}
+.programa{
+    width: 620px;
+    float: left;
+    margin-left: 150px;
+    margin-top: 40px;
+}
+.foto_sena img{
+    margin-top: 2.6%;
+    width: 420px;
+    height: 250px;
+    float: right;
+    margin-right: 100px;
+}
+.labor1{
+    margin-left: 120px;
+    margin-top: 29.6%;
+    width: 280px;
+    height: 260px;
+}
+.labor1 img{
+    margin-left: 30px;
+    margin-top: 15px;
+    width: 210px;
+    height: 210px;
+}
+.descrip{
+    color: rgb(35, 130, 118);
+    text-align: center;
+    margin-top: 12px;
+    font-size: 16px;
+}
+.labor2{
+    float: left;
+    margin-left: 500px;
+    margin-top: -19.6%;
+    width: 280px;
+    height: 260px; 
+}
+.labor2 img{
+    margin-left: 30px;
+    margin-top: 15px;
+    width: 210px;
+    height: 210px;
+}
+.labor3{
+    float: right;
+    margin-right: 140px;
+    width: 280px;
+    height: 260px;
+    margin-top: -19.6%;
+}
+.labor3 img{
+    margin-left: 30px;
+    margin-top: 15px;
+    width: 210px;
+    height: 210px; 
+}
+.labor4{
+    margin-left: 260px;
+    margin-top: 5%;
+    width: 280px;
+    height: 260px;
+    margin-bottom: 120px;
+}
+.labor4 img{
+    margin-left: 30px;
+    margin-top: 15px;
+    width: 210px;
+    height: 210px;
+}
+.labor5{
+    float: right;
+    margin-right: 350px;
+    width: 280px;
+    height: 260px;
+   margin-top: -28.5%;
+}
+.labor5 img{
+    margin-left: 30px;
+    margin-top: 15px;
+    width: 210px;
+    height: 210px;
+}
