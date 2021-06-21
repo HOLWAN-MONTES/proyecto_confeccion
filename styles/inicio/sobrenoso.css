@@ -1,12 +1,143 @@
 .sobrenoso{
-    background-color: aqua;
-    visibility: hidden;
-    margin-top: -45%;
+    background-color: rgb(245, 237, 237); 
+    opacity: 0;
+    display: none;
+    visibility: hidden;   
+    width: 100%;
+    height: 1500px;
+}
+.titulo_mayor{
+    font-size: 25px;
+}
+.imagen_logo img{
+    width: 200px;
+    height: 180px;
+    margin-left: 230px;
+    margin-top: 80px;
 }
 .textprinci{
-    background-color: red;
+    padding-top: 13px;
     text-align: center;
 }
-.info1{
-    display: flex;
+.principio_full{
+    width: 500px;
+    margin-top: -15.8%;
+    float: right;
+    padding-right: 300px;
+}
+.titulos{
+    font-size: 17px;
+    font-weight: bold;
+    color: orangered;
+}
+.especialidad{
+    padding-top: 40px;
+    text-align: center;
+    font-size: 22px;
+
+}
+.texto_tec{
+    margin-top: 9px;
+    margin-left: 470px;
+    width: 400px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: orangered;
+}
+.cargo_uno{
+    border-radius: 5px;
+    margin-top: 50px;
+    float: left;
+    margin-left: 240px;
+    width: 280px;
+    height: 260px;
+    border: 1px solid #000;
+}
+.foto img{
+    margin-top: 17px;
+    margin-left: 70px;
+    width: 150px;
+    height: 150px;
+}
+.informa{
+    text-align: center;
+    margin-top: 12px;
+}
+.cargo_dos{
+    margin-top: 3.7%;
+    border-radius: 5px;
+    float: right;
+    margin-right: 300px;
+    width: 280px;
+    height: 260px;
+    border: 1px solid #000;
+}
+.foto_dos img{
+    margin-top: 17px;
+    margin-left: 70px;
+    width: 150px;
+    height: 150px;
+}
+.informa_dos{
+    text-align: center;
+    margin-top: 12px;
+}
+.cargo_tres{
+    border-radius: 5px;
+    border: 1px solid #000;
+    width: 280px;
+    height: 260px;
+    float: left;
+    margin-left: -20px;
+    margin-top: 50px;
+}
+.foto_tres img{
+    margin-top: 17px;
+    margin-left: 70px;
+    width: 150px;
+    height: 150px; 
+}
+.informa_tres{
+    text-align: center;
+    margin-top: 12px;
+}
+.cargo_cuatro{
+    border-radius: 5px;
+    margin-top: 27%;
+    float: left;
+    margin-left: -545px;
+    width: 280px;
+    height: 260px;
+    border: 1px solid #000; 
+    margin-bottom: 120px;
+}
+.foto_cuatro img{
+    margin-top: 17px;
+    margin-left: 70px;
+    width: 150px;
+    height: 150px;
+}
+.informa_cuatro{
+    text-align: center;
+    margin-top: 12px;
+}
+.cargo_cinco{
+    margin-top: 3.7%;
+    border-radius: 5px;
+    float: right;
+    margin-right: 300px;
+    width: 280px;
+    height: 260px;
+    border: 1px solid #000;
+}
+.foto_cinco img{
+    margin-top: 17px;
+    margin-left: 70px;
+    width: 150px;
+    height: 150px;
+}
+.informa_cinco{
+    text-align: center;
+    margin-top: 12px;
 }
