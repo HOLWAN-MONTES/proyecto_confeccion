@@ -30,10 +30,7 @@ if($_POST["inicio"]){
                 header("location: ../users/administrador/admin.php");
             }
             elseif($_SESSION['TIPO_USUARIO'] == 2){
-                header("location: ../users/instructor/instructor.php");
-            }
-            elseif($_SESSION['TIPO_USUARIO'] == 3){
-                header("location: ../users/aprend_vocero/vocero.php");
+                header("location: ../users/instructor/instructo.php");
             }
             else{
                 echo "<script>alert('DATOS EQUIVOCADOS')</script>";
