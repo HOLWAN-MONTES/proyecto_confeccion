@@ -282,3 +282,12 @@ a i {
     background-color: #ede4e4;
     padding: 10px;
 }
+/*Estilos para la tabla de prestamos agregados*/
+.tabla_info{
+    margin-left: 23%;
+    width: 50%;
+    font-weight: bold;
+}
+.tab_ml, .agregado{
+    border: 1px solid #23ad9dc5;
+}

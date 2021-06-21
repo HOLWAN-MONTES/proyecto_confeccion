@@ -100,7 +100,7 @@ $hora = date("H:i:s");
 
                                     <div class="categoriass">
                                         <label for="">CATEGORIA</label>    
-                                            <select class="input6" name="categorias" id="ti_pres" required>
+                                            <select class="input6 tip_mat" name="categorias" id="ti_pres" required>
                                                 <option>SELECCIONAR</option>
                                                 <?php
                                                 $tipo2 = "SELECT * FROM tipo_material";
@@ -124,7 +124,7 @@ $hora = date("H:i:s");
 
                                     <div class="cantidadSe">
                                         <label for="">CANTIDAD</label>
-                                        <input type="number" id="cant" placeholder="CANTIDAD">
+                                        <input type="number" id="cant" class="canti" placeholder="CANTIDAD">
                                     </div>
 
                                     <div class="bnt">
@@ -139,17 +139,13 @@ $hora = date("H:i:s");
                                         <table class="tabla_info" id="tab_info">
                                             <thead class="tab">
                                                 <tr class="tab-ml">
-                                                    <td class="tab-ml"></td>
-                                                    <td class="tab-ml">Categoria</td>
-                                                    <td class="tab-ml">Nombre</td>
-                                                    <td class="tab-ml">Cantidad</td>
-                                                    <td class="tab-ml">Accion</td>
+                                                    <td class="tab_ml">CATEGORIA</td>
+                                                    <td class="tab_ml">NOMBRE</td>
+                                                    <td class="tab_ml">CANTIDAD</td>
+                                                    <td class="tab_ml">ACCION</td>
                                                 </tr>
                                             </thead>
                                             <tbody class="agregado" id="agregado">
-                                                <tr id="agregados">
-                                                    <td></td>
-                                                </tr>
                                             </tbody>
                                         </table>
                                         <!-- CA VAN TODOS LOS LISTADOS DE LO QUE SE AGREGUE -->
